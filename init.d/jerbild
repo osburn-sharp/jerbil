@@ -1,0 +1,35 @@
+#!/sbin/runscript
+#
+# INIT Script for the Numbat System Controller
+
+export RUBYOPT="-rauto_gem"
+export RUBYLIB="/usr/local/lib"
+
+start() {
+  ebegin "Starting Jerbil Server"
+
+    # create the options for starting the daemon from the settings in the
+    # /etc/conf.d/jerbild file
+    myopts=""
+    [ -n "${NO_DAEMON}" ] && myopts="${myopts} -n"
+    [ -n "${CONF_FILE}" ] && myopts="${myopts} -c ${CONF_FILE}"
+    [ "${VERBOSE}" == "true" ] && [ "${QUIET}" != "true" ] && myopts="${myopts} -V"
+
+    /bin/su -m -c "/usr/local/sbin/jerbild ${myopts}" - robert
+
+  eend $?
+}
+
+status() {
+  ebegin "Checking status"
+  /usr/local/bin/jerbil -q
+  eend $?
+}
+
+
+stop() {
+  ebegin "Stopping Numbat Daemon"
+  /usr/local/sbin/jerbil-stop 
+  eend $?
+}
+

@@ -1,0 +1,113 @@
+#! /usr/bin/ruby
+# Description
+#
+# Author:: Robert Sharp
+# Copyright:: Copyright (c) 2010 Robert Sharp
+# License:: Open Software Licence v3.0
+#
+# This software is licensed for use under the Open Software Licence v. 3.0
+# The terms of this licence can be found at http://www.opensource.org/licenses/osl-3.0.php
+# and in the file copyright.txt. Under the terms of this licence, all derivative works
+# must themselves be licensed under the Open Software Licence v. 3.0
+# 
+# 
+
+#
+# Start the Jerbil Server
+#
+
+require 'jerbil'
+require 'jerbil/server'
+require 'jerbil/config'
+require 'jerbil/version'
+require 'jelly'
+require 'jeckyl'
+require 'socket'
+require 'drb'
+require 'rubygems'
+require 'daemons'
+require 'optparse'
+
+config_file='/etc/jerbil/config'
+daemonize = true
+log_to_syslog = true
+verbose = false
+
+OptionParser.new do |opts|
+
+  opts.banner = "Usage: jerbild [opts]"
+  opts.separator ""
+  opts.separator " start the Jerbil Daemon"
+  opts.separator ""
+
+  opts.on("-n", "--no-daemon", "Do not daemonize") do
+    daemonize = false
+  end
+
+  opts.on("-S", "--no-syslog", "Do not log to syslog") do
+    log_to_syslog = false
+  end
+
+  opts.on("-c", "--config [file]", String, "use this config file to find Jerbil" ) do |cfile|
+    if FileTest.readable?(cfile) then
+      config_file = cfile
+    else
+      puts "Config file cannot be read."
+      exit 1
+    end
+  end
+
+  opts.on("-V", "--verbose", "output more information about what is going on ") do
+    verbose = true
+  end
+
+  opts.on("-h", "--help", "Provide Help") do |h|
+    opts.separator ""
+    puts opts
+    exit 0
+  end
+
+end.parse!
+
+puts "Starting the Jerbil Server" if verbose
+puts "Version: " + Jerbil::Version if verbose
+
+hostname = Socket.gethostname
+my_self = Jerbil::Server.new(hostname, 'ABCDE')
+
+options = Jerbil::Config.new(config_file)
+puts options.inspect if verbose
+
+if daemonize then
+  puts "Daemonizing now" if verbose
+  Daemons.demonize
+else
+  puts "Running in the foreground" if verbose
+end
+
+servers = options.delete(:servers)
+
+# prevent the server from generating syslogs
+Jelly.disable_syslog unless log_to_syslog
+
+$SAFE = 1 # using DRb, so prevent anything nasty
+
+jerbild = Jerbil.new(my_self, servers, options)
+
+DRb.start_service(my_self.drb_address, jerbild)
+
+# need to write pid to pidfile
+
+if options[:pid_dir] then
+  begin
+    pid_file = options[:pid_dir] + '/jerbil.pid'
+    File.open(pid_file, "w") do |pfile|
+      pfile.puts Process.pid.to_s
+    end
+    puts "Created pid file: #{pid_file}" if verbose && !daemonize
+  rescue
+    # ignore pid file if write fails
+  end
+end
+
+DRb.thread.join

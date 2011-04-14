@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# create the options for starting the daemon from the settings in the
+# /etc/conf.d/jerbild file
+myopts=""
+[ -n "${NO_DAEMON}" ] && myopts="${myopts} -n"
+[ -n "${CONF_FILE}" ] && myopts="${myopts} -c ${CONF_FILE}"
+[ "${VERBOSE}" == "true" ] && [ "${QUIET}" != "true" ] && myopts="${myopts} -V"
+
+${PROJECT_ROOT}/sbin/jerbild ${myopts}
+
+

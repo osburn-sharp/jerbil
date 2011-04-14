@@ -1,0 +1,36 @@
+
+require 'socket'
+require 'jerbil/server'
+
+# Array of Jerbil::Server, one for each server in the system
+hostname = Socket.gethostname
+my_servers = Array.new
+my_servers << Jerbil::Server.new(hostname, 'ABCDE')
+my_servers << Jerbil::Server.new(hostname, 'DEVELOPMENT')
+my_servers << Jerbil::Server.new('antonia', 'JKLMNOP')
+
+servers my_servers
+
+
+# Controls the amount of logging done by Jelly
+# 
+#  * :system - standard message, plus log to syslog
+#  * :verbose - more generous logging to help resolve problems
+#  * :debug - usually used only for resolving problems during development
+# 
+log_level :debug
+
+# Location for Jelly (logging utility) to save log files
+log_dir "/home/robert/dev/projects/jerbil/log"
+
+# Size of a log file (in MB) before switching to the next log
+#log_length 1
+
+# Number of log files to retain at any moment
+#log_rotation 2
+
+# private key file used to authenticate privileged users
+key_file "/home/robert/dev/projects/jerbil/test/private_key_file.asc"
+
+# somewhere to store the pid
+pid_dir "/home/robert/dev/projects/jerbil/test/pids"

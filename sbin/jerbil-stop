@@ -1,0 +1,107 @@
+#! /usr/bin/ruby
+#
+# Jerbil
+#
+# Author:: Robert Sharp
+# Copyright:: Copyright (c) 2010 Robert Sharp
+# License:: Open Software Licence v3.0
+#
+# This software is licensed for use under the Open Software Licence v. 3.0
+# The terms of this licence can be found at http://www.opensource.org/licenses/osl-3.0.php
+# and in the file copyright.txt. Under the terms of this licence, all derivative works
+# must themselves be licensed under the Open Software Licence v. 3.0
+#
+#
+# stop the jerbil server on this host
+# 
+require 'jerbil'
+require 'jerbil/server'
+require 'jerbil/version'
+require 'jerbil/config'
+require 'socket'
+require 'drb'
+require 'optparse'
+
+config_file='/etc/jerbil/config'
+verbose = false
+
+OptionParser.new do |opts|
+
+  opts.banner = "Usage: jerbild [opts]"
+  opts.separator ""
+  opts.separator " Stop the Jerbil Server"
+  opts.separator ""
+
+  opts.on("-c", "--config [file]", String, "use this config file to find Jerbil" ) do |cfile|
+    if FileTest.readable?(cfile) then
+      config_file = cfile
+    else
+      puts "Config file cannot be read."
+      exit 1
+    end
+  end
+
+  opts.on("-V", "--verbose", "output more information about what is going on ") do
+    verbose = true
+  end
+
+  opts.on("-h", "--help", "Provide Help") do |h|
+    opts.separator ""
+    puts opts
+    exit 0
+  end
+
+end.parse!
+
+puts "Stopping the local Jerbil Server" if verbose
+puts "Version: " + Jerbil::Version if verbose
+
+hostname = Socket.gethostname
+
+options = Jerbil::Config.new(config_file)
+servers = options[:servers]
+local = nil
+servers.each {|serv| local = serv if serv.fqdn == hostname}
+
+if local.nil? then
+  puts "Cannot fund local Jerbil Server" if verbose
+  exit 1
+end
+
+puts "Found local Jerbil Server" if verbose
+
+key_file = options[:key_file]
+begin
+  my_key = File.read(key_file)
+rescue
+  puts "Failed to open private key file. Cannot stop server" if verbose
+  exit 1
+end
+
+puts "Stopping Jerbil Test Server" if verbose
+
+jerbild = local.connect
+
+# see if you can connect!
+begin
+  jerbild.verify
+rescue DRb::DRbConnError
+  #fall back to pid killing
+  if options[:pid_dir] then
+    # can give it a go
+    pid_file = options[:pid_dir] + '/jerbil.pid'
+    pid = File.read(pid_file)
+    Process.kill("SIGKILL", pid.to_i)
+    puts "Manually killed the process" if verbose
+    exit 0
+  end
+end
+
+# did, so kill it properly
+begin
+  jerbild.stop(my_key)
+rescue DRb::DRbConnError
+  #fall back to pid killing
+end
+
+puts "Stopped Jerbil Server" if verbose

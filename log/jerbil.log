@@ -1,0 +1,1161 @@
+I, [2011-04-09 08:22:46 #10455]  INFO -- : Started up the Jerbil Server
+I, [2011-04-09 08:23:18 #10455]  INFO -- : Stopping the Jerbil Server now
+I, [2011-04-11 10:01:16 #16043]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:07:18 #16043]  INFO -- : Stopping the Jerbil Server now
+I, [2011-04-11 10:07:23 #16198]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:07:37 #16198]  INFO -- : Stopping the Jerbil Server now
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+W, [2011-04-11 10:56:01 #17138]  WARN -- : Service: lucius.osburn-sharp.ath.cx:49900-dev already registered
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Searching for services. Found 3 matching.
+I, [2011-04-11 10:56:01 #17138]  INFO -- :   Arguments: {:name=>:rubytest}
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 10:56:01 #17138]  INFO -- :   Arguments: {:env=>:prod}
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-11 10:56:01 #17138]  INFO -- :   Arguments: {:name=>:Bilker}
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Searching for services. Found 3 matching.
+I, [2011-04-11 10:56:01 #17138]  INFO -- :   Arguments: {:name=>:rubytest}
+I, [2011-04-11 10:56:01 #17138]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49900-dev
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Started up the Jerbil Server
+W, [2011-04-11 10:56:10 #17140]  WARN -- : Remote registration failed due to unknown server key: INVALID
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+W, [2011-04-11 10:56:10 #17140]  WARN -- : Service: lucius.osburn-sharp.ath.cx:49900-dev already registered
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Deleted Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Deleted Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Searching for services. Found 3 matching.
+I, [2011-04-11 10:56:10 #17140]  INFO -- :   Arguments: {:name=>:rubytest}
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 10:56:10 #17140]  INFO -- :   Arguments: {:env=>:prod}
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-11 10:56:10 #17140]  INFO -- :   Arguments: {:name=>:Bilker}
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 10:56:10 #17140]  INFO -- :   Arguments: {:env=>:prod, :name=>:rubytest}
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49900-prod
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 10:56:10 #17140]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+W, [2011-04-11 10:56:10 #17140]  WARN -- : Get local services failed due to unknown server key: INVALID
+I, [2011-04-11 10:14:36 #16318]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 11:12:16 #16318]  INFO -- : Stopping the Jerbil Server now
+I, [2011-04-11 11:12:27 #17414]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 11:12:31 #17414]  INFO -- : Stopping the Jerbil Server now
+I, [2011-04-11 11:12:36 #17421]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 11:19:18 #17421]  INFO -- : Stopping the Jerbil Server now
+I, [2011-04-11 11:19:22 #17684]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+W, [2011-04-11 12:12:33 #18413]  WARN -- : Service: lucius.osburn-sharp.ath.cx:49900-dev already registered
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Searching for services. Found 3 matching.
+I, [2011-04-11 12:12:33 #18413]  INFO -- :   Arguments: {:name=>:rubytest}
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 12:12:33 #18413]  INFO -- :   Arguments: {:env=>:prod}
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-11 12:12:33 #18413]  INFO -- :   Arguments: {:name=>:Bilker}
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Searching for services. Found 3 matching.
+I, [2011-04-11 12:12:33 #18413]  INFO -- :   Arguments: {:name=>:rubytest}
+I, [2011-04-11 12:12:33 #18413]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49900-dev
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Started up the Jerbil Server
+W, [2011-04-11 12:13:00 #18425]  WARN -- : Remote registration failed due to unknown server key: INVALID
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+W, [2011-04-11 12:13:00 #18425]  WARN -- : Service: lucius.osburn-sharp.ath.cx:49900-dev already registered
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Deleted Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Deleted Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Searching for services. Found 3 matching.
+I, [2011-04-11 12:13:00 #18425]  INFO -- :   Arguments: {:name=>:rubytest}
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 12:13:00 #18425]  INFO -- :   Arguments: {:env=>:prod}
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-11 12:13:00 #18425]  INFO -- :   Arguments: {:name=>:Bilker}
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 12:13:00 #18425]  INFO -- :   Arguments: {:env=>:prod, :name=>:rubytest}
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49900-prod
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: dev
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:13:00 #18425]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+W, [2011-04-11 12:13:00 #18425]  WARN -- : Get local services failed due to unknown server key: INVALID
+I, [2011-04-11 12:37:18 #17684]  INFO -- : Stopping the Jerbil Server now
+I, [2011-04-11 12:38:55 #18737]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:48:13 #18737]  INFO -- : Stopping the Jerbil Server now
+I, [2011-04-11 12:48:16 #18885]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:48:21 #18885]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:48:21 #18885]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:48:21 #18885]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:48:21 #18885]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:49:28 #18885]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:49:28 #18885]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:49:28 #18907]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:49:28 #18885]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:49:28 #18885]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:49:36 #18885]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:49:36 #18885]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:49:36 #18912]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 12:49:36 #18885]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:49:36 #18885]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:56:42 #18885]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:56:42 #18885]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:56:42 #18885]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:56:42 #18885]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:57:24 #18885]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:57:24 #18885]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+W, [2011-04-11 12:57:24 #18885]  WARN -- : Get local services failed due to unknown server key: DEVELOPMENT
+I, [2011-04-11 12:57:24 #18885]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 12:57:24 #18885]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 12:58:09 #18885]  INFO -- : Stopping the Jerbil Server now
+I, [2011-04-11 13:03:51 #19178]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 13:04:00 #19178]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:04:00 #19178]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 13:04:00 #19181]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 13:04:00 #19178]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:04:00 #19178]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 13:05:06 #19178]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:05:06 #19178]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 13:05:06 #19200]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 13:05:06 #19178]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:05:06 #19178]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 13:06:29 #19178]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:06:29 #19178]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 13:06:29 #19220]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 13:06:29 #19178]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:06:29 #19178]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 13:07:17 #19178]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:07:17 #19178]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 13:07:17 #19232]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 13:07:17 #19178]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:07:17 #19178]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 13:07:17 #19232]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-11 13:07:17 #19232]  INFO -- :   Arguments: {}
+I, [2011-04-11 13:08:47 #19178]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:08:47 #19178]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 13:08:47 #19252]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 13:08:47 #19178]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:08:47 #19178]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 13:08:47 #19252]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-11 13:08:47 #19252]  INFO -- :   Arguments: {}
+I, [2011-04-11 13:08:53 #19178]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:08:53 #19178]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 13:08:53 #19255]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 13:08:53 #19178]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:08:53 #19178]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 13:08:53 #19255]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-11 13:08:53 #19255]  INFO -- :   Arguments: {}
+I, [2011-04-11 13:09:52 #19178]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:09:52 #19178]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 13:09:52 #19272] DEBUG -- : Got remote services: []
+I, [2011-04-11 13:09:52 #19272]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 13:09:52 #19178]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:09:52 #19178]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 13:09:52 #19272]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-11 13:09:52 #19272]  INFO -- :   Arguments: {}
+I, [2011-04-11 13:11:16 #19178]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:11:16 #19178]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 13:11:16 #19315] DEBUG -- : Got remote services: []
+I, [2011-04-11 13:11:16 #19315]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 13:11:16 #19178]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:11:16 #19178]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 13:11:16 #19315]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-11 13:11:16 #19315]  INFO -- :   Arguments: {}
+I, [2011-04-11 13:12:01 #19178]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:12:01 #19178]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 13:12:01 #19328] DEBUG -- : Connecting to : #<Jerbil::Server:0xb7093d0c @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 13:12:01 #19328] DEBUG -- : Got remote services: []
+I, [2011-04-11 13:12:01 #19328]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 13:12:01 #19178]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:12:01 #19178]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 13:12:01 #19328]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-11 13:12:01 #19328]  INFO -- :   Arguments: {}
+I, [2011-04-11 13:13:54 #19178]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-11 13:13:59 #19523] DEBUG -- : Connecting to : #<Jerbil::Server:0xb74c80bc @port=49901, @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 13:13:59 #19523] DEBUG -- : Connecting to : #<Jerbil::Server:0xb74c80a8 @port=49901, @active=false, @key="JKLMNOP", @fqdn="antonia">
+D, [2011-04-11 13:13:59 #19523] DEBUG -- : Got remote services: []
+I, [2011-04-11 13:13:59 #19523]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 13:14:22 #19523]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:14:22 #19523]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 13:14:22 #19531] DEBUG -- : Connecting to : #<Jerbil::Server:0xb700a7dc @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 13:14:22 #19531] DEBUG -- : Got remote services: []
+I, [2011-04-11 13:14:22 #19531]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 13:14:22 #19531]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-11 13:14:22 #19531]  INFO -- :   Arguments: {}
+I, [2011-04-11 13:14:22 #19523]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:14:22 #19523]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 13:16:04 #19523]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:16:04 #19523]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 13:16:04 #19554] DEBUG -- : Connecting to : #<Jerbil::Server:0xb70e3a28 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 13:16:04 #19554] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb70e32f8 @host="lucius.osburn-sharp.ath.cx", @stop_callback=nil, @key="ae1d09fb0e", @name=:rubytest, @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=19554, @port=49900, @lock=nil>, #<Jerbil::Service:0xb70e3190 @host="lucius.osburn-sharp.ath.cx", @stop_callback=nil, @key="e4aef078b7", @name=:rubytest, @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=19554, @port=49900, @lock=nil>]
+I, [2011-04-11 13:16:04 #19554]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 13:16:04 #19554]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 13:16:04 #19554]  INFO -- :   Arguments: {}
+I, [2011-04-11 13:16:04 #19523]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:16:04 #19523]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 13:39:13 #19523]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:39:13 #19523]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 13:39:13 #19834] DEBUG -- : Connecting to : #<Jerbil::Server:0xb7077080 @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901>
+D, [2011-04-11 13:39:13 #19834] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb7076950 @lock=nil, @host="lucius.osburn-sharp.ath.cx", @name=:rubytest, @stop_callback=nil, @key="1703287ad6", @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=19834, @port=49900>, #<Jerbil::Service:0xb70767e8 @lock=nil, @host="lucius.osburn-sharp.ath.cx", @name=:rubytest, @stop_callback=nil, @key="d9c0c89ed7", @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=19834, @port=49900>]
+I, [2011-04-11 13:39:13 #19834]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 13:39:13 #19834]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 13:39:13 #19834]  INFO -- :   Arguments: {}
+D, [2011-04-11 13:39:13 #19834] DEBUG -- : Connecting to : #<Jerbil::Server:0xb7075578 @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901>
+D, [2011-04-11 13:39:13 #19834] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb7074e48 @lock=nil, @host="lucius.osburn-sharp.ath.cx", @name=:rubytest, @stop_callback=nil, @key="1703287ad6", @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=19834, @port=49900>, #<Jerbil::Service:0xb7074ce0 @lock=nil, @host="lucius.osburn-sharp.ath.cx", @name=:rubytest, @stop_callback=nil, @key="d9c0c89ed7", @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=19834, @port=49900>]
+I, [2011-04-11 13:39:13 #19834]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 13:39:13 #19523]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 13:39:13 #19834]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-11 13:39:13 #19834]  INFO -- :   Arguments: {:name=>:numbat}
+I, [2011-04-11 13:39:13 #19523]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+I, [2011-04-11 13:39:13 #19523]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-11 14:33:01 #19523]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-11 14:33:04 #20614] DEBUG -- : Connecting to : #<Jerbil::Server:0xb74ad5b4 @port=49901, @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 14:33:04 #20614] DEBUG -- : Connecting to : #<Jerbil::Server:0xb74ad5a0 @port=49901, @active=false, @key="JKLMNOP", @fqdn="antonia">
+D, [2011-04-11 14:33:04 #20614] DEBUG -- : Got remote services: []
+I, [2011-04-11 14:33:04 #20614]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 14:33:13 #20614]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 14:33:13 #20614] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+W, [2011-04-11 14:33:13 #20614]  WARN -- : Remote registration failed due to unknown server key: ABCDE
+I, [2011-04-11 14:33:13 #20614]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 14:33:13 #20614] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 14:33:13 #20614]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 14:33:13 #20614] DEBUG -- : Connected to antonia
+I, [2011-04-11 14:33:13 #20614]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 14:33:13 #20614] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 14:33:13 #20614]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 14:33:13 #20614] DEBUG -- : Connected to antonia
+I, [2011-04-11 14:35:28 #20614]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 14:35:28 #20614] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+W, [2011-04-11 14:35:28 #20614]  WARN -- : Remote registration failed due to unknown server key: ABCDE
+I, [2011-04-11 14:35:28 #20614]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 14:35:28 #20614] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 14:35:28 #20614]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 14:35:28 #20614] DEBUG -- : Connected to antonia
+I, [2011-04-11 14:35:28 #20614]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 14:35:28 #20614] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 14:35:28 #20614]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 14:35:28 #20614] DEBUG -- : Connected to antonia
+I, [2011-04-11 14:35:40 #20614]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 14:35:40 #20614] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+W, [2011-04-11 14:35:40 #20614]  WARN -- : Remote registration failed due to unknown server key: ABCDE
+I, [2011-04-11 14:35:40 #20614]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 14:35:40 #20614] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 14:35:40 #20614]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 14:35:40 #20614] DEBUG -- : Connected to antonia
+I, [2011-04-11 14:35:40 #20614]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 14:35:40 #20614] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 14:35:40 #20614]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 14:35:40 #20614] DEBUG -- : Connected to antonia
+I, [2011-04-11 14:36:58 #20614]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-11 14:38:22 #20689] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb73ff4c8 @port=49901, @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 14:38:22 #20689] DEBUG -- : Connecting to : #<Jerbil::Server:0xb73ff43c @port=49901, @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 14:38:22 #20689] DEBUG -- : Connecting to : #<Jerbil::Server:0xb73ff428 @port=49901, @active=false, @key="JKLMNOP", @fqdn="antonia">
+D, [2011-04-11 14:38:22 #20689] DEBUG -- : Got remote services: []
+I, [2011-04-11 14:38:22 #20689]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 14:38:40 #20689]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 14:38:40 #20689] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+W, [2011-04-11 14:38:40 #20689]  WARN -- : Remote registration failed due to unknown server key: ABCDE
+I, [2011-04-11 14:38:40 #20689]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 14:38:40 #20689] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 14:38:40 #20689]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 14:38:40 #20689] DEBUG -- : Connected to antonia
+I, [2011-04-11 14:38:40 #20689]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 14:38:40 #20689] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 14:38:40 #20689]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 14:38:40 #20689] DEBUG -- : Connected to antonia
+I, [2011-04-11 14:43:51 #20689]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 14:43:51 #20689] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+W, [2011-04-11 14:43:51 #20689]  WARN -- : Remote registration failed due to unknown server key: ABCDE
+I, [2011-04-11 14:43:51 #20689]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 14:43:51 #20689] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 14:43:51 #20689]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 14:43:51 #20689] DEBUG -- : Connected to antonia
+I, [2011-04-11 14:43:51 #20689]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 14:43:51 #20689] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 14:43:51 #20689]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 14:43:51 #20689] DEBUG -- : Connected to antonia
+I, [2011-04-11 14:45:21 #20689]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-11 14:45:24 #20808] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb74674c4 @port=49901, @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 14:45:24 #20808] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7467438 @port=49901, @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 14:45:24 #20808] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7467424 @port=49901, @active=false, @key="JKLMNOP", @fqdn="antonia">
+D, [2011-04-11 14:45:24 #20808] DEBUG -- : Got remote services: []
+I, [2011-04-11 14:45:24 #20808]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 14:47:17 #20808]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-11 14:47:20 #20842] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb74513cc @port=49901, @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 14:47:20 #20842] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7451340 @port=49901, @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx">
+I, [2011-04-11 14:47:20 #20842]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-11 14:47:20 #20842] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb745132c @port=49901, @active=false, @key="JKLMNOP", @fqdn="antonia">
+I, [2011-04-11 14:47:20 #20842]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-11 14:47:20 #20842] DEBUG -- : Got remote services: []
+I, [2011-04-11 14:47:20 #20842]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 14:51:33 #20842]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-11 14:51:36 #20921] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb73ec2ec @port=49901, @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 14:51:36 #20921] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb73ec260 @port=49901, @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx">
+I, [2011-04-11 14:51:36 #20921]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-11 14:51:36 #20921] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb73ec24c @port=49901, @active=false, @key="JKLMNOP", @fqdn="antonia">
+I, [2011-04-11 14:51:36 #20921]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-11 14:51:36 #20921] DEBUG -- : Got remote services: []
+I, [2011-04-11 14:51:36 #20921]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 14:51:43 #20921]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 14:51:43 #20921] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 14:51:43 #20921]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 14:51:43 #20921] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 14:51:43 #20921]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 14:51:43 #20921] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 14:51:43 #20921]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 14:51:43 #20921] DEBUG -- : Registering remote. Connected to antonia
+D, [2011-04-11 14:51:43 #20925] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb7032160 @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 14:51:43 #20925] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb70320d4 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 14:51:43 #20925] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb703192c @stop_callback=nil, @key="a24b8d2104", @name=:rubytest, @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=20925, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">, #<Jerbil::Service:0xb70317c4 @stop_callback=nil, @key="1567a9fb3e", @name=:rubytest, @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=20925, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">]
+I, [2011-04-11 14:51:43 #20925]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 14:51:43 #20925]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 14:51:43 #20925]  INFO -- :   Arguments: {}
+D, [2011-04-11 14:51:43 #20925] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb7030568 @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 14:51:43 #20925] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb70304dc @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 14:51:43 #20925] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb702fd34 @stop_callback=nil, @key="a24b8d2104", @name=:rubytest, @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=20925, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">, #<Jerbil::Service:0xb702fbcc @stop_callback=nil, @key="1567a9fb3e", @name=:rubytest, @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=20925, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">]
+I, [2011-04-11 14:51:43 #20925]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 14:51:43 #20921]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 14:51:43 #20921] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 14:51:43 #20921]  INFO -- : Registered Service on remote server: numbat
+D, [2011-04-11 14:51:43 #20921] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 14:51:43 #20925]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-11 14:51:43 #20925]  INFO -- :   Arguments: {:name=>:numbat}
+I, [2011-04-11 14:51:43 #20921]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 14:51:43 #20921] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 14:51:43 #20921]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 14:51:43 #20921] DEBUG -- : Connected to antonia
+I, [2011-04-11 14:51:43 #20921]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 14:51:43 #20921] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 14:51:43 #20921]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 14:51:43 #20921] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:07:22 #20921]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:07:22 #20921] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:07:22 #20921]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:07:22 #20921] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 15:07:22 #20921]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:07:22 #20921] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:07:22 #20921]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:07:22 #20921] DEBUG -- : Registering remote. Connected to antonia
+D, [2011-04-11 15:07:22 #21104] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb70688b4 @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:07:22 #21104] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7068828 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:07:22 #21104] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb7068080 @stop_callback=nil, @key="6718c42391", @name=:numbat, @verify_callback=:verify_callback, @env=:dev, @address="lucius.osburn-sharp.ath.cx:49960", @pid=20925, @port=49960, @lock=nil, @host="lucius.osburn-sharp.ath.cx">, #<Jerbil::Service:0xb7067f18 @stop_callback=nil, @key="f51859c5a4", @name=:rubytest, @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21104, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">, #<Jerbil::Service:0xb7067e8c @stop_callback=nil, @key="8f9fbb7c24", @name=:rubytest, @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21104, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">]
+I, [2011-04-11 15:07:22 #21104]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:07:22 #21104]  INFO -- : Searching for services. Found 3 matching.
+I, [2011-04-11 15:07:22 #21104]  INFO -- :   Arguments: {}
+D, [2011-04-11 15:07:22 #21104] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb7065164 @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:07:22 #21104] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb70650d8 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:07:22 #21104] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb7064930 @stop_callback=nil, @key="6718c42391", @name=:numbat, @verify_callback=:verify_callback, @env=:dev, @address="lucius.osburn-sharp.ath.cx:49960", @pid=20925, @port=49960, @lock=nil, @host="lucius.osburn-sharp.ath.cx">, #<Jerbil::Service:0xb70647c8 @stop_callback=nil, @key="f51859c5a4", @name=:rubytest, @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21104, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">, #<Jerbil::Service:0xb706473c @stop_callback=nil, @key="8f9fbb7c24", @name=:rubytest, @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21104, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">]
+I, [2011-04-11 15:07:22 #21104]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:07:22 #21104]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 15:07:22 #21104] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:07:22 #20921]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 15:07:22 #21104]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 15:07:22 #20921]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 15:07:22 #20921]  INFO -- :   Arguments: {:name=>:numbat}
+I, [2011-04-11 15:07:22 #20921]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49960-dev
+I, [2011-04-11 15:07:22 #20921]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:07:22 #20921] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:07:22 #20921]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:07:22 #20921] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:07:22 #20921]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:07:22 #20921] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:07:22 #20921]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:07:22 #20921] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:07:57 #20921]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-11 15:08:01 #21117] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb74362e8 @port=49901, @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 15:08:01 #21117] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb743625c @port=49901, @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx">
+I, [2011-04-11 15:08:01 #21117]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-11 15:08:01 #21117] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7436248 @port=49901, @active=false, @key="JKLMNOP", @fqdn="antonia">
+I, [2011-04-11 15:08:01 #21117]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-11 15:08:01 #21117] DEBUG -- : Got remote services: []
+I, [2011-04-11 15:08:01 #21117]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:08:09 #21117]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:08:09 #21117] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:08:09 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:08:09 #21117] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 15:08:09 #21117]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:08:09 #21117] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:08:09 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:08:09 #21117] DEBUG -- : Registering remote. Connected to antonia
+D, [2011-04-11 15:08:09 #21122] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb7088178 @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:08:09 #21122] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb70880ec @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:08:09 #21122] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb7087944 @stop_callback=nil, @key="bf9a651c1c", @name=:rubytest, @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21122, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">, #<Jerbil::Service:0xb70877dc @stop_callback=nil, @key="595a39c72b", @name=:rubytest, @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21122, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">]
+I, [2011-04-11 15:08:09 #21122]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:08:09 #21122]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 15:08:09 #21122]  INFO -- :   Arguments: {}
+D, [2011-04-11 15:08:09 #21122] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb7086580 @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:08:09 #21122] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb70864f4 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:08:09 #21122] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb7085d4c @stop_callback=nil, @key="bf9a651c1c", @name=:rubytest, @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21122, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">, #<Jerbil::Service:0xb7085be4 @stop_callback=nil, @key="595a39c72b", @name=:rubytest, @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21122, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">]
+I, [2011-04-11 15:08:09 #21122]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:08:09 #21122]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 15:08:09 #21122] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:08:09 #21117]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 15:08:09 #21122]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 15:08:09 #21117]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 15:08:09 #21117]  INFO -- :   Arguments: {:name=>:numbat}
+I, [2011-04-11 15:08:09 #21117]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49960-dev
+I, [2011-04-11 15:08:09 #21122]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 15:08:09 #21122] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:08:09 #21117]  INFO -- : Deleted Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 15:08:09 #21122]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 15:08:09 #21117]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:08:09 #21117] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:08:09 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:08:09 #21117] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:08:09 #21117]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:08:09 #21117] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:08:09 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:08:09 #21117] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:08:13 #21117]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:08:13 #21117] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:08:13 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:08:13 #21117] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 15:08:13 #21117]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:08:13 #21117] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:08:13 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:08:13 #21117] DEBUG -- : Registering remote. Connected to antonia
+D, [2011-04-11 15:08:13 #21124] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb70a3158 @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:08:13 #21124] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb70a30cc @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:08:13 #21124] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb70a2924 @stop_callback=nil, @key="e636cbd643", @name=:rubytest, @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21124, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">, #<Jerbil::Service:0xb70a27bc @stop_callback=nil, @key="666bd5f71f", @name=:rubytest, @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21124, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">]
+I, [2011-04-11 15:08:13 #21124]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:08:13 #21124]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 15:08:13 #21124]  INFO -- :   Arguments: {}
+D, [2011-04-11 15:08:13 #21124] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb70a1560 @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:08:13 #21124] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb70a14d4 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:08:13 #21124] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb70a0d2c @stop_callback=nil, @key="e636cbd643", @name=:rubytest, @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21124, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">, #<Jerbil::Service:0xb70a0bc4 @stop_callback=nil, @key="666bd5f71f", @name=:rubytest, @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21124, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">]
+I, [2011-04-11 15:08:13 #21124]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:08:13 #21124]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 15:08:13 #21124] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:08:13 #21117]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 15:08:13 #21124]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 15:08:13 #21117]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 15:08:13 #21117]  INFO -- :   Arguments: {:name=>:numbat}
+I, [2011-04-11 15:08:13 #21117]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49960-dev
+I, [2011-04-11 15:08:13 #21124]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 15:08:13 #21124] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:08:13 #21117]  INFO -- : Deleted Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 15:08:13 #21124]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 15:08:13 #21117]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:08:13 #21117] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:08:13 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:08:13 #21117] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:08:13 #21117]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:08:13 #21117] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:08:13 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:08:13 #21117] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:10:39 #21117]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:10:39 #21117] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:10:39 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:10:39 #21117] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 15:10:39 #21117]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:10:39 #21117] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:10:39 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:10:39 #21117] DEBUG -- : Registering remote. Connected to antonia
+D, [2011-04-11 15:10:39 #21175] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb7028f84 @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:10:39 #21175] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7028ef8 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:10:39 #21175] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb7028750 @stop_callback=nil, @key="a90d69652f", @name=:rubytest, @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21175, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">, #<Jerbil::Service:0xb70285e8 @stop_callback=nil, @key="36c20bad65", @name=:rubytest, @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21175, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">]
+I, [2011-04-11 15:10:39 #21175]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:10:39 #21175]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 15:10:39 #21175]  INFO -- :   Arguments: {}
+D, [2011-04-11 15:10:39 #21175] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb70273a0 @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:10:39 #21175] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7027314 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:10:39 #21175] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb7026b6c @stop_callback=nil, @key="a90d69652f", @name=:rubytest, @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21175, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">, #<Jerbil::Service:0xb7026a04 @stop_callback=nil, @key="36c20bad65", @name=:rubytest, @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21175, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">]
+I, [2011-04-11 15:10:39 #21175]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:10:39 #21175]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 15:10:39 #21175] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:10:39 #21117]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 15:10:39 #21175]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 15:10:39 #21117]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 15:10:39 #21117]  INFO -- :   Arguments: {:name=>:numbat}
+I, [2011-04-11 15:10:39 #21117]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49960-dev
+I, [2011-04-11 15:10:39 #21175]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 15:10:39 #21175] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:10:39 #21117]  INFO -- : Deleted Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 15:10:39 #21175]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 15:10:39 #21117]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:10:39 #21117] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:10:39 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:10:39 #21117] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:10:39 #21117]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:10:39 #21117] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:10:39 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:10:39 #21117] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:41:41 #21117]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:41:41 #21117] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:41:41 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:41:41 #21117] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 15:41:41 #21117]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:41:41 #21117] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:41:41 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:41:41 #21117] DEBUG -- : Registering remote. Connected to antonia
+D, [2011-04-11 15:41:41 #21620] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb709adf0 @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:41:41 #21620] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb709ad64 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:41:41 #21620] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb709a5bc @stop_callback=nil, @key="329a91d08b", @name=:rubytest, @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21620, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">, #<Jerbil::Service:0xb709a454 @stop_callback=nil, @key="fb29041f22", @name=:rubytest, @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21620, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">]
+I, [2011-04-11 15:41:41 #21620]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:41:41 #21620]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 15:41:41 #21620]  INFO -- :   Arguments: {}
+D, [2011-04-11 15:41:41 #21620] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb709920c @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:41:41 #21620] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7099180 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:41:41 #21620] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb70989d8 @stop_callback=nil, @key="329a91d08b", @name=:rubytest, @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21620, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">, #<Jerbil::Service:0xb7098870 @stop_callback=nil, @key="fb29041f22", @name=:rubytest, @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21620, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">]
+I, [2011-04-11 15:41:41 #21620]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:41:41 #21620]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 15:41:41 #21620] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:41:41 #21117]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 15:41:41 #21620]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 15:41:41 #21117]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 15:41:41 #21117]  INFO -- :   Arguments: {:name=>:numbat}
+I, [2011-04-11 15:41:41 #21117]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49960-dev
+I, [2011-04-11 15:41:41 #21620]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 15:41:41 #21620] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:41:41 #21117]  INFO -- : Deleted Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 15:41:41 #21620]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 15:41:41 #21117]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 15:41:41 #21117]  INFO -- :   Arguments: {}
+I, [2011-04-11 15:41:41 #21117]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:41:41 #21117] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:41:41 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:41:41 #21117] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:41:41 #21117]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:41:41 #21117] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:41:41 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:41:41 #21117] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:43:15 #21117]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:43:15 #21117] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:43:15 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:43:15 #21117] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 15:43:15 #21117]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:43:15 #21117] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:43:15 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:43:15 #21117] DEBUG -- : Registering remote. Connected to antonia
+D, [2011-04-11 15:43:15 #21639] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb70b6c6c @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:43:15 #21639] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb70b6be0 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:43:15 #21639] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb70b6438 @stop_callback=nil, @key="e905ea6259", @name=:rubytest, @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21639, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">, #<Jerbil::Service:0xb70b62d0 @stop_callback=nil, @key="3f6640c541", @name=:rubytest, @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21639, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">]
+I, [2011-04-11 15:43:15 #21639]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:43:15 #21639]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 15:43:15 #21639]  INFO -- :   Arguments: {}
+I, [2011-04-11 15:43:15 #21639]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 15:43:15 #21639]  INFO -- :   Arguments: {:env=>:test, :name=>:rubytest}
+I, [2011-04-11 15:43:15 #21639]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49900-test
+D, [2011-04-11 15:43:15 #21639] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb70b4d2c @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:43:15 #21639] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb70b4ca0 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:43:15 #21639] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb70b44f8 @stop_callback=nil, @key="e905ea6259", @name=:rubytest, @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21639, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">, #<Jerbil::Service:0xb70b4390 @stop_callback=nil, @key="3f6640c541", @name=:rubytest, @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21639, @port=49900, @lock=nil, @host="lucius.osburn-sharp.ath.cx">]
+I, [2011-04-11 15:43:15 #21639]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:43:15 #21639]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 15:43:15 #21639] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:43:15 #21117]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 15:43:15 #21639]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 15:43:15 #21117]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 15:43:15 #21117]  INFO -- :   Arguments: {:name=>:numbat}
+I, [2011-04-11 15:43:15 #21117]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49960-dev
+I, [2011-04-11 15:43:15 #21639]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 15:43:15 #21639] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:43:15 #21117]  INFO -- : Deleted Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 15:43:15 #21639]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 15:43:15 #21117]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 15:43:15 #21117]  INFO -- :   Arguments: {}
+I, [2011-04-11 15:43:15 #21117]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:43:15 #21117] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:43:15 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:43:15 #21117] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:43:15 #21117]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:43:15 #21117] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:43:15 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:43:15 #21117] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:44:35 #21117]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:44:35 #21117] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:44:35 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:44:35 #21117] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 15:44:35 #21117]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:44:35 #21117] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:44:35 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:44:35 #21117] DEBUG -- : Registering remote. Connected to antonia
+D, [2011-04-11 15:44:35 #21664] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb704ee14 @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901>
+D, [2011-04-11 15:44:35 #21664] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb704ed88 @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901>
+D, [2011-04-11 15:44:35 #21664] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb704e5e0 @lock=nil, @host="lucius.osburn-sharp.ath.cx", @name=:rubytest, @stop_callback=nil, @key="aaf4c847c8", @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21664, @port=49900>, #<Jerbil::Service:0xb704e478 @lock=nil, @host="lucius.osburn-sharp.ath.cx", @name=:rubytest, @stop_callback=nil, @key="306bf998ae", @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21664, @port=49900>]
+I, [2011-04-11 15:44:35 #21664]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:44:35 #21664]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 15:44:35 #21664]  INFO -- :   Arguments: {}
+I, [2011-04-11 15:44:35 #21664]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 15:44:35 #21664]  INFO -- :   Arguments: {:env=>:test, :name=>:rubytest}
+I, [2011-04-11 15:44:35 #21664]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49900-test
+D, [2011-04-11 15:44:35 #21664] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb704ced4 @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901>
+D, [2011-04-11 15:44:35 #21664] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb704ce48 @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901>
+D, [2011-04-11 15:44:35 #21664] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb704c6a0 @lock=nil, @host="lucius.osburn-sharp.ath.cx", @name=:rubytest, @stop_callback=nil, @key="aaf4c847c8", @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21664, @port=49900>, #<Jerbil::Service:0xb704c538 @lock=nil, @host="lucius.osburn-sharp.ath.cx", @name=:rubytest, @stop_callback=nil, @key="306bf998ae", @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=21664, @port=49900>]
+I, [2011-04-11 15:44:35 #21664]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:44:35 #21664]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 15:44:35 #21664] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:44:35 #21117]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 15:44:35 #21664]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 15:44:35 #21117]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 15:44:35 #21117]  INFO -- :   Arguments: {:name=>:numbat}
+I, [2011-04-11 15:44:35 #21117]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49960-dev
+I, [2011-04-11 15:44:35 #21664]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 15:44:35 #21664] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:44:35 #21117]  INFO -- : Deleted Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 15:44:35 #21664]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 15:44:35 #21117]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 15:44:35 #21117]  INFO -- :   Arguments: {}
+I, [2011-04-11 15:44:35 #21117]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:44:35 #21117] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:44:35 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:44:35 #21117] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:44:35 #21117]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:44:35 #21117] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:44:35 #21117]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:44:35 #21117] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:45:31 #21117]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-11 15:45:36 #21685] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb74046bc @port=49901, @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 15:45:36 #21685] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7404630 @port=49901, @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx">
+I, [2011-04-11 15:45:36 #21685]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-11 15:45:36 #21685] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb740461c @port=49901, @active=false, @key="JKLMNOP", @fqdn="antonia">
+I, [2011-04-11 15:45:36 #21685]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-11 15:45:36 #21685] DEBUG -- : Got remote services: []
+I, [2011-04-11 15:45:36 #21685]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:45:40 #21685]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:45:40 #21685] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:45:40 #21685]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:45:40 #21685] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 15:45:40 #21685]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:45:40 #21685] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:45:40 #21685]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:45:40 #21685] DEBUG -- : Registering remote. Connected to antonia
+D, [2011-04-11 15:45:40 #21687] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb70b7e14 @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901>
+D, [2011-04-11 15:45:40 #21687] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb70b7d88 @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901>
+D, [2011-04-11 15:45:40 #21687] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb70b5074 @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901>
+D, [2011-04-11 15:45:40 #21687] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb70b4fe8 @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901>
+I, [2011-04-11 15:45:40 #21685]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:45:40 #21685] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:45:40 #21685]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:45:40 #21685] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:45:40 #21685]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:45:40 #21685] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:45:40 #21685]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:45:40 #21685] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:47:18 #21685]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:47:18 #21685] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:47:18 #21685]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:47:18 #21685] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 15:47:18 #21685]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:47:18 #21685] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:47:18 #21685]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:47:18 #21685] DEBUG -- : Registering remote. Connected to antonia
+D, [2011-04-11 15:47:18 #21710] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb70a1fc4 @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901>
+D, [2011-04-11 15:47:18 #21710] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb70a1f38 @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901>
+D, [2011-04-11 15:47:18 #21710] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb709f224 @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901>
+D, [2011-04-11 15:47:18 #21710] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb709f198 @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901>
+I, [2011-04-11 15:47:18 #21685]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:47:18 #21685] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:47:18 #21685]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:47:18 #21685] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:47:18 #21685]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:47:18 #21685] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:47:18 #21685]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:47:18 #21685] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:48:50 #21685]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-11 15:48:53 #21736] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb74426b0 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 15:48:53 #21736] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7442624 @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+I, [2011-04-11 15:48:53 #21736]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-11 15:48:53 #21736] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7442610 @key="JKLMNOP", @fqdn="antonia", @port=49901, @active=false>
+I, [2011-04-11 15:48:53 #21736]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-11 15:48:53 #21736] DEBUG -- : Got remote services: []
+I, [2011-04-11 15:48:53 #21736]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:49:00 #21736]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:49:00 #21736] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:49:00 #21736]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:49:00 #21736] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 15:49:00 #21736]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:49:00 #21736] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:49:00 #21736]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:49:00 #21736] DEBUG -- : Registering remote. Connected to antonia
+D, [2011-04-11 15:49:00 #21740] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb7008054 @port=49901, @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 15:49:00 #21740] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7007fc8 @port=49901, @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 15:49:00 #21740] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb7007820 @address="lucius.osburn-sharp.ath.cx:49900", @pid=21740, @port=49900, @name=:rubytest, @lock=nil, @host="lucius.osburn-sharp.ath.cx", @stop_callback=nil, @key="1df1606c5e", @verify_callback=:verify_callback, @env=:test>, #<Jerbil::Service:0xb70076b8 @address="lucius.osburn-sharp.ath.cx:49900", @pid=21740, @port=49900, @name=:rubytest, @lock=nil, @host="lucius.osburn-sharp.ath.cx", @stop_callback=nil, @key="134c62ac55", @verify_callback=:verify_callback, @env=:prod>]
+I, [2011-04-11 15:49:00 #21740]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:49:00 #21740]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 15:49:00 #21740]  INFO -- :   Arguments: {}
+I, [2011-04-11 15:49:00 #21740]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 15:49:00 #21740]  INFO -- :   Arguments: {:env=>:test, :name=>:rubytest}
+I, [2011-04-11 15:49:00 #21740]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49900-test
+D, [2011-04-11 15:49:00 #21740] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb7006114 @port=49901, @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 15:49:00 #21740] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7006088 @port=49901, @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 15:49:00 #21740] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb70058e0 @address="lucius.osburn-sharp.ath.cx:49900", @pid=21740, @port=49900, @name=:rubytest, @lock=nil, @host="lucius.osburn-sharp.ath.cx", @stop_callback=nil, @key="1df1606c5e", @verify_callback=:verify_callback, @env=:test>, #<Jerbil::Service:0xb7005778 @address="lucius.osburn-sharp.ath.cx:49900", @pid=21740, @port=49900, @name=:rubytest, @lock=nil, @host="lucius.osburn-sharp.ath.cx", @stop_callback=nil, @key="134c62ac55", @verify_callback=:verify_callback, @env=:prod>]
+I, [2011-04-11 15:49:00 #21740]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 15:49:00 #21740]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 15:49:00 #21740] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:49:00 #21736]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 15:49:00 #21740]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 15:49:00 #21736]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 15:49:00 #21736]  INFO -- :   Arguments: {:name=>:numbat}
+I, [2011-04-11 15:49:00 #21736]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49960-dev
+I, [2011-04-11 15:49:00 #21740]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 15:49:00 #21740] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:49:00 #21736]  INFO -- : Deleted Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 15:49:00 #21740]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 15:49:00 #21736]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 15:49:00 #21736]  INFO -- :   Arguments: {}
+I, [2011-04-11 15:49:00 #21736]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 15:49:00 #21736] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:49:00 #21736]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:49:00 #21736] DEBUG -- : Connected to antonia
+I, [2011-04-11 15:49:00 #21736]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 15:49:00 #21736] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 15:49:00 #21736]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 15:49:00 #21736] DEBUG -- : Connected to antonia
+I, [2011-04-11 22:13:44 #21736]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-11 22:13:48 #27063] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb741c80c @port=49901, @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 22:13:48 #27063] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb741c780 @port=49901, @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx">
+I, [2011-04-11 22:13:48 #27063]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-11 22:13:48 #27063] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb741c76c @port=49901, @active=false, @key="JKLMNOP", @fqdn="antonia">
+I, [2011-04-11 22:13:48 #27063]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-11 22:13:48 #27063] DEBUG -- : Got remote services: []
+I, [2011-04-11 22:13:48 #27063]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 22:18:56 #27063]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-11 22:18:59 #27150] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb7490414 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+D, [2011-04-11 22:18:59 #27150] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7490388 @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @active=false>
+I, [2011-04-11 22:18:59 #27150]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-11 22:18:59 #27150] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7490374 @key="JKLMNOP", @fqdn="antonia", @port=49901, @active=false>
+I, [2011-04-11 22:18:59 #27150]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-11 22:18:59 #27150] DEBUG -- : Got remote services: []
+I, [2011-04-11 22:18:59 #27150]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 22:19:14 #27150]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 22:19:14 #27150] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:19:14 #27150]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:19:14 #27150] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 22:19:14 #27150]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 22:19:14 #27150] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:19:14 #27150]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:19:14 #27150] DEBUG -- : Registering remote. Connected to antonia
+D, [2011-04-11 22:19:14 #27157] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb70e5d28 @port=49901, @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 22:19:14 #27157] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb70e5c9c @port=49901, @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 22:19:14 #27157] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb70e54f4 @pid=27157, @port=49900, @name=:rubytest, @lock=nil, @host="lucius.osburn-sharp.ath.cx", @stop_callback=nil, @key="216170f4ad", @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900">, #<Jerbil::Service:0xb70e538c @pid=27157, @port=49900, @name=:rubytest, @lock=nil, @host="lucius.osburn-sharp.ath.cx", @stop_callback=nil, @key="ac611afb5f", @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900">]
+I, [2011-04-11 22:19:14 #27157]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 22:19:14 #27157]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 22:19:14 #27157]  INFO -- :   Arguments: {}
+I, [2011-04-11 22:19:14 #27157]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 22:19:14 #27157]  INFO -- :   Arguments: {:env=>:test, :name=>:rubytest}
+I, [2011-04-11 22:19:14 #27157]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49900-test
+D, [2011-04-11 22:19:14 #27157] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb70e3dd4 @port=49901, @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 22:19:14 #27157] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb70e3d48 @port=49901, @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 22:19:14 #27157] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb70e35a0 @pid=27157, @port=49900, @name=:rubytest, @lock=nil, @host="lucius.osburn-sharp.ath.cx", @stop_callback=nil, @key="216170f4ad", @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900">, #<Jerbil::Service:0xb70e3438 @pid=27157, @port=49900, @name=:rubytest, @lock=nil, @host="lucius.osburn-sharp.ath.cx", @stop_callback=nil, @key="ac611afb5f", @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900">]
+I, [2011-04-11 22:19:14 #27157]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 22:19:14 #27157]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 22:19:14 #27157] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:19:14 #27150]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 22:19:14 #27157]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 22:19:14 #27150]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 22:19:14 #27150]  INFO -- :   Arguments: {:name=>:numbat}
+I, [2011-04-11 22:19:14 #27150]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49960-dev
+I, [2011-04-11 22:19:14 #27157]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 22:19:14 #27157] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:19:14 #27150]  INFO -- : Deleted Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 22:19:14 #27157]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 22:19:14 #27150]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 22:19:14 #27150]  INFO -- :   Arguments: {}
+I, [2011-04-11 22:19:14 #27150]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 22:19:14 #27150] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:19:14 #27150]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:19:14 #27150] DEBUG -- : Connected to antonia
+I, [2011-04-11 22:19:14 #27150]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 22:19:14 #27150] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:19:14 #27150]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:19:14 #27150] DEBUG -- : Connected to antonia
+I, [2011-04-11 22:19:19 #27150]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 22:19:19 #27150] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:19:19 #27150]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:19:19 #27150] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 22:19:19 #27150]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 22:19:19 #27150] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:19:19 #27150]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:19:19 #27150] DEBUG -- : Registering remote. Connected to antonia
+D, [2011-04-11 22:19:19 #27161] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb70a7dac @port=49901, @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 22:19:19 #27161] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb70a7d20 @port=49901, @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 22:19:19 #27161] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb70a7578 @pid=27161, @port=49900, @name=:rubytest, @lock=nil, @host="lucius.osburn-sharp.ath.cx", @stop_callback=nil, @key="8504f4f826", @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900">, #<Jerbil::Service:0xb70a7410 @pid=27161, @port=49900, @name=:rubytest, @lock=nil, @host="lucius.osburn-sharp.ath.cx", @stop_callback=nil, @key="6f6e477685", @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900">]
+I, [2011-04-11 22:19:19 #27161]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 22:19:19 #27161]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 22:19:19 #27161]  INFO -- :   Arguments: {}
+I, [2011-04-11 22:19:19 #27161]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 22:19:19 #27161]  INFO -- :   Arguments: {:env=>:test, :name=>:rubytest}
+I, [2011-04-11 22:19:19 #27161]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49900-test
+D, [2011-04-11 22:19:19 #27161] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb70a5e58 @port=49901, @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 22:19:19 #27161] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb70a5dcc @port=49901, @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 22:19:19 #27161] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb70a5624 @pid=27161, @port=49900, @name=:rubytest, @lock=nil, @host="lucius.osburn-sharp.ath.cx", @stop_callback=nil, @key="8504f4f826", @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900">, #<Jerbil::Service:0xb70a54bc @pid=27161, @port=49900, @name=:rubytest, @lock=nil, @host="lucius.osburn-sharp.ath.cx", @stop_callback=nil, @key="6f6e477685", @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900">]
+I, [2011-04-11 22:19:19 #27161]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 22:19:19 #27161]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 22:19:19 #27161] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:19:19 #27150]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 22:19:19 #27161]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 22:19:19 #27150]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 22:19:19 #27150]  INFO -- :   Arguments: {:name=>:numbat}
+I, [2011-04-11 22:19:19 #27150]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49960-dev
+I, [2011-04-11 22:19:19 #27161]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 22:19:19 #27161] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:19:19 #27150]  INFO -- : Deleted Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 22:19:19 #27161]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 22:19:19 #27150]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 22:19:19 #27150]  INFO -- :   Arguments: {}
+I, [2011-04-11 22:19:19 #27150]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 22:19:19 #27150] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:19:19 #27150]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:19:19 #27150] DEBUG -- : Connected to antonia
+I, [2011-04-11 22:19:19 #27150]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 22:19:19 #27150] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:19:19 #27150]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:19:19 #27150] DEBUG -- : Connected to antonia
+I, [2011-04-11 22:24:47 #27150]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-11 22:24:49 #27253] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb742c298 @port=49901, @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 22:24:49 #27253] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb742c20c @port=49901, @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx">
+I, [2011-04-11 22:24:49 #27253]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-11 22:24:49 #27253] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb742c1f8 @port=49901, @active=false, @key="JKLMNOP", @fqdn="antonia">
+I, [2011-04-11 22:24:49 #27253]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-11 22:24:49 #27253] DEBUG -- : Got remote services: []
+I, [2011-04-11 22:24:49 #27253]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 22:25:06 #27253]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 22:25:06 #27253] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:25:06 #27253]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:25:06 #27253] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 22:25:06 #27253]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 22:25:06 #27253] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:25:06 #27253]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:25:06 #27253] DEBUG -- : Registering remote. Connected to antonia
+D, [2011-04-11 22:25:06 #27259] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb70999dc @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901>
+D, [2011-04-11 22:25:06 #27259] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7099950 @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901>
+D, [2011-04-11 22:25:06 #27259] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb70991a8 @host="lucius.osburn-sharp.ath.cx", @name=:rubytest, @stop_callback=nil, @key="881380dda3", @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=27259, @port=49900, @lock=nil>, #<Jerbil::Service:0xb7099040 @host="lucius.osburn-sharp.ath.cx", @name=:rubytest, @stop_callback=nil, @key="fae0378671", @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=27259, @port=49900, @lock=nil>]
+I, [2011-04-11 22:25:06 #27259]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 22:25:06 #27259]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 22:25:06 #27259]  INFO -- :   Arguments: {}
+I, [2011-04-11 22:25:06 #27259]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 22:25:06 #27259]  INFO -- :   Arguments: {:env=>:test, :name=>:rubytest}
+I, [2011-04-11 22:25:06 #27259]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49900-test
+D, [2011-04-11 22:25:06 #27259] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb7097a88 @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901>
+D, [2011-04-11 22:25:06 #27259] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb70979fc @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49901>
+D, [2011-04-11 22:25:06 #27259] DEBUG -- : Got remote services: [#<Jerbil::Service:0xb7097254 @host="lucius.osburn-sharp.ath.cx", @name=:rubytest, @stop_callback=nil, @key="881380dda3", @verify_callback=:verify_callback, @env=:test, @address="lucius.osburn-sharp.ath.cx:49900", @pid=27259, @port=49900, @lock=nil>, #<Jerbil::Service:0xb70970ec @host="lucius.osburn-sharp.ath.cx", @name=:rubytest, @stop_callback=nil, @key="fae0378671", @verify_callback=:verify_callback, @env=:prod, @address="lucius.osburn-sharp.ath.cx:49900", @pid=27259, @port=49900, @lock=nil>]
+I, [2011-04-11 22:25:06 #27259]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 22:25:06 #27259]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 22:25:06 #27259] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:25:06 #27253]  INFO -- : Registered Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 22:25:06 #27259]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 22:25:06 #27253]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-11 22:25:06 #27253]  INFO -- :   Arguments: {:name=>:numbat}
+I, [2011-04-11 22:25:06 #27253]  INFO -- : Get returned service: lucius.osburn-sharp.ath.cx:49960-dev
+I, [2011-04-11 22:25:06 #27259]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+D, [2011-04-11 22:25:06 #27259] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:25:06 #27253]  INFO -- : Deleted Remote Service: lucius.osburn-sharp.ath.cx:49960 for env: dev
+I, [2011-04-11 22:25:06 #27259]  INFO -- : Registered Service on remote server: numbat
+I, [2011-04-11 22:25:06 #27253]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 22:25:06 #27253]  INFO -- :   Arguments: {}
+I, [2011-04-11 22:25:06 #27253]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 22:25:06 #27253] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:25:06 #27253]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:25:06 #27253] DEBUG -- : Connected to antonia
+I, [2011-04-11 22:25:06 #27253]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 22:25:06 #27253] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:25:06 #27253]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:25:06 #27253] DEBUG -- : Connected to antonia
+I, [2011-04-11 22:27:23 #27253]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 22:27:23 #27253] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:27:23 #27253]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:27:23 #27253] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 22:27:23 #27253]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 22:27:23 #27253] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:27:23 #27253]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:27:23 #27253] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 22:35:34 #27253]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-11 22:35:44 #27459] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb7426e9c @key="ABCDE", @active=false, @port=49901, @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 22:35:44 #27459] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7426e10 @key="DEVELOPMENT", @active=false, @port=49901, @fqdn="lucius.osburn-sharp.ath.cx">
+I, [2011-04-11 22:35:44 #27459]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-11 22:35:44 #27459] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7426dfc @key="JKLMNOP", @active=false, @port=49901, @fqdn="antonia">
+I, [2011-04-11 22:35:44 #27459]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-11 22:35:44 #27459] DEBUG -- : Got remote services: []
+I, [2011-04-11 22:35:44 #27459]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 22:35:49 #27459]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 22:35:49 #27459] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:35:49 #27459]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:35:49 #27459] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 22:35:49 #27459]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 22:35:49 #27459] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:35:49 #27459]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:35:49 #27459] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 22:36:40 #27459]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-11 22:36:42 #27489] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb744bdc8 @key="ABCDE", @active=false, @port=49901, @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 22:36:42 #27489] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb744bd3c @key="DEVELOPMENT", @active=false, @port=49901, @fqdn="lucius.osburn-sharp.ath.cx">
+I, [2011-04-11 22:36:42 #27489]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-11 22:36:42 #27489] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb744bd28 @key="JKLMNOP", @active=false, @port=49901, @fqdn="antonia">
+I, [2011-04-11 22:36:42 #27489]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-11 22:36:42 #27489] DEBUG -- : Got remote services: []
+I, [2011-04-11 22:36:42 #27489]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 22:36:50 #27489]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 22:36:50 #27489] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:36:50 #27489]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:36:50 #27489] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 22:36:50 #27489]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 22:36:50 #27489] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:36:50 #27489]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:36:50 #27489] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 22:37:46 #27489]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-11 22:37:49 #27520] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb747cdd8 @key="ABCDE", @active=false, @port=49901, @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-11 22:37:49 #27520] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb747cd4c @key="DEVELOPMENT", @active=false, @port=49901, @fqdn="lucius.osburn-sharp.ath.cx">
+I, [2011-04-11 22:37:49 #27520]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-11 22:37:49 #27520] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb747cd38 @key="JKLMNOP", @active=false, @port=49901, @fqdn="antonia">
+I, [2011-04-11 22:37:49 #27520]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-11 22:37:49 #27520] DEBUG -- : Got remote services: []
+I, [2011-04-11 22:37:49 #27520]  INFO -- : Started up the Jerbil Server
+I, [2011-04-11 22:38:01 #27520]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-11 22:38:01 #27520]  INFO -- :   Arguments: {}
+I, [2011-04-11 22:38:06 #27520]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-11 22:38:06 #27520] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:38:06 #27520]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:38:06 #27520] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 22:38:06 #27520]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-11 22:38:06 #27520] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-11 22:38:06 #27520]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-11 22:38:06 #27520] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-11 22:38:09 #27520]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 22:38:09 #27520]  INFO -- :   Arguments: {}
+I, [2011-04-11 22:38:13 #27520]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 22:38:13 #27520]  INFO -- :   Arguments: {}
+I, [2011-04-11 22:38:14 #27520]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 22:38:14 #27520]  INFO -- :   Arguments: {}
+I, [2011-04-11 22:40:13 #27520]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 22:40:13 #27520]  INFO -- :   Arguments: {}
+I, [2011-04-11 22:40:36 #27520]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-11 22:40:36 #27520]  INFO -- :   Arguments: {}
+D, [2011-04-12 07:25:51 #2024] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb73d72c0 @port=49901, @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-12 07:25:51 #2024] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb73d7234 @port=49901, @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx">
+I, [2011-04-12 07:25:51 #2024]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-12 07:25:51 #2024] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb73d7220 @port=49901, @active=false, @key="JKLMNOP", @fqdn="antonia">
+I, [2011-04-12 07:25:51 #2024]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-12 07:25:51 #2024] DEBUG -- : Got remote services: []
+I, [2011-04-12 07:25:51 #2024]  INFO -- : Started up the Jerbil Server
+I, [2011-04-12 07:27:25 #2024]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-12 07:27:25 #2024]  INFO -- :   Arguments: {}
+I, [2011-04-12 07:28:44 #2024]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-12 07:28:44 #2024] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-12 07:28:44 #2024]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-12 07:28:44 #2024] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-12 07:28:44 #2024]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-12 07:28:44 #2024] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-12 07:28:44 #2024]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-12 07:28:44 #2024] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-12 07:29:02 #2024]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-12 07:29:02 #2024]  INFO -- :   Arguments: {}
+I, [2011-04-12 07:29:46 #2024]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-12 07:29:46 #2024]  INFO -- :   Arguments: {}
+I, [2011-04-12 07:31:27 #2024]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-12 07:31:31 #2338] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb73db078 @port=49901, @active=false, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+D, [2011-04-12 07:31:31 #2338] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb73dafec @port=49901, @active=false, @key="DEVELOPMENT", @fqdn="lucius.osburn-sharp.ath.cx">
+I, [2011-04-12 07:31:31 #2338]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-12 07:31:31 #2338] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb73dafd8 @port=49901, @active=false, @key="JKLMNOP", @fqdn="antonia">
+I, [2011-04-12 07:31:31 #2338]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-12 07:31:31 #2338] DEBUG -- : Got remote services: []
+I, [2011-04-12 07:31:31 #2338]  INFO -- : Started up the Jerbil Server
+I, [2011-04-12 07:31:47 #2338]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-12 07:31:47 #2338] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-12 07:31:47 #2338]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-12 07:31:47 #2338] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-12 07:31:47 #2338]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-12 07:31:47 #2338] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-12 07:31:47 #2338]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-12 07:31:47 #2338] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-12 07:31:58 #2338]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-12 07:31:58 #2338]  INFO -- :   Arguments: {}
+I, [2011-04-12 07:32:53 #2338]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-12 07:32:56 #2374] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb740b098 @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @key="ABCDE", @active=false>
+D, [2011-04-12 07:32:56 #2374] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb740b00c @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @key="DEVELOPMENT", @active=false>
+I, [2011-04-12 07:32:56 #2374]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-12 07:32:56 #2374] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb740aff8 @fqdn="antonia", @port=49901, @key="JKLMNOP", @active=false>
+I, [2011-04-12 07:32:56 #2374]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-12 07:32:56 #2374] DEBUG -- : Got remote services: []
+I, [2011-04-12 07:32:56 #2374]  INFO -- : Started up the Jerbil Server
+I, [2011-04-12 07:32:59 #2374]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-12 07:32:59 #2374]  INFO -- :   Arguments: {}
+I, [2011-04-12 07:33:05 #2374]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-12 07:33:05 #2374] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-12 07:33:05 #2374]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-12 07:33:05 #2374] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-12 07:33:05 #2374]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-12 07:33:05 #2374] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-12 07:33:05 #2374]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-12 07:33:05 #2374] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-12 07:33:15 #2374]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-12 07:33:15 #2374]  INFO -- :   Arguments: {}
+I, [2011-04-12 07:35:01 #2374]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-12 07:35:01 #2374]  INFO -- :   Arguments: {}
+I, [2011-04-12 07:35:05 #2374]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-12 07:35:05 #2374]  INFO -- :   Arguments: {}
+I, [2011-04-12 07:55:30 #2374]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-12 08:04:30 #2885] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb7164cb8 @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @key="ABCDE", @active=false>
+D, [2011-04-12 08:04:30 #2885] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7164c2c @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @key="DEVELOPMENT", @active=false>
+I, [2011-04-12 08:04:30 #2885]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-12 08:04:30 #2885] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7164c18 @fqdn="antonia", @port=49901, @key="JKLMNOP", @active=false>
+I, [2011-04-12 08:04:30 #2885]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-12 08:04:30 #2885] DEBUG -- : Got remote services: []
+I, [2011-04-12 08:04:30 #2885]  INFO -- : Started up the Jerbil Server
+I, [2011-04-12 08:04:39 #2885]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-12 08:04:48 #2894] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb71b6964 @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @key="ABCDE", @active=false>
+D, [2011-04-12 08:04:48 #2894] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb71b68d8 @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @key="DEVELOPMENT", @active=false>
+I, [2011-04-12 08:04:48 #2894]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-12 08:04:48 #2894] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb71b68c4 @fqdn="antonia", @port=49901, @key="JKLMNOP", @active=false>
+I, [2011-04-12 08:04:48 #2894]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-12 08:04:48 #2894] DEBUG -- : Got remote services: []
+I, [2011-04-12 08:04:48 #2894]  INFO -- : Started up the Jerbil Server
+I, [2011-04-12 08:18:30 #2894]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-12 08:53:59 #3556] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb71a3f44 @active=false, @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @key="ABCDE">
+D, [2011-04-12 08:53:59 #3556] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb71a3eb8 @active=false, @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @key="DEVELOPMENT">
+I, [2011-04-12 08:53:59 #3556]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-12 08:53:59 #3556] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb71a3ea4 @active=false, @fqdn="antonia", @port=49901, @key="JKLMNOP">
+I, [2011-04-12 08:53:59 #3556]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-12 08:53:59 #3556] DEBUG -- : Got remote services: []
+I, [2011-04-12 08:53:59 #3556]  INFO -- : Started up the Jerbil Server
+I, [2011-04-12 08:54:40 #3556]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-12 08:55:25 #3578] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb71f0894 @active=false, @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @key="ABCDE">
+D, [2011-04-12 08:55:25 #3578] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb71f07cc @active=false, @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @key="DEVELOPMENT">
+I, [2011-04-12 08:55:25 #3578]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-12 08:55:25 #3578] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb71f07b8 @active=false, @fqdn="antonia", @port=49901, @key="JKLMNOP">
+I, [2011-04-12 08:55:25 #3578]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-12 08:55:25 #3578] DEBUG -- : Got remote services: []
+I, [2011-04-12 08:55:25 #3578]  INFO -- : Started up the Jerbil Server
+I, [2011-04-12 08:55:53 #3578]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-12 08:55:57 #3590] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb71d1ee4 @active=false, @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @key="ABCDE">
+D, [2011-04-12 08:55:57 #3590] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb71d1e44 @active=false, @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @key="DEVELOPMENT">
+I, [2011-04-12 08:55:57 #3590]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-12 08:55:57 #3590] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb71d1e30 @active=false, @fqdn="antonia", @port=49901, @key="JKLMNOP">
+I, [2011-04-12 08:55:57 #3590]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-12 08:55:57 #3590] DEBUG -- : Got remote services: []
+I, [2011-04-12 08:55:57 #3590]  INFO -- : Started up the Jerbil Server
+I, [2011-04-12 11:07:55 #3590]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-12 11:12:37 #5786] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb71c2ee4 @active=false, @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @key="ABCDE">
+D, [2011-04-12 11:12:37 #5786] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb71c2e44 @active=false, @fqdn="lucius.osburn-sharp.ath.cx", @port=49901, @key="DEVELOPMENT">
+I, [2011-04-12 11:12:37 #5786]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-12 11:12:37 #5786] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb71c2e30 @active=false, @fqdn="antonia", @port=49901, @key="JKLMNOP">
+I, [2011-04-12 11:12:37 #5786]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-12 11:12:37 #5786] DEBUG -- : Got remote services: []
+I, [2011-04-12 11:12:37 #5786]  INFO -- : Started up the Jerbil Server
+I, [2011-04-12 11:12:55 #5786]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-12 11:12:55 #5786]  INFO -- :   Arguments: {}
+I, [2011-04-12 11:13:01 #5786]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-12 11:13:01 #5786] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-12 11:13:01 #5786]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-12 11:13:01 #5786] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-12 11:13:01 #5786]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-12 11:13:01 #5786] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-12 11:13:01 #5786]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-12 11:13:01 #5786] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-12 11:13:05 #5786]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-12 11:13:05 #5786]  INFO -- :   Arguments: {}
