@@ -80,7 +80,7 @@ puts options.inspect if verbose
 
 if daemonize then
   puts "Daemonizing now" if verbose
-  Daemons.demonize
+  Daemons.daemonize
 else
   puts "Running in the foreground" if verbose
 end

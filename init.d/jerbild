@@ -15,7 +15,7 @@ start() {
     [ -n "${CONF_FILE}" ] && myopts="${myopts} -c ${CONF_FILE}"
     [ "${VERBOSE}" == "true" ] && [ "${QUIET}" != "true" ] && myopts="${myopts} -V"
 
-    /bin/su -m -c "/usr/local/sbin/jerbild ${myopts}" - robert
+    /bin/su -m -c "/usr/local/sbin/jerbild ${myopts}" - jermine
 
   eend $?
 }

@@ -1,3 +1,3 @@
-NO_DAEMON=true
-CONF_FILE=/home/robert/dev/projects/jerbil/test/conf.d/jerbil
+#NO_DAEMON=true
+CONF_FILE=/etc/jermine/jerbil.conf
 VERBOSE=true
