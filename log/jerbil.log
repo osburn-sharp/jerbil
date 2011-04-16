@@ -1159,3 +1159,238 @@ I, [2011-04-12 11:13:01 #5786]  INFO -- : Registered Service on remote server: r
 D, [2011-04-12 11:13:01 #5786] DEBUG -- : Registering remote. Connected to antonia
 I, [2011-04-12 11:13:05 #5786]  INFO -- : Searching for services. Found 2 matching.
 I, [2011-04-12 11:13:05 #5786]  INFO -- :   Arguments: {}
+D, [2011-04-15 07:55:50 #15709] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb71cf11c @port=49901, @active=false, @fqdn="lucius.osburn-sharp.ath.cx", @key="ABCDE">
+D, [2011-04-15 07:55:50 #15709] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb71cf040 @port=49901, @active=false, @fqdn="lucius.osburn-sharp.ath.cx", @key="DEVELOPMENT">
+I, [2011-04-15 07:55:50 #15709]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-15 07:55:50 #15709] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb71cf02c @port=49901, @active=false, @fqdn="antonia", @key="JKLMNOP">
+I, [2011-04-15 07:55:50 #15709]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-15 07:55:50 #15709] DEBUG -- : Got remote services: []
+I, [2011-04-15 07:55:50 #15709]  INFO -- : Started up the Jerbil Server
+I, [2011-04-15 07:56:54 #15709]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 07:56:54 #15709] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 07:56:54 #15709]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 07:56:54 #15709] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-15 07:57:34 #15709]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 07:57:34 #15709]  INFO -- :   Arguments: {}
+I, [2011-04-15 07:57:59 #15709]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 07:57:59 #15709]  INFO -- :   Arguments: {}
+I, [2011-04-15 08:08:35 #15709]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 08:08:35 #15709]  INFO -- :   Arguments: {}
+W, [2011-04-15 08:11:57 #15709]  WARN -- : Service: lucius.osburn-sharp.ath.cx:49900-test already registered
+W, [2011-04-15 08:12:57 #15709]  WARN -- : Service: lucius.osburn-sharp.ath.cx:49900-test already registered
+I, [2011-04-15 08:41:59 #15709]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 08:41:59 #15709]  INFO -- :   Arguments: {}
+I, [2011-04-15 08:42:29 #15709]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-15 08:42:43 #16364] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb719bbc8 @port=49901, @active=false, @fqdn="lucius.osburn-sharp.ath.cx", @key="ABCDE">
+D, [2011-04-15 08:42:43 #16364] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb719bb00 @port=49901, @active=false, @fqdn="lucius.osburn-sharp.ath.cx", @key="DEVELOPMENT">
+I, [2011-04-15 08:42:43 #16364]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-15 08:42:43 #16364] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb719bad8 @port=49901, @active=false, @fqdn="antonia", @key="JKLMNOP">
+I, [2011-04-15 08:42:43 #16364]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-15 08:42:43 #16364] DEBUG -- : Got remote services: []
+I, [2011-04-15 08:42:43 #16364]  INFO -- : Started up the Jerbil Server
+I, [2011-04-15 08:42:49 #16364]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-15 08:42:49 #16364]  INFO -- :   Arguments: {}
+I, [2011-04-15 08:44:49 #16364]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-15 08:44:52 #16399] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb7153c4c @port=49901, @active=false, @fqdn="lucius.osburn-sharp.ath.cx", @key="ABCDE">
+D, [2011-04-15 08:44:52 #16399] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7153bac @port=49901, @active=false, @fqdn="lucius.osburn-sharp.ath.cx", @key="DEVELOPMENT">
+I, [2011-04-15 08:44:52 #16399]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-15 08:44:52 #16399] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb7153b98 @port=49901, @active=false, @fqdn="antonia", @key="JKLMNOP">
+I, [2011-04-15 08:44:52 #16399]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-15 08:44:52 #16399] DEBUG -- : Got remote services: []
+I, [2011-04-15 08:44:52 #16399]  INFO -- : Started up the Jerbil Server
+I, [2011-04-15 08:54:08 #16399]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-15 08:54:08 #16399]  INFO -- :   Arguments: {}
+I, [2011-04-15 08:54:13 #16399]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 08:54:13 #16399] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 08:54:13 #16399]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 08:54:13 #16399] DEBUG -- : Registering remote. Connected to antonia
+W, [2011-04-15 08:54:32 #16399]  WARN -- : Service: lucius.osburn-sharp.ath.cx:49900-test already registered
+I, [2011-04-15 08:54:41 #16399]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 08:54:41 #16399]  INFO -- :   Arguments: {}
+I, [2011-04-15 08:54:48 #16399]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 08:54:48 #16399]  INFO -- :   Arguments: {}
+I, [2011-04-15 08:54:48 #16399]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 08:54:48 #16399]  INFO -- :   Arguments: {:env=>:test, :host=>"lucius.osburn-sharp.ath.cx", :name=>:rubytest, :key=>"3b79e7d38e"}
+I, [2011-04-15 08:54:48 #16399]  INFO -- : Get returned rubytest@lucius.osburn-sharp.ath.cx:49900[test]
+I, [2011-04-15 08:54:48 #16399]  INFO -- : Verification failed for rubytest@lucius.osburn-sharp.ath.cx:49900[test]
+I, [2011-04-15 08:54:48 #16399]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 08:54:48 #16399] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 08:54:48 #16399]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 08:54:48 #16399] DEBUG -- : Connected to antonia
+I, [2011-04-15 08:56:29 #16399]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-15 08:56:29 #16399]  INFO -- :   Arguments: {}
+I, [2011-04-15 08:56:42 #16399]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 08:56:42 #16399] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 08:56:42 #16399]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 08:56:42 #16399] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-15 08:56:52 #16399]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 08:56:52 #16399]  INFO -- :   Arguments: {}
+I, [2011-04-15 08:56:57 #16399]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 08:56:57 #16399]  INFO -- :   Arguments: {}
+I, [2011-04-15 08:56:57 #16399]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 08:56:57 #16399]  INFO -- :   Arguments: {:env=>:test, :host=>"lucius.osburn-sharp.ath.cx", :name=>:rubytest, :key=>"92b2aceded"}
+I, [2011-04-15 08:56:57 #16399]  INFO -- : Get returned rubytest@lucius.osburn-sharp.ath.cx:49900[test]
+I, [2011-04-15 08:56:57 #16399]  INFO -- : Verification failed for rubytest@lucius.osburn-sharp.ath.cx:49900[test]
+I, [2011-04-15 08:56:57 #16399]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 08:56:57 #16399] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 08:56:57 #16399]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 08:56:57 #16399] DEBUG -- : Connected to antonia
+I, [2011-04-15 08:57:00 #16399]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-15 08:57:00 #16399]  INFO -- :   Arguments: {}
+I, [2011-04-15 08:58:55 #16399]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 08:58:55 #16399] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 08:58:55 #16399]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 08:58:55 #16399] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-15 08:59:15 #16399]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 08:59:15 #16399]  INFO -- :   Arguments: {}
+I, [2011-04-15 08:59:40 #16399]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 08:59:40 #16399]  INFO -- :   Arguments: {}
+I, [2011-04-15 08:59:40 #16399]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 08:59:40 #16399]  INFO -- :   Arguments: {:env=>:test, :host=>"lucius.osburn-sharp.ath.cx", :name=>:rubytest, :key=>"e9bb149d2d"}
+I, [2011-04-15 08:59:40 #16399]  INFO -- : Get returned rubytest@lucius.osburn-sharp.ath.cx:49900[test]
+I, [2011-04-15 08:59:40 #16399]  INFO -- : Verification failed for rubytest@lucius.osburn-sharp.ath.cx:49900[test]
+I, [2011-04-15 08:59:40 #16399]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 08:59:40 #16399] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 08:59:40 #16399]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 08:59:40 #16399] DEBUG -- : Connected to antonia
+I, [2011-04-15 09:01:40 #16399]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 09:01:40 #16399] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 09:01:40 #16399]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 09:01:40 #16399] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-15 09:01:46 #16399]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 09:01:46 #16399]  INFO -- :   Arguments: {}
+I, [2011-04-15 09:01:46 #16399]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 09:01:46 #16399]  INFO -- :   Arguments: {:env=>:test, :host=>"lucius.osburn-sharp.ath.cx", :name=>:rubytest, :key=>"13786b5c22"}
+I, [2011-04-15 09:01:46 #16399]  INFO -- : Get returned rubytest@lucius.osburn-sharp.ath.cx:49900[test]
+I, [2011-04-15 09:01:56 #16399]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-15 09:01:59 #16745] DEBUG -- : Registered myself as: #<Jerbil::Server:0xb724bf3c @port=49901, @active=false, @fqdn="lucius.osburn-sharp.ath.cx", @key="ABCDE">
+D, [2011-04-15 09:01:59 #16745] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb724be88 @port=49901, @active=false, @fqdn="lucius.osburn-sharp.ath.cx", @key="DEVELOPMENT">
+I, [2011-04-15 09:01:59 #16745]  INFO -- : Failed to get remote services from server: lucius.osburn-sharp.ath.cx
+D, [2011-04-15 09:01:59 #16745] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::Server:0xb724be74 @port=49901, @active=false, @fqdn="antonia", @key="JKLMNOP">
+I, [2011-04-15 09:01:59 #16745]  INFO -- : Failed to get remote services from server: antonia
+D, [2011-04-15 09:01:59 #16745] DEBUG -- : Got remote services: []
+I, [2011-04-15 09:01:59 #16745]  INFO -- : Started up the Jerbil Server
+I, [2011-04-15 09:02:04 #16745]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-15 09:02:04 #16745]  INFO -- :   Arguments: {}
+I, [2011-04-15 09:02:06 #16745]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 09:02:06 #16745] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 09:02:06 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 09:02:06 #16745] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-15 09:02:10 #16745]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 09:02:10 #16745]  INFO -- :   Arguments: {}
+I, [2011-04-15 09:02:10 #16745]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 09:02:10 #16745]  INFO -- :   Arguments: {:env=>:test, :host=>"lucius.osburn-sharp.ath.cx", :name=>:rubytest, :key=>"53446a4be6"}
+I, [2011-04-15 09:02:10 #16745]  INFO -- : Get returned rubytest@lucius.osburn-sharp.ath.cx:49900[test]
+I, [2011-04-15 09:02:26 #16745]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 09:02:26 #16745]  INFO -- :   Arguments: {}
+I, [2011-04-15 09:02:26 #16745]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 09:02:26 #16745]  INFO -- :   Arguments: {:env=>:test, :host=>"lucius.osburn-sharp.ath.cx", :name=>:rubytest, :key=>"53446a4be6"}
+I, [2011-04-15 09:02:26 #16745]  INFO -- : Get returned rubytest@lucius.osburn-sharp.ath.cx:49900[test]
+I, [2011-04-15 09:02:45 #16745]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 09:02:45 #16745]  INFO -- :   Arguments: {}
+I, [2011-04-15 09:02:45 #16745]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 09:02:45 #16745]  INFO -- :   Arguments: {:env=>:test, :host=>"lucius.osburn-sharp.ath.cx", :name=>:rubytest, :key=>"53446a4be6"}
+I, [2011-04-15 09:02:45 #16745]  INFO -- : Get returned rubytest@lucius.osburn-sharp.ath.cx:49900[test]
+I, [2011-04-15 09:58:01 #16745]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 09:58:01 #16745]  INFO -- :   Arguments: {}
+I, [2011-04-15 09:58:01 #16745]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 09:58:01 #16745]  INFO -- :   Arguments: {:env=>:test, :host=>"lucius.osburn-sharp.ath.cx", :name=>:rubytest, :key=>"53446a4be6"}
+I, [2011-04-15 09:58:01 #16745]  INFO -- : Get returned rubytest@lucius.osburn-sharp.ath.cx:49900[test]
+W, [2011-04-15 09:59:20 #16745]  WARN -- : Service: lucius.osburn-sharp.ath.cx:49900-test already registered
+I, [2011-04-15 09:59:35 #16745]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 09:59:35 #16745]  INFO -- :   Arguments: {}
+I, [2011-04-15 09:59:35 #16745]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 09:59:35 #16745]  INFO -- :   Arguments: {:env=>:test, :host=>"lucius.osburn-sharp.ath.cx", :name=>:rubytest, :key=>"53446a4be6"}
+I, [2011-04-15 09:59:35 #16745]  INFO -- : Get returned rubytest@lucius.osburn-sharp.ath.cx:49900[test]
+I, [2011-04-15 10:00:29 #16745]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 10:00:29 #16745]  INFO -- :   Arguments: {}
+I, [2011-04-15 10:00:29 #16745]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-15 10:00:29 #16745]  INFO -- :   Arguments: {:env=>:test, :host=>"lucius.osburn-sharp.ath.cx", :name=>:rubytest, :key=>"53446a4be6"}
+I, [2011-04-15 10:00:29 #16745]  INFO -- : Get returned rubytest@lucius.osburn-sharp.ath.cx:49900[test]
+I, [2011-04-15 10:00:29 #16745]  INFO -- : Verification failed for rubytest@lucius.osburn-sharp.ath.cx:49900[test]
+I, [2011-04-15 10:00:29 #16745]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 10:00:29 #16745] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 10:00:29 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 10:00:29 #16745] DEBUG -- : Connected to antonia
+I, [2011-04-15 10:00:36 #16745]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-15 10:00:36 #16745]  INFO -- :   Arguments: {}
+I, [2011-04-15 10:03:23 #16745]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 10:03:23 #16745] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 10:03:23 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 10:03:23 #16745] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-15 10:03:23 #16745]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 10:03:23 #16745] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 10:03:23 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 10:03:23 #16745] DEBUG -- : Connected to antonia
+I, [2011-04-15 10:09:04 #16745]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 10:09:04 #16745] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 10:09:04 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 10:09:04 #16745] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-15 10:09:04 #16745]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 10:09:04 #16745] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 10:09:04 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 10:09:04 #16745] DEBUG -- : Connected to antonia
+I, [2011-04-15 10:10:12 #16745]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 10:10:12 #16745] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 10:10:12 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 10:10:12 #16745] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-15 10:10:12 #16745]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 10:10:12 #16745] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 10:10:12 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 10:10:12 #16745] DEBUG -- : Connected to antonia
+I, [2011-04-15 10:10:17 #16745]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 10:10:17 #16745] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 10:10:17 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 10:10:17 #16745] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-15 10:10:17 #16745]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 10:10:17 #16745] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 10:10:17 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 10:10:17 #16745] DEBUG -- : Connected to antonia
+I, [2011-04-15 10:11:28 #16745]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 10:11:28 #16745] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 10:11:28 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 10:11:28 #16745] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-15 10:11:28 #16745]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 10:11:28 #16745] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 10:11:28 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 10:11:28 #16745] DEBUG -- : Connected to antonia
+I, [2011-04-15 10:23:43 #16745]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 10:23:43 #16745] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 10:23:43 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 10:23:43 #16745] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-15 10:23:43 #16745]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 10:23:43 #16745] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 10:23:43 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 10:23:43 #16745] DEBUG -- : Connected to antonia
+I, [2011-04-15 10:24:06 #16745]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 10:24:06 #16745] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 10:24:06 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 10:24:06 #16745] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-15 10:24:06 #16745]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 10:24:06 #16745] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 10:24:06 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 10:24:06 #16745] DEBUG -- : Connected to antonia
+I, [2011-04-15 12:49:18 #16745]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 12:49:18 #16745] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 12:49:18 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 12:49:18 #16745] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-15 12:49:18 #16745]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 12:49:18 #16745] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 12:49:18 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 12:49:18 #16745] DEBUG -- : Connected to antonia
+I, [2011-04-15 12:52:51 #16745]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 12:52:51 #16745] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 12:52:51 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 12:52:51 #16745] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-15 12:52:51 #16745]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 12:52:51 #16745] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 12:52:51 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 12:52:51 #16745] DEBUG -- : Connected to antonia
+I, [2011-04-15 12:53:20 #16745]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 12:53:20 #16745] DEBUG -- : Registering remote. Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 12:53:20 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 12:53:20 #16745] DEBUG -- : Registering remote. Connected to antonia
+I, [2011-04-15 12:53:20 #16745]  INFO -- : Deleted Service: lucius.osburn-sharp.ath.cx:49900 for env: test
+D, [2011-04-15 12:53:20 #16745] DEBUG -- : Connected to lucius.osburn-sharp.ath.cx
+I, [2011-04-15 12:53:20 #16745]  INFO -- : Registered Service on remote server: rubytest
+D, [2011-04-15 12:53:20 #16745] DEBUG -- : Connected to antonia

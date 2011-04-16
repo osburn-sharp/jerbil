@@ -1,0 +1,55 @@
+I, [2011-04-15 07:56:54 #15726]  INFO -- : Started service on lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-15 07:56:54 #15726] DEBUG -- : Someone called the action method!
+F, [2011-04-15 08:12:57 #15969] FATAL -- : Error with Jerbil Service: Jerbil::ServiceAlreadyRegistered
+I, [2011-04-15 08:54:13 #16530]  INFO -- : Started service on lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-15 08:54:13 #16530] DEBUG -- : Someone called the action method!
+F, [2011-04-15 08:54:32 #16539] FATAL -- : Error with Jerbil Service: Jerbil::ServiceAlreadyRegistered
+I, [2011-04-15 08:56:42 #16572]  INFO -- : Started service on lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-15 08:56:42 #16572] DEBUG -- : Someone called the action method!
+I, [2011-04-15 08:58:55 #16672]  INFO -- : Started service on lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-15 08:58:55 #16672] DEBUG -- : Someone called the action method!
+I, [2011-04-15 09:01:40 #16734]  INFO -- : Started service on lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-15 09:01:40 #16734] DEBUG -- : Someone called the action method!
+I, [2011-04-15 09:02:06 #16750]  INFO -- : Started service on lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-15 09:02:06 #16750] DEBUG -- : Someone called the action method!
+F, [2011-04-15 09:59:20 #17759] FATAL -- : Error with Jerbil Service: Jerbil::ServiceAlreadyRegistered
+I, [2011-04-15 10:03:23 #17848]  INFO -- : Started service on lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-15 10:03:23 #17848] DEBUG -- : Someone called the action method!
+I, [2011-04-15 10:09:04 #17930]  INFO -- : Started service on lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-15 10:09:04 #17930] DEBUG -- : Someone called the action method!
+I, [2011-04-15 10:10:12 #17963]  INFO -- : Started service on lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-15 10:10:12 #17963] DEBUG -- : Someone called the action method!
+I, [2011-04-15 10:10:17 #17965]  INFO -- : Started service on lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-15 10:10:17 #17965] DEBUG -- : Someone called the action method!
+I, [2011-04-15 10:11:28 #17993]  INFO -- : Started service on lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-15 10:11:28 #17993] DEBUG -- : Someone called the action method!
+I, [2011-04-15 10:23:43 #19626]  INFO -- : Started service on lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-15 10:23:43 #19626] DEBUG -- : Someone called the action method!
+I, [2011-04-15 10:24:06 #19636]  INFO -- : Started service on lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-15 10:24:06 #19636] DEBUG -- : Someone called the action method!
+I, [2011-04-15 12:49:18 #21696]  INFO -- : Started service on lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-15 12:49:18 #21696] DEBUG -- : Someone called the action method!
+I, [2011-04-15 12:52:51 #21761]  INFO -- : Started service on lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-15 12:52:51 #21761] DEBUG -- : Someone called the action method!
+I, [2011-04-15 12:53:20 #21771]  INFO -- : Started service on lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-15 12:53:20 #21771] DEBUG -- : Someone called the action method!
+F, [2011-04-16 08:03:10 #3465] FATAL -- : Error reading config file: /home/robert/dev/projects/jerbil/test/conf.d/config.not.there
+F, [2011-04-16 08:04:03 #3481] FATAL -- : Error reading config file: /home/robert/dev/projects/jerbil/test/conf.d/config.not.there
+F, [2011-04-16 08:05:37 #3512] FATAL -- : Error reading config file: /home/robert/dev/projects/jerbil/test/conf.d/config.not.there
+F, [2011-04-16 08:05:37 #3512] FATAL -- : Error reading config file: [what_is_this]: I do not know - Unknown parameter
+F, [2011-04-16 08:09:08 #3593] FATAL -- : Error reading config file: /home/robert/dev/projects/jerbil/test/conf.d/config.not.there
+F, [2011-04-16 08:09:08 #3593] FATAL -- : Error reading config file: [what_is_this]: I do not know - Unknown parameter
+F, [2011-04-16 08:09:42 #3606] FATAL -- : Error reading config file: /home/robert/dev/projects/jerbil/test/conf.d/config.not.there
+F, [2011-04-16 08:09:42 #3606] FATAL -- : Error reading config file: [what_is_this]: I do not know - Unknown parameter
+F, [2011-04-16 08:10:58 #3647] FATAL -- : Error reading config file: /home/robert/dev/projects/jerbil/test/conf.d/config.not.there
+F, [2011-04-16 08:10:58 #3647] FATAL -- : Error reading config file: [what_is_this]: I do not know - Unknown parameter
+F, [2011-04-16 08:11:53 #3664] FATAL -- : Error reading config file: /home/robert/dev/projects/jerbil/test/conf.d/config.not.there
+F, [2011-04-16 08:11:53 #3664] FATAL -- : Error reading config file: [what_is_this]: I do not know - Unknown parameter
+F, [2011-04-16 08:13:04 #3685] FATAL -- : Error reading config file: /home/robert/dev/projects/jerbil/test/conf.d/config.not.there
+F, [2011-04-16 08:13:04 #3685] FATAL -- : Error reading config file: [what_is_this]: I do not know - Unknown parameter
+F, [2011-04-16 08:14:13 #3708] FATAL -- : Error reading config file: /home/robert/dev/projects/jerbil/test/conf.d/config.not.there
+F, [2011-04-16 08:14:13 #3708] FATAL -- : Error reading config file: [what_is_this]: I do not know - Unknown parameter
+F, [2011-04-16 08:14:13 #3708] FATAL -- : Error setting up DRb Server: druby://lucius.osburn-sharp.ath.cx:49901 - #<Errno::ECONNREFUSED: Connection refused - connect(2)>
+F, [2011-04-16 08:15:17 #3722] FATAL -- : Error reading config file: /home/robert/dev/projects/jerbil/test/conf.d/config.not.there
+F, [2011-04-16 08:15:17 #3722] FATAL -- : Error reading config file: [what_is_this]: I do not know - Unknown parameter
+F, [2011-04-16 08:15:17 #3722] FATAL -- : Error setting up DRb Server: druby://lucius.osburn-sharp.ath.cx:49901 - #<Errno::ECONNREFUSED: Connection refused - connect(2)>

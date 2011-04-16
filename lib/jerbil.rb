@@ -166,7 +166,7 @@ class Jerbil
         @logger.debug("Connected to #{rserver.fqdn}")
         begin
           rjerbil.remove_remote(@local.key, service)
-          @logger.verbose("Registered Service on remote server: #{service.name}")
+          @logger.verbose("Removed Service from remote server: #{service.name}")
         rescue DRb::DRbConnError
           # assume it is not working
         end
@@ -186,12 +186,6 @@ class Jerbil
         results << service
       end
     end
-#    @remote_store.each do |service|
-#      if service.matches?(args) then
-#        service.count_access
-#        results << service
-#      end
-#    end
     
     @logger.verbose("Searching for services. Found #{results.length} matching.")
     @logger.verbose("  Arguments: #{args.inspect}")
@@ -204,8 +198,21 @@ class Jerbil
     results = Array.new
     results = self.find(args, ignore_access)
     if results.length >= 1 then
-      @logger.verbose("Get returned service: #{results[0].address}-#{results[0].env}")
-      return results[0]
+      service = results[0]
+      @logger.verbose("Get returned #{service.name}@#{service.address}[#{service.env}]")
+      unless ignore_access
+        # check if it is working
+        begin
+          service.connect
+        rescue ServiceCallbackMissing
+          @logger.warning("Verifying #{service.ident} failed due to missing callback")
+        rescue ServiceConnectError
+          @logger.verbose("Verification failed for #{service.ident}")
+          self.remove(service)
+          return nil
+        end
+      end
+      return service
     else
       return nil
     end

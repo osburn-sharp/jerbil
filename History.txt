@@ -1,8 +1,13 @@
+jerbil-0.0.3a 16-Apr-2011
+
+Initial release for system level testing only.
+
+
 jerbil-0.0.2 1-Apr-2011
 
 Made a few insignificant changes today
 and that is all
 
-jerbil-0.0.1 1-11-2011
+jerbil-0.0.1 1-Apr-2011
 
-This is the history of a file
+Initial create, but never tagged!

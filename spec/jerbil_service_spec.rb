@@ -17,28 +17,19 @@ require 'jerbil/jerbil_service_class'
 require File.expand_path(File.dirname(__FILE__) + '/../test/test_service')
 require 'socket'
 
-describe "Test Class" do
+jconfig = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/jerbil')
+tconfig = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/test')
 
-  before(:all) do
-    #DRb.stub(:start_service).and_return {true}
-    @service = TestService.new
-    @my_service = @service.my_service
-    puts @my_service.key
-    #DRbObject.stub(:new).and_return {@service}
+describe "Test Service Class" do
+
+
+
+  it "should start and stop OK" do
+    tservice = TestService.new(:log_dir => "/home/robert/dev/projects/jerbil/log", :log_level => :debug, :jerbil_config=>jconfig, :exit_on_stop=>false)
+    tservice.action.should == "Hello"
+    service = tservice.my_service
+    service.stop(false) # make sure you do not kill anything
   end
 
-
-  it "should start OK" do
-    my_address = Socket::gethostname + ':' + Socket::getservbyname('rubytest').to_s
-    @my_service.address.should == my_address
-    service = @my_service.connect
-    service.action.should == "Hello"
-  end
-
-  it "should stop OK" do
-    @service.stub(:stop_callback).and_return {@service = nil}
-    @my_service.stop(false)
-    @service.should be_nil
-  end
 
 end

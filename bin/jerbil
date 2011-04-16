@@ -20,11 +20,19 @@ require 'jerbil/version'
 require 'socket'
 require 'drb'
 require 'optparse'
+require 'rubygems'
+
+require 'term/ansicolor'
+class String
+  # makes the colouring functions into string methods
+  include Term::ANSIColor
+end
 
 config_file='/etc/jerbil/config'
 cmd = :check_local
 verbose = false
 quiet = false
+verify = false
 
 OptionParser.new do |opts|
 
@@ -54,6 +62,10 @@ OptionParser.new do |opts|
     end
   end
 
+  opts.on("-v", "--verify", "verify that services are running") do
+    verify = true
+  end
+
   opts.on("-V", "--verbose", "output more information about what is going on ") do
     verbose = true
   end
@@ -70,14 +82,11 @@ OptionParser.new do |opts|
 
 end.parse!
 
-puts "Jerbil version:" + Jerbil::Version unless quiet
-
-hostname = Socket.gethostname
+puts "Jerbil v" + Jerbil::Version unless quiet
 
 options = Jerbil::Config.new(config_file)
 servers = options[:servers]
-local = nil
-servers.each {|serv| local = serv if serv.fqdn == hostname}
+local = Jerbil::Server.get_local_server(servers)
 #puts options.inspect
 
 if quiet then
@@ -101,7 +110,7 @@ when :check_local
     puts "  Server has been up since #{started.strftime('%d %b %Y at %H:%M')}"
     puts "  and has had #{jerbs.registrations.to_s} registrations"
   rescue Exception => err
-    puts "  Server did not respond: #{err.message}"
+    puts "  Server did not respond: #{err.message}".red.bold
   end
 
 
@@ -139,6 +148,14 @@ when :list
     puts "  #{s.name}[:#{s.env}]@#{s.host}:#{s.port}"
     puts "    started at: #{s.registered_at.strftime('%d/%m/%y %H:%M')}" if verbose
     puts "    accessed #{s.access_count.to_s} times, last time at: #{s.accessed_at.strftime('%d/%m/%y %H:%M')}" if verbose
+    if verify then
+      service = jerbs.get(s.args)
+      if service.nil? then
+        puts "  Verify failed. Service has been removed"
+      else
+        puts "  Verify succeeded"
+      end
+    end
   end
 
 end

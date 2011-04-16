@@ -26,6 +26,9 @@ class Jerbil
   # the service being registered is not in /etc/services
   class InvalidService < JerbilServiceError; end
 
+  # the config file used by the service raised an error
+  class ServiceConfigError < JerbilServiceError; end
+
   # the key used was not the key created for this service
   class InvalidServiceKey < JerbilServiceError; end
 

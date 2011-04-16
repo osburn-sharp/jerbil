@@ -22,7 +22,7 @@ require 'socket'
 require 'drb'
 require 'optparse'
 
-config_file='/etc/jerbil/config'
+config_file='/etc/jermine/jerbil.conf'
 verbose = false
 
 OptionParser.new do |opts|

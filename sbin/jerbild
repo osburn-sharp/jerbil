@@ -28,7 +28,7 @@ require 'rubygems'
 require 'daemons'
 require 'optparse'
 
-config_file='/etc/jerbil/config'
+config_file='/etc/jermine/jerbil.conf'
 daemonize = true
 log_to_syslog = true
 verbose = false

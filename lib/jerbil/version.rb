@@ -1,10 +1,9 @@
 # Created by Jevoom
 #
-# 01-Apr-2011
-#   Made a few insignificant changes today
-#   and that is all
+# 16-Apr-2011
+#   Initial release for system level testing only.
 
 class Jerbil
-  Version = '0.0.2'
-  Version_Date = '01-Apr-2011'
+  Version = '0.0.3'
+  Version_Date = '16-Apr-2011'
 end

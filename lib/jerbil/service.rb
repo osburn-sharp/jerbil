@@ -92,6 +92,16 @@ class Jerbil
       @access_count += 1
     end
 
+    # return a string containing the name, host etc
+    def ident
+      "#{@name}@#{@address}[#{@env}]"
+    end
+
+    # return a hash containing the find arguments for self
+    def args
+      {:name=>@name, :env=>@env, :host=>@host, :key=>@key}
+    end
+
     # compare services according to a set of arguments
     #
     # args should a hash containing the following keys :name, :env, :key
@@ -128,7 +138,7 @@ class Jerbil
     def connect(verify=true)
       self.start_drb_if_needed
       service = DRbObject.new(nil, "druby://#{@address}")
-      service.send @verify_callback, @key if verify
+      key = service.send(@verify_callback, @key) if verify
       return service
     rescue NoMethodError
       raise ServiceCallbackMissing
@@ -136,6 +146,15 @@ class Jerbil
       raise ServiceConnectError
 
     end
+
+    # drb_address makes it easier to start a DRb server, which
+    # is done outside this class because it should only be done
+    # under specific circumstances, and not by the general users of this class
+    #
+    def drb_address
+      "druby://#{@host}:#{@port}"
+    end
+
 
     # kill the service either by asking it, or if that fails
     # pull the rug from under

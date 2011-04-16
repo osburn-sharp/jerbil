@@ -15,10 +15,10 @@ require 'jerbil/jerbil_service_class'
 
 # Test Service for Jerbil
 
-class TestService < JerbilService
+class BadTestService < JerbilService
   
   def initialize(options)
-    super(:rubytest, :test, options)
+    super(:rubynonsense, :test, options)
   end
 
   def action

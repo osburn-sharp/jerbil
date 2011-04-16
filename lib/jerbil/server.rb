@@ -16,9 +16,19 @@
 #
 #
 require 'socket'
+require 'drb'
 
 class Jerbil
 class Server
+
+  # returns the local server from an array of servers. Aimed at locating the local
+  # server to use from the output of the config file
+  #
+  def self.get_local_server(servers)
+    hostname = Socket.gethostname
+    servers.each {|server| return server if server.fqdn == hostname}
+  end
+  
   def initialize(fqdn, key, port=nil)
     @fqdn = fqdn
     @key = key
