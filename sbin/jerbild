@@ -72,11 +72,12 @@ end.parse!
 puts "Starting the Jerbil Server" if verbose
 puts "Version: " + Jerbil::Version if verbose
 
-hostname = Socket.gethostname
-my_self = Jerbil::Server.new(hostname, 'ABCDE')
-
 options = Jerbil::Config.new(config_file)
 puts options.inspect if verbose
+
+servers = options[:servers]
+my_self = Jerbil::Server.get_local_server(servers)
+
 
 if daemonize then
   puts "Daemonizing now" if verbose

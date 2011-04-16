@@ -64,8 +64,6 @@ class Jerbil
 
     @key_file = options[:key_file]
 
-    my_fqdn = Socket.gethostname
-
     # loop through all of the servers to create local records
     servers.each do |server|
       if server == this_server then
@@ -77,7 +75,12 @@ class Jerbil
       end
     end
 
-    raise MissingLocalServer if @local.nil?
+    if @local.nil? then
+      @logger.fatal("Missing local server")
+      @logger.debug("  Servers: " + servers.inspect)
+      @logger.debug("  This Server: " + this_server.inspect)
+      raise MissingLocalServer
+    end
 
     remote_services = Array.new
     # now loop round the remote servers to see if any are there
