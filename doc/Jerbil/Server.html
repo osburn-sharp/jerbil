@@ -65,6 +65,8 @@
         <h3 class="section-header">Methods</h3>
         <ul class="link-list">
           
+          <li><a href="#method-c-get_local_server">::get_local_server</a></li>
+          
           <li><a href="#method-c-new">::new</a></li>
           
           <li><a href="#method-i-3D-3D">#==</a></li>
@@ -94,6 +96,10 @@
       <div id="fileindex-section" class="section project-section">
         <h3 class="section-header">Files</h3>
         <ul>
+        
+          <li class="file"><a href="../Bugs_txt.html">Bugs.txt</a></li>
+        
+          <li class="file"><a href="../History_txt.html">History.txt</a></li>
         
           <li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
         
@@ -145,6 +151,8 @@
           <li><a href="../Jerbil/ServiceAlreadyRegistered.html">Jerbil::ServiceAlreadyRegistered</a></li>
         
           <li><a href="../Jerbil/ServiceCallbackMissing.html">Jerbil::ServiceCallbackMissing</a></li>
+        
+          <li><a href="../Jerbil/ServiceConfigError.html">Jerbil::ServiceConfigError</a></li>
         
           <li><a href="../Jerbil/ServiceConnectError.html">Jerbil::ServiceConnectError</a></li>
         
@@ -235,6 +243,41 @@
         <h3 class="section-header">Public Class Methods</h3>
 
       
+        <div id="get_local_server-method" class="method-detail ">
+          <a name="method-c-get_local_server"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">get_local_server</span><span
+              class="method-args">(servers)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>returns the local server from an array of servers. Aimed at locating the
+local server to use from the output of the config file</p>
+            
+
+            
+            <div class="method-source-code" id="get_local_server-source">
+<pre>
+<span class="ruby-comment"># File lib/jerbil/server.rb, line 27</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">get_local_server</span>(<span class="ruby-identifier">servers</span>)
+  <span class="ruby-identifier">hostname</span> = <span class="ruby-constant">Socket</span>.<span class="ruby-identifier">gethostname</span>
+  <span class="ruby-identifier">servers</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">server</span><span class="ruby-operator">|</span> <span class="ruby-keyword">return</span> <span class="ruby-identifier">server</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">server</span>.<span class="ruby-identifier">fqdn</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">hostname</span>}
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- get_local_server-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- get_local_server-method -->
+
+      
         <div id="new-method" class="method-detail ">
           <a name="method-c-new"></a>
 
@@ -254,7 +297,7 @@
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/server.rb, line 22</span>
+<span class="ruby-comment"># File lib/jerbil/server.rb, line 32</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">fqdn</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">port</span>=<span class="ruby-keyword">nil</span>)
   <span class="ruby-ivar">@fqdn</span> = <span class="ruby-identifier">fqdn</span>
   <span class="ruby-ivar">@key</span> = <span class="ruby-identifier">key</span>
@@ -296,7 +339,7 @@
             
             <div class="method-source-code" id="3D-3D-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/server.rb, line 31</span>
+<span class="ruby-comment"># File lib/jerbil/server.rb, line 41</span>
 <span class="ruby-keyword">def</span> <span class="ruby-operator">==</span>(<span class="ruby-identifier">rhs</span>)
   <span class="ruby-ivar">@fqdn</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">rhs</span>.<span class="ruby-identifier">fqdn</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@key</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">rhs</span>.<span class="ruby-identifier">key</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@port</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">rhs</span>.<span class="ruby-identifier">port</span>
 <span class="ruby-keyword">end</span></pre>
@@ -330,7 +373,7 @@ they are added</p>
             
             <div class="method-source-code" id="activate-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/server.rb, line 55</span>
+<span class="ruby-comment"># File lib/jerbil/server.rb, line 65</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">activate</span>
   <span class="ruby-ivar">@active</span> = <span class="ruby-keyword">true</span>
 <span class="ruby-keyword">end</span></pre>
@@ -363,7 +406,7 @@ they are added</p>
             
             <div class="method-source-code" id="active-3F-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/server.rb, line 65</span>
+<span class="ruby-comment"># File lib/jerbil/server.rb, line 75</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">active?</span>
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">active</span>
 <span class="ruby-keyword">end</span></pre>
@@ -397,7 +440,7 @@ service running. <a href="../Jerbil.html">Jerbil</a> certainly should!</p>
             
             <div class="method-source-code" id="connect-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/server.rb, line 47</span>
+<span class="ruby-comment"># File lib/jerbil/server.rb, line 57</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">connect</span>
   <span class="ruby-constant">DRbObject</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">drb_address</span>)
 <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span>
@@ -432,7 +475,7 @@ service running. <a href="../Jerbil.html">Jerbil</a> certainly should!</p>
             
             <div class="method-source-code" id="copy-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/server.rb, line 70</span>
+<span class="ruby-comment"># File lib/jerbil/server.rb, line 80</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">copy</span>
   <span class="ruby-keyword">return</span> <span class="ruby-constant">Server</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">fqdn</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">key</span>, <span class="ruby-keyword">self</span>.<span class="ruby-identifier">port</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -465,7 +508,7 @@ service running. <a href="../Jerbil.html">Jerbil</a> certainly should!</p>
             
             <div class="method-source-code" id="deactivate-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/server.rb, line 60</span>
+<span class="ruby-comment"># File lib/jerbil/server.rb, line 70</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">deactivate</span>
   <span class="ruby-ivar">@active</span> = <span class="ruby-keyword">false</span>
 <span class="ruby-keyword">end</span></pre>
@@ -501,7 +544,7 @@ this class</p>
             
             <div class="method-source-code" id="drb_address-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/server.rb, line 41</span>
+<span class="ruby-comment"># File lib/jerbil/server.rb, line 51</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">drb_address</span>
   <span class="ruby-node">&quot;druby://#{@fqdn}:#{@port}&quot;</span>
 <span class="ruby-keyword">end</span></pre>

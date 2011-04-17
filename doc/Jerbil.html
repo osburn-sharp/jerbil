@@ -34,6 +34,9 @@
         <div class="section-body">
           <ul>
           
+            <li><a href="./lib/jerbil/jerbil_service_config_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/jerbil/jerbil_service_config.rb">lib/jerbil/jerbil_service_config.rb</a></li>
+          
             <li><a href="./lib/jerbil/config_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
               class="thickbox" title="lib/jerbil/config.rb">lib/jerbil/config.rb</a></li>
           
@@ -42,6 +45,9 @@
           
             <li><a href="./lib/jerbil/service_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
               class="thickbox" title="lib/jerbil/service.rb">lib/jerbil/service.rb</a></li>
+          
+            <li><a href="./lib/jerbil/version_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/jerbil/version.rb">lib/jerbil/version.rb</a></li>
           
             <li><a href="./lib/jerbil/errors_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
               class="thickbox" title="lib/jerbil/errors.rb">lib/jerbil/errors.rb</a></li>
@@ -103,6 +109,8 @@
           
           <li><span class="type">CLASS</span> <a href="Jerbil/ServiceCallbackMissing.html">Jerbil::ServiceCallbackMissing</a></li>
           
+          <li><span class="type">CLASS</span> <a href="Jerbil/ServiceConfigError.html">Jerbil::ServiceConfigError</a></li>
+          
           <li><span class="type">CLASS</span> <a href="Jerbil/ServiceConnectError.html">Jerbil::ServiceConnectError</a></li>
           
         </ul>
@@ -153,6 +161,8 @@
           
           <li><a href="#method-i-verify">#verify</a></li>
           
+          <li><a href="#method-i-version">#version</a></li>
+          
         </ul>
       </div>
       
@@ -166,6 +176,10 @@
       <div id="fileindex-section" class="section project-section">
         <h3 class="section-header">Files</h3>
         <ul>
+        
+          <li class="file"><a href="./Bugs_txt.html">Bugs.txt</a></li>
+        
+          <li class="file"><a href="./History_txt.html">History.txt</a></li>
         
           <li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
         
@@ -218,6 +232,8 @@
         
           <li><a href="./Jerbil/ServiceCallbackMissing.html">Jerbil::ServiceCallbackMissing</a></li>
         
+          <li><a href="./Jerbil/ServiceConfigError.html">Jerbil::ServiceConfigError</a></li>
+        
           <li><a href="./Jerbil/ServiceConnectError.html">Jerbil::ServiceConnectError</a></li>
         
           <li><a href="./JerbilService.html">JerbilService</a></li>
@@ -237,6 +253,13 @@
 
     <div id="description" class="description">
       
+<p>Created by Jevoom</p>
+
+<p>17-Apr-2011</p>
+
+<pre>Fixed a few more typos and added install to init script</pre>
+<hr style="height: 1px">
+
 <p>Description</p>
 <table class="rdoc-list"><tr><td class="rdoc-term"><p>Author</p></td>
 <td>
@@ -265,6 +288,24 @@ Licence v. 3.0</p>
       
 
       
+      <!-- Constants -->
+      <div id="constants-list" class="section">
+        <h3 class="section-header">Constants</h3>
+        <dl>
+        
+          <dt><a name="Version">Version</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+          <dt><a name="Version_Date">Version_Date</a></dt>
+          
+          <dd class="description"></dd>
+          
+        
+        </dl>
+      </div>
+      
 
       
       <!-- Attributes -->
@@ -282,7 +323,7 @@ Licence v. 3.0</p>
 
           <div class="method-description">
           
-          
+          <p>the number of registrations since the server started</p>
           
           </div>
         </div>
@@ -297,7 +338,7 @@ Licence v. 3.0</p>
 
           <div class="method-description">
           
-          
+          <p>date/time at which the server was started</p>
           
           </div>
         </div>
@@ -346,7 +387,7 @@ caller to resolve.</p>
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 46</span>
+<span class="ruby-comment"># File lib/jerbil.rb, line 47</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">this_server</span>, <span class="ruby-identifier">servers</span>, <span class="ruby-identifier">options</span>) <span class="ruby-comment">#log_dir, log_level=:system)</span>
 
   <span class="ruby-comment"># store details of this server and remote servers</span>
@@ -367,8 +408,6 @@ caller to resolve.</p>
 
   <span class="ruby-ivar">@key_file</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:key_file</span>]
 
-  <span class="ruby-identifier">my_fqdn</span> = <span class="ruby-constant">Socket</span>.<span class="ruby-identifier">gethostname</span>
-
   <span class="ruby-comment"># loop through all of the servers to create local records</span>
   <span class="ruby-identifier">servers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">server</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-identifier">server</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">this_server</span> <span class="ruby-keyword">then</span>
@@ -380,7 +419,12 @@ caller to resolve.</p>
     <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">end</span>
 
-  <span class="ruby-identifier">raise</span> <span class="ruby-constant">MissingLocalServer</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@local</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@local</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">fatal</span>(<span class="ruby-string">&quot;Missing local server&quot;</span>)
+    <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-string">&quot;  Servers: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">servers</span>.<span class="ruby-identifier">inspect</span>)
+    <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-string">&quot;  This Server: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">this_server</span>.<span class="ruby-identifier">inspect</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">MissingLocalServer</span>
+  <span class="ruby-keyword">end</span>
 
   <span class="ruby-identifier">remote_services</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
   <span class="ruby-comment"># now loop round the remote servers to see if any are there</span>
@@ -441,7 +485,7 @@ caller to resolve.</p>
             
             <div class="method-source-code" id="close-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 205</span>
+<span class="ruby-comment"># File lib/jerbil.rb, line 229</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">close</span>
   <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">close</span>
 <span class="ruby-keyword">end</span></pre>
@@ -474,7 +518,7 @@ caller to resolve.</p>
             
             <div class="method-source-code" id="close_remote_server-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 316</span>
+<span class="ruby-comment"># File lib/jerbil.rb, line 340</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">close_remote_server</span>
 
 <span class="ruby-keyword">end</span></pre>
@@ -494,7 +538,7 @@ caller to resolve.</p>
           
           <div class="method-heading">
             <span class="method-name">find</span><span
-              class="method-args">(args)</span>
+              class="method-args">(args={}, ignore_access=false)</span>
             <span class="method-click-advice">click to toggle source</span>
           </div>
           
@@ -509,20 +553,15 @@ href="Jerbil/Service.html#method-i-matches-3F">Service.matches?</a></p>
             
             <div class="method-source-code" id="find-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 166</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">find</span>(<span class="ruby-identifier">args</span>)
+<span class="ruby-comment"># File lib/jerbil.rb, line 182</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">find</span>(<span class="ruby-identifier">args</span>={}, <span class="ruby-identifier">ignore_access</span>=<span class="ruby-keyword">false</span>)
   <span class="ruby-comment">#options = {:name=&gt;nil, :port=&gt;nil, :env=&gt;nil}.merge(args)</span>
   <span class="ruby-identifier">results</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
-  <span class="ruby-ivar">@store</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">service</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">services</span> = <span class="ruby-ivar">@store</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@remote_store</span>
+  <span class="ruby-identifier">services</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">service</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-identifier">service</span>.<span class="ruby-identifier">matches?</span>(<span class="ruby-identifier">args</span>) <span class="ruby-keyword">then</span>
-      <span class="ruby-identifier">service</span>.<span class="ruby-identifier">count_access</span>
+      <span class="ruby-identifier">service</span>.<span class="ruby-identifier">log_access</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">ignore_access</span>
       <span class="ruby-identifier">results</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">service</span>
-    <span class="ruby-keyword">end</span>
-  <span class="ruby-keyword">end</span>
-  <span class="ruby-ivar">@remote_store</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">service</span><span class="ruby-operator">|</span>
-    <span class="ruby-keyword">if</span> <span class="ruby-identifier">service</span>.<span class="ruby-identifier">matches?</span>(<span class="ruby-identifier">args</span>) <span class="ruby-keyword">then</span>
-      <span class="ruby-identifier">service</span>.<span class="ruby-identifier">count_access</span>
-      <span class="ruby-identifier">results</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">service</span> 
     <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">end</span>
   
@@ -547,7 +586,7 @@ href="Jerbil/Service.html#method-i-matches-3F">Service.matches?</a></p>
           
           <div class="method-heading">
             <span class="method-name">get</span><span
-              class="method-args">(args)</span>
+              class="method-args">(args={}, ignore_access=false)</span>
             <span class="method-click-advice">click to toggle source</span>
           </div>
           
@@ -560,13 +599,26 @@ href="Jerbil/Service.html#method-i-matches-3F">Service.matches?</a></p>
             
             <div class="method-source-code" id="get-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 189</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">args</span>)
+<span class="ruby-comment"># File lib/jerbil.rb, line 200</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">args</span>={}, <span class="ruby-identifier">ignore_access</span>=<span class="ruby-keyword">false</span>)
   <span class="ruby-identifier">results</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
-  <span class="ruby-identifier">results</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">args</span>)
+  <span class="ruby-identifier">results</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">args</span>, <span class="ruby-identifier">ignore_access</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">results</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">1</span> <span class="ruby-keyword">then</span>
-    <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">verbose</span>(<span class="ruby-node">&quot;Get returned service: #{results[0].address}-#{results[0].env}&quot;</span>)
-    <span class="ruby-keyword">return</span> <span class="ruby-identifier">results</span>[<span class="ruby-value">0</span>]
+    <span class="ruby-identifier">service</span> = <span class="ruby-identifier">results</span>[<span class="ruby-value">0</span>]
+    <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">verbose</span>(<span class="ruby-node">&quot;Get returned #{service.name}@#{service.address}[#{service.env}]&quot;</span>)
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">ignore_access</span>
+      <span class="ruby-comment"># check if it is working</span>
+      <span class="ruby-keyword">begin</span>
+        <span class="ruby-identifier">service</span>.<span class="ruby-identifier">connect</span>
+      <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ServiceCallbackMissing</span>
+        <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">warning</span>(<span class="ruby-node">&quot;Verifying #{service.ident} failed due to missing callback&quot;</span>)
+      <span class="ruby-keyword">rescue</span> <span class="ruby-constant">ServiceConnectError</span>
+        <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">verbose</span>(<span class="ruby-node">&quot;Verification failed for #{service.ident}&quot;</span>)
+        <span class="ruby-keyword">self</span>.<span class="ruby-identifier">remove</span>(<span class="ruby-identifier">service</span>)
+        <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">return</span> <span class="ruby-identifier">service</span>
   <span class="ruby-keyword">else</span>
     <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span>
   <span class="ruby-keyword">end</span>
@@ -587,7 +639,7 @@ href="Jerbil/Service.html#method-i-matches-3F">Service.matches?</a></p>
           
           <div class="method-heading">
             <span class="method-name">get_all</span><span
-              class="method-args">()</span>
+              class="method-args">(ignore_access=false)</span>
             <span class="method-click-advice">click to toggle source</span>
           </div>
           
@@ -600,9 +652,9 @@ href="Jerbil/Service.html#method-i-matches-3F">Service.matches?</a></p>
             
             <div class="method-source-code" id="get_all-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 200</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_all</span>
-  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find</span>({})
+<span class="ruby-comment"># File lib/jerbil.rb, line 224</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_all</span>(<span class="ruby-identifier">ignore_access</span>=<span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">find</span>({}, <span class="ruby-identifier">ignore_access</span>)
 <span class="ruby-keyword">end</span></pre>
             </div><!-- get_all-source -->
             
@@ -635,7 +687,7 @@ href="Jerbil/Service.html#method-i-matches-3F">Service.matches?</a></p>
             
             <div class="method-source-code" id="get_local_services-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 261</span>
+<span class="ruby-comment"># File lib/jerbil.rb, line 285</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_local_services</span>(<span class="ruby-identifier">key</span>)
   <span class="ruby-keyword">return</span> [] <span class="ruby-keyword">if</span> <span class="ruby-ivar">@local</span>.<span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">key</span>
   <span class="ruby-identifier">services</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
@@ -679,7 +731,7 @@ href="Jerbil/Service.html#method-i-matches-3F">Service.matches?</a></p>
             
             <div class="method-source-code" id="get_my_services-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 277</span>
+<span class="ruby-comment"># File lib/jerbil.rb, line 301</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_my_services</span>(<span class="ruby-identifier">my_server_key</span>)
 
 <span class="ruby-keyword">end</span></pre>
@@ -706,13 +758,13 @@ href="Jerbil/Service.html#method-i-matches-3F">Service.matches?</a></p>
 
           <div class="method-description">
             
-            
+            <p>the number of local services registered</p>
             
 
             
             <div class="method-source-code" id="local_services-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 112</span>
+<span class="ruby-comment"># File lib/jerbil.rb, line 127</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">local_services</span>
   <span class="ruby-ivar">@store</span>.<span class="ruby-identifier">length</span>
 <span class="ruby-keyword">end</span></pre>
@@ -755,7 +807,7 @@ active, so that new local services are propagated to the remote server</p>
             
             <div class="method-source-code" id="open_remote_server-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 253</span>
+<span class="ruby-comment"># File lib/jerbil.rb, line 277</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">open_remote_server</span>(<span class="ruby-identifier">server_name</span>, <span class="ruby-identifier">server_key</span>)
   <span class="ruby-keyword">return</span> <span class="ruby-identifier">my_server_key</span>
 <span class="ruby-keyword">end</span></pre>
@@ -792,9 +844,9 @@ exception</p>
             
             <div class="method-source-code" id="register-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 125</span>
+<span class="ruby-comment"># File lib/jerbil.rb, line 141</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">register</span>(<span class="ruby-identifier">service</span>)
-  <span class="ruby-identifier">service</span>.<span class="ruby-identifier">registered_at</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>
+  <span class="ruby-identifier">service</span>.<span class="ruby-identifier">register</span>
   <span class="ruby-identifier">add_service_to_store</span>(<span class="ruby-ivar">@store</span>, <span class="ruby-identifier">service</span>)
   <span class="ruby-ivar">@registrations</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
   <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">system</span>(<span class="ruby-node">&quot;Registered Local Service: #{service.address} for env: #{service.env}&quot;</span>)
@@ -848,7 +900,7 @@ the service is a duplicate</p>
             
             <div class="method-source-code" id="register_remote-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 288</span>
+<span class="ruby-comment"># File lib/jerbil.rb, line 312</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">register_remote</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">service</span>)
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span> <span class="ruby-keyword">if</span> <span class="ruby-ivar">@local</span>.<span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">key</span> <span class="ruby-comment"># rare issue, probably only test related</span>
   <span class="ruby-comment"># check that the caller is a valid server</span>
@@ -886,13 +938,13 @@ the service is a duplicate</p>
 
           <div class="method-description">
             
-            
+            <p>the number of remote services registered</p>
             
 
             
             <div class="method-source-code" id="remote_services-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 116</span>
+<span class="ruby-comment"># File lib/jerbil.rb, line 132</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">remote_services</span>
   <span class="ruby-ivar">@remote_store</span>.<span class="ruby-identifier">length</span>
 <span class="ruby-keyword">end</span></pre>
@@ -926,7 +978,7 @@ registered</p>
             
             <div class="method-source-code" id="remove-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 147</span>
+<span class="ruby-comment"># File lib/jerbil.rb, line 163</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">remove</span>(<span class="ruby-identifier">service</span>)
   <span class="ruby-ivar">@store</span>.<span class="ruby-identifier">delete_if</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">service</span>}
   <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">system</span>(<span class="ruby-node">&quot;Deleted Service: #{service.address} for env: #{service.env}&quot;</span>)
@@ -936,7 +988,7 @@ registered</p>
       <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;Connected to #{rserver.fqdn}&quot;</span>)
       <span class="ruby-keyword">begin</span>
         <span class="ruby-identifier">rjerbil</span>.<span class="ruby-identifier">remove_remote</span>(<span class="ruby-ivar">@local</span>.<span class="ruby-identifier">key</span>, <span class="ruby-identifier">service</span>)
-        <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">verbose</span>(<span class="ruby-node">&quot;Registered Service on remote server: #{service.name}&quot;</span>)
+        <span class="ruby-ivar">@logger</span>.<span class="ruby-identifier">verbose</span>(<span class="ruby-node">&quot;Removed Service from remote server: #{service.name}&quot;</span>)
       <span class="ruby-keyword">rescue</span> <span class="ruby-constant">DRb</span><span class="ruby-operator">::</span><span class="ruby-constant">DRbConnError</span>
         <span class="ruby-comment"># assume it is not working</span>
       <span class="ruby-keyword">end</span>
@@ -972,7 +1024,7 @@ registered</p>
             
             <div class="method-source-code" id="remove_remote-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 305</span>
+<span class="ruby-comment"># File lib/jerbil.rb, line 329</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">remove_remote</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">service</span>)
   <span class="ruby-ivar">@remote_servers</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">remote</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-identifier">remote</span>.<span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">key</span> <span class="ruby-keyword">then</span>
@@ -1005,13 +1057,13 @@ registered</p>
 
           <div class="method-description">
             
-            
+            <p>the total number of services currently registered with the server</p>
             
 
             
             <div class="method-source-code" id="services-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 108</span>
+<span class="ruby-comment"># File lib/jerbil.rb, line 122</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">services</span>
   <span class="ruby-ivar">@store</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@remote_store</span>.<span class="ruby-identifier">length</span>
 <span class="ruby-keyword">end</span></pre>
@@ -1044,7 +1096,7 @@ registered</p>
             
             <div class="method-source-code" id="stop-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 216</span>
+<span class="ruby-comment"># File lib/jerbil.rb, line 240</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">stop</span>(<span class="ruby-identifier">master_key</span>)
   <span class="ruby-keyword">unless</span> <span class="ruby-constant">FileTest</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-ivar">@key_file</span>) <span class="ruby-keyword">then</span>
     <span class="ruby-comment"># what? no master key file. Must be fatal</span>
@@ -1095,7 +1147,7 @@ registered</p>
             
             <div class="method-source-code" id="verify-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 210</span>
+<span class="ruby-comment"># File lib/jerbil.rb, line 234</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">verify</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">true</span>
 <span class="ruby-keyword">end</span></pre>
@@ -1107,6 +1159,39 @@ registered</p>
 
           
         </div><!-- verify-method -->
+
+      
+        <div id="version-method" class="method-detail ">
+          <a name="method-i-version"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">version</span><span
+              class="method-args">()</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>return the current version of <a href="Jerbil.html">Jerbil</a></p>
+            
+
+            
+            <div class="method-source-code" id="version-source">
+<pre>
+<span class="ruby-comment"># File lib/jerbil.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">version</span>
+  <span class="ruby-constant">Version</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- version-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- version-method -->
 
       
       </div><!-- public-instance-method-details -->
@@ -1134,7 +1219,7 @@ registered</p>
             
             <div class="method-source-code" id="add_service_to_store-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil.rb, line 325</span>
+<span class="ruby-comment"># File lib/jerbil.rb, line 349</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">add_service_to_store</span>(<span class="ruby-identifier">store</span>, <span class="ruby-identifier">service</span>)
   <span class="ruby-identifier">store</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
     <span class="ruby-keyword">if</span> <span class="ruby-identifier">s</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">service</span> <span class="ruby-keyword">then</span>

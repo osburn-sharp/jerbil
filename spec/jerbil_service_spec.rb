@@ -28,7 +28,7 @@ describe "Test Service Class" do
     tservice = TestService.new(:log_dir => "/home/robert/dev/projects/jerbil/log", :log_level => :debug, :jerbil_config=>jconfig, :exit_on_stop=>false)
     tservice.action.should == "Hello"
     service = tservice.my_service
-    service.stop(false) # make sure you do not kill anything
+    #service.stop(false) # make sure you do not kill anything
   end
 
 

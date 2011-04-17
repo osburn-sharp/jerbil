@@ -2,8 +2,13 @@
 #
 # INIT Script for the Numbat System Controller
 
+opts="${opts} install"
 export RUBYOPT="-rauto_gem"
 export RUBYLIB="/usr/local/lib"
+
+
+depends() {
+}
 
 start() {
   ebegin "Starting Jerbil Server"

@@ -53,3 +53,5 @@ F, [2011-04-16 08:14:13 #3708] FATAL -- : Error setting up DRb Server: druby://l
 F, [2011-04-16 08:15:17 #3722] FATAL -- : Error reading config file: /home/robert/dev/projects/jerbil/test/conf.d/config.not.there
 F, [2011-04-16 08:15:17 #3722] FATAL -- : Error reading config file: [what_is_this]: I do not know - Unknown parameter
 F, [2011-04-16 08:15:17 #3722] FATAL -- : Error setting up DRb Server: druby://lucius.osburn-sharp.ath.cx:49901 - #<Errno::ECONNREFUSED: Connection refused - connect(2)>
+I, [2011-04-17 08:38:41 #24702]  INFO -- : Started service on lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-17 08:38:41 #24702] DEBUG -- : Someone called the action method!

@@ -1,10 +1,14 @@
-Tue, 12 Apr 2011 06:45:15 +0100
+Sun, 17 Apr 2011 08:43:53 +0100
 lib/jerbil/session.rb	Sun, 03 Apr 2011 08:30:19 +0100
+History.txt	Sun, 17 Apr 2011 08:41:06 +0100
 lib/jerbil/store.rb	Sun, 03 Apr 2011 08:01:45 +0100
-lib/jerbil/server.rb	Mon, 11 Apr 2011 13:03:11 +0100
-lib/jerbil/service.rb	Mon, 11 Apr 2011 22:42:56 +0100
+lib/jerbil/server.rb	Sat, 16 Apr 2011 08:12:43 +0100
+lib/jerbil/service.rb	Fri, 15 Apr 2011 08:56:23 +0100
+lib/jerbil/jerbil_service_config.rb	Sat, 16 Apr 2011 07:56:28 +0100
+Bugs.txt	Sun, 17 Apr 2011 08:42:17 +0100
 README.rdoc	Fri, 11 Feb 2011 15:23:53 +0000
-lib/jerbil.rb	Mon, 11 Apr 2011 22:44:52 +0100
-lib/jerbil/errors.rb	Mon, 11 Apr 2011 12:10:57 +0100
-lib/jerbil/config.rb	Mon, 11 Apr 2011 10:03:50 +0100
-lib/jerbil/jerbil_service_class.rb	Mon, 04 Apr 2011 13:23:50 +0100
+lib/jerbil/version.rb	Sun, 17 Apr 2011 08:33:09 +0100
+lib/jerbil.rb	Sat, 16 Apr 2011 09:31:33 +0100
+lib/jerbil/errors.rb	Fri, 15 Apr 2011 07:28:54 +0100
+lib/jerbil/config.rb	Tue, 12 Apr 2011 08:20:55 +0100
+lib/jerbil/jerbil_service_class.rb	Sat, 16 Apr 2011 08:15:14 +0100

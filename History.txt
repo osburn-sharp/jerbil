@@ -1,3 +1,9 @@
+==History
+
+jerbil-0.0.7 17-Apr-2011
+
+Tweak to init script for install option
+
 jerbil-0.0.6 17-Apr-2011
 
 Fixed a few more typos and added install to init script

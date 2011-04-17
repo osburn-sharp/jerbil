@@ -1,0 +1,6 @@
+== Bugs
+
+17-Apr-2011
+
+If you run jerbil -v on a remote server it appears to remove a service but the removal fails.
+This is because it tries to remove the service locally.
