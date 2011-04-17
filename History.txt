@@ -1,3 +1,7 @@
+jerbil-0.0.6 17-Apr-2011
+
+Fixed a few more typos and added install to init script
+
 jerbil-0.0.5 16-Apr-2011
 
 Fixed mess up in sbin/jerbild to get real local host server record

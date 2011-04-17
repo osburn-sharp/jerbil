@@ -8,6 +8,11 @@ export RUBYLIB="/usr/local/lib"
 start() {
   ebegin "Starting Jerbil Server"
 
+    if [ ! -d /var/run/jermine ]
+    then
+      install()
+    fi
+
     # create the options for starting the daemon from the settings in the
     # /etc/conf.d/jerbild file
     myopts=""
@@ -21,15 +26,29 @@ start() {
 }
 
 status() {
-  ebegin "Checking status"
+  ebegin "Checking Jerbil Status"
   /usr/local/bin/jerbil -q
   eend $?
 }
 
 
 stop() {
-  ebegin "Stopping Numbat Daemon"
+  ebegin "Stopping Jerbil Server"
   /usr/local/sbin/jerbil-stop 
   eend $?
 }
 
+install() {
+  einfo "Installing Jerbil Server"
+  ebegin "Creating User"
+  /usr/bin/useradd -d /var/run/jermine -u 603 -s /bin/bash jermine >&/dev/null
+  eend $?
+  ebegin "Creating directories"
+  mkdir -p /var/log/jermine
+  mkdir -p /var/run/jermine
+  eend $?
+  ebegin "Changing log directory ownership"
+  chown jermine /var/log/jermine
+  chown jermine /var/run/jermine
+  eend $?
+}

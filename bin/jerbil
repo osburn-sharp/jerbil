@@ -28,7 +28,7 @@ class String
   include Term::ANSIColor
 end
 
-config_file='/etc/jerbil/config'
+config_file='/etc/jermine/jerbil.conf'
 cmd = :check_local
 verbose = false
 quiet = false

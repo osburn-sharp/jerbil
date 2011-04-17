@@ -60,8 +60,8 @@ hostname = Socket.gethostname
 
 options = Jerbil::Config.new(config_file)
 servers = options[:servers]
-local = nil
-servers.each {|serv| local = serv if serv.fqdn == hostname}
+
+local = Jerbil::Server.get_local_server(servers)
 
 if local.nil? then
   puts "Cannot fund local Jerbil Server" if verbose
