@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.0.8 17-Apr-2011
+
+Further tweaks to initscript install option
+
 jerbil-0.0.7 17-Apr-2011
 
 Tweak to init script for install option

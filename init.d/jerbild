@@ -6,16 +6,11 @@ opts="${opts} install"
 export RUBYOPT="-rauto_gem"
 export RUBYLIB="/usr/local/lib"
 
-
-depends() {
-}
-
 start() {
   ebegin "Starting Jerbil Server"
 
-    if [ ! -d /var/run/jermine ]
-    then
-      install()
+    if [ ! -d /var/run/jermine ]; then
+      install
     fi
 
     # create the options for starting the daemon from the settings in the
@@ -46,14 +41,14 @@ stop() {
 install() {
   einfo "Installing Jerbil Server"
   ebegin "Creating User"
-  /usr/bin/useradd -d /var/run/jermine -u 603 -s /bin/bash jermine >&/dev/null
+  /usr/sbin/useradd -d /var/run/jermine -u 603 -s /bin/bash jermine >&/dev/null
   eend $?
   ebegin "Creating directories"
-  mkdir -p /var/log/jermine
-  mkdir -p /var/run/jermine
+  mkdir -p /var/log/jermine >&/dev/null
+  mkdir -p /var/run/jermine >&/dev/null
   eend $?
   ebegin "Changing log directory ownership"
-  chown jermine /var/log/jermine
-  chown jermine /var/run/jermine
+  chown jermine /var/log/jermine >&/dev/null
+  chown jermine /var/run/jermine >&/dev/null
   eend $?
 }
