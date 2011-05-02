@@ -18,37 +18,38 @@ require 'socket'
 
 describe "Service" do
   it "should create a new service record" do
-    service = Jerbil::Service.new(:rubytest, :dev)
+    service = Jerbil::ServiceRecord.new(:rubytest, :dev)
     service.name.should == :rubytest
-    my_address = Socket::gethostname + ':' + Socket::getservbyname('rubytest').to_s
+    my_address = Socket::gethostname + ':' + (Socket::getservbyname('rubytest') + 2).to_s
     service.address.should == my_address
     service.key.should_not be_nil
+    service.local?.should be_true
   end
 
   describe "Comparisons" do
     it "should match the service with all parameters" do
-      a_service = Jerbil::Service.new(:rubytest, :dev)
+      a_service = Jerbil::ServiceRecord.new(:rubytest, :dev)
       my_key = a_service.key
       a_service.matches?(:name=>:rubytest, :env=>:dev, :key=>my_key).should be_true
     end
 
     it "should match the serice with the same name" do
-      a_service = Jerbil::Service.new(:rubytest, :dev)
+      a_service = Jerbil::ServiceRecord.new(:rubytest, :dev)
       a_service.matches?(:name=>:rubytest).should be_true
     end
 
     it "should match the service with the same env" do
-      a_service = Jerbil::Service.new(:rubytest, :dev)
+      a_service = Jerbil::ServiceRecord.new(:rubytest, :dev)
       a_service.matches?(:env=>:dev).should be_true
     end
 
     it "should match if no arguments are given" do
-      a_service = Jerbil::Service.new(:rubytest, :dev)
+      a_service = Jerbil::ServiceRecord.new(:rubytest, :dev)
       a_service.matches?.should be_true
     end
 
     it "should not not match arguments that are different" do
-      a_service = Jerbil::Service.new(:rubytest, :dev)
+      a_service = Jerbil::ServiceRecord.new(:rubytest, :dev)
       a_service.matches?(:name=>:hoaxer, :env=>:dev).should be_false
     end
 
@@ -62,7 +63,7 @@ describe "Service" do
     end
 
     it "should fail to connect where there is no server" do
-      @service = Jerbil::Service.new(:rubytest, :dev)
+      @service = Jerbil::ServiceRecord.new(:rubytest, :dev)
       lambda{@service.connect}.should raise_error(Jerbil::ServiceConnectError)
     end
 

@@ -1,0 +1,134 @@
+D, [2011-04-25 08:30:22 #23967] DEBUG -- : Registered myself as: #<Jerbil::ServerRecord:0xb73debb0 @env=:dev, @port=49202, @active=false, @fqdn="lucius.osburn-sharp.ath.cx", @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+D, [2011-04-25 08:30:22 #23967] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73de73c @env=:dev, @port=49202, @active=false, @fqdn="germanicus.osburn-sharp.ath.cx", @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+I, [2011-04-25 08:30:22 #23967]  INFO -- : Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+D, [2011-04-25 08:30:22 #23967] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73de728 @env=:dev, @port=49202, @active=false, @fqdn="octavia.osburn-sharp.ath.cx", @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+I, [2011-04-25 08:30:22 #23967]  INFO -- : Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+D, [2011-04-25 08:30:22 #23967] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73de55c @env=:dev, @port=49202, @active=false, @fqdn="antonia.osburn-sharp.ath.cx", @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+I, [2011-04-25 08:30:22 #23967]  INFO -- : Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+D, [2011-04-25 08:30:22 #23967] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73de534 @env=:dev, @port=49202, @active=false, @fqdn="valeria.osburn-sharp.ath.cx", @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+I, [2011-04-25 08:30:22 #23967]  INFO -- : Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+D, [2011-04-25 08:30:22 #23967] DEBUG -- : Got remote services: []
+I, [2011-04-25 08:30:22 #23967]  INFO -- : Started up the Jerbil Server
+I, [2011-04-25 08:30:59 #23967]  INFO -- : Stop called with incorrect private key
+D, [2011-04-25 08:30:59 #23967] DEBUG -- :  Private Key provided:
+D, [2011-04-25 08:30:59 #23967] DEBUG -- : 
+D, [2011-04-25 08:30:59 #23967] DEBUG -- :  Private Key required
+D, [2011-04-25 08:30:59 #23967] DEBUG -- : 159c217de269b4fcc969
+I, [2011-04-25 08:32:42 #23967]  INFO -- : Stop called with incorrect private key
+D, [2011-04-25 08:32:42 #23967] DEBUG -- :  Private Key provided:
+D, [2011-04-25 08:32:42 #23967] DEBUG -- : 
+D, [2011-04-25 08:32:42 #23967] DEBUG -- :  Private Key required
+D, [2011-04-25 08:32:42 #23967] DEBUG -- : 159c217de269b4fcc969
+I, [2011-04-25 08:35:07 #23967]  INFO -- : Stop called with incorrect private key
+D, [2011-04-25 08:35:07 #23967] DEBUG -- :  Private Key provided:
+D, [2011-04-25 08:35:07 #23967] DEBUG -- : 
+D, [2011-04-25 08:35:07 #23967] DEBUG -- :  Private Key required
+D, [2011-04-25 08:35:07 #23967] DEBUG -- : 159c217de269b4fcc969
+I, [2011-04-25 08:37:05 #23967]  INFO -- : Stop called with incorrect private key
+D, [2011-04-25 08:37:05 #23967] DEBUG -- :  Private Key provided:
+D, [2011-04-25 08:37:05 #23967] DEBUG -- : 
+D, [2011-04-25 08:37:05 #23967] DEBUG -- :  Private Key required
+D, [2011-04-25 08:37:05 #23967] DEBUG -- : 159c217de269b4fcc969
+I, [2011-04-25 08:37:45 #23967]  INFO -- : Stopping the Jerbil Server now
+D, [2011-04-25 08:38:05 #24106] DEBUG -- : Registered myself as: #<Jerbil::ServerRecord:0xb71c32cc @env=:dev, @port=49202, @active=false, @fqdn="lucius.osburn-sharp.ath.cx", @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+D, [2011-04-25 08:38:05 #24106] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb71c18dc @env=:dev, @port=49202, @active=false, @fqdn="germanicus.osburn-sharp.ath.cx", @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+I, [2011-04-25 08:38:05 #24106]  INFO -- : Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+D, [2011-04-25 08:38:05 #24106] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb71c1800 @env=:dev, @port=49202, @active=false, @fqdn="octavia.osburn-sharp.ath.cx", @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+I, [2011-04-25 08:38:05 #24106]  INFO -- : Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+D, [2011-04-25 08:38:05 #24106] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb71c179c @env=:dev, @port=49202, @active=false, @fqdn="antonia.osburn-sharp.ath.cx", @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+I, [2011-04-25 08:38:05 #24106]  INFO -- : Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+D, [2011-04-25 08:38:05 #24106] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb71c1760 @env=:dev, @port=49202, @active=false, @fqdn="valeria.osburn-sharp.ath.cx", @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+I, [2011-04-25 08:38:05 #24106]  INFO -- : Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+D, [2011-04-25 08:38:05 #24106] DEBUG -- : Got remote services: []
+I, [2011-04-25 08:38:05 #24106]  INFO -- : Started up the Jerbil Server
+I, [2011-04-25 09:49:51 #24106]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49901 for env: test
+D, [2011-04-25 09:49:51 #24106] DEBUG -- : Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+D, [2011-04-25 09:49:51 #24106] DEBUG -- : Registering remote. Connected to octavia.osburn-sharp.ath.cx
+D, [2011-04-25 09:49:51 #24106] DEBUG -- : Registering remote. Connected to antonia.osburn-sharp.ath.cx
+D, [2011-04-25 09:49:51 #24106] DEBUG -- : Registering remote. Connected to valeria.osburn-sharp.ath.cx
+I, [2011-04-25 09:49:51 #24106]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+D, [2011-04-25 09:49:51 #24106] DEBUG -- : Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+D, [2011-04-25 09:49:51 #24106] DEBUG -- : Registering remote. Connected to octavia.osburn-sharp.ath.cx
+D, [2011-04-25 09:49:51 #24106] DEBUG -- : Registering remote. Connected to antonia.osburn-sharp.ath.cx
+D, [2011-04-25 09:49:51 #24106] DEBUG -- : Registering remote. Connected to valeria.osburn-sharp.ath.cx
+I, [2011-04-25 09:50:02 #24106]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-25 09:50:02 #24106]  INFO -- :   Arguments: {}
+I, [2011-04-25 09:50:08 #24106]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-25 09:50:08 #24106]  INFO -- :   Arguments: {}
+I, [2011-04-25 09:50:13 #24106]  INFO -- : Searching for services. Found 2 matching.
+I, [2011-04-25 09:50:13 #24106]  INFO -- :   Arguments: {}
+I, [2011-04-25 09:50:13 #24106]  INFO -- : Local service missing for rubytest[test]@lucius.osburn-sharp.ath.cx:49901?
+D, [2011-04-25 09:50:13 #24106] DEBUG -- : Local service appears to be missing: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+I, [2011-04-25 09:50:13 #24106]  INFO -- : Deleted Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+D, [2011-04-25 09:50:13 #24106] DEBUG -- : Connected to germanicus.osburn-sharp.ath.cx
+D, [2011-04-25 09:50:13 #24106] DEBUG -- : Skipping over remove_remote for germanicus.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+D, [2011-04-25 09:50:13 #24106] DEBUG -- : Connected to octavia.osburn-sharp.ath.cx
+D, [2011-04-25 09:50:13 #24106] DEBUG -- : Skipping over remove_remote for octavia.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+D, [2011-04-25 09:50:13 #24106] DEBUG -- : Connected to antonia.osburn-sharp.ath.cx
+D, [2011-04-25 09:50:13 #24106] DEBUG -- : Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+D, [2011-04-25 09:50:13 #24106] DEBUG -- : Connected to valeria.osburn-sharp.ath.cx
+D, [2011-04-25 09:50:13 #24106] DEBUG -- : Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+I, [2011-04-25 09:50:13 #24106]  INFO -- : Removed missing local service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+I, [2011-04-25 09:50:13 #24106]  INFO -- : Local service missing for rubytest[prod]@lucius.osburn-sharp.ath.cx:49900?
+D, [2011-04-25 09:50:13 #24106] DEBUG -- : Local service appears to be missing: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+I, [2011-04-25 09:50:13 #24106]  INFO -- : Deleted Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-25 09:50:13 #24106] DEBUG -- : Connected to germanicus.osburn-sharp.ath.cx
+D, [2011-04-25 09:50:13 #24106] DEBUG -- : Skipping over remove_remote for germanicus.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-25 09:50:13 #24106] DEBUG -- : Connected to octavia.osburn-sharp.ath.cx
+D, [2011-04-25 09:50:13 #24106] DEBUG -- : Skipping over remove_remote for octavia.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-25 09:50:13 #24106] DEBUG -- : Connected to antonia.osburn-sharp.ath.cx
+D, [2011-04-25 09:50:13 #24106] DEBUG -- : Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+D, [2011-04-25 09:50:13 #24106] DEBUG -- : Connected to valeria.osburn-sharp.ath.cx
+D, [2011-04-25 09:50:13 #24106] DEBUG -- : Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+I, [2011-04-25 09:50:13 #24106]  INFO -- : Removed missing local service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+I, [2011-04-25 09:50:19 #24106]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-25 09:50:19 #24106]  INFO -- :   Arguments: {}
+D, [2011-04-26 08:58:56 #10323] DEBUG -- : Registered myself as: #<Jerbil::ServerRecord:0xb7268524 @port=49202, @active=false, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK", @fqdn="lucius.osburn-sharp.ath.cx", @env=:dev>
+D, [2011-04-26 08:58:56 #10323] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb726836c @port=49202, @active=false, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4", @fqdn="germanicus.osburn-sharp.ath.cx", @env=:dev>
+I, [2011-04-26 08:58:56 #10323]  INFO -- : Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+D, [2011-04-26 08:58:56 #10323] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7268344 @port=49202, @active=false, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3", @fqdn="octavia.osburn-sharp.ath.cx", @env=:dev>
+I, [2011-04-26 08:58:56 #10323]  INFO -- : Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+D, [2011-04-26 08:58:56 #10323] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72682f4 @port=49202, @active=false, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV", @fqdn="antonia.osburn-sharp.ath.cx", @env=:dev>
+I, [2011-04-26 08:58:56 #10323]  INFO -- : Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+D, [2011-04-26 08:58:56 #10323] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72682e0 @port=49202, @active=false, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ", @fqdn="valeria.osburn-sharp.ath.cx", @env=:dev>
+I, [2011-04-26 08:58:56 #10323]  INFO -- : Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+D, [2011-04-26 08:58:56 #10323] DEBUG -- : Got remote services: []
+I, [2011-04-26 08:58:56 #10323]  INFO -- : Started up the Jerbil Server
+I, [2011-04-26 10:28:20 #10323]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49901 for env: test
+D, [2011-04-26 10:28:20 #10323] DEBUG -- : Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+D, [2011-04-26 10:28:20 #10323] DEBUG -- : Registering remote. Connected to octavia.osburn-sharp.ath.cx
+D, [2011-04-26 10:28:20 #10323] DEBUG -- : Registering remote. Connected to antonia.osburn-sharp.ath.cx
+D, [2011-04-26 10:28:20 #10323] DEBUG -- : Registering remote. Connected to valeria.osburn-sharp.ath.cx
+I, [2011-04-26 10:28:20 #10323]  INFO -- : Deleted Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+D, [2011-04-26 10:28:20 #10323] DEBUG -- : Connected to germanicus.osburn-sharp.ath.cx
+D, [2011-04-26 10:28:20 #10323] DEBUG -- : Skipping over remove_remote for germanicus.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+D, [2011-04-26 10:28:20 #10323] DEBUG -- : Connected to octavia.osburn-sharp.ath.cx
+D, [2011-04-26 10:28:20 #10323] DEBUG -- : Skipping over remove_remote for octavia.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+D, [2011-04-26 10:28:20 #10323] DEBUG -- : Connected to antonia.osburn-sharp.ath.cx
+D, [2011-04-26 10:28:20 #10323] DEBUG -- : Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+D, [2011-04-26 10:28:20 #10323] DEBUG -- : Connected to valeria.osburn-sharp.ath.cx
+D, [2011-04-26 10:28:20 #10323] DEBUG -- : Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+I, [2011-04-26 10:34:28 #10323]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49901 for env: test
+D, [2011-04-26 10:34:28 #10323] DEBUG -- : Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+D, [2011-04-26 10:34:28 #10323] DEBUG -- : Registering remote. Connected to octavia.osburn-sharp.ath.cx
+D, [2011-04-26 10:34:28 #10323] DEBUG -- : Registering remote. Connected to antonia.osburn-sharp.ath.cx
+D, [2011-04-26 10:34:28 #10323] DEBUG -- : Registering remote. Connected to valeria.osburn-sharp.ath.cx
+W, [2011-04-26 10:36:38 #10323]  WARN -- : Service: lucius.osburn-sharp.ath.cx:49901-test already registered
+W, [2011-04-26 10:36:45 #10323]  WARN -- : Service: lucius.osburn-sharp.ath.cx:49901-test already registered
+W, [2011-04-26 10:37:11 #10323]  WARN -- : Service: lucius.osburn-sharp.ath.cx:49901-test already registered
+D, [2011-04-28 07:27:28 #14812] DEBUG -- : Registered myself as: #<Jerbil::ServerRecord:0xb727aee0 @port=49202, @active=false, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK", @fqdn="lucius.osburn-sharp.ath.cx", @env=:dev>
+D, [2011-04-28 07:27:28 #14812] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb727aae4 @port=49202, @active=false, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4", @fqdn="germanicus.osburn-sharp.ath.cx", @env=:dev>
+I, [2011-04-28 07:27:28 #14812]  INFO -- : Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+D, [2011-04-28 07:27:28 #14812] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb727aaa8 @port=49202, @active=false, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3", @fqdn="octavia.osburn-sharp.ath.cx", @env=:dev>
+I, [2011-04-28 07:27:28 #14812]  INFO -- : Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+D, [2011-04-28 07:27:28 #14812] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb727a9e0 @port=49202, @active=false, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV", @fqdn="antonia.osburn-sharp.ath.cx", @env=:dev>
+I, [2011-04-28 07:27:28 #14812]  INFO -- : Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+D, [2011-04-28 07:27:28 #14812] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb727a8f0 @port=49202, @active=false, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ", @fqdn="valeria.osburn-sharp.ath.cx", @env=:dev>
+I, [2011-04-28 07:27:28 #14812]  INFO -- : Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+D, [2011-04-28 07:27:28 #14812] DEBUG -- : Got remote services: []
+I, [2011-04-28 07:27:28 #14812]  INFO -- : Started up the Jerbil Server
+I, [2011-04-28 10:35:08 #14812]  INFO -- : Stop called with incorrect private key
+D, [2011-04-28 10:35:08 #14812] DEBUG -- :  Private Key provided:
+D, [2011-04-28 10:35:08 #14812] DEBUG -- : fe76fc87a5a280653096
+D, [2011-04-28 10:35:08 #14812] DEBUG -- :  Private Key required
+D, [2011-04-28 10:35:08 #14812] DEBUG -- : ca5aa08e70be4054f524

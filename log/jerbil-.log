@@ -1,0 +1,41 @@
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Started up the Jerbil Server
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Started up the Jerbil Server
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49902 for env: dev
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Started up the Jerbil Server
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49902 for env: dev
+W, [2011-04-26 07:29:18 #8918]  WARN -- : Service: lucius.osburn-sharp.ath.cx:49902-dev already registered
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Started up the Jerbil Server
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49902 for env: dev
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Deleted Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Started up the Jerbil Server
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49902 for env: dev
+W, [2011-04-26 07:29:18 #8918]  WARN -- : Attempt was made to remove a service that is not registered: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Started up the Jerbil Server
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49902 for env: dev
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49901 for env: test
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Started up the Jerbil Server
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49902 for env: dev
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49901 for env: test
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Searching for services. Found 3 matching.
+I, [2011-04-26 07:29:18 #8918]  INFO -- :   Arguments: {:name=>:rubytest}
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Started up the Jerbil Server
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49902 for env: dev
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49901 for env: test
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Searching for services. Found 1 matching.
+I, [2011-04-26 07:29:18 #8918]  INFO -- :   Arguments: {:env=>:prod}
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Started up the Jerbil Server
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49902 for env: dev
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49901 for env: test
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Searching for services. Found 0 matching.
+I, [2011-04-26 07:29:18 #8918]  INFO -- :   Arguments: {:name=>:Bilker}
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Started up the Jerbil Server
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49902 for env: dev
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49901 for env: test
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Registered Local Service: lucius.osburn-sharp.ath.cx:49900 for env: prod
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Searching for services. Found 3 matching.
+I, [2011-04-26 07:29:18 #8918]  INFO -- :   Arguments: {:name=>:rubytest}
+I, [2011-04-26 07:29:18 #8918]  INFO -- : Get returned rubytest[dev]@lucius.osburn-sharp.ath.cx:49902

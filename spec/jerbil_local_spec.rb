@@ -26,14 +26,15 @@ describe "A Jerbil Session" do
 
   before(:each) do
     me = Socket::gethostname
-    my_server = Jerbil::Server.new(me, 'ABCDE')
+    my_server = Jerbil::ServerRecord.new(me, 'ABCDE', 49902)
     my_servers = [my_server]
-    my_options = {:log_dir=>log_dir, :log_level=>:verbose, :key_file=>key_file}
+    my_options = {:log_dir=>log_dir, :log_level=>:verbose}
+    pkey = "ABCDEFG"
 
-    @my_session = Jerbil.new(my_server, my_servers, my_options)
-    @my_service = Jerbil::Service.new(:rubytest, :dev)
-    @a_service = Jerbil::Service.new(:rubytest, :test)
-    @b_service = Jerbil::Service.new(:rubytest, :prod)
+    @my_session = Jerbil::Broker.new(my_server, my_servers, my_options, pkey)
+    @my_service = Jerbil::ServiceRecord.new(:rubytest, :dev)
+    @a_service = Jerbil::ServiceRecord.new(:rubytest, :test)
+    @b_service = Jerbil::ServiceRecord.new(:rubytest, :prod)
   end
 
   after(:each) do
@@ -64,7 +65,7 @@ describe "A Jerbil Session" do
   end
 
   it "should do nothing if you remove an unregistered service" do
-    Syslog.should_receive(:info).exactly(2).times.and_return(true)
+    Syslog.should_receive(:info).exactly(1).times.and_return(true)
     @my_session.register(@my_service)
     @my_session.remove(@a_service)
     @my_session.services.should == 1
@@ -102,8 +103,8 @@ describe "A Jerbil Session" do
     end
 
     it "should be possible to get a service in one go" do
-      my_service = @my_session.get(:name=>:rubytest)
-      my_service.should be_a_kind_of(Jerbil::Service)
+      my_service = @my_session.get({:name=>:rubytest}, true)
+      my_service.should be_a_kind_of(Jerbil::ServiceRecord)
       my_service.env.should == :dev
 
     end

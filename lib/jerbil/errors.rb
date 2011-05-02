@@ -12,7 +12,7 @@
 # 
 # 
 
-class Jerbil
+module Jerbil
 
   # general error type
   class JerbilError < RuntimeError; end
@@ -38,11 +38,23 @@ class Jerbil
   # there is already a service with these details registered with the Jerbil Server
   class ServiceAlreadyRegistered < JerbilServiceError; end
 
+  # the service being registered is not local
+  class ServiceNotLocal < JerbilServiceError; end
+
+  # tried to do something to a service without access
+  class UnauthorizedMethod < JerbilServiceError; end
+
+  # there is no service
+  class ServiceNotFound < JerbilServiceError; end
+
   # create a class for all server related errors
   class JerbilServerError < JerbilError; end
 
-  # failed to find the local server in the list of servers provided on initialization
-  class MissingLocalServer < JerbilServerError; end
+  # error in the jerbil config file
+  class JerbilConfigError < JerbilServerError; end
+
+  # failed to find the server in the list of servers provided in config
+  class MissingServer < JerbilServerError; end
 
   # error while trying to connect to a Jerbil Server
   class ServerConnectError < JerbilServerError; end
@@ -51,6 +63,6 @@ class Jerbil
   class InvalidServerKey < JerbilServerError; end
 
   # the master key provided for a system operation does not match this master key
-  class InvalidMasterKey < JerbilServerError; end
+  class InvalidPrivateKey < JerbilServerError; end
 
 end

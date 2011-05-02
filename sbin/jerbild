@@ -20,6 +20,7 @@ require 'jerbil'
 require 'jerbil/server'
 require 'jerbil/config'
 require 'jerbil/version'
+require 'jerbil/support'
 require 'jelly'
 require 'jeckyl'
 require 'socket'
@@ -28,10 +29,11 @@ require 'rubygems'
 require 'daemons'
 require 'optparse'
 
-config_file='/etc/jermine/jerbil.conf'
+config_file = nil # let it be the default
 daemonize = true
 log_to_syslog = true
 verbose = false
+env = nil
 
 OptionParser.new do |opts|
 
@@ -57,6 +59,10 @@ OptionParser.new do |opts|
     end
   end
 
+  opts.on("-e", "--environment [TYPE]", [:prod, :test, :dev], "Select env (prod, test, dev), default is prod") do |e|
+    env = e
+  end
+
   opts.on("-V", "--verbose", "output more information about what is going on ") do
     verbose = true
   end
@@ -69,15 +75,40 @@ OptionParser.new do |opts|
 
 end.parse!
 
-puts "Starting the Jerbil Server" if verbose
-puts "Version: " + Jerbil::Version if verbose
+puts "Starting the Jerbil Server (#{Jerbil::Ident})" if verbose
 
-options = Jerbil::Config.new(config_file)
-puts options.inspect if verbose
+#options = Jerbil::Config.new(config_file)
+#puts options.inspect if verbose
+#
+#servers = options[:servers]
+#
+#if env != :null then
+#  server_env = env
+#else
+#  server_env = options[:environment] || :prod
+#end
 
-servers = options[:servers]
-my_self = Jerbil::Server.get_local_server(servers)
+begin
+  config = Jerbil.get_config(config_file)
 
+  my_self = Jerbil.get_local_server(config)
+rescue Jerbil::JerbilConfigError => err
+  puts "Error in Jerbil Config File: #{err.message}"
+  exit 1
+rescue Jerbil::MissingServer
+  puts "Failed to find a local server in the config file. Check environment settings"
+  exit 1
+end
+
+# create a private key for jerbil
+pkey = Jerbil::Support.create_private_key(:jerbil, config[:environment], config[:key_dir])
+puts "Created Private Key" if verbose
+
+# check the pid directory has been set
+unless config[:pid_dir] then
+  puts "You must provide a writeable pid_dir in the config file!"
+  exit 1
+end
 
 if daemonize then
   puts "Daemonizing now" if verbose
@@ -86,29 +117,18 @@ else
   puts "Running in the foreground" if verbose
 end
 
-servers = options.delete(:servers)
+servers = config.delete(:servers)
 
 # prevent the server from generating syslogs
 Jelly.disable_syslog unless log_to_syslog
 
 $SAFE = 1 # using DRb, so prevent anything nasty
 
-jerbild = Jerbil.new(my_self, servers, options)
+jerbild = Jerbil::Broker.new(my_self, servers, config, pkey)
 
 DRb.start_service(my_self.drb_address, jerbild)
 
-# need to write pid to pidfile
-
-if options[:pid_dir] then
-  begin
-    pid_file = options[:pid_dir] + '/jerbil.pid'
-    File.open(pid_file, "w") do |pfile|
-      pfile.puts Process.pid.to_s
-    end
-    puts "Created pid file: #{pid_file}" if verbose && !daemonize
-  rescue
-    # ignore pid file if write fails
-  end
-end
+# now create the pid file
+Jerbil::Support.write_pid_file(:jerbil, config[:environment], config[:pid_dir])
 
 DRb.thread.join

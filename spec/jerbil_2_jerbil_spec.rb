@@ -31,10 +31,10 @@ describe "Jerbil to Jerbil tests" do
     @my_key = 'DEVELOPMENT'
     DRb.start_service
     Jelly.disable_syslog
-    @remote_jerbil_server = Jerbil::Server.new(hostname, 'ABCDE')
-    @jerbil_server = Jerbil::Server.new(hostname, @my_key)
-    @a_service = Jerbil::Service.new(:rubytest, :test)
-    @b_service = Jerbil::Service.new(:rubytest, :prod)
+    @remote_jerbil_server = Jerbil::ServerRecord.new(hostname, 'ABCDE')
+    @jerbil_server = Jerbil::ServerRecord.new(hostname, @my_key)
+    @a_service = Jerbil::ServiceRecord.new(:rubytest, :test)
+    @b_service = Jerbil::ServiceRecord.new(:rubytest, :prod)
     @remote_jerbil = @remote_jerbil_server.connect
     @remote_jerbil.register(@a_service)
     @remote_jerbil.register(@b_service)
@@ -64,7 +64,7 @@ describe "Jerbil to Jerbil tests" do
     my_options = {:log_dir=>log_dir, :log_level=>:debug, :key_file=>key_file}
     jerbil = Jerbil.new(@jerbil_server, servers, my_options)
     jerbil.verify.should be_true
-    another_service = Jerbil::Service.new(:numbat, :dev)
+    another_service = Jerbil::ServiceRecord.new(:numbat, :dev)
     jerbil.register(another_service)
     aservice = @remote_jerbil.get({:name=>:numbat})
     aservice.should == another_service

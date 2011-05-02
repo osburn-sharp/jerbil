@@ -18,12 +18,13 @@ require 'jerbil'
 require 'jerbil/server'
 require 'jerbil/version'
 require 'jerbil/config'
-require 'socket'
+require 'jerbil/support'
 require 'drb'
 require 'optparse'
 
 config_file='/etc/jermine/jerbil.conf'
 verbose = false
+env = :null
 
 OptionParser.new do |opts|
 
@@ -45,6 +46,10 @@ OptionParser.new do |opts|
     verbose = true
   end
 
+  opts.on("-e", "--environment [TYPE]", [:prod, :test, :dev], "Select env (prod, test, dev), default is prod") do |e|
+    env = e
+  end
+
   opts.on("-h", "--help", "Provide Help") do |h|
     opts.separator ""
     puts opts
@@ -54,54 +59,68 @@ OptionParser.new do |opts|
 end.parse!
 
 puts "Stopping the local Jerbil Server" if verbose
-puts "Version: " + Jerbil::Version if verbose
-
-hostname = Socket.gethostname
+puts "Version: jerbil-" + Jerbil::Version + " [#{Jerbil::Version_Date}]" if verbose
 
 options = Jerbil::Config.new(config_file)
 servers = options[:servers]
 
-local = Jerbil::Server.get_local_server(servers)
+if env != :null then
+  server_env = env
+else
+  server_env = options[:environment] || :prod
+end
+
+puts "Running with environment: #{server_env}" if verbose
+
+local = Jerbil::ServerRecord.get_local_server(servers, server_env)
 
 if local.nil? then
-  puts "Cannot fund local Jerbil Server" if verbose
+  puts "Cannot find record for a local Jerbil Server" if verbose
   exit 1
 end
 
-puts "Found local Jerbil Server" if verbose
+puts "Found local Jerbil Server record" if verbose
 
-key_file = options[:key_file]
-begin
-  my_key = File.read(key_file)
-rescue
-  puts "Failed to open private key file. Cannot stop server" if verbose
-  exit 1
-end
+pkey = Jerbil::Support.get_key_and_delete_file(:jerbil, server_env, options[:key_dir])
+puts "Obtained a private key: #{pkey} from #{options[:key_dir]}" if verbose
+pid = Jerbil::Support.get_pid_and_delete_file(:jerbil, server_env, options[:pid_dir])
+puts "Obtained a pid: #{pid}" if verbose
 
 puts "Stopping Jerbil Test Server" if verbose
 
-jerbild = local.connect
-
-# see if you can connect!
 begin
+  jerbild = local.connect
+
+  # see if you can verify?
   jerbild.verify
-rescue DRb::DRbConnError
+rescue DRb::DRbConnError, Jerbil::ServerConnectError
   #fall back to pid killing
-  if options[:pid_dir] then
-    # can give it a go
-    pid_file = options[:pid_dir] + '/jerbil.pid'
-    pid = File.read(pid_file)
+  if pid > 0 then
     Process.kill("SIGKILL", pid.to_i)
     puts "Manually killed the process" if verbose
-    exit 0
+  else
+    puts "No pid, assume it is already dead" if verbose
   end
+  exit 0
 end
 
 # did, so kill it properly
 begin
-  jerbild.stop(my_key)
+  jerbild.stop(pkey)
+rescue Jerbil::InvalidPrivateKey
+  # process must exist but something went wrong with the key
+  puts "Invalid or missing private key: #{pkey}" if verbose
+  if pid > 0 then
+    puts "Manually killing the process by pid: #{pid}" if verbose
+    Process.kill("SIGKILL", pid.to_i)
+  else
+    # no key, no pid, but the process still exists.
+    puts "Jerbil Server appears to be running but there is no pid file or key file!" if verbose
+    exit 1
+  end
 rescue DRb::DRbConnError
-  #fall back to pid killing
+  # always raised when remote end exits, so just ignore it
 end
 
 puts "Stopped Jerbil Server" if verbose
+exit 0

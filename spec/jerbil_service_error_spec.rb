@@ -13,8 +13,9 @@
 # 
 
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
-require 'jerbil/jerbil_service_class'
 require 'jerbil/errors'
+require 'jerbil/jerbil_service/base'
+require 'jerbil'
 require File.expand_path(File.dirname(__FILE__) + '/../test/test_service')
 require 'socket'
 
@@ -23,31 +24,33 @@ tconfig = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/test')
 
 describe "Test Service Class for Errors (No Jerbil)" do
 
+  before(:each) do
+    @pkey = "ABCDEF"
+    jerbil_test = get_test_jerbil
+    Jerbil.stub(:get_local_server).and_return(jerbil_test)
 
-  it "should raise error on missing config" do
-    jconfig = config_dir + '/config.not.there'
-    options = {:log_dir => "/home/robert/dev/projects/jerbil/log", :log_level => :debug, :jerbil_config=>jconfig, :exit_on_stop=>false}
-    lambda{TestService.new(options)}.should raise_error(Jerbil::ServiceConfigError)
   end
 
-  it "should raise error on malformed config" do
-    jconfig = config_dir + '/malformed'
-    options = {:log_dir => "/home/robert/dev/projects/jerbil/log", :log_level => :debug, :jerbil_config=>jconfig, :exit_on_stop=>false}
-    lambda{TestService.new(options)}.should raise_error(Jerbil::ServiceConfigError)
-  end
 
   it "should raise error on bad service name" do
     require File.expand_path(File.dirname(__FILE__) + '/../test/bad_test_service')
     jconfig = config_dir + '/jerbil'
     options = {:log_dir => "/home/robert/dev/projects/jerbil/log", :log_level => :debug, :jerbil_config=>jconfig, :exit_on_stop=>false}
-    lambda{BadTestService.new(options)}.should raise_error(Jerbil::InvalidService)
+    lambda{BadTestService.new(@pkey, options)}.should raise_error(Jerbil::InvalidService)
   end
 
   it "should raise error for no Jerbil Server" do
     jconfig = config_dir + '/jerbil'
     options = {:log_dir => "/home/robert/dev/projects/jerbil/log", :log_level => :debug, :jerbil_config=>jconfig, :exit_on_stop=>false}
-    lambda{TestService.new(options)}.should raise_error(Jerbil::ServerConnectError)
+    Jerbil.unstub(:get_local_server)
+    lambda{TestService.new(@pkey, options)}.should raise_error(Jerbil::ServerConnectError)
   end
 
 
+end
+
+def get_test_jerbil
+  config_file = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/jerbil.conf')
+  config = Jerbil.get_config(config_file)
+  return Jerbil.get_local_server(config)
 end

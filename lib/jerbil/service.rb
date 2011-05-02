@@ -17,7 +17,7 @@ require 'jerbil/errors'
 require 'socket'
 require 'digest/sha1'
 
-class Jerbil
+module Jerbil
 
   # Define a service to register with Jerbil
   #
@@ -25,7 +25,7 @@ class Jerbil
   # * port - the service port to be used for the service
   # * env - set to :dev, :test, or :production
   #
-  class Service
+  class ServiceRecord
 
     # create a new service object
     #
@@ -49,6 +49,10 @@ class Jerbil
         raise InvalidService, "No service registered as: #{name}"
       end
 
+      # now increment it if not production
+      @port += 1 if env == :test
+      @port += 2 if env == :dev
+
       @env = env
       @key = Digest::SHA1.hexdigest(Time.now.to_s + rand(12341234).to_s)[1..10]
       @pid = Process.pid
@@ -59,6 +63,7 @@ class Jerbil
       @registered_at = nil
       @access_count = 0
       @accessed_at = nil
+      @close = true
     end
 
     # name of the service
@@ -94,7 +99,7 @@ class Jerbil
 
     # return a string containing the name, host etc
     def ident
-      "#{@name}@#{@address}[#{@env}]"
+      "#{@name}[#{@env}]@#{@address}"
     end
 
     # return a hash containing the find arguments for self
@@ -155,24 +160,32 @@ class Jerbil
       "druby://#{@host}:#{@port}"
     end
 
-
-    # kill the service either by asking it, or if that fails
-    # pull the rug from under
-    def stop(kill=true)
-      begin
-        unless @stop_callback.nil?
-          service = self.connect(false)
-          service.send @stop_callback, @key
-        end
-      rescue
-        # do I need this?
-      ensure
-        # could not contact service
-        # assume it is misbehaving
-        Process.kill("SIGKILL", @pid) if kill
-        # and do no more
-      end
+    # is the service local to the caller?
+    def local?
+      return @host == Socket.gethostname
     end
+
+
+    # close the connection to the service
+    def close
+      DRb.stop_service if @close
+    end
+
+#    def stop(kill=true)
+#      begin
+#        unless @stop_callback.nil?
+#          service = self.connect(false)
+#          service.send @stop_callback, @key
+#        end
+#      rescue
+#        # do I need this?
+#      ensure
+#        # could not contact service
+#        # assume it is misbehaving
+#        Process.kill("SIGKILL", @pid) if kill
+#        # and do no more
+#      end
+#    end
 
     # mark the service as locked so server knows not
     # to release record to another client
@@ -208,8 +221,10 @@ class Jerbil
 
     def start_drb_if_needed
       DRb.current_server
+      @close = false
     rescue
       DRb.start_service
+      @close = true
     end
     
   end

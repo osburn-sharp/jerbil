@@ -26,7 +26,7 @@ require 'drb'
 
 
 hostname = Socket.gethostname
-my_self = Jerbil::Server.new(hostname, 'ABCDE')
+my_self = Jerbil::ServerRecord.new(hostname, 'ABCDE')
 #another = Jerbil::Server.new('antonia', 'JKLMNOP')
 #servers = [my_self, another]
 

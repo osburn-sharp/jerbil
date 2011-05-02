@@ -28,11 +28,12 @@ class String
   include Term::ANSIColor
 end
 
-config_file='/etc/jermine/jerbil.conf'
+config_file = nil
 cmd = :check_local
 verbose = false
 quiet = false
 verify = false
+env = :null
 
 OptionParser.new do |opts|
 
@@ -62,6 +63,10 @@ OptionParser.new do |opts|
     end
   end
 
+  opts.on("-e", "--environment [TYPE]", [:prod, :test, :dev], "Select env (prod, test, dev), default is prod") do |e|
+    env = e
+  end
+
   opts.on("-v", "--verify", "verify that services are running") do
     verify = true
   end
@@ -82,11 +87,10 @@ OptionParser.new do |opts|
 
 end.parse!
 
-puts "Jerbil v" + Jerbil::Version unless quiet
+puts "Welcome to Jerbil (" + Jerbil::Ident + ')' unless quiet
 
-options = Jerbil::Config.new(config_file)
-servers = options[:servers]
-local = Jerbil::Server.get_local_server(servers)
+config = Jerbil.get_config(config_file)
+local = Jerbil.get_local_server(config)
 #puts options.inspect
 
 if quiet then
@@ -116,14 +120,14 @@ when :check_local
 
 when :config_servers
   puts "Jerbil is configured with the following servers:"
-  servers.each do |server|
+  config[:servers].each do |server|
     puts "  #{server.fqdn}, key: [#{server.key}]"
   end
 
 when :servers
   puts "Jerbil server status is:"
 
-  servers.each do |server|
+  config[:servers].each do |server|
     connect = false
     begin
       jerbs = server.connect
@@ -149,8 +153,7 @@ when :list
     puts "    started at: #{s.registered_at.strftime('%d/%m/%y %H:%M')}" if verbose
     puts "    accessed #{s.access_count.to_s} times, last time at: #{s.accessed_at.strftime('%d/%m/%y %H:%M')}" if verbose
     if verify then
-      service = jerbs.get(s.args)
-      if service.nil? then
+      if jerbs.service_missing?(s) then
         puts "  Verify failed. Service has been removed"
       else
         puts "  Verify succeeded"

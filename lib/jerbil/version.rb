@@ -1,9 +1,10 @@
 # Created by Jevoom
 #
-# 17-Apr-2011
-#   Further tweaks to initscript install option
+# 02-May-2011
+#   Second release with a substantial number of changes and tweaks.
 
-class Jerbil
-  Version = '0.0.8'
-  Version_Date = '17-Apr-2011'
+module Jerbil
+  Version = '0.1.0'
+  Version_Date = '02-May-2011'
+  Ident = 'jerbil-0.1.0 02-May-2011'
 end

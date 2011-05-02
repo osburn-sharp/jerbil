@@ -17,7 +17,7 @@ require 'socket'
 require 'drb'
 
 hostname = Socket.gethostname
-my_self = Jerbil::Server.new(hostname, 'ABCDE')
+my_self = Jerbil::ServerRecord.new(hostname, 'ABCDE')
 
 DRb.start_service
 jerbild = DRbObject.new(nil, my_self.drb_address)

@@ -48,7 +48,7 @@ class Session
   # args has to be a hash of options
   def find(args)
     options = {:name=>nil, :port=>nil, :env=>nil, :pid=>nil}.merge(args)
-    pattern = Jerbil::Service.new(options[:name], options[:port], options[:env], options[:pid])
+    pattern = Jerbil::ServiceRecord.new(options[:name], options[:port], options[:env], options[:pid])
     results = Array.new
     @store.each do |service|
       results << service if service == pattern

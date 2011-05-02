@@ -26,16 +26,23 @@ describe "A Jerbil Session" do
 
   before(:each) do
     me = Socket::gethostname
-    local_server = Jerbil::Server.new(me, 'ABCDE')
+    local_server = Jerbil::ServerRecord.new(me, 'ABCDE', 49902)
     @calling_key = 'JKLMNOP'
-    calling_server = Jerbil::Server.new('antonia', @calling_key)
-    my_servers = [local_server, calling_server]
-    my_options = {:log_dir=>log_dir, :log_level=>:verbose, :key_file=>key_file}
+    @third_key = 'GFHNBDUC'
+    @pkey = '123456'
+    @calling_server = Jerbil::ServerRecord.new('germanicus.osburn-sharp.ath.cx', @calling_key, 49902)
+    @third_server = Jerbil::ServerRecord.new('antonia.osburn-sharp.ath.cx', @third_key, 49902)
+    my_servers = [local_server, @calling_server]#, @third_server]
+    my_options = {:log_dir=>log_dir, :log_level=>:debug, :key_file=>key_file}
 
-    @my_session = Jerbil.new(local_server, my_servers, my_options)
-    @my_service = Jerbil::Service.new(:rubytest, :dev)
-    @a_service = Jerbil::Service.new(:rubytest, :test)
-    @b_service = Jerbil::Service.new(:rubytest, :prod)
+    @my_session = Jerbil::Broker.new(local_server, my_servers, my_options, @pkey)
+    @my_service = Jerbil::ServiceRecord.new(:rubytest, :dev)
+    @remote_host = 'germanicus.osburn-sharp.ath.cx'
+    Socket.stub(:gethostname).and_return(@remote_host)
+    @a_service = Jerbil::ServiceRecord.new(:rubytest, :test)
+    Socket.stub(:gethostname).and_return('antonia.osburn-sharp.ath.cx')
+    @b_service = Jerbil::ServiceRecord.new(:rubytest, :prod)
+    Socket.unstub(:gethostname)
   end
 
   after(:each) do
@@ -101,6 +108,14 @@ describe "A Jerbil Session" do
       services = @my_session.find(:env=>:prod)
       services.length.should == 1
       services[0].should == @b_service
+      services[0].host.should == 'antonia.osburn-sharp.ath.cx'
+    end
+
+    it "should be possible to find a service by env" do
+      services = @my_session.find(:env=>:test)
+      services.length.should == 1
+      services[0].should == @a_service
+      services[0].host.should == @remote_host
     end
 
     it "should not be possible to find a service not registered" do
@@ -109,26 +124,26 @@ describe "A Jerbil Session" do
     end
 
     it "should be possible to get a service in one go" do
-      my_service = @my_session.get(:name=>:rubytest, :env=>:prod)
-      my_service.should be_a_kind_of(Jerbil::Service)
+      my_service = @my_session.get({:name=>:rubytest, :env=>:prod}, true)
+      my_service.should be_a_kind_of(Jerbil::ServiceRecord)
       my_service.env.should == :prod
 
     end
-
   end
+
 
   describe "remote server calls" do
 
     before(:each) do
       Syslog.should_receive(:info).exactly(3).times.and_return(true)
       @my_session.register(@my_service)
-      @my_session.register(@a_service)
+      @my_session.register_remote(@calling_key, @a_service)
       @my_session.register_remote(@calling_key, @b_service)
     end
 
     it "should return all locally registered services" do
       local_services = @my_session.get_local_services(@calling_key)
-      local_services.length.should == 2
+      local_services.length.should == 1
     end
 
     it "should not be possible to get local services without a valid server key" do

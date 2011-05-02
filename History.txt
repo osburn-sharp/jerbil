@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.1.0 2-May-2011
+
+Second release with a substantial number of changes and tweaks.
+
 jerbil-0.0.8 17-Apr-2011
 
 Further tweaks to initscript install option

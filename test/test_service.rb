@@ -11,21 +11,27 @@
 # must themselves be licensed under the Open Software Licence v. 3.0
 # 
 #
-require 'jerbil/jerbil_service_class'
+require 'jerbil/jerbil_service/base'
+require 'jerbil/jerbil_service/support'
 
 # Test Service for Jerbil
 
-class TestService < JerbilService
-  
-  def initialize(options)
-    super(:rubytest, :test, options)
+module RubyTest
+
+  extend JerbilService::Support
+
+  class Service < JerbilService::Base
+
+    def initialize(pkey, options)
+      super(:rubytest, pkey, options)
+    end
+
+    def action
+      @logger.debug("Someone called the action method!")
+      return "Hello"
+    end
+
   end
 
-  def action
-    @logger.debug("Someone called the action method!")
-    return "Hello"
-  end
-  
 end
-
 

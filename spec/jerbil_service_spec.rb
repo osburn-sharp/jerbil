@@ -13,23 +13,29 @@
 # 
 
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
-require 'jerbil/jerbil_service_class'
+require 'jerbil/jerbil_service/base'
+require 'jerbil'
 require File.expand_path(File.dirname(__FILE__) + '/../test/test_service')
-require 'socket'
 
-jconfig = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/jerbil')
-tconfig = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/test')
 
 describe "Test Service Class" do
 
 
 
   it "should start and stop OK" do
-    tservice = TestService.new(:log_dir => "/home/robert/dev/projects/jerbil/log", :log_level => :debug, :jerbil_config=>jconfig, :exit_on_stop=>false)
+    pkey = "ABCDEF"
+    jerbil_test = get_test_jerbil
+    Jerbil.stub(:get_local_server).and_return(jerbil_test)
+    tservice = TestService.new(pkey, :log_dir => "/home/robert/dev/projects/jerbil/log", :log_level => :debug, :exit_on_stop=>false)
     tservice.action.should == "Hello"
-    service = tservice.my_service
-    #service.stop(false) # make sure you do not kill anything
+    tservice.stop_callback(pkey) # make sure you do not kill anything
   end
 
 
+end
+
+def get_test_jerbil
+  config_file = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/jerbil.conf')
+  config = Jerbil.get_config(config_file)
+  return Jerbil.get_local_server(config)
 end

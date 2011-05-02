@@ -27,28 +27,33 @@ start() {
 
 status() {
   ebegin "Checking Jerbil Status"
-  /usr/local/bin/jerbil -q
+    /usr/local/bin/jerbil -q
   eend $?
 }
 
 
 stop() {
   ebegin "Stopping Jerbil Server"
-  /usr/local/sbin/jerbil-stop 
+    /usr/local/sbin/jerbil-stop
   eend $?
 }
 
 install() {
   einfo "Installing Jerbil Server"
   ebegin "Creating User"
-  /usr/sbin/useradd -d /var/run/jermine -u 603 -s /bin/bash jermine >&/dev/null
+    /usr/sbin/useradd -d /var/run/jermine -u 603 -s /bin/bash jermine >&/dev/null
   eend $?
+  ebegin "Creating Group"
+    /usr/sbin/groupadd -g 603 -f jermine
+    /usr/sbin/gpasswd -a jermine jermine >&/dev/null
   ebegin "Creating directories"
-  mkdir -p /var/log/jermine >&/dev/null
-  mkdir -p /var/run/jermine >&/dev/null
+    mkdir -p /var/log/jermine >&/dev/null
+    mkdir -p /var/run/jermine >&/dev/null
   eend $?
   ebegin "Changing log directory ownership"
-  chown jermine /var/log/jermine >&/dev/null
-  chown jermine /var/run/jermine >&/dev/null
+    chown jermine:jermine /var/log/jermine >&/dev/null
+    chown jermine:jermine /var/run/jermine >&/dev/null
+    chmod g+w /var/log/jermine >&/dev/null
+    chmod g+w /var/run/jermine >&/dev/null
   eend $?
 }

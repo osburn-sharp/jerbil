@@ -15,27 +15,27 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 require 'jerbil/server'
 require 'jerbil/service'
+require 'jerbil/config'
 require 'jerbil'
 require 'jelly'
 require 'socket'
 require 'syslog'
 require 'drb'
 
-log_dir = File.expand_path(File.dirname(__FILE__) + '/../log')
-key_file = File.expand_path(File.dirname(__FILE__) + '/../test/private_key_file.asc')
+
+config = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/jerbil.conf')
 
 describe "Jerbil to Jerbil tests" do
 
   before(:all) do
-    hostname = Socket.gethostname
-    @my_key = 'DEVELOPMENT'
-    DRb.start_service
-    Jelly.disable_syslog
-    @remote_jerbil_server = Jerbil::Server.new(hostname, 'ABCDE')
-    @jerbil_server = Jerbil::Server.new(hostname, @my_key)
-    @a_service = Jerbil::Service.new(:rubytest, :test)
-    @b_service = Jerbil::Service.new(:rubytest, :prod)
-    @remote_jerbil = @remote_jerbil_server.connect
+    @options = Jerbil::Config.new(config)
+    @servers = @options.delete(:servers)
+    @env = @options[:environment]
+    @local = Jerbil::ServerRecord.get_local_server(@servers, @env)
+
+    @a_service = Jerbil::ServiceRecord.new(:rubytest, :test)
+    @b_service = Jerbil::ServiceRecord.new(:rubytest, :prod)
+    @remote_jerbil = @local.connect
     @remote_jerbil.register(@a_service)
     @remote_jerbil.register(@b_service)
   end

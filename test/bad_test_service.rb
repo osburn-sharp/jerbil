@@ -11,14 +11,14 @@
 # must themselves be licensed under the Open Software Licence v. 3.0
 # 
 #
-require 'jerbil/jerbil_service_class'
+require 'jerbil/jerbil_service/base'
 
 # Test Service for Jerbil
 
-class BadTestService < JerbilService
+class BadTestService < JerbilService::Base
   
-  def initialize(options)
-    super(:rubynonsense, :test, options)
+  def initialize(pkey, options)
+    super(:rubynonsense, :test, pkey, options)
   end
 
   def action

@@ -118,9 +118,11 @@
         
           <li><a href="./Jerbil.html">Jerbil</a></li>
         
+          <li><a href="./Jerbil/Broker.html">Jerbil::Broker</a></li>
+        
           <li><a href="./Jerbil/Config.html">Jerbil::Config</a></li>
         
-          <li><a href="./Jerbil/InvalidMasterKey.html">Jerbil::InvalidMasterKey</a></li>
+          <li><a href="./Jerbil/InvalidPrivateKey.html">Jerbil::InvalidPrivateKey</a></li>
         
           <li><a href="./Jerbil/InvalidServerKey.html">Jerbil::InvalidServerKey</a></li>
         
@@ -128,19 +130,19 @@
         
           <li><a href="./Jerbil/InvalidServiceKey.html">Jerbil::InvalidServiceKey</a></li>
         
+          <li><a href="./Jerbil/JerbilConfigError.html">Jerbil::JerbilConfigError</a></li>
+        
           <li><a href="./Jerbil/JerbilError.html">Jerbil::JerbilError</a></li>
         
           <li><a href="./Jerbil/JerbilServerError.html">Jerbil::JerbilServerError</a></li>
         
           <li><a href="./Jerbil/JerbilServiceError.html">Jerbil::JerbilServiceError</a></li>
         
-          <li><a href="./Jerbil/MissingLocalServer.html">Jerbil::MissingLocalServer</a></li>
-        
-          <li><a href="./Jerbil/Server.html">Jerbil::Server</a></li>
+          <li><a href="./Jerbil/MissingServer.html">Jerbil::MissingServer</a></li>
         
           <li><a href="./Jerbil/ServerConnectError.html">Jerbil::ServerConnectError</a></li>
         
-          <li><a href="./Jerbil/Service.html">Jerbil::Service</a></li>
+          <li><a href="./Jerbil/ServerRecord.html">Jerbil::ServerRecord</a></li>
         
           <li><a href="./Jerbil/ServiceAlreadyRegistered.html">Jerbil::ServiceAlreadyRegistered</a></li>
         
@@ -150,7 +152,27 @@
         
           <li><a href="./Jerbil/ServiceConnectError.html">Jerbil::ServiceConnectError</a></li>
         
+          <li><a href="./Jerbil/ServiceNotFound.html">Jerbil::ServiceNotFound</a></li>
+        
+          <li><a href="./Jerbil/ServiceNotLocal.html">Jerbil::ServiceNotLocal</a></li>
+        
+          <li><a href="./Jerbil/ServiceRecord.html">Jerbil::ServiceRecord</a></li>
+        
+          <li><a href="./Jerbil/Support.html">Jerbil::Support</a></li>
+        
+          <li><a href="./Jerbil/UnauthorizedMethod.html">Jerbil::UnauthorizedMethod</a></li>
+        
           <li><a href="./JerbilService.html">JerbilService</a></li>
+        
+          <li><a href="./JerbilService/Base.html">JerbilService::Base</a></li>
+        
+          <li><a href="./JerbilService/Client.html">JerbilService::Client</a></li>
+        
+          <li><a href="./JerbilService/Config.html">JerbilService::Config</a></li>
+        
+          <li><a href="./JerbilService/SuperClient.html">JerbilService::SuperClient</a></li>
+        
+          <li><a href="./JerbilService/Support.html">JerbilService::Support</a></li>
         
           <li><a href="./Session.html">Session</a></li>
         
@@ -317,7 +339,7 @@ options</p>
 <span class="ruby-comment"># File lib/jerbil/session.rb, line 49</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">find</span>(<span class="ruby-identifier">args</span>)
   <span class="ruby-identifier">options</span> = {<span class="ruby-value">:name=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">nil</span>, <span class="ruby-value">:port=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">nil</span>, <span class="ruby-value">:env=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">nil</span>, <span class="ruby-value">:pid=</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">nil</span>}.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">args</span>)
-  <span class="ruby-identifier">pattern</span> = <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">Service</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:name</span>], <span class="ruby-identifier">options</span>[<span class="ruby-value">:port</span>], <span class="ruby-identifier">options</span>[<span class="ruby-value">:env</span>], <span class="ruby-identifier">options</span>[<span class="ruby-value">:pid</span>])
+  <span class="ruby-identifier">pattern</span> = <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">ServiceRecord</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:name</span>], <span class="ruby-identifier">options</span>[<span class="ruby-value">:port</span>], <span class="ruby-identifier">options</span>[<span class="ruby-value">:env</span>], <span class="ruby-identifier">options</span>[<span class="ruby-value">:pid</span>])
   <span class="ruby-identifier">results</span> = <span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@store</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">service</span><span class="ruby-operator">|</span>
     <span class="ruby-identifier">results</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">service</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">service</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pattern</span>

@@ -16,14 +16,28 @@ require 'jeckyl'
 require 'jeckyl/errors'
 require 'jerbil/server'
 
-class Jerbil
+module Jerbil
 
-  class Config < Jeckyl
+  DefaultConfigFile = Jeckyl::ConfigRoot + '/jerbil.conf'
+
+  class Config < Jeckyl::Options
+
+    def configure_environment(env)
+      default :prod
+      comment "Set the default environment for jerbil related commands etc. This should",
+        "match the environment used in the servers below.",
+        "",
+        "Can be one of :prod, :test, :dev"
+
+      env_set = [:prod, :test, :dev]
+      a_member_of(env, env_set)
+      
+    end
 
     def configure_servers(ary)
       comment "Array of Jerbil::Server, one for each server in the system"
 
-      an_array_of(ary, Jerbil::Server)
+      an_array_of(ary, Jerbil::ServerRecord)
       
     end
 
@@ -67,10 +81,10 @@ class Jerbil
       @parameter = int * 1024 * 1024
     end
 
-    def configure_key_file(path)
-      comment "private key file used to authenticate privileged users"
+    def configure_key_dir(path)
+      comment "private key dir used to authenticate privileged users"
       
-      a_readable_file(path)
+      a_writable_dir(path)
     end
 
     def configure_pid_dir(path)
