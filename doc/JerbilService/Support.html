@@ -154,7 +154,9 @@
         
           <li><a href="../JerbilService/Config.html">JerbilService::Config</a></li>
         
-          <li><a href="../JerbilService/SuperClient.html">JerbilService::SuperClient</a></li>
+          <li><a href="../JerbilService/MultiClient.html">JerbilService::MultiClient</a></li>
+        
+          <li><a href="../JerbilService/Supervisor.html">JerbilService::Supervisor</a></li>
         
           <li><a href="../JerbilService/Support.html">JerbilService::Support</a></li>
         
@@ -173,6 +175,14 @@
 
     <div id="description" class="description">
       
+<p><a href="Support.html">Support</a> methods that should be used to extend a
+service module</p>
+
+<pre>module RubyTest
+  extend JerbilService::Support
+
+  class Service ...</pre>
+
     </div><!-- description -->
 
     
@@ -217,7 +227,7 @@ service module in the location defined by Jeckyl::ConfigRoot.</p>
             
             <div class="method-source-code" id="get_config-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/jerbil_service/support.rb, line 26</span>
+<span class="ruby-comment"># File lib/jerbil/jerbil_service/support.rb, line 37</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_config</span>(<span class="ruby-identifier">config_file</span>=<span class="ruby-keyword">nil</span>)
   <span class="ruby-comment"># check that the config_file has been specified</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">config_file</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">then</span>
@@ -253,13 +263,13 @@ service module in the location defined by Jeckyl::ConfigRoot.</p>
           <div class="method-description">
             
             <p>get the identity of this module, assuming this has been set up and is
-maintained by Jevoom Returns ‘n/s’ otherwise</p>
+maintained by Jevoom Returns ‘n/a’ otherwise</p>
             
 
             
             <div class="method-source-code" id="ident-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/jerbil_service/support.rb, line 41</span>
+<span class="ruby-comment"># File lib/jerbil/jerbil_service/support.rb, line 52</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">ident</span>
   <span class="ruby-keyword">return</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">module_eval</span>(<span class="ruby-string">&quot;Ident&quot;</span>)
 <span class="ruby-keyword">rescue</span>

@@ -17,8 +17,10 @@ require File.expand_path(File.dirname(__FILE__) + '/../test/test_service')
 require File.expand_path(File.dirname(__FILE__) + '/../test/test_config')
 require 'jerbil/jerbil_service/client'
 require 'jerbil/errors'
+require 'socket'
 
 config_file = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/test')
+localhost = Socket.gethostname
 
 describe "Test Jerbil Client Interface" do
 
@@ -28,6 +30,8 @@ describe "Test Jerbil Client Interface" do
   it "should respond to the action method" do
     JerbilService::Client.connect(RubyTest, @client_opts) do |rubytest|
       rubytest.action.should == 'Hello'
+      rubytest.verify.should be_true
+      rubytest.host.should == localhost
     end
   end
 

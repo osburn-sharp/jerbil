@@ -65,7 +65,13 @@
         <h3 class="section-header">Methods</h3>
         <ul class="link-list">
           
+          <li><a href="#method-c-connect">::connect</a></li>
+          
+          <li><a href="#method-c-each_service">::each_service</a></li>
+          
           <li><a href="#method-c-new">::new</a></li>
+          
+          <li><a href="#method-i-connect">#connect</a></li>
           
           <li><a href="#method-i-method_missing">#method_missing</a></li>
           
@@ -162,7 +168,9 @@
         
           <li><a href="../JerbilService/Config.html">JerbilService::Config</a></li>
         
-          <li><a href="../JerbilService/SuperClient.html">JerbilService::SuperClient</a></li>
+          <li><a href="../JerbilService/MultiClient.html">JerbilService::MultiClient</a></li>
+        
+          <li><a href="../JerbilService/Supervisor.html">JerbilService::Supervisor</a></li>
         
           <li><a href="../JerbilService/Support.html">JerbilService::Support</a></li>
         
@@ -207,12 +215,12 @@ interaction with <a href="../Jerbil.html">Jerbil</a> itself.</p>
         <h3 class="section-header">Public Class Methods</h3>
 
       
-        <div id="new-method" class="method-detail ">
-          <a name="method-c-new"></a>
+        <div id="connect-method" class="method-detail ">
+          <a name="method-c-connect"></a>
 
           
           <div class="method-heading">
-            <span class="method-name">new</span><span
+            <span class="method-name">connect</span><span
               class="method-args">(modl, client_options={}, &block)</span>
             <span class="method-click-advice">click to toggle source</span>
           </div>
@@ -220,105 +228,229 @@ interaction with <a href="../Jerbil.html">Jerbil</a> itself.</p>
 
           <div class="method-description">
             
-            <p>create a client object to access a service over <a
-href="../Jerbil.html">Jerbil</a></p>
+            <p>Connect to a single service using <a href="../Jerbil.html">Jerbil</a></p>
 <ul><li>
-<p>modl - constant for the service Module</p>
-</li><li>
-<p>env - symbol :dev, :test, :prod</p>
+<p>modl - constant for the service module</p>
 </li><li>
 <p>client_options - hash of: :quiet - boolean, suppress messages on stdout
 (default: false) :local - boolean, find only the local service (default:
 false) :output - a file object (not filename) to be used for output -
-defaults to</p>
-
-<pre>$stderr. Is overridden with /dev/null if quiet.</pre>
+defaults to $stderr. Is overridden with /dev/null if quiet. :config_file -
+filename to config file that overides the default</p>
 </li></ul>
 
 <p>The block is called with the client so that within the block the user can
 call methods on the remote object</p>
 
-<p>Services should be defined within the given Module and should have an inner
-class called Service that is a descendent of <a
-href="Base.html">JerbilService::Base</a></p>
+<p>The connection to the service is closed at the end of the block</p>
+            
 
-<p>module RubyTest</p>
+            
+            <div class="method-source-code" id="connect-source">
+<pre>
+<span class="ruby-comment"># File lib/jerbil/jerbil_service/client.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">connect</span>(<span class="ruby-identifier">modl</span>, <span class="ruby-identifier">client_options</span>={}, &amp;<span class="ruby-identifier">block</span>)
 
-<pre>class Service &lt; JerbilService::Base
+  <span class="ruby-comment"># the class itself should be called Service within the given module</span>
+  <span class="ruby-identifier">klass</span> = <span class="ruby-identifier">modl</span>.<span class="ruby-identifier">module_eval</span>(<span class="ruby-string">'Service'</span>)
 
-end</pre>
+  <span class="ruby-identifier">name</span> = <span class="ruby-identifier">modl</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-identifier">name_symbol</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">to_sym</span>
 
-<p>end</p>
+  <span class="ruby-identifier">quiet</span> = <span class="ruby-identifier">client_options</span>[<span class="ruby-value">:quiet</span>]
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">quiet</span>
+    <span class="ruby-identifier">output</span> = <span class="ruby-identifier">client_options</span>[<span class="ruby-value">:output</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">$stderr</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">output</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">'/dev/null'</span>, <span class="ruby-string">'w'</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Welcome to #{name} (#{modl.ident}&quot;</span>
+
+  <span class="ruby-identifier">config_file</span> = <span class="ruby-identifier">client_options</span>[<span class="ruby-value">:config_file</span>]
+  <span class="ruby-identifier">config</span> = <span class="ruby-identifier">modl</span>.<span class="ruby-identifier">get_config</span>(<span class="ruby-identifier">config_file</span>)
+
+  <span class="ruby-identifier">env</span> = <span class="ruby-identifier">config</span>[<span class="ruby-value">:environment</span>]
+
+  <span class="ruby-identifier">service_opts</span> = {<span class="ruby-value">:name=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">name_symbol</span>, <span class="ruby-value">:env=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">env</span>}
+  <span class="ruby-identifier">service_opts</span>[<span class="ruby-value">:host</span>] = <span class="ruby-constant">Socket</span>.<span class="ruby-identifier">gethostname</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">client_options</span>[<span class="ruby-value">:local</span>]
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-comment"># find jerbil</span>
+    <span class="ruby-identifier">jerbil_server</span> = <span class="ruby-constant">Jerbil</span>.<span class="ruby-identifier">get_local_server</span>
+
+    <span class="ruby-comment"># now connect to it</span>
+    <span class="ruby-identifier">jerbil</span> = <span class="ruby-identifier">jerbil_server</span>.<span class="ruby-identifier">connect</span>
+
+    <span class="ruby-comment"># and get service</span>
+    <span class="ruby-identifier">servicerecord</span> = <span class="ruby-identifier">jerbil</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">service_opts</span>)
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">servicerecord</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">ServiceNotFound</span>, <span class="ruby-string">&quot;cannot find service through Jerbil&quot;</span>
+    <span class="ruby-keyword">end</span>
+    
+    <span class="ruby-identifier">this_client</span> = <span class="ruby-identifier">new</span>(<span class="ruby-identifier">servicerecord</span>, <span class="ruby-identifier">jerbil</span>, <span class="ruby-identifier">output</span>, <span class="ruby-identifier">klass</span>)
+
+    <span class="ruby-identifier">this_client</span>.<span class="ruby-identifier">connect</span>(&amp;<span class="ruby-identifier">block</span>)
+
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Stopping the service&quot;</span>
+    <span class="ruby-comment">#output.close unless @output == $stderr</span>
+
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-comment"># give the caller nothing back</span>
+
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">MissingServer</span>
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-string">&quot;Cannot find a local Jerbil server&quot;</span>)
+    <span class="ruby-identifier">raise</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">JerbilConfigError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">err</span>
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;Error in Jerbil Config File: #{err.message}&quot;</span>)
+    <span class="ruby-identifier">raise</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">JerbilServiceError</span> =<span class="ruby-operator">&gt;</span><span class="ruby-identifier">jerr</span>
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;Error with Jerbil Service: #{jerr.message}&quot;</span>) 
+    <span class="ruby-identifier">raise</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">ServerConnectError</span>
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-string">&quot;Error connecting to Jerbil Server&quot;</span>) 
+    <span class="ruby-identifier">raise</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">DRb</span><span class="ruby-operator">::</span><span class="ruby-constant">DRbConnError</span> =<span class="ruby-operator">&gt;</span><span class="ruby-identifier">derr</span>
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;Error setting up DRb Server: #{derr.message}&quot;</span>) 
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">ServerConnectError</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- connect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- connect-method -->
+
+      
+        <div id="each_service-method" class="method-detail ">
+          <a name="method-c-each_service"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">each_service</span><span
+              class="method-args">(modl, client_options, &block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>Connect to multiple services</p>
+            
+
+            
+            <div class="method-source-code" id="each_service-source">
+<pre>
+<span class="ruby-comment"># File lib/jerbil/jerbil_service/client.rb, line 117</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">Client</span>.<span class="ruby-identifier">each_service</span>(<span class="ruby-identifier">modl</span>, <span class="ruby-identifier">client_options</span>, &amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-comment"># the class itself should be called Service within the given module</span>
+  <span class="ruby-identifier">klass</span> = <span class="ruby-identifier">modl</span>.<span class="ruby-identifier">module_eval</span>(<span class="ruby-string">'Service'</span>)
+
+  <span class="ruby-identifier">name</span> = <span class="ruby-identifier">modl</span>.<span class="ruby-identifier">to_s</span>
+  <span class="ruby-identifier">name_symbol</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">to_sym</span>
+
+  <span class="ruby-identifier">quiet</span> = <span class="ruby-identifier">client_options</span>[<span class="ruby-value">:quiet</span>]
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">quiet</span>
+    <span class="ruby-identifier">output</span> = <span class="ruby-identifier">client_options</span>[<span class="ruby-value">:output</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">$stderr</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">output</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">'/dev/null'</span>, <span class="ruby-string">'w'</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Welcome to #{name} (#{modl.ident}&quot;</span>
+
+  <span class="ruby-identifier">config_file</span> = <span class="ruby-identifier">client_options</span>[<span class="ruby-value">:config_file</span>]
+  <span class="ruby-identifier">config</span> = <span class="ruby-identifier">modl</span>.<span class="ruby-identifier">get_config</span>(<span class="ruby-identifier">config_file</span>)
+
+  <span class="ruby-identifier">env</span> = <span class="ruby-identifier">config</span>[<span class="ruby-value">:environment</span>]
+
+  <span class="ruby-identifier">service_opts</span> = {<span class="ruby-value">:name=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">name_symbol</span>, <span class="ruby-value">:env=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">env</span>}
+  <span class="ruby-identifier">service_opts</span>[<span class="ruby-value">:host</span>] = <span class="ruby-constant">Socket</span>.<span class="ruby-identifier">gethostname</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">client_options</span>[<span class="ruby-value">:local</span>]
+
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-comment"># find jerbil</span>
+    <span class="ruby-identifier">jerbil_server</span> = <span class="ruby-constant">Jerbil</span>.<span class="ruby-identifier">get_local_server</span>
+
+    <span class="ruby-comment"># now connect to it</span>
+    <span class="ruby-identifier">jerbil</span> = <span class="ruby-identifier">jerbil_server</span>.<span class="ruby-identifier">connect</span>
+
+    <span class="ruby-comment"># and find all of the services</span>
+    <span class="ruby-identifier">services</span> = []
+    <span class="ruby-identifier">services</span> = <span class="ruby-identifier">jerbil</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">service_opts</span>)
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">services</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">ServiceNotFound</span>, <span class="ruby-string">&quot;cannot find any services through Jerbil&quot;</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">services</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">service_record</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">this_client</span> = <span class="ruby-identifier">new</span>(<span class="ruby-identifier">service_record</span>, <span class="ruby-identifier">jerbil</span>, <span class="ruby-identifier">output</span>, <span class="ruby-identifier">klass</span>)
+
+      <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">this_client</span>)
+      
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Stopping the service&quot;</span>
+    <span class="ruby-comment">#output.close unless @output == $stderr</span>
+
+    <span class="ruby-keyword">return</span> <span class="ruby-keyword">nil</span> <span class="ruby-comment"># give the caller nothing back</span>
+
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">MissingServer</span>
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-string">&quot;Cannot find a local Jerbil server&quot;</span>)
+    <span class="ruby-identifier">raise</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">JerbilConfigError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">err</span>
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;Error in Jerbil Config File: #{err.message}&quot;</span>)
+    <span class="ruby-identifier">raise</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">JerbilServiceError</span> =<span class="ruby-operator">&gt;</span><span class="ruby-identifier">jerr</span>
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;Error with Jerbil Service: #{jerr.message}&quot;</span>)
+    <span class="ruby-identifier">raise</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">ServerConnectError</span>
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-string">&quot;Error connecting to Jerbil Server&quot;</span>)
+    <span class="ruby-identifier">raise</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">DRb</span><span class="ruby-operator">::</span><span class="ruby-constant">DRbConnError</span> =<span class="ruby-operator">&gt;</span><span class="ruby-identifier">derr</span>
+    <span class="ruby-identifier">output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;Error setting up DRb Server: #{derr.message}&quot;</span>)
+    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">ServerConnectError</span>
+  <span class="ruby-keyword">end</span>
+
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- each_service-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- each_service-method -->
+
+      
+        <div id="new-method" class="method-detail ">
+          <a name="method-c-new"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">new</span><span
+              class="method-args">(service, jerbil, output, klass)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>create a client instance</p>
             
 
             
             <div class="method-source-code" id="new-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/jerbil_service/client.rb, line 55</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">modl</span>, <span class="ruby-identifier">client_options</span>={}, &amp;<span class="ruby-identifier">block</span>)
+<span class="ruby-comment"># File lib/jerbil/jerbil_service/client.rb, line 188</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">service</span>, <span class="ruby-identifier">jerbil</span>, <span class="ruby-identifier">output</span>, <span class="ruby-identifier">klass</span>)
 
-  <span class="ruby-comment"># the class itself should be called Service within the given module</span>
-  <span class="ruby-ivar">@klass</span> = <span class="ruby-identifier">modl</span>.<span class="ruby-identifier">module_eval</span>(<span class="ruby-string">'Service'</span>)
+  <span class="ruby-ivar">@service</span> = <span class="ruby-identifier">service</span>
+  <span class="ruby-ivar">@jerbil_server</span> = <span class="ruby-identifier">jerbil</span>
+  <span class="ruby-ivar">@output</span> = <span class="ruby-identifier">output</span>
+  <span class="ruby-ivar">@klass</span> = <span class="ruby-identifier">klass</span>
+  <span class="ruby-ivar">@session</span> = <span class="ruby-keyword">nil</span>
 
-  <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">modl</span>.<span class="ruby-identifier">to_s</span>
-  <span class="ruby-ivar">@name_symbol</span> = <span class="ruby-ivar">@name</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">to_sym</span>
-
-  <span class="ruby-ivar">@quiet</span> = <span class="ruby-identifier">client_options</span>[<span class="ruby-value">:quiet</span>]
-  <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@quiet</span>
-    <span class="ruby-ivar">@output</span> = <span class="ruby-identifier">client_options</span>[<span class="ruby-value">:output</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">$stderr</span>
-  <span class="ruby-keyword">else</span>
-    <span class="ruby-ivar">@output</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-string">'/dev/null'</span>, <span class="ruby-string">'w'</span>)
-  <span class="ruby-keyword">end</span>
-
-  <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Welcome to #{@name} (#{modl.ident}&quot;</span>
-
-  <span class="ruby-ivar">@config_file</span> = <span class="ruby-identifier">client_options</span>[<span class="ruby-value">:config_file</span>]
-  <span class="ruby-ivar">@config</span> = <span class="ruby-identifier">modl</span>.<span class="ruby-identifier">get_config</span>(<span class="ruby-ivar">@config_file</span>)
-
-  <span class="ruby-ivar">@env</span> = <span class="ruby-ivar">@config</span>[<span class="ruby-value">:environment</span>]
-
-  <span class="ruby-identifier">service_opts</span> = {<span class="ruby-value">:name=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@name_symbol</span>, <span class="ruby-value">:env=</span><span class="ruby-operator">&gt;</span><span class="ruby-ivar">@env</span>}
-  <span class="ruby-identifier">service_opts</span>[<span class="ruby-value">:host</span>] = <span class="ruby-constant">Socket</span>.<span class="ruby-identifier">gethostname</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">client_options</span>[<span class="ruby-value">:local</span>]
-
-  <span class="ruby-keyword">begin</span>
-    <span class="ruby-comment"># find jerbil</span>
-    <span class="ruby-ivar">@jerbil_server</span> = <span class="ruby-constant">Jerbil</span>.<span class="ruby-identifier">get_local_server</span>
-
-    <span class="ruby-comment"># now connect to it</span>
-    <span class="ruby-identifier">jerbil</span> = <span class="ruby-ivar">@jerbil_server</span>.<span class="ruby-identifier">connect</span>
-
-    <span class="ruby-comment"># and get service</span>
-    <span class="ruby-ivar">@service</span> = <span class="ruby-identifier">jerbil</span>.<span class="ruby-identifier">get</span>(<span class="ruby-identifier">service_opts</span>)
-
-    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">then</span>
-      <span class="ruby-identifier">raise</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">ServiceNotFound</span>, <span class="ruby-string">&quot;cannot find service through Jerbil&quot;</span>
-    <span class="ruby-keyword">end</span>
-    
-    <span class="ruby-ivar">@session</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">connect</span>
-
-    <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-keyword">self</span>)
-
-    <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Stopping the service&quot;</span>
-    <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">close</span> <span class="ruby-keyword">unless</span> <span class="ruby-ivar">@output</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">$stderr</span>
-    <span class="ruby-comment">#@service.stop</span>
-
-
-  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">MissingServer</span>
-    <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-string">&quot;Cannot find a local Jerbil server&quot;</span>)
-    <span class="ruby-identifier">raise</span>
-  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">JerbilConfigError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">err</span>
-    <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;Error in Jerbil Config File: #{err.message}&quot;</span>)
-    <span class="ruby-identifier">raise</span>
-  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">JerbilServiceError</span> =<span class="ruby-operator">&gt;</span><span class="ruby-identifier">jerr</span>
-    <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;Error with Jerbil Service: #{jerr.message}&quot;</span>) 
-    <span class="ruby-identifier">raise</span>
-  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">ServerConnectError</span>
-    <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-string">&quot;Error connecting to Jerbil Server&quot;</span>) 
-    <span class="ruby-identifier">raise</span>
-  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">DRb</span><span class="ruby-operator">::</span><span class="ruby-constant">DRbConnError</span> =<span class="ruby-operator">&gt;</span><span class="ruby-identifier">derr</span>
-    <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;Error setting up DRb Server: #{derr.message}&quot;</span>) 
-    <span class="ruby-identifier">raise</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">ServerConnectError</span>
-  <span class="ruby-keyword">end</span>
 <span class="ruby-keyword">end</span></pre>
             </div><!-- new-source -->
             
@@ -334,6 +466,45 @@ end</pre>
     
       <div id="public-instance-method-details" class="method-section section">
         <h3 class="section-header">Public Instance Methods</h3>
+
+      
+        <div id="connect-method" class="method-detail ">
+          <a name="method-i-connect"></a>
+
+          
+          <div class="method-heading">
+            <span class="method-name">connect</span><span
+              class="method-args">(&block)</span>
+            <span class="method-click-advice">click to toggle source</span>
+          </div>
+          
+
+          <div class="method-description">
+            
+            <p>connect to the client</p>
+            
+
+            
+            <div class="method-source-code" id="connect-source">
+<pre>
+<span class="ruby-comment"># File lib/jerbil/jerbil_service/client.rb, line 201</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">connect</span>(&amp;<span class="ruby-identifier">block</span>)
+  <span class="ruby-ivar">@session</span> = <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">connect</span>
+
+  <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-keyword">self</span>)
+
+  <span class="ruby-ivar">@session</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-comment">#@service.close</span>
+
+<span class="ruby-keyword">end</span></pre>
+            </div><!-- connect-source -->
+            
+          </div>
+
+          
+
+          
+        </div><!-- connect-method -->
 
       
         <div id="method_missing-method" class="method-detail ">
@@ -355,7 +526,7 @@ end</pre>
             
             <div class="method-source-code" id="method_missing-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/jerbil_service/client.rb, line 123</span>
+<span class="ruby-comment"># File lib/jerbil/jerbil_service/client.rb, line 213</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">method_missing</span>(<span class="ruby-identifier">symb</span>, *<span class="ruby-identifier">parameters</span>)
 
   <span class="ruby-comment"># stop anyone from calling the stop method</span>
@@ -378,10 +549,8 @@ end</pre>
     <span class="ruby-identifier">jerbil</span> = <span class="ruby-ivar">@jerbil_server</span>.<span class="ruby-identifier">connect</span>
     <span class="ruby-keyword">if</span> <span class="ruby-identifier">jerbil</span>.<span class="ruby-identifier">service_missing?</span>(<span class="ruby-ivar">@service</span>) <span class="ruby-keyword">then</span>
       <span class="ruby-comment"># something nasty has occurred</span>
-      <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Jerbil confirms the service is missing - attempting to stop it&quot;</span>
-      <span class="ruby-ivar">@service</span>.<span class="ruby-identifier">stop</span>
-      <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Stopped the missing service&quot;</span>
-      <span class="ruby-identifier">raise</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">ServiceConnectError</span>, <span class="ruby-string">&quot;Service has been stopped&quot;</span>
+      <span class="ruby-ivar">@output</span>.<span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;Jerbil confirms the service is missing&quot;</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">Jerbil</span><span class="ruby-operator">::</span><span class="ruby-constant">ServiceConnectError</span>, <span class="ruby-string">&quot;Service is missing&quot;</span>
     <span class="ruby-keyword">else</span>
       <span class="ruby-comment"># seems jerbil thinks its ok, so try again</span>
       <span class="ruby-identifier">retries</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>

@@ -66,7 +66,7 @@ OptionParser.new do |opts|
 
 end.parse!
 
-JerbilService::SuperClient.new(RubyTest) do |rubytest|
+JerbilService::Supervisor.new(RubyTest) do |rubytest|
   rubytest.no_daemon unless daemonize
   rubytest.quiet if quiet
   rubytest.verbose if verbose

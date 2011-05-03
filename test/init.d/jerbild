@@ -7,7 +7,7 @@ myopts=""
 [ -n "${CONF_FILE}" ] && myopts="${myopts} -c ${CONF_FILE}"
 [ "${VERBOSE}" == "true" ] && [ "${QUIET}" != "true" ] && myopts="${myopts} -V"
 [ -n "${NO_SYSLOG}" ] && myopts="${myopts} -S"
-[ -n "${ENV}" ] && myopts="${myopts} -e ${ENV}"
+
 
 ${PROJECT_ROOT}/sbin/jerbild ${myopts}
 

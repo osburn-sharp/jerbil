@@ -187,3 +187,16 @@ D, [2011-05-01 08:34:06 #6462] DEBUG -- : Someone called the action method!
 I, [2011-05-01 09:24:11 #6462]  INFO -- : Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
 I, [2011-05-01 09:27:33 #7621]  INFO -- : Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
 I, [2011-05-01 09:27:51 #7621]  INFO -- : Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+I, [2011-05-03 10:36:38 #16206]  INFO -- : Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+I, [2011-05-03 10:37:52 #16206]  INFO -- : Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+I, [2011-05-03 10:39:45 #16318]  INFO -- : Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+D, [2011-05-03 10:40:10 #16318] DEBUG -- : Someone called the action method!
+D, [2011-05-03 10:40:10 #16318] DEBUG -- : Someone called the action method!
+D, [2011-05-03 10:40:10 #16318] DEBUG -- : Someone called the action method!
+D, [2011-05-03 10:40:35 #16318] DEBUG -- : Someone called the action method!
+D, [2011-05-03 10:40:35 #16318] DEBUG -- : Someone called the action method!
+D, [2011-05-03 10:40:35 #16318] DEBUG -- : Someone called the action method!
+D, [2011-05-03 10:40:46 #16318] DEBUG -- : Someone called the action method!
+D, [2011-05-03 10:40:46 #16318] DEBUG -- : Someone called the action method!
+D, [2011-05-03 10:40:46 #16318] DEBUG -- : Someone called the action method!
+I, [2011-05-03 11:26:49 #16318]  INFO -- : Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902

@@ -6,3 +6,5 @@ If you run jerbil -v on a remote server it appears to remove a service but the r
 This is because it tries to remove the service locally. Also, if a server disappears then
 the other servers still think the service is available. They need to remove the service manually if
 that is the case!
+
+Fixed in 0.1.0

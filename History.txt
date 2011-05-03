@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.1.1 02-May-2011
+
+Minor changes to Client
+
 jerbil-0.1.0 2-May-2011
 
 Second release with a substantial number of changes and tweaks.

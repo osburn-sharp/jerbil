@@ -14,6 +14,7 @@
 require 'jerbil/service'
 require 'jerbil/errors'
 require 'jerbil/config'
+require 'jerbil/support'
 require 'jelly'
 require 'socket'
 require 'drb'

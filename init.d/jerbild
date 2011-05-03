@@ -19,6 +19,7 @@ start() {
     [ -n "${NO_DAEMON}" ] && myopts="${myopts} -n"
     [ -n "${CONF_FILE}" ] && myopts="${myopts} -c ${CONF_FILE}"
     [ "${VERBOSE}" == "true" ] && [ "${QUIET}" != "true" ] && myopts="${myopts} -V"
+    [ -n "${NO_SYSLOG}" ] && myopts="${myopts} -S"
 
     /bin/su -m -c "/usr/local/sbin/jerbild ${myopts}" - jermine
 
@@ -44,8 +45,9 @@ install() {
     /usr/sbin/useradd -d /var/run/jermine -u 603 -s /bin/bash jermine >&/dev/null
   eend $?
   ebegin "Creating Group"
-    /usr/sbin/groupadd -g 603 -f jermine
+    /usr/sbin/groupadd -g 603 -f jermine >&/dev/null
     /usr/sbin/gpasswd -a jermine jermine >&/dev/null
+    /usr/sbin/gpasswd -a robert jermine >&/dev/null
   ebegin "Creating directories"
     mkdir -p /var/log/jermine >&/dev/null
     mkdir -p /var/run/jermine >&/dev/null

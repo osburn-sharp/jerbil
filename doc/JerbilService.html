@@ -37,6 +37,9 @@
             <li><a href="./lib/jerbil/jerbil_service/config_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
               class="thickbox" title="lib/jerbil/jerbil_service/config.rb">lib/jerbil/jerbil_service/config.rb</a></li>
           
+            <li><a href="./lib/jerbil/jerbil_service/mclient_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+              class="thickbox" title="lib/jerbil/jerbil_service/mclient.rb">lib/jerbil/jerbil_service/mclient.rb</a></li>
+          
             <li><a href="./lib/jerbil/jerbil_service/client_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
               class="thickbox" title="lib/jerbil/jerbil_service/client.rb">lib/jerbil/jerbil_service/client.rb</a></li>
           
@@ -78,7 +81,9 @@
           
           <li><span class="type">CLASS</span> <a href="JerbilService/Config.html">JerbilService::Config</a></li>
           
-          <li><span class="type">CLASS</span> <a href="JerbilService/SuperClient.html">JerbilService::SuperClient</a></li>
+          <li><span class="type">CLASS</span> <a href="JerbilService/MultiClient.html">JerbilService::MultiClient</a></li>
+          
+          <li><span class="type">CLASS</span> <a href="JerbilService/Supervisor.html">JerbilService::Supervisor</a></li>
           
         </ul>
       </div>
@@ -175,7 +180,9 @@
         
           <li><a href="./JerbilService/Config.html">JerbilService::Config</a></li>
         
-          <li><a href="./JerbilService/SuperClient.html">JerbilService::SuperClient</a></li>
+          <li><a href="./JerbilService/MultiClient.html">JerbilService::MultiClient</a></li>
+        
+          <li><a href="./JerbilService/Supervisor.html">JerbilService::Supervisor</a></li>
         
           <li><a href="./JerbilService/Support.html">JerbilService::Support</a></li>
         
@@ -194,7 +201,7 @@
 
     <div id="description" class="description">
       
-<p><a href="Jerbil.html">Jerbil</a> Service</p>
+<h2><a href="Jerbil.html">Jerbil</a> Service</h2>
 
 <p>Designed to help create ruby services easily, hiding all of the
 interactions with <a href="Jerbil.html">Jerbil</a> itself.</p>
@@ -207,22 +214,22 @@ to your module (e.g. RubyTest::Config). Finally, use the
 jerbil_service/support module to extend your base module to include the
 get_config method.</p>
 
-<p>module RubyTest</p>
+<pre>module RubyTest
 
-<pre>extend JerbilService::Support
+  extend JerbilService::Support
 
-class Service &lt; JerbilService::Base
+  class Service &lt; JerbilService::Base
 
-  def initialize(pkey, options)
+    def initialize(pkey, options)
 
-    super(:rubytest, pkey, options)
+      super(:rubytest, pkey, options)
 
+    end
   end
 end</pre>
 
-<p>end</p>
-
-<p>See also the <a href="JerbilService/Client.html">Client</a> and Sclient
+<p>See also the <a href="JerbilService/Client.html">Client</a>, <a
+href="JerbilService/MultiClient.html">MultiClient</a> and SuperClient
 classes to assist with a complete solution.</p>
 <hr style="height: 1px">
 

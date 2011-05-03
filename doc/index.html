@@ -96,7 +96,9 @@
     
     <li class="class"><a href="JerbilService/Config.html">JerbilService::Config</a></li>
     
-    <li class="class"><a href="JerbilService/SuperClient.html">JerbilService::SuperClient</a></li>
+    <li class="class"><a href="JerbilService/MultiClient.html">JerbilService::MultiClient</a></li>
+    
+    <li class="class"><a href="JerbilService/Supervisor.html">JerbilService::Supervisor</a></li>
     
     <li class="module"><a href="JerbilService/Support.html">JerbilService::Support</a></li>
     
@@ -107,7 +109,11 @@
   <h2 id="methods">Methods</h2>
   <ul>
     
+      <li><a href="JerbilService/Client.html#method-c-connect">::connect &mdash; JerbilService::Client</a></li>
+    
       <li><a href="Jerbil/Support.html#method-c-create_private_key">::create_private_key &mdash; Jerbil::Support</a></li>
+    
+      <li><a href="JerbilService/Client.html#method-c-each_service">::each_service &mdash; JerbilService::Client</a></li>
     
       <li><a href="Jerbil.html#method-c-get_config">::get_config &mdash; Jerbil</a></li>
     
@@ -127,27 +133,29 @@
     
       <li><a href="Jerbil/ServerRecord.html#method-c-get_server">::get_server &mdash; Jerbil::ServerRecord</a></li>
     
-      <li><a href="JerbilService/Client.html#method-c-new">::new &mdash; JerbilService::Client</a></li>
-    
-      <li><a href="Jerbil/ServerRecord.html#method-c-new">::new &mdash; Jerbil::ServerRecord</a></li>
+      <li><a href="JerbilService/MultiClient.html#method-c-new">::new &mdash; JerbilService::MultiClient</a></li>
     
       <li><a href="JerbilService/Base.html#method-c-new">::new &mdash; JerbilService::Base</a></li>
     
-      <li><a href="Jerbil/Broker.html#method-c-new">::new &mdash; Jerbil::Broker</a></li>
-    
-      <li><a href="Jerbil/ServiceRecord.html#method-c-new">::new &mdash; Jerbil::ServiceRecord</a></li>
+      <li><a href="JerbilService/Client.html#method-c-new">::new &mdash; JerbilService::Client</a></li>
     
       <li><a href="Session.html#method-c-new">::new &mdash; Session</a></li>
     
-      <li><a href="JerbilService/SuperClient.html#method-c-new">::new &mdash; JerbilService::SuperClient</a></li>
+      <li><a href="Jerbil/ServiceRecord.html#method-c-new">::new &mdash; Jerbil::ServiceRecord</a></li>
     
-      <li><a href="JerbilService/SuperClient.html#method-c-stop">::stop &mdash; JerbilService::SuperClient</a></li>
+      <li><a href="Jerbil/Broker.html#method-c-new">::new &mdash; Jerbil::Broker</a></li>
+    
+      <li><a href="JerbilService/Supervisor.html#method-c-new">::new &mdash; JerbilService::Supervisor</a></li>
+    
+      <li><a href="Jerbil/ServerRecord.html#method-c-new">::new &mdash; Jerbil::ServerRecord</a></li>
+    
+      <li><a href="JerbilService/Supervisor.html#method-c-stop">::stop &mdash; JerbilService::Supervisor</a></li>
     
       <li><a href="Jerbil/Support.html#method-c-write_pid_file">::write_pid_file &mdash; Jerbil::Support</a></li>
     
-      <li><a href="Jerbil/ServerRecord.html#method-i-3D-3D">#== &mdash; Jerbil::ServerRecord</a></li>
-    
       <li><a href="Jerbil/ServiceRecord.html#method-i-3D-3D">#== &mdash; Jerbil::ServiceRecord</a></li>
+    
+      <li><a href="Jerbil/ServerRecord.html#method-i-3D-3D">#== &mdash; Jerbil::ServerRecord</a></li>
     
       <li><a href="Jerbil/ServiceRecord.html#method-i-3D-3D-3D">#=== &mdash; Jerbil::ServiceRecord</a></li>
     
@@ -161,43 +169,47 @@
     
       <li><a href="Jerbil/Broker.html#method-i-close">#close &mdash; Jerbil::Broker</a></li>
     
+      <li><a href="Jerbil/ServiceRecord.html#method-i-close">#close &mdash; Jerbil::ServiceRecord</a></li>
+    
       <li><a href="Jerbil/Broker.html#method-i-close_remote_server">#close_remote_server &mdash; Jerbil::Broker</a></li>
     
-      <li><a href="JerbilService/SuperClient.html#method-i-config_file-3D">#config_file= &mdash; JerbilService::SuperClient</a></li>
-    
-      <li><a href="JerbilService/Config.html#method-i-configure_environment">#configure_environment &mdash; JerbilService::Config</a></li>
+      <li><a href="JerbilService/Supervisor.html#method-i-config_file-3D">#config_file= &mdash; JerbilService::Supervisor</a></li>
     
       <li><a href="Jerbil/Config.html#method-i-configure_environment">#configure_environment &mdash; Jerbil::Config</a></li>
     
+      <li><a href="JerbilService/Config.html#method-i-configure_environment">#configure_environment &mdash; JerbilService::Config</a></li>
+    
       <li><a href="JerbilService/Config.html#method-i-configure_exit_on_stop">#configure_exit_on_stop &mdash; JerbilService::Config</a></li>
     
-      <li><a href="Jerbil/Config.html#method-i-configure_key_dir">#configure_key_dir &mdash; Jerbil::Config</a></li>
-    
       <li><a href="JerbilService/Config.html#method-i-configure_key_dir">#configure_key_dir &mdash; JerbilService::Config</a></li>
+    
+      <li><a href="Jerbil/Config.html#method-i-configure_key_dir">#configure_key_dir &mdash; Jerbil::Config</a></li>
     
       <li><a href="Jerbil/Config.html#method-i-configure_log_dir">#configure_log_dir &mdash; Jerbil::Config</a></li>
     
       <li><a href="JerbilService/Config.html#method-i-configure_log_dir">#configure_log_dir &mdash; JerbilService::Config</a></li>
     
-      <li><a href="Jerbil/Config.html#method-i-configure_log_length">#configure_log_length &mdash; Jerbil::Config</a></li>
-    
       <li><a href="JerbilService/Config.html#method-i-configure_log_length">#configure_log_length &mdash; JerbilService::Config</a></li>
+    
+      <li><a href="Jerbil/Config.html#method-i-configure_log_length">#configure_log_length &mdash; Jerbil::Config</a></li>
     
       <li><a href="Jerbil/Config.html#method-i-configure_log_level">#configure_log_level &mdash; Jerbil::Config</a></li>
     
       <li><a href="JerbilService/Config.html#method-i-configure_log_level">#configure_log_level &mdash; JerbilService::Config</a></li>
     
-      <li><a href="JerbilService/Config.html#method-i-configure_log_rotation">#configure_log_rotation &mdash; JerbilService::Config</a></li>
-    
       <li><a href="Jerbil/Config.html#method-i-configure_log_rotation">#configure_log_rotation &mdash; Jerbil::Config</a></li>
     
-      <li><a href="JerbilService/Config.html#method-i-configure_pid_dir">#configure_pid_dir &mdash; JerbilService::Config</a></li>
+      <li><a href="JerbilService/Config.html#method-i-configure_log_rotation">#configure_log_rotation &mdash; JerbilService::Config</a></li>
     
       <li><a href="Jerbil/Config.html#method-i-configure_pid_dir">#configure_pid_dir &mdash; Jerbil::Config</a></li>
+    
+      <li><a href="JerbilService/Config.html#method-i-configure_pid_dir">#configure_pid_dir &mdash; JerbilService::Config</a></li>
     
       <li><a href="Jerbil/Config.html#method-i-configure_servers">#configure_servers &mdash; Jerbil::Config</a></li>
     
       <li><a href="Jerbil/ServerRecord.html#method-i-connect">#connect &mdash; Jerbil::ServerRecord</a></li>
+    
+      <li><a href="JerbilService/Client.html#method-i-connect">#connect &mdash; JerbilService::Client</a></li>
     
       <li><a href="Jerbil/ServiceRecord.html#method-i-connect">#connect &mdash; Jerbil::ServiceRecord</a></li>
     
@@ -207,9 +219,9 @@
     
       <li><a href="Jerbil/ServerRecord.html#method-i-deactivate">#deactivate &mdash; Jerbil::ServerRecord</a></li>
     
-      <li><a href="Jerbil/ServiceRecord.html#method-i-drb_address">#drb_address &mdash; Jerbil::ServiceRecord</a></li>
-    
       <li><a href="Jerbil/ServerRecord.html#method-i-drb_address">#drb_address &mdash; Jerbil::ServerRecord</a></li>
+    
+      <li><a href="Jerbil/ServiceRecord.html#method-i-drb_address">#drb_address &mdash; Jerbil::ServiceRecord</a></li>
     
       <li><a href="JerbilService/Base.html#method-i-drb_address">#drb_address &mdash; JerbilService::Base</a></li>
     
@@ -249,29 +261,31 @@
     
       <li><a href="JerbilService/Client.html#method-i-method_missing">#method_missing &mdash; JerbilService::Client</a></li>
     
-      <li><a href="JerbilService/SuperClient.html#method-i-no_daemon">#no_daemon &mdash; JerbilService::SuperClient</a></li>
+      <li><a href="JerbilService/MultiClient.html#method-i-method_missing">#method_missing &mdash; JerbilService::MultiClient</a></li>
     
-      <li><a href="JerbilService/SuperClient.html#method-i-no_syslog">#no_syslog &mdash; JerbilService::SuperClient</a></li>
+      <li><a href="JerbilService/Supervisor.html#method-i-no_daemon">#no_daemon &mdash; JerbilService::Supervisor</a></li>
+    
+      <li><a href="JerbilService/Supervisor.html#method-i-no_syslog">#no_syslog &mdash; JerbilService::Supervisor</a></li>
     
       <li><a href="Jerbil/Broker.html#method-i-open_remote_server">#open_remote_server &mdash; Jerbil::Broker</a></li>
     
-      <li><a href="JerbilService/SuperClient.html#method-i-output-3D">#output= &mdash; JerbilService::SuperClient</a></li>
+      <li><a href="JerbilService/Supervisor.html#method-i-output-3D">#output= &mdash; JerbilService::Supervisor</a></li>
     
-      <li><a href="JerbilService/SuperClient.html#method-i-quiet">#quiet &mdash; JerbilService::SuperClient</a></li>
+      <li><a href="JerbilService/Supervisor.html#method-i-quiet">#quiet &mdash; JerbilService::Supervisor</a></li>
+    
+      <li><a href="Session.html#method-i-register">#register &mdash; Session</a></li>
     
       <li><a href="Jerbil/ServiceRecord.html#method-i-register">#register &mdash; Jerbil::ServiceRecord</a></li>
     
       <li><a href="Jerbil/Broker.html#method-i-register">#register &mdash; Jerbil::Broker</a></li>
     
-      <li><a href="Session.html#method-i-register">#register &mdash; Session</a></li>
-    
       <li><a href="Jerbil/Broker.html#method-i-register_remote">#register_remote &mdash; Jerbil::Broker</a></li>
     
       <li><a href="Jerbil/Broker.html#method-i-remote_services">#remote_services &mdash; Jerbil::Broker</a></li>
     
-      <li><a href="Session.html#method-i-remove">#remove &mdash; Session</a></li>
-    
       <li><a href="Jerbil/Broker.html#method-i-remove">#remove &mdash; Jerbil::Broker</a></li>
+    
+      <li><a href="Session.html#method-i-remove">#remove &mdash; Session</a></li>
     
       <li><a href="Jerbil/Broker.html#method-i-remove_remote">#remove_remote &mdash; Jerbil::Broker</a></li>
     
@@ -281,21 +295,19 @@
     
       <li><a href="Jerbil/ServiceRecord.html#method-i-start_drb_if_needed">#start_drb_if_needed &mdash; Jerbil::ServiceRecord</a></li>
     
-      <li><a href="JerbilService/SuperClient.html#method-i-start_service">#start_service &mdash; JerbilService::SuperClient</a></li>
-    
-      <li><a href="Jerbil/ServiceRecord.html#method-i-stop">#stop &mdash; Jerbil::ServiceRecord</a></li>
+      <li><a href="JerbilService/Supervisor.html#method-i-start_service">#start_service &mdash; JerbilService::Supervisor</a></li>
     
       <li><a href="Jerbil/Broker.html#method-i-stop">#stop &mdash; Jerbil::Broker</a></li>
     
       <li><a href="JerbilService/Base.html#method-i-stop_callback">#stop_callback &mdash; JerbilService::Base</a></li>
     
-      <li><a href="JerbilService/SuperClient.html#method-i-stop_service">#stop_service &mdash; JerbilService::SuperClient</a></li>
+      <li><a href="JerbilService/Supervisor.html#method-i-stop_service">#stop_service &mdash; JerbilService::Supervisor</a></li>
     
       <li><a href="Jerbil/ServiceRecord.html#method-i-to_hash">#to_hash &mdash; Jerbil::ServiceRecord</a></li>
     
       <li><a href="Jerbil/ServiceRecord.html#method-i-unlock">#unlock &mdash; Jerbil::ServiceRecord</a></li>
     
-      <li><a href="JerbilService/SuperClient.html#method-i-verbose">#verbose &mdash; JerbilService::SuperClient</a></li>
+      <li><a href="JerbilService/Supervisor.html#method-i-verbose">#verbose &mdash; JerbilService::Supervisor</a></li>
     
       <li><a href="Jerbil/Broker.html#method-i-verify">#verify &mdash; Jerbil::Broker</a></li>
     

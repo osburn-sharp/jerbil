@@ -162,7 +162,9 @@
         
           <li><a href="../JerbilService/Config.html">JerbilService::Config</a></li>
         
-          <li><a href="../JerbilService/SuperClient.html">JerbilService::SuperClient</a></li>
+          <li><a href="../JerbilService/MultiClient.html">JerbilService::MultiClient</a></li>
+        
+          <li><a href="../JerbilService/Supervisor.html">JerbilService::Supervisor</a></li>
         
           <li><a href="../JerbilService/Support.html">JerbilService::Support</a></li>
         
@@ -181,7 +183,8 @@
 
     <div id="description" class="description">
       
-<p>Set of utilities to assist in managing services</p>
+<p>Set of utilities to assist in managing services. Used largely by <a
+href="../JerbilService.html">JerbilService</a> modules and classes</p>
 
     </div><!-- description -->
 
@@ -224,7 +227,7 @@ supervise the service (e.g. stop)</p>
             
             <div class="method-source-code" id="create_private_key-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/support.rb, line 69</span>
+<span class="ruby-comment"># File lib/jerbil/support.rb, line 70</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">Support</span>.<span class="ruby-identifier">create_private_key</span>(<span class="ruby-identifier">name</span>,  <span class="ruby-identifier">env</span>, <span class="ruby-identifier">key_dir</span>)
   <span class="ruby-identifier">key</span> = <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">SHA1</span>.<span class="ruby-identifier">hexdigest</span>(<span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">rand</span>(<span class="ruby-value">12341234</span>).<span class="ruby-identifier">to_s</span>)[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">20</span>]
   <span class="ruby-identifier">key_file</span> = <span class="ruby-node">&quot;#{key_dir}/#{name.to_s}-#{env}.asc&quot;</span>
@@ -265,7 +268,7 @@ supervise the service (e.g. stop)</p>
             
             <div class="method-source-code" id="get_key_and_delete_file-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/support.rb, line 91</span>
+<span class="ruby-comment"># File lib/jerbil/support.rb, line 92</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">Support</span>.<span class="ruby-identifier">get_key_and_delete_file</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">env</span>, <span class="ruby-identifier">key_dir</span>)
   <span class="ruby-identifier">key</span> = <span class="ruby-identifier">get_private_key</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">env</span>, <span class="ruby-identifier">key_dir</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">!=</span> <span class="ruby-string">''</span> <span class="ruby-keyword">then</span>
@@ -308,7 +311,7 @@ supervise the service (e.g. stop)</p>
             
             <div class="method-source-code" id="get_pid_and_delete_file-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/support.rb, line 51</span>
+<span class="ruby-comment"># File lib/jerbil/support.rb, line 52</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">Support</span>.<span class="ruby-identifier">get_pid_and_delete_file</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">env</span>, <span class="ruby-identifier">pid_dir</span>)
   <span class="ruby-identifier">pid</span> = <span class="ruby-identifier">get_pid_from_file</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">env</span>, <span class="ruby-identifier">pid_dir</span>)
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">pid</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-keyword">then</span>
@@ -350,7 +353,7 @@ supervise the service (e.g. stop)</p>
             
             <div class="method-source-code" id="get_pid_from_file-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/support.rb, line 41</span>
+<span class="ruby-comment"># File lib/jerbil/support.rb, line 42</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">Support</span>.<span class="ruby-identifier">get_pid_from_file</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">env</span>, <span class="ruby-identifier">pid_dir</span>)
   <span class="ruby-identifier">pid_file</span> = <span class="ruby-node">&quot;#{pid_dir}/#{name.to_s}-#{env}.pid&quot;</span>
   <span class="ruby-identifier">pid</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">pid_file</span>).<span class="ruby-identifier">chomp</span>
@@ -388,7 +391,7 @@ supervise the service (e.g. stop)</p>
             
             <div class="method-source-code" id="get_private_key-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/support.rb, line 82</span>
+<span class="ruby-comment"># File lib/jerbil/support.rb, line 83</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">Support</span>.<span class="ruby-identifier">get_private_key</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">env</span>, <span class="ruby-identifier">key_dir</span>)
   <span class="ruby-identifier">key_file</span> = <span class="ruby-node">&quot;#{key_dir}/#{name.to_s}-#{env}.asc&quot;</span>
   <span class="ruby-identifier">key</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read</span>(<span class="ruby-identifier">key_file</span>).<span class="ruby-identifier">chomp</span>
@@ -425,7 +428,7 @@ supervise the service (e.g. stop)</p>
             
             <div class="method-source-code" id="write_pid_file-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/support.rb, line 28</span>
+<span class="ruby-comment"># File lib/jerbil/support.rb, line 29</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">Support</span>.<span class="ruby-identifier">write_pid_file</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">env</span>, <span class="ruby-identifier">pid_dir</span>)
   <span class="ruby-identifier">pid</span> = <span class="ruby-constant">Process</span>.<span class="ruby-identifier">pid</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-identifier">pid_file</span> = <span class="ruby-node">&quot;#{pid_dir}/#{name.to_s}-#{env}.pid&quot;</span>

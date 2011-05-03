@@ -35,7 +35,7 @@ module JerbilService
     # class
     def initialize(klass, &block)
 
-      @daemonize = false
+      @daemonize = true
       @config_file = nil
       @verbose = false
       @quiet = false

@@ -226,7 +226,9 @@
         
           <li><a href="./JerbilService/Config.html">JerbilService::Config</a></li>
         
-          <li><a href="./JerbilService/SuperClient.html">JerbilService::SuperClient</a></li>
+          <li><a href="./JerbilService/MultiClient.html">JerbilService::MultiClient</a></li>
+        
+          <li><a href="./JerbilService/Supervisor.html">JerbilService::Supervisor</a></li>
         
           <li><a href="./JerbilService/Support.html">JerbilService::Support</a></li>
         
@@ -247,9 +249,9 @@
       
 <p>Created by Jevoom</p>
 
-<p>17-Apr-2011</p>
+<p>02-May-2011</p>
 
-<pre>Further tweaks to initscript install option</pre>
+<pre>Second release with a substantial number of changes and tweaks.</pre>
 <hr style="height: 1px">
 
 <p>Description</p>
@@ -270,6 +272,12 @@ href="http://www.opensource.org/licenses/osl-3.0.php">www.opensource.org/license
 and in the file copyright.txt. Under the terms of this licence, all
 derivative works must themselves be licensed under the Open Software
 Licence v. 3.0</p>
+<hr style="height: 1px">
+
+<h2>JERBIL - Jumpin’ Ermin’s Ruby <a href="Jerbil/Broker.html">Broker</a> for Integrated Linux services!</h2>
+
+<p>A network server for registering services and a suite of classes and
+methods to manage these services and to connect with them.</p>
 
     </div><!-- description -->
 
@@ -330,13 +338,14 @@ Licence v. 3.0</p>
 
           <div class="method-description">
             
-            <p>get the config hash from the given file, or the default if nil</p>
+            <p>get the <a href="Jerbil.html">Jerbil</a> config options from the given
+file, or the default if nil</p>
             
 
             
             <div class="method-source-code" id="get_config-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/support.rb, line 110</span>
+<span class="ruby-comment"># File lib/jerbil/support.rb, line 111</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">Jerbil</span>.<span class="ruby-identifier">get_config</span>(<span class="ruby-identifier">config_file</span>=<span class="ruby-keyword">nil</span>)
    <span class="ruby-comment"># check that the config_file has been specified</span>
   <span class="ruby-keyword">if</span> <span class="ruby-identifier">config_file</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword">then</span>
@@ -381,7 +390,7 @@ local server</p>
             
             <div class="method-source-code" id="get_local_server-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/support.rb, line 154</span>
+<span class="ruby-comment"># File lib/jerbil/support.rb, line 153</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">Jerbil</span>.<span class="ruby-identifier">get_local_server</span>(<span class="ruby-identifier">config</span>=<span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">hostname</span> = <span class="ruby-constant">Socket</span>.<span class="ruby-identifier">gethostname</span>
 
@@ -418,16 +427,13 @@ href="Jerbil/ServerRecord.html">ServerRecord</a> for the server requested</p>
 </li><li>
 <p>config_file - string path to file. If nil (default) then use the default
 path</p>
-</li><li>
-<p>env - symbol from :prod, :test, :env. If nil (default) then it defaults to
-value in the config file</p>
 </li></ul>
             
 
             
             <div class="method-source-code" id="get_server-source">
 <pre>
-<span class="ruby-comment"># File lib/jerbil/support.rb, line 134</span>
+<span class="ruby-comment"># File lib/jerbil/support.rb, line 133</span>
 <span class="ruby-keyword">def</span> <span class="ruby-constant">Jerbil</span>.<span class="ruby-identifier">get_server</span>(<span class="ruby-identifier">fqdn</span>, <span class="ruby-identifier">config</span>=<span class="ruby-keyword">nil</span>)
 
   <span class="ruby-comment"># check that a config has been specified</span>

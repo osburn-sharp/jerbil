@@ -64,7 +64,7 @@ OptionParser.new do |opts|
 
 end.parse!
 
-JerbilService::SuperClient.stop(RubyTest) do |rubytest|
+JerbilService::Supervisor.stop(RubyTest) do |rubytest|
   rubytest.verbose if verbose
   rubytest.quiet if quiet
   rubytest.config_file = config_file

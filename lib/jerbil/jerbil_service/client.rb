@@ -62,7 +62,7 @@ module JerbilService
         output = File.open('/dev/null', 'w')
       end
 
-      output.puts "Welcome to #{name} (#{modl.ident}"
+      output.puts "Welcome to #{name} (#{modl.ident})"
 
       config_file = client_options[:config_file]
       config = modl.get_config(config_file)
@@ -90,7 +90,7 @@ module JerbilService
 
         this_client.connect(&block)
 
-        output.puts "Stopping the service"
+        output.puts "Closing the connection"
         #output.close unless @output == $stderr
 
         return nil # give the caller nothing back
@@ -184,7 +184,7 @@ module JerbilService
 
     end
 
-    # create a client instance
+    #:nodoc: create a client instance
     def initialize(service, jerbil, output, klass)
 
       @service = service
@@ -197,7 +197,7 @@ module JerbilService
 
     #private
 
-    # connect to the client
+    #:nodoc: connect to the client
     def connect(&block)
       @session = @service.connect
 
@@ -208,7 +208,17 @@ module JerbilService
 
     end
 
-    # allow client to pass on methods to the remote service
+    # verify that the service is working
+    def verify
+      return !@session.nil?
+    end
+
+    # return the name of the host on which the service is running
+    def host
+      return @service.host
+    end
+
+    #:nodoc: allow client to pass on methods to the remote service
     #
     def method_missing(symb, *parameters)
 

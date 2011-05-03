@@ -1048,3 +1048,4 @@ D, [2011-05-01 09:27:51 #6423] DEBUG -- : Connected to antonia.osburn-sharp.ath.
 D, [2011-05-01 09:27:51 #6423] DEBUG -- : Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
 D, [2011-05-01 09:27:51 #6423] DEBUG -- : Connected to valeria.osburn-sharp.ath.cx
 D, [2011-05-01 09:27:51 #6423] DEBUG -- : Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+I, [2011-05-02 08:11:22 #6423]  INFO -- : Stopping the Jerbil Server now
