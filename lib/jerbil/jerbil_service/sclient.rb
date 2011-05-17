@@ -210,6 +210,7 @@ module JerbilService
       # there is no pid, so just exit
     rescue Exception => err
       @output.puts "Error: #{err.message}" if @verbose
+      @output.puts err.backtrace if @verbose
       # it went wrong, so fall back on pid killing
       if pid > 0 then
         @output.puts "Killing the process: #{pid}"

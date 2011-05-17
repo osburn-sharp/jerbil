@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.1.5 17-May-2011
+
+Added a backtrace to Supervisor to help debug!
+
 jerbil-0.1.4 17-May-2011
 
 Added the service_key method to Client to make it easier to get the key for the service
