@@ -218,6 +218,10 @@ module JerbilService
       return @service.host
     end
 
+    def service_key
+      return @service.key
+    end
+
     #:nodoc: allow client to pass on methods to the remote service
     #
     def method_missing(symb, *parameters)

@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.1.4 17-May-2011
+
+Added the service_key method to Client to make it easier to get the key for the service
+
 jerbil-0.1.3 17-May-2011
 
 Added a log entry for invalid service keys
