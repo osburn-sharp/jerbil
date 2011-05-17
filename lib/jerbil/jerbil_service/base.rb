@@ -132,13 +132,13 @@ module JerbilService
     # this is used by callers just to check that the service is running
     # if caller is unaware of the key, this will fail
     def verify_callback(key="")
-      raise Jerbil::InvalidServiceKey if key != @service.key
+      check_key(key)
       return true
     end
 
     # used to stop the service
-    def stop_callback(key="")
-      raise Jerbil::InvalidServiceKey if key != @private_key
+    def stop_callback(pkey="")
+      raise Jerbil::InvalidServiceKey if pkey != @private_key
       # deregister
       jerbil = @jerbil_server.connect
       jerbil.remove(@service)
@@ -149,9 +149,15 @@ module JerbilService
     end
 
     # wait for calls
-    def wait(key='')
-      raise Jerbil::InvalidServiceKey if key != @private_key
+    def wait(pkey='')
+      raise Jerbil::InvalidServiceKey if pkey != @private_key
       DRb.thread.join
+    end
+
+  private
+
+    def check_key(key)
+      raise Jerbil::InvalidServiceKey if key != @service.key
     end
 
   end

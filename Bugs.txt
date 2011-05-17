@@ -8,3 +8,10 @@ the other servers still think the service is available. They need to remove the 
 that is the case!
 
 Fixed in 0.1.0
+------
+17-May-2011
+
+Would be good to hide the key check in a private function: check_key(key) rather than
+expose the underlying mechanism
+
+Also change key to pkey for private key parameters

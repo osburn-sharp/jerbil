@@ -158,7 +158,7 @@ module Jerbil
         service.register
         add_service_to_store(@store, service)
         @registrations += 1
-        @logger.system("Registered Local Service: #{service.address} for env: #{service.env}")
+        @logger.system("Registered Local Service: #{service.ident}")
 
         @remote_servers.each do |rserver|
           rjerbil = rserver.connect
@@ -419,7 +419,7 @@ module Jerbil
       @remote_servers.each do |remote|
         if remote.key == key then
           add_service_to_store(@remote_store, service)
-          @logger.system("Registered Remote Service: #{service.address} for env: #{service.env}")
+          @logger.info("Registered Remote Service: #{service.ident}")
           return true
         end
       end
@@ -434,7 +434,7 @@ module Jerbil
       @remote_servers.each do |remote|
         if remote.key == key then
           @remote_store.delete_if {|s| s === service}
-          @logger.system("Deleted Remote Service: #{service.address} for env: #{service.env}")
+          @logger.info("Deleted Remote Service: #{service.ident}")
           return true
         end
       end

@@ -128,7 +128,7 @@ module JerbilService
         output = File.open('/dev/null', 'w')
       end
 
-      output.puts "Welcome to #{name} (#{modl.ident}"
+      output.puts "Welcome to #{name} (#{modl.ident})"
 
       config_file = client_options[:config_file]
       config = modl.get_config(config_file)
