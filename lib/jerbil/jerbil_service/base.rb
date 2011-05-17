@@ -157,7 +157,10 @@ module JerbilService
   private
 
     def check_key(key)
-      raise Jerbil::InvalidServiceKey if key != @service.key
+      if key != @service.key then
+        @logger.error("Call made with Invalid Service Key: #{key}")
+        raise Jerbil::InvalidServiceKey
+      end
     end
 
   end

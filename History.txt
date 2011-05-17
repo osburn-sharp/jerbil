@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.1.3 17-May-2011
+
+Added a log entry for invalid service keys
+
 jerbil-0.1.2 17-May-2011
 
 Added a check_key method to JerbilService::Base to hide key checking.
