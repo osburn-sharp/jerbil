@@ -67,6 +67,7 @@ module JerbilService
     #   * log_length - size of log files (in bytes)
     #   * jerbil_config - the config file for Jerbil - defaults to /etc/jermine/jerbil.conf
     #   * exit_on_stop - set to false to prevent the stop method invoking exit! For testing.
+    #   * unsafe - set to true to prevent init from setting $SAFE > 0
     #
     # * pkey - string containing a private key that has to be provided when calling the
     #   stop_callback
@@ -97,7 +98,7 @@ module JerbilService
         jerbil.register(@service)
 
         # and start it - preventing anything nasty from coming over DRb
-        $SAFE = 1
+        $SAFE = 1 unless options[:unsafe]
         DRb.start_service(@service.drb_address, self)
 
       rescue Jerbil::MissingServer

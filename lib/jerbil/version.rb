@@ -1,10 +1,10 @@
 # Created by Jevoom
 #
-# 17-May-2011
-#   Added a backtrace to Supervisor to help debug!
+# 30-May-2011
+#   Add option to JerbilService::Base to not set $SAFE > 0 where subclass needs to set it later
 
 module Jerbil
-  Version = '0.1.5'
-  Version_Date = '17-May-2011'
-  Ident = 'jerbil-0.1.5 17-May-2011'
+  Version = '0.1.6'
+  Version_Date = '30-May-2011'
+  Ident = 'jerbil-0.1.6 30-May-2011'
 end
