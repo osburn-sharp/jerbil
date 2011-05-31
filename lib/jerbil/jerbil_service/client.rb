@@ -32,186 +32,153 @@ module JerbilService
 
     private_class_method :new
 
+    # return the server's config options for the given file, or the default if none given
+    def self.get_config(modl, config_file=nil)
+      modl.get_config(config_file)
+    end
+
     # Connect to a single service using Jerbil
     #
     # * modl - constant for the service module
     # * client_options - hash of:
     #   :quiet - boolean, suppress messages on stdout (default: false)
     #   :local - boolean, find only the local service (default: false)
-    #   :output - a file object (not filename) to be used for output - defaults to
+    #   :output - a file object or similar (not filename) to be used for output - defaults to
     #   $stderr. Is overridden with /dev/null if quiet.
-    #   :config_file - filename to config file that overides the default
+    #   :welcome - boolean, output additional messages suitable for standalone operation
+    #   :environment - symbol for environment from config-file (probably), defaults to :prod
     #
     # The block is called with the client so that within the block the user
     # can call methods on the remote object
     #
     # The connection to the service is closed at the end of the block
     #
-    def self.connect(modl, client_options={}, &block)
+    def self.find_services(what, modl, options={}, &block) # :yields: client
 
-      # the class itself should be called Service within the given module
-      klass = modl.module_eval('Service')
-
-      name = modl.to_s
-      name_symbol = name.downcase.to_sym
-
-      quiet = client_options[:quiet]
-      unless quiet
-        output = client_options[:output] || $stderr
+      case what
+      when :first
+        select = :first
+      when :all
+        select = :all
+      when :local
+        select = :first
+        options[:local] = true
       else
-        output = File.open('/dev/null', 'w')
+        raise ArgumentError, "Find Services invalid search key: #{what}"
       end
 
-      output.puts "Welcome to #{name} (#{modl.ident})"
+      unless options[:environment]
+        # set the default environment if not already set
+        options[:environment] = :prod
+      end
 
-      config_file = client_options[:config_file]
-      config = modl.get_config(config_file)
-
-      env = config[:environment]
-
-      service_opts = {:name=>name_symbol, :env=>env}
-      service_opts[:host] = Socket.gethostname if client_options[:local]
-
-      begin
-        # find jerbil
-        jerbil_server = Jerbil.get_local_server
-
-        # now connect to it
-        jerbil = jerbil_server.connect
-
-        # and get service
-        servicerecord = jerbil.get(service_opts)
-
-        if servicerecord.nil? then
-          raise Jerbil::ServiceNotFound, "cannot find service through Jerbil"
-        end
-        
-        this_client = new(servicerecord, jerbil, output, klass)
-
-        this_client.connect(&block)
-
-        output.puts "Closing the connection"
-        #output.close unless @output == $stderr
-
-        return nil # give the caller nothing back
-
-      rescue Jerbil::MissingServer
-        output.puts("Cannot find a local Jerbil server")
-        raise
-      rescue Jerbil::JerbilConfigError => err
-        output.puts("Error in Jerbil Config File: #{err.message}")
-        raise
-      rescue Jerbil::JerbilServiceError =>jerr
-        output.puts("Error with Jerbil Service: #{jerr.message}") 
-        raise
-      rescue Jerbil::ServerConnectError
-        output.puts("Error connecting to Jerbil Server") 
-        raise
-      rescue DRb::DRbConnError =>derr
-        output.puts("Error setting up DRb Server: #{derr.message}") 
-        raise Jerbil::ServerConnectError
+      new(modl, options) do |client|
+        client.connect(select, &block)
       end
     end
 
-    # Connect to multiple services
-    def Client.each_service(modl, client_options, &block)
-      # the class itself should be called Service within the given module
-      klass = modl.module_eval('Service')
+    # backwards compatible method to connect to first service using environment
+    # defined in config_file which is read in from options[:config_file] or the default
+    # location (see get_config)
+    #
+    def self.connect(modl, options={}, &block) # :yields: client
 
+      config_file = options[:config_file]
+      config = modl.get_config(config_file)
+
+      options[:environment] = config[:environment]
+
+      self.find_services(:first, modl, options, &block)
+
+    end
+
+
+    #create a client instance and call the block. Should be used internally only
+    def initialize(modl, options, &block)
+
+      @klass = modl::Service
       name = modl.to_s
       name_symbol = name.downcase.to_sym
 
-      quiet = client_options[:quiet]
+      quiet = options[:quiet]
       unless quiet
-        output = client_options[:output] || $stderr
+        @output = options[:output] || $stderr
       else
-        output = File.open('/dev/null', 'w')
+        @output = File.open('/dev/null', 'w')
       end
 
-      output.puts "Welcome to #{name} (#{modl.ident})"
+      @welcome = options[:welcome]
 
-      config_file = client_options[:config_file]
-      config = modl.get_config(config_file)
+      @output.puts "Welcome to #{name} (#{modl.ident})" if @welcome
 
-      env = config[:environment]
+      env = options[:environment]
 
       service_opts = {:name=>name_symbol, :env=>env}
-      service_opts[:host] = Socket.gethostname if client_options[:local]
+      service_opts[:host] = Socket.gethostname if options[:local]
 
       begin
         # find jerbil
-        jerbil_server = Jerbil.get_local_server
+        @jerbil_server = Jerbil.get_local_server
 
         # now connect to it
-        jerbil = jerbil_server.connect
+        jerbil = @jerbil_server.connect
 
         # and find all of the services
-        services = []
-        services = jerbil.find(service_opts)
+        @services = []
+        @services = jerbil.find(service_opts)
 
-        if services.length == 0 then
-          raise Jerbil::ServiceNotFound, "cannot find any services through Jerbil"
+        if @services.length == 0 then
+          @output.puts "No services for #{name}[:#{env}] were found"
+          raise Jerbil::ServiceNotFound, "No services for #{name}[:#{env}] were found"
         end
 
-        services.each do |service_record|
-          this_client = new(service_record, jerbil, output, klass)
+        block.call(self)
 
-          block.call(this_client)
-          
-        end
-
-        output.puts "Stopping the service"
+        @output.puts "Stopping the service" if @welcome
         #output.close unless @output == $stderr
 
         return nil # give the caller nothing back
 
       rescue Jerbil::MissingServer
-        output.puts("Cannot find a local Jerbil server")
+        @output.puts("Cannot find a local Jerbil server")
         raise
       rescue Jerbil::JerbilConfigError => err
-        output.puts("Error in Jerbil Config File: #{err.message}")
+        @output.puts("Error in Jerbil Config File: #{err.message}")
         raise
       rescue Jerbil::JerbilServiceError =>jerr
-        output.puts("Error with Jerbil Service: #{jerr.message}")
+        @output.puts("Error with Jerbil Service: #{jerr.message}")
         raise
       rescue Jerbil::ServerConnectError
-        output.puts("Error connecting to Jerbil Server")
+        @output.puts("Error connecting to Jerbil Server")
         raise
       rescue DRb::DRbConnError =>derr
-        output.puts("Error setting up DRb Server: #{derr.message}")
+        @output.puts("Error setting up DRb Server: #{derr.message}")
         raise Jerbil::ServerConnectError
       end
-
-    end
-
-    #:nodoc: create a client instance
-    def initialize(service, jerbil, output, klass)
-
-      @service = service
-      @jerbil_server = jerbil
-      @output = output
-      @klass = klass
-      @session = nil
 
     end
 
     #private
 
-    #:nodoc: connect to the client
-    def connect(&block)
-      @session = @service.connect
+    # connect to the client
+    def connect(index=:all, &block)
 
-      block.call(self)
+      if index == :first then
+        @session = @services[0].connect
+        @service = @services[0]
+        block.call(self)
 
-      @session = nil
-      #@service.close
+        @session = nil
+      else
+        @services.each do |service|
+          @service = service
+          @session = service.connect
+          block.call(self)
+        end
+      end
 
     end
 
-    # verify that the service is working
-    def verify
-      return !@session.nil?
-    end
 
     # return the name of the host on which the service is running
     def host

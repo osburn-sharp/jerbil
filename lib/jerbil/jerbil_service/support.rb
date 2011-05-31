@@ -50,7 +50,7 @@ module JerbilService
     # set up and is maintained by Jevoom
     # Returns 'n/a' otherwise
     def ident
-      return self.module_eval("Ident")
+      return self::Ident
     rescue
       return 'n/a'
     end

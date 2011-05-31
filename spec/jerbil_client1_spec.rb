@@ -20,70 +20,37 @@ require 'jerbil/errors'
 require 'socket'
 
 config_file = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/test')
-log_filename = File.expand_path(File.dirname(__FILE__) + '/../log/client.log')
 localhost = Socket.gethostname
 
 describe "Test Jerbil Client Interface" do
 
   before(:all) do
-    @client_opts = {:local=>true, :environment=>:dev, :quiet=>true}
+    @client_opts = {:local=>true, :config_file=>config_file, :quiet=>true}
   end
-
-  it "should respond to the old connect method" do
-    client_opts = {:local=>true, :config_file=>config_file, :quiet=>true}
-    JerbilService::Client.connect(RubyTest, client_opts) do |rubytest|
+  it "should respond to the action method" do
+    JerbilService::Client.connect(RubyTest, @client_opts) do |rubytest|
       rubytest.action.should == 'Hello'
-      rubytest.host.should == localhost
-    end
-  end
-
-  it "should respond to the new find_services method" do
-    JerbilService::Client.find_services(:first, RubyTest, @client_opts) do |rubytest|
-      rubytest.action.should == 'Hello'
-      rubytest.host.should == localhost
-    end
-  end
-
-  it "should respond to the new find_services method with local service" do
-    JerbilService::Client.find_services(:local, RubyTest, @client_opts) do |rubytest|
-      rubytest.action.should == 'Hello'
+      rubytest.verify.should be_true
       rubytest.host.should == localhost
     end
   end
 
   it "should work with multiple client call" do
-    JerbilService::Client.find_services(:all, RubyTest, @client_opts) do |rubytest|
-      rubytest.action.should == 'Hello'
+    JerbilService::Client.each_service(RubyTest, @client_opts) do |a_service|
+      a_service.connect do |rubytest|
+        rubytest.action.should == 'Hello'
+      end
     end
-  end
-
-  it "should work output welcome things with the welcome option" do
-
-    log_file = File.open(log_filename, "w")
-    options = @client_opts.dup
-    options[:welcome] = true
-    options[:output] = log_file
-    options[:quiet] = false
-    JerbilService::Client.find_services(:local, RubyTest, options) do |rubytest|
-      rubytest.action.should == 'Hello'
-    end
-    log_file.close
-    log = File.readlines(log_filename)
-    log[0].should match(/^Welcome/)
   end
 
   it "should not respond to an unknown method" do
-    JerbilService::Client.find_services(:first, RubyTest, @client_opts) do |rubytest|
+    JerbilService::Client.connect(RubyTest, @client_opts) do |rubytest|
       lambda{rubytest.unlikely_method}.should raise_error(NoMethodError)
     end
   end
 
-  it "should not respond to an unknown search key" do
-    lambda{JerbilService::Client.find_services(:last, RubyTest, @client_opts)}.should raise_error(ArgumentError)
-  end
-
   it "should not allow the stop_callback to be called" do
-    JerbilService::Client.find_services(:first, RubyTest, @client_opts) do |rubytest|
+    JerbilService::Client.connect(RubyTest, @client_opts) do |rubytest|
       lambda{rubytest.stop_callback}.should raise_error(Jerbil::UnauthorizedMethod)
     end
   end

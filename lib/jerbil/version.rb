@@ -1,10 +1,11 @@
 # Created by Jevoom
 #
-# 30-May-2011
-#   Add option to JerbilService::Base to not set $SAFE > 0 where subclass needs to set it later
+# 31-May-2011
+#   Update to JerbilService::Client to refactor and redesign the interface to remove use of
+#   evals that would otherwise compromise security
 
 module Jerbil
-  Version = '0.1.6'
-  Version_Date = '30-May-2011'
-  Ident = 'jerbil-0.1.6 30-May-2011'
+  Version = '0.1.7'
+  Version_Date = '31-May-2011'
+  Ident = 'jerbil-0.1.7 31-May-2011'
 end
