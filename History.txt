@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.1.8 01-June-2011
+
+Added back the verify method to JerbilService::Client!
+
 jerbil-0.1.7 31-May-2011
 
 Update to JerbilService::Client to refactor and redesign the interface to remove use of

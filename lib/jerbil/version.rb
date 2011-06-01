@@ -1,11 +1,10 @@
 # Created by Jevoom
 #
-# 31-May-2011
-#   Update to JerbilService::Client to refactor and redesign the interface to remove use of
-#   evals that would otherwise compromise security
+# 01-Jun-2011
+#   Added back the verify method to JerbilService::Client!
 
 module Jerbil
-  Version = '0.1.7'
-  Version_Date = '31-May-2011'
-  Ident = 'jerbil-0.1.7 31-May-2011'
+  Version = '0.1.8'
+  Version_Date = '01-Jun-2011'
+  Ident = 'jerbil-0.1.8 01-Jun-2011'
 end

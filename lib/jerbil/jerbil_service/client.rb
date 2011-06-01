@@ -179,6 +179,16 @@ module JerbilService
 
     end
 
+    # verify that the service is working - having a @session is enough cos
+    # calling @service.connect will already try verify_callback. This is a bit of a
+    # no-op cos to call it OK you must already have connected and if it could ever
+    # return false you wouldn't have got this far! Still, it gives mean to what
+    # would otherwise be a meaningless empty block.
+    #
+    def verify
+      @session != nil
+    end
+
 
     # return the name of the host on which the service is running
     def host
