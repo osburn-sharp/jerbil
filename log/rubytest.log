@@ -286,3 +286,4 @@ D, [2011-05-31 16:41:02 #17106] DEBUG -- : Someone called the action method!
 D, [2011-05-31 16:41:02 #17106] DEBUG -- : Someone called the action method!
 D, [2011-05-31 16:41:02 #17106] DEBUG -- : Someone called the action method!
 D, [2011-05-31 16:41:02 #17106] DEBUG -- : Someone called the action method!
+I, [2011-06-01 10:52:47 #17106]  INFO -- : Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902

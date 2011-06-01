@@ -129,14 +129,20 @@ when :servers
 
   config[:servers].each do |server|
     connect = false
+    version = "0"
     begin
       jerbs = server.connect
       jerbs.verify
       connect = true
+      version = server.version
     rescue
       # do nothing
     end
-    puts "   #{server.fqdn}: #{connect ? 'OK' : 'no response'}"
+    if connect then
+      puts "   #{server.fqdn}: #{version}"
+    else
+      puts "   #{server.fqdn}: no response"
+    end
   end
 
 when :list

@@ -130,7 +130,7 @@ module Jerbil
 
     # return the current version of Jerbil
     def version
-      Version
+      Jerbil::Version
     end
 
     # the total number of services currently registered with the server

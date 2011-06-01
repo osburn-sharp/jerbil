@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.1.9 01-June-2011
+
+correct version method to respond with Jerbil::Version and add to output of bin/jerbil -S
+
 jerbil-0.1.8 01-June-2011
 
 Added back the verify method to JerbilService::Client!
