@@ -1,5 +1,18 @@
 == Bugs
 
+01-Aug-2011
+
+1. service-missing is not working as expected. Needs to be tested to see what happens 
+when a server is ungracefully removed. May need to change logic from removing services
+to removing servers.
+
+2. Need to add client config file for jerbil to avoid having readable files everywhere.
+
+23-June-2011
+
+jerbil -V reports the number of times a service has been accessed through the local server.
+Would be good to share all counts across all servers somehow?
+
 17-Apr-2011
 
 If you run jerbil -v on a remote server it appears to remove a service but the removal fails.

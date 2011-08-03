@@ -110,12 +110,29 @@ unless config[:pid_dir] then
   exit 1
 end
 
-if daemonize then
-  puts "Daemonizing now" if verbose
-  Daemons.daemonize
-else
-  puts "Running in the foreground" if verbose
+# prevent the server from generating syslogs
+Jelly.disable_syslog unless log_to_syslog
+
+# create a local log
+
+dopts = {:backtrace=>true,
+  :log_dir=>'/tmp',
+  :log_output=>true
+}
+  
+begin
+  if daemonize then
+    puts "Daemonizing now" if verbose
+    Daemons.daemonize(dopts)
+  else
+    puts "Running in the foreground" if verbose
+  end
 end
+
+logger = Jelly.new('jerbilsd', config[:log_dir], false, config[:log_rotation], config[:log_length])
+logger.log_level = :debug
+logger.info "Logging started"
+logger.puts "Daemonized?" if verbose 
 
 servers = config.delete(:servers)
 

@@ -1049,3 +1049,15 @@ D, [2011-05-01 09:27:51 #6423] DEBUG -- : Skipping over remove_remote for antoni
 D, [2011-05-01 09:27:51 #6423] DEBUG -- : Connected to valeria.osburn-sharp.ath.cx
 D, [2011-05-01 09:27:51 #6423] DEBUG -- : Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
 I, [2011-05-02 08:11:22 #6423]  INFO -- : Stopping the Jerbil Server now
+D, [2011-07-30 08:13:41 #11346] DEBUG -- : Registered myself as: #<Jerbil::ServerRecord:0xb72b9af0 @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK", @active=false, @env=:prod, @fqdn="lucius.osburn-sharp.ath.cx", @port=49200>
+D, [2011-07-30 08:13:41 #11346] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72b9a3c @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4", @active=false, @env=:prod, @fqdn="germanicus.osburn-sharp.ath.cx", @port=49200>
+D, [2011-07-30 08:13:41 #11346] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72b9a28 @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3", @active=false, @env=:prod, @fqdn="octavia.osburn-sharp.ath.cx", @port=49200>
+D, [2011-07-30 08:13:41 #11346] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72b9a00 @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV", @active=false, @env=:prod, @fqdn="antonia.osburn-sharp.ath.cx", @port=49200>
+D, [2011-07-30 08:13:41 #11346] DEBUG -- : Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72b99ec @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ", @active=false, @env=:prod, @fqdn="valeria.osburn-sharp.ath.cx", @port=49200>
+D, [2011-07-30 08:13:41 #11346] DEBUG -- : Got remote services: [#<Jerbil::ServiceRecord:0xb72b8e48 @accessed_at=Fri Jul 29 21:00:31 +0100 2011, @key="bf43df9d12", @lock=nil, @access_count=50, @env=:test, @stop_callback=:stop_callback, @host="germanicus.osburn-sharp.ath.cx", @registered_at=Tue Jul 19 22:38:25 +0100 2011, @port=49204, @name=:jexten, @verify_callback=:verify_callback, @close=true, @address="germanicus.osburn-sharp.ath.cx:49204", @pid=8494>, #<Jerbil::ServiceRecord:0xb72b8bf0 @accessed_at=Mon Jul 25 07:07:45 +0100 2011, @key="9d4d8d3fb9", @lock=nil, @access_count=1, @env=:test, @stop_callback=:stop_callback, @host="germanicus.osburn-sharp.ath.cx", @registered_at=Tue Jul 19 23:05:26 +0100 2011, @port=49961, @name=:numbat, @verify_callback=:verify_callback, @close=true, @address="germanicus.osburn-sharp.ath.cx:49961", @pid=9952>]
+I, [2011-07-30 08:13:41 #11346]  INFO -- : Started up the Jerbil Server
+I, [2011-07-30 08:14:25 #11346]  INFO -- : Stop called with incorrect private key
+D, [2011-07-30 08:14:25 #11346] DEBUG -- :  Private Key provided:
+D, [2011-07-30 08:14:25 #11346] DEBUG -- : 
+D, [2011-07-30 08:14:25 #11346] DEBUG -- :  Private Key required
+D, [2011-07-30 08:14:25 #11346] DEBUG -- : a343f6567fbc3bcddb44

@@ -13,6 +13,7 @@
 #
 # user utility to question the Jerbil network
 # 
+require 'jeckyl'
 require 'jerbil'
 require 'jerbil/server'
 require 'jerbil/config'
@@ -28,7 +29,7 @@ class String
   include Term::ANSIColor
 end
 
-config_file = nil
+config_file = Jeckyl::ConfigRoot + '/jerbil-client.conf'
 cmd = :check_local
 verbose = false
 quiet = false
@@ -134,7 +135,7 @@ when :servers
       jerbs = server.connect
       jerbs.verify
       connect = true
-      version = server.version
+      version = jerbs.version
     rescue
       # do nothing
     end

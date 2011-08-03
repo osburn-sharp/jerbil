@@ -35,7 +35,7 @@ module Jerbil
       return pid
     rescue Errno::ENOENT
       # failed to write pid to file
-      raise Jerbil::ServiceConfigFile, "Cannot write pid file: #{pid_file}"
+      raise Jerbil::ServiceConfigError, "Cannot write pid file: #{pid_file}"
     end
 
     # retrieve the pid from a perviously created pid file
@@ -76,7 +76,7 @@ module Jerbil
       return key
     rescue Errno::ENOENT
       # failed to write pid to file
-      raise Jerbil::ServiceConfigFile, "Cannot write key file: #{key_file}"
+      raise Jerbil::ServiceConfigError, "Cannot write key file: #{key_file}"
     end
 
     # return a previously saved private key

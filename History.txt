@@ -1,5 +1,14 @@
 ==History
 
+jerbil-0.1.11 02-Aug-2011
+
+Included logging in jerbild to avoid whatever caused the daemonised version to fail.
+Change default config file for jerbil to jerbil-client.conf.
+
+jerbil-0.1.10 09-June-2011
+
+Minor fix for incorrect exception names in jerbil/support
+
 jerbil-0.1.9 01-June-2011
 
 correct version method to respond with Jerbil::Version and add to output of bin/jerbil -S
