@@ -117,7 +117,9 @@ Jelly.disable_syslog unless log_to_syslog
 
 dopts = {:backtrace=>true,
   :log_dir=>'/tmp',
-  :log_output=>true
+  :log_output=>true,
+  :dir_mode=>:normal,
+  :dir=>config[:pid_dir]
 }
   
 begin

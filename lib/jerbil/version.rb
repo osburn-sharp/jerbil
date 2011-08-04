@@ -1,11 +1,11 @@
 # Created by Jevoom
 #
-# 02-Aug-2011
-#   Included logging in jerbild to avoid whatever caused the daemonised version to fail.
-#   Change default config file for jerbil to jerbil-client.conf.
+# 04-Aug-2011
+#   ensure that jerbild daemon creates things in a defined directory.
+#   delete pid and key files before trying to open them in case of permissions problems.
 
 module Jerbil
-  Version = '0.1.11'
-  Version_Date = '02-Aug-2011'
-  Ident = 'jerbil-0.1.11 02-Aug-2011'
+  Version = '0.1.12'
+  Version_Date = '04-Aug-2011'
+  Ident = 'jerbil-0.1.12 04-Aug-2011'
 end

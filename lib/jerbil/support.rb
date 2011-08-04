@@ -29,6 +29,7 @@ module Jerbil
     def Support.write_pid_file(name, env, pid_dir)
       pid = Process.pid.to_s
       pid_file = "#{pid_dir}/#{name.to_s}-#{env}.pid"
+      FileUtils.rm_f(pid_file) if File.exists?(pid_file) # avoid permissions probs
       File.open(pid_file, "w") do |pfile|
         pfile.puts pid
       end
@@ -70,6 +71,7 @@ module Jerbil
     def Support.create_private_key(name,  env, key_dir)
       key = Digest::SHA1.hexdigest(Time.now.to_s + rand(12341234).to_s)[1..20]
       key_file = "#{key_dir}/#{name.to_s}-#{env}.asc"
+      FileUtils.rm_f(key_file) if File.exists?(key_file) # avoid permissions probs
       File.open(key_file, "w") do |kfile|
         kfile.puts key
       end

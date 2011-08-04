@@ -1,5 +1,10 @@
 ==History
 
+jerbil-0.1.12 04-Aug-2011
+
+ensure that jerbild daemon creates things in a defined directory.
+delete pid and key files before trying to open them in case of permissions problems.
+
 jerbil-0.1.11 02-Aug-2011
 
 Included logging in jerbild to avoid whatever caused the daemonised version to fail.
