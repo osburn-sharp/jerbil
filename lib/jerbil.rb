@@ -23,6 +23,7 @@
 # Jerbil is meant to be used behind a higher level wrapper that hides DRb as well
 #
 #
+require 'rubygems'
 require 'drb'
 require 'socket'
 require 'jelly'
@@ -68,10 +69,11 @@ module Jerbil
       @remote_store = Array.new
 
       # create a jelly logger that continues any previous log and keeps the last 5 log files
-
       app_name = "Jerbil-#{options[:environment].to_s}"
-      @logger = Jelly.new(app_name, options[:log_dir], false, options[:log_rotation], options[:log_length])
-      @logger.log_level = options[:log_level]
+      log_opts = Jelly::Logger.get_options(options)
+      @logger = Jelly::Logger.new(app_name, log_opts)
+      @logger.debug "Started the Logger"
+      #@logger.log_level = options[:log_level] - not needed for Jelly 1.0+
 
       # some statistical data
       @started = Time.now
@@ -272,7 +274,7 @@ module Jerbil
     #
     # if not local, find server and ask it the same question.
     # if the server is not there, then fake being that server and remove_remote from
-    # everyone.
+    # everyone. Don't forget to remove it from here too!
     #
     def service_missing?(service)
       # is it one of mine?
@@ -316,6 +318,7 @@ module Jerbil
         unless failed_remote_server.nil?
           @logger.warn("Failed to connect to server: #{failed_remote_server.fqdn}, removing service for it")
           rkey = failed_remote_server.key
+          self.remove_remote(rkey, service)
           @remote_servers.each do |rserver|
             begin
               rjerbil = rserver.connect
@@ -453,12 +456,18 @@ module Jerbil
     def add_service_to_store(store, service)
       store.each do |s|
         if s == service then
-          @logger.warn("Service: #{service.address}-#{service.env} already registered")
-          raise ServiceAlreadyRegistered
+          # there is already a service registered, but is it active?
+          if self.service_missing?(s) then
+            @logger.verbose "Service: #{s.ident} was registered, but did not respond"
+          else
+            @logger.warn("Service: #{service.address}-#{service.env} already registered")
+             raise ServiceAlreadyRegistered
+          end
+          
         end
       end
+      # either service was not registered or was missing, so add it
       store << service
-
     end
 
   end

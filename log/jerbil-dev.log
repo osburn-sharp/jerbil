@@ -132,3 +132,1598 @@ D, [2011-04-28 10:35:08 #14812] DEBUG -- :  Private Key provided:
 D, [2011-04-28 10:35:08 #14812] DEBUG -- : fe76fc87a5a280653096
 D, [2011-04-28 10:35:08 #14812] DEBUG -- :  Private Key required
 D, [2011-04-28 10:35:08 #14812] DEBUG -- : ca5aa08e70be4054f524
+[32m[2011-09-09 08:06:41] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:06:41] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7425ad8 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:06:41] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Started up the Jerbil Server
+[32m[2011-09-09 08:06:41] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:06:41] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb741e080 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:06:41] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-09 08:06:41] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:06:41] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb740b9f8 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:06:41] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2011-09-09 08:06:41] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
+[32m[2011-09-09 08:06:41] DEBUG[0m - Local service appears to be missing: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Deleted Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Removed missing local service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2011-09-09 08:06:41] INFO[0m - Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902 was registered, but did not respond
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-09 08:06:41] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:06:41] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73ea604 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:06:41] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Deleted Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-09 08:06:41] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:06:41] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73d739c @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:06:41] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[33m[2011-09-09 08:06:41] WARN[0m - Attempt was made to remove a service that is not registered: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 08:06:41] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:06:41] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73cad54 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:06:41] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 08:06:41] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:06:41] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb749fd24 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:06:41] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[37m[2011-09-09 08:06:41] INFO[0m - Searching for services. Found 3 matching.
+[37m[2011-09-09 08:06:41] INFO[0m -   Arguments: {:name=>:rubytest}
+[32m[2011-09-09 08:06:41] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:06:41] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7455da0 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:06:41] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[37m[2011-09-09 08:06:41] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-09 08:06:41] INFO[0m -   Arguments: {:env=>:prod}
+[32m[2011-09-09 08:06:41] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:06:41] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73b1778 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:06:41] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[37m[2011-09-09 08:06:41] INFO[0m - Searching for services. Found 0 matching.
+[37m[2011-09-09 08:06:41] INFO[0m -   Arguments: {:name=>:Bilker}
+[32m[2011-09-09 08:06:41] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:06:41] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73ab9b8 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:06:41] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 08:06:41] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[37m[2011-09-09 08:06:41] INFO[0m - Searching for services. Found 3 matching.
+[37m[2011-09-09 08:06:41] INFO[0m -   Arguments: {:name=>:rubytest}
+[37m[2011-09-09 08:06:41] INFO[0m - Get returned rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-09 08:41:03] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:41:03] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73c1768 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:41:03] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Started up the Jerbil Server
+[32m[2011-09-09 08:41:03] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:41:03] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73bbdb8 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:41:03] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-09 08:41:03] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:41:03] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73aa220 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:41:03] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2011-09-09 08:41:03] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
+[32m[2011-09-09 08:41:03] DEBUG[0m - Local service appears to be missing: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Deleted Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Removed missing local service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2011-09-09 08:41:03] INFO[0m - Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902 was registered, but did not respond
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-09 08:41:03] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:41:03] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb738a7cc @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:41:03] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Deleted Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-09 08:41:03] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:41:03] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7377e60 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:41:03] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[33m[2011-09-09 08:41:03] WARN[0m - Attempt was made to remove a service that is not registered: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 08:41:03] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:41:03] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb736bd54 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:41:03] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 08:41:03] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:41:03] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb735bbe8 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:41:03] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[37m[2011-09-09 08:41:03] INFO[0m - Searching for services. Found 3 matching.
+[37m[2011-09-09 08:41:03] INFO[0m -   Arguments: {:name=>:rubytest}
+[32m[2011-09-09 08:41:03] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:41:03] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7403ed8 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:41:03] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[37m[2011-09-09 08:41:03] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-09 08:41:03] INFO[0m -   Arguments: {:env=>:prod}
+[32m[2011-09-09 08:41:03] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:41:03] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7352fd4 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:41:03] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[37m[2011-09-09 08:41:03] INFO[0m - Searching for services. Found 0 matching.
+[37m[2011-09-09 08:41:03] INFO[0m -   Arguments: {:name=>:Bilker}
+[32m[2011-09-09 08:41:03] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:41:03] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb734cc88 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:41:03] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 08:41:03] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[37m[2011-09-09 08:41:03] INFO[0m - Searching for services. Found 3 matching.
+[37m[2011-09-09 08:41:03] INFO[0m -   Arguments: {:name=>:rubytest}
+[37m[2011-09-09 08:41:03] INFO[0m - Get returned rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-09 08:44:10] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:44:10] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7445400 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:44:10] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Started up the Jerbil Server
+[32m[2011-09-09 08:44:10] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:44:10] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb743fa00 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:44:10] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-09 08:44:10] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:44:10] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb742dcec @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:44:10] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2011-09-09 08:44:10] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
+[37m[2011-09-09 08:44:10] INFO[0m - Missing service was found to be OK: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[33m[2011-09-09 08:44:10] WARN[0m - Service: lucius.osburn-sharp.ath.cx:49902-dev already registered
+[32m[2011-09-09 08:44:10] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:44:10] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7419760 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:44:10] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Deleted Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-09 08:44:10] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:44:10] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7405120 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:44:10] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[33m[2011-09-09 08:44:10] WARN[0m - Attempt was made to remove a service that is not registered: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 08:44:10] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:44:10] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73f8894 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:44:10] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 08:44:10] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:44:10] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73e98e4 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:44:10] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[37m[2011-09-09 08:44:10] INFO[0m - Searching for services. Found 3 matching.
+[37m[2011-09-09 08:44:10] INFO[0m -   Arguments: {:name=>:rubytest}
+[32m[2011-09-09 08:44:10] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:44:10] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb749f8c4 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:44:10] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[37m[2011-09-09 08:44:10] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-09 08:44:10] INFO[0m -   Arguments: {:env=>:prod}
+[32m[2011-09-09 08:44:10] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:44:10] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74d30c0 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:44:10] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[37m[2011-09-09 08:44:10] INFO[0m - Searching for services. Found 0 matching.
+[37m[2011-09-09 08:44:10] INFO[0m -   Arguments: {:name=>:Bilker}
+[32m[2011-09-09 08:44:10] DEBUG[0m - Started the Logger
+[32m[2011-09-09 08:44:10] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73d44f8 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-09 08:44:10] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 08:44:10] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[37m[2011-09-09 08:44:10] INFO[0m - Searching for services. Found 3 matching.
+[37m[2011-09-09 08:44:10] INFO[0m -   Arguments: {:name=>:rubytest}
+[37m[2011-09-09 08:44:10] INFO[0m - Get returned rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-09 13:58:39] DEBUG[0m - Started the Logger
+[32m[2011-09-09 13:58:39] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb71eb59c @active=false, @port=49202, @env=:dev, @fqdn="lucius.osburn-sharp.ath.cx", @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-09 13:58:39] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb71eb22c @active=false, @port=49202, @env=:dev, @fqdn="germanicus.osburn-sharp.ath.cx", @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-09 13:58:39] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 13:58:39] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb71eb218 @active=false, @port=49202, @env=:dev, @fqdn="octavia.osburn-sharp.ath.cx", @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-09 13:58:39] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 13:58:39] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb71eb204 @active=false, @port=49202, @env=:dev, @fqdn="antonia.osburn-sharp.ath.cx", @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-09 13:58:39] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 13:58:39] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb71eb1f0 @active=false, @port=49202, @env=:dev, @fqdn="valeria.osburn-sharp.ath.cx", @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-09 13:58:39] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-09 13:58:39] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 13:58:39] SYSTEM[0m - Started up the Jerbil Server
+[37m[2011-09-09 13:59:06] INFO[0m - Searching for services. Found 0 matching.
+[37m[2011-09-09 13:59:06] INFO[0m -   Arguments: {}
+[36m[2011-09-09 13:59:12] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 13:59:12] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:12] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:12] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:12] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[36m[2011-09-09 13:59:12] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 13:59:12] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:12] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:12] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:12] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-09 13:59:12] INFO[0m - Registered Remote Service: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[37m[2011-09-09 13:59:12] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-09 13:59:12] INFO[0m -   Arguments: {:name=>:numbat}
+[37m[2011-09-09 13:59:12] INFO[0m - Get returned numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[37m[2011-09-09 13:59:12] INFO[0m - Verification failed for numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[36m[2011-09-09 13:59:12] SYSTEM[0m - Deleted Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 13:59:12] DEBUG[0m - Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:12] DEBUG[0m - Skipping over remove_remote for germanicus.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 13:59:12] DEBUG[0m - Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:12] DEBUG[0m - Skipping over remove_remote for octavia.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 13:59:12] DEBUG[0m - Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:12] DEBUG[0m - Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 13:59:12] DEBUG[0m - Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:12] DEBUG[0m - Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 13:59:12] SYSTEM[0m - Deleted Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 13:59:12] DEBUG[0m - Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:12] DEBUG[0m - Skipping over remove_remote for germanicus.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 13:59:12] DEBUG[0m - Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:12] DEBUG[0m - Skipping over remove_remote for octavia.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 13:59:12] DEBUG[0m - Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:12] DEBUG[0m - Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 13:59:12] DEBUG[0m - Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:12] DEBUG[0m - Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[36m[2011-09-09 13:59:16] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 13:59:16] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:16] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:16] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:16] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[36m[2011-09-09 13:59:16] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 13:59:16] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:16] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:16] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:16] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-09 13:59:16] INFO[0m - Local service missing for numbat[dev]@lucius.osburn-sharp.ath.cx:49962?
+[32m[2011-09-09 13:59:16] DEBUG[0m - Local service appears to be missing: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[33m[2011-09-09 13:59:16] WARN[0m - Attempt was made to remove a service that is not registered: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[36m[2011-09-09 13:59:16] SYSTEM[0m - Removed missing local service: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[37m[2011-09-09 13:59:16] INFO[0m - Service: numbat[dev]@lucius.osburn-sharp.ath.cx:49962 was registered, but did not respond
+[37m[2011-09-09 13:59:16] INFO[0m - Registered Remote Service: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[37m[2011-09-09 13:59:16] INFO[0m - Searching for services. Found 2 matching.
+[37m[2011-09-09 13:59:16] INFO[0m -   Arguments: {:name=>:numbat}
+[37m[2011-09-09 13:59:16] INFO[0m - Get returned numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[37m[2011-09-09 13:59:16] INFO[0m - Verification failed for numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[36m[2011-09-09 13:59:16] SYSTEM[0m - Deleted Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 13:59:16] DEBUG[0m - Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:16] DEBUG[0m - Skipping over remove_remote for germanicus.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 13:59:16] DEBUG[0m - Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:16] DEBUG[0m - Skipping over remove_remote for octavia.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 13:59:16] DEBUG[0m - Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:16] DEBUG[0m - Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 13:59:16] DEBUG[0m - Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:16] DEBUG[0m - Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 13:59:16] SYSTEM[0m - Deleted Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 13:59:16] DEBUG[0m - Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:16] DEBUG[0m - Skipping over remove_remote for germanicus.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 13:59:16] DEBUG[0m - Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:16] DEBUG[0m - Skipping over remove_remote for octavia.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 13:59:16] DEBUG[0m - Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:16] DEBUG[0m - Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 13:59:16] DEBUG[0m - Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-09 13:59:16] DEBUG[0m - Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[37m[2011-09-09 13:59:20] INFO[0m - Searching for services. Found 2 matching.
+[37m[2011-09-09 13:59:20] INFO[0m -   Arguments: {}
+[37m[2011-09-09 13:59:20] INFO[0m - Local service missing for numbat[dev]@lucius.osburn-sharp.ath.cx:49962?
+[32m[2011-09-09 13:59:20] DEBUG[0m - Local service appears to be missing: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[33m[2011-09-09 13:59:20] WARN[0m - Attempt was made to remove a service that is not registered: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[36m[2011-09-09 13:59:20] SYSTEM[0m - Removed missing local service: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[37m[2011-09-09 13:59:20] INFO[0m - Local service missing for numbat[dev]@lucius.osburn-sharp.ath.cx:49962?
+[32m[2011-09-09 13:59:20] DEBUG[0m - Local service appears to be missing: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[33m[2011-09-09 13:59:20] WARN[0m - Attempt was made to remove a service that is not registered: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[36m[2011-09-09 13:59:20] SYSTEM[0m - Removed missing local service: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[37m[2011-09-09 13:59:23] INFO[0m - Searching for services. Found 2 matching.
+[37m[2011-09-09 13:59:23] INFO[0m -   Arguments: {}
+[37m[2011-09-09 13:59:23] INFO[0m - Local service missing for numbat[dev]@lucius.osburn-sharp.ath.cx:49962?
+[32m[2011-09-09 13:59:23] DEBUG[0m - Local service appears to be missing: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[33m[2011-09-09 13:59:23] WARN[0m - Attempt was made to remove a service that is not registered: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[36m[2011-09-09 13:59:23] SYSTEM[0m - Removed missing local service: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[37m[2011-09-09 13:59:23] INFO[0m - Local service missing for numbat[dev]@lucius.osburn-sharp.ath.cx:49962?
+[32m[2011-09-09 13:59:23] DEBUG[0m - Local service appears to be missing: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[33m[2011-09-09 13:59:23] WARN[0m - Attempt was made to remove a service that is not registered: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[36m[2011-09-09 13:59:23] SYSTEM[0m - Removed missing local service: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[37m[2011-09-09 18:13:29] INFO[0m - Searching for services. Found 2 matching.
+[37m[2011-09-09 18:13:29] INFO[0m -   Arguments: {}
+[37m[2011-09-09 18:13:29] INFO[0m - Local service missing for numbat[dev]@lucius.osburn-sharp.ath.cx:49962?
+[32m[2011-09-09 18:13:29] DEBUG[0m - Local service appears to be missing: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[33m[2011-09-09 18:13:29] WARN[0m - Attempt was made to remove a service that is not registered: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[36m[2011-09-09 18:13:29] SYSTEM[0m - Removed missing local service: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[37m[2011-09-09 18:13:29] INFO[0m - Local service missing for numbat[dev]@lucius.osburn-sharp.ath.cx:49962?
+[32m[2011-09-09 18:13:29] DEBUG[0m - Local service appears to be missing: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[33m[2011-09-09 18:13:29] WARN[0m - Attempt was made to remove a service that is not registered: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[36m[2011-09-09 18:13:29] SYSTEM[0m - Removed missing local service: numbat[dev]@lucius.osburn-sharp.ath.cx:49962
+[36m[2011-09-09 18:13:33] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2011-09-09 18:13:37] DEBUG[0m - Started the Logger
+[32m[2011-09-09 18:13:37] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb70ff55c @active=false, @port=49202, @env=:dev, @fqdn="lucius.osburn-sharp.ath.cx", @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-09 18:13:37] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb70ff1ec @active=false, @port=49202, @env=:dev, @fqdn="germanicus.osburn-sharp.ath.cx", @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-09 18:13:37] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 18:13:37] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb70ff1d8 @active=false, @port=49202, @env=:dev, @fqdn="octavia.osburn-sharp.ath.cx", @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-09 18:13:37] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:13:37] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb70ff1c4 @active=false, @port=49202, @env=:dev, @fqdn="antonia.osburn-sharp.ath.cx", @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-09 18:13:37] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:13:37] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb70ff1b0 @active=false, @port=49202, @env=:dev, @fqdn="valeria.osburn-sharp.ath.cx", @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-09 18:13:37] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-09 18:13:37] DEBUG[0m - Got remote services: []
+[36m[2011-09-09 18:13:37] SYSTEM[0m - Started up the Jerbil Server
+[37m[2011-09-09 18:13:41] INFO[0m - Searching for services. Found 0 matching.
+[37m[2011-09-09 18:13:41] INFO[0m -   Arguments: {}
+[36m[2011-09-09 18:13:45] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 18:13:45] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 18:13:45] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:13:45] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:13:45] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[36m[2011-09-09 18:13:45] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 18:13:45] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 18:13:45] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:13:45] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:13:45] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-09 18:13:45] INFO[0m - Registered Remote Service: numbat[dev]@antonia.osburn-sharp.ath.cx:49962
+[37m[2011-09-09 18:13:45] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-09 18:13:45] INFO[0m -   Arguments: {:name=>:numbat}
+[37m[2011-09-09 18:13:45] INFO[0m - Get returned numbat[dev]@antonia.osburn-sharp.ath.cx:49962
+[37m[2011-09-09 18:13:45] INFO[0m - Verification failed for numbat[dev]@antonia.osburn-sharp.ath.cx:49962
+[36m[2011-09-09 18:13:45] SYSTEM[0m - Deleted Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 18:13:45] DEBUG[0m - Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 18:13:45] DEBUG[0m - Skipping over remove_remote for germanicus.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 18:13:45] DEBUG[0m - Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:13:45] DEBUG[0m - Skipping over remove_remote for octavia.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 18:13:45] DEBUG[0m - Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:13:45] DEBUG[0m - Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 18:13:45] DEBUG[0m - Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-09 18:13:45] DEBUG[0m - Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 18:13:45] SYSTEM[0m - Deleted Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 18:13:45] DEBUG[0m - Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 18:13:45] DEBUG[0m - Skipping over remove_remote for germanicus.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 18:13:45] DEBUG[0m - Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:13:45] DEBUG[0m - Skipping over remove_remote for octavia.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 18:13:45] DEBUG[0m - Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:13:45] DEBUG[0m - Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 18:13:45] DEBUG[0m - Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-09 18:13:45] DEBUG[0m - Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[37m[2011-09-09 18:13:53] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-09 18:13:53] INFO[0m -   Arguments: {}
+[37m[2011-09-09 18:13:53] INFO[0m - Missing service is not local: numbat[dev]@antonia.osburn-sharp.ath.cx:49962
+[32m[2011-09-09 18:13:53] DEBUG[0m - Service: numbat[dev]@antonia.osburn-sharp.ath.cx:49962 belongs to antonia.osburn-sharp.ath.cx
+[33m[2011-09-09 18:13:53] WARN[0m - Failed to connect to server: antonia.osburn-sharp.ath.cx, removing service for it
+[37m[2011-09-09 18:13:53] INFO[0m - Deleted Remote Service: numbat[dev]@antonia.osburn-sharp.ath.cx:49962
+[32m[2011-09-09 18:13:53] DEBUG[0m - Failed to connect to server to remove service: germanicus.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-09 18:13:53] DEBUG[0m - Failed to connect to server to remove service: octavia.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-09 18:13:53] DEBUG[0m - Failed to connect to server to remove service: antonia.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-09 18:13:53] DEBUG[0m - Failed to connect to server to remove service: valeria.osburn-sharp.ath.cx, but who cares!
+[37m[2011-09-09 18:13:57] INFO[0m - Searching for services. Found 0 matching.
+[37m[2011-09-09 18:13:57] INFO[0m -   Arguments: {}
+[36m[2011-09-09 18:15:55] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 18:15:55] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 18:15:55] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:15:55] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:15:55] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[36m[2011-09-09 18:15:55] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 18:15:55] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 18:15:55] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:15:55] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:15:55] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-09 18:15:55] INFO[0m - Registered Remote Service: numbat[dev]@antonia.osburn-sharp.ath.cx:49962
+[37m[2011-09-09 18:15:55] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-09 18:15:55] INFO[0m -   Arguments: {:name=>:numbat}
+[37m[2011-09-09 18:15:55] INFO[0m - Get returned numbat[dev]@antonia.osburn-sharp.ath.cx:49962
+[37m[2011-09-09 18:15:55] INFO[0m - Deleted Remote Service: numbat[dev]@antonia.osburn-sharp.ath.cx:49962
+[37m[2011-09-09 18:15:55] INFO[0m - Searching for services. Found 2 matching.
+[37m[2011-09-09 18:15:55] INFO[0m -   Arguments: {}
+[36m[2011-09-09 18:15:55] SYSTEM[0m - Deleted Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 18:15:55] DEBUG[0m - Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 18:15:55] DEBUG[0m - Skipping over remove_remote for germanicus.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 18:15:55] DEBUG[0m - Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:15:55] DEBUG[0m - Skipping over remove_remote for octavia.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 18:15:55] DEBUG[0m - Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:15:55] DEBUG[0m - Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 18:15:55] DEBUG[0m - Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-09 18:15:55] DEBUG[0m - Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 18:15:55] SYSTEM[0m - Deleted Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 18:15:55] DEBUG[0m - Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 18:15:55] DEBUG[0m - Skipping over remove_remote for germanicus.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 18:15:55] DEBUG[0m - Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:15:55] DEBUG[0m - Skipping over remove_remote for octavia.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 18:15:55] DEBUG[0m - Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:15:55] DEBUG[0m - Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 18:15:55] DEBUG[0m - Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-09 18:15:55] DEBUG[0m - Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[37m[2011-09-09 18:15:58] INFO[0m - Searching for services. Found 0 matching.
+[37m[2011-09-09 18:15:58] INFO[0m -   Arguments: {}
+[36m[2011-09-09 18:16:01] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 18:16:01] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 18:16:01] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:16:01] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:16:01] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[36m[2011-09-09 18:16:01] SYSTEM[0m - Registered Local Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 18:16:01] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 18:16:01] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:16:01] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:16:01] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-09 18:16:01] INFO[0m - Registered Remote Service: numbat[dev]@antonia.osburn-sharp.ath.cx:49962
+[37m[2011-09-09 18:16:01] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-09 18:16:01] INFO[0m -   Arguments: {:name=>:numbat}
+[37m[2011-09-09 18:16:01] INFO[0m - Get returned numbat[dev]@antonia.osburn-sharp.ath.cx:49962
+[37m[2011-09-09 18:16:01] INFO[0m - Deleted Remote Service: numbat[dev]@antonia.osburn-sharp.ath.cx:49962
+[37m[2011-09-09 18:16:01] INFO[0m - Searching for services. Found 2 matching.
+[37m[2011-09-09 18:16:01] INFO[0m -   Arguments: {}
+[36m[2011-09-09 18:16:01] SYSTEM[0m - Deleted Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 18:16:01] DEBUG[0m - Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 18:16:01] DEBUG[0m - Skipping over remove_remote for germanicus.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 18:16:01] DEBUG[0m - Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:16:01] DEBUG[0m - Skipping over remove_remote for octavia.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 18:16:01] DEBUG[0m - Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:16:01] DEBUG[0m - Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2011-09-09 18:16:01] DEBUG[0m - Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-09 18:16:01] DEBUG[0m - Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2011-09-09 18:16:01] SYSTEM[0m - Deleted Service: rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 18:16:01] DEBUG[0m - Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-09 18:16:01] DEBUG[0m - Skipping over remove_remote for germanicus.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 18:16:01] DEBUG[0m - Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:16:01] DEBUG[0m - Skipping over remove_remote for octavia.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 18:16:01] DEBUG[0m - Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-09 18:16:01] DEBUG[0m - Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[32m[2011-09-09 18:16:01] DEBUG[0m - Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-09 18:16:01] DEBUG[0m - Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[prod]@lucius.osburn-sharp.ath.cx:49900
+[37m[2011-09-09 18:16:04] INFO[0m - Searching for services. Found 0 matching.
+[37m[2011-09-09 18:16:04] INFO[0m -   Arguments: {}
+[37m[2011-09-10 08:05:18] INFO[0m - Searching for services. Found 0 matching.
+[37m[2011-09-10 08:05:18] INFO[0m -   Arguments: {}
+[36m[2011-09-10 08:18:43] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:18:43] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:18:43] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:18:43] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:18:43] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-10 08:19:01] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:19:01] INFO[0m -   Arguments: {}
+[37m[2011-09-10 08:19:01] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
+[37m[2011-09-10 08:19:01] INFO[0m - Missing service was found to be OK: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2011-09-10 08:22:37] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:22:37] INFO[0m -   Arguments: {:host=>"lucius.osburn-sharp.ath.cx", :env=>:dev, :name=>:rubytest}
+[37m[2011-09-10 08:23:02] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:23:02] INFO[0m -   Arguments: {:host=>"lucius.osburn-sharp.ath.cx", :env=>:dev, :name=>:rubytest}
+[37m[2011-09-10 08:23:02] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:23:02] INFO[0m -   Arguments: {:host=>"lucius.osburn-sharp.ath.cx", :env=>:dev, :name=>:rubytest}
+[37m[2011-09-10 08:23:02] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:23:02] INFO[0m -   Arguments: {:host=>"lucius.osburn-sharp.ath.cx", :env=>:dev, :name=>:rubytest}
+[37m[2011-09-10 08:23:02] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:23:02] INFO[0m -   Arguments: {:host=>"lucius.osburn-sharp.ath.cx", :env=>:dev, :name=>:rubytest}
+[37m[2011-09-10 08:23:02] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:23:02] INFO[0m -   Arguments: {:host=>"lucius.osburn-sharp.ath.cx", :env=>:dev, :name=>:rubytest}
+[37m[2011-09-10 08:23:02] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:23:02] INFO[0m -   Arguments: {:host=>"lucius.osburn-sharp.ath.cx", :env=>:dev, :name=>:rubytest}
+[37m[2011-09-10 08:23:02] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:23:02] INFO[0m -   Arguments: {:host=>"lucius.osburn-sharp.ath.cx", :env=>:dev, :name=>:rubytest}
+[37m[2011-09-10 08:24:32] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:24:32] INFO[0m -   Arguments: {:host=>"lucius.osburn-sharp.ath.cx", :env=>:dev, :name=>:rubytest}
+[37m[2011-09-10 08:24:32] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:24:32] INFO[0m -   Arguments: {:host=>"lucius.osburn-sharp.ath.cx", :env=>:dev, :name=>:rubytest}
+[37m[2011-09-10 08:24:32] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:24:32] INFO[0m -   Arguments: {:host=>"lucius.osburn-sharp.ath.cx", :env=>:dev, :name=>:rubytest}
+[37m[2011-09-10 08:24:32] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:24:32] INFO[0m -   Arguments: {:host=>"lucius.osburn-sharp.ath.cx", :env=>:dev, :name=>:rubytest}
+[37m[2011-09-10 08:24:32] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:24:32] INFO[0m -   Arguments: {:host=>"lucius.osburn-sharp.ath.cx", :env=>:dev, :name=>:rubytest}
+[37m[2011-09-10 08:24:32] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:24:32] INFO[0m -   Arguments: {:host=>"lucius.osburn-sharp.ath.cx", :env=>:dev, :name=>:rubytest}
+[37m[2011-09-10 08:24:32] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:24:32] INFO[0m -   Arguments: {:host=>"lucius.osburn-sharp.ath.cx", :env=>:dev, :name=>:rubytest}
+[37m[2011-09-10 08:24:32] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:24:32] INFO[0m -   Arguments: {:host=>"lucius.osburn-sharp.ath.cx", :env=>:dev, :name=>:rubytest}
+[37m[2011-09-10 08:24:32] INFO[0m - Searching for services. Found 0 matching.
+[37m[2011-09-10 08:24:32] INFO[0m -   Arguments: {:host=>"germanicus.osburn-sharp.ath.cx", :env=>:dev, :name=>:rubytest}
+[36m[2011-09-10 08:27:09] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2011-09-10 08:27:58] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73985fc @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:27:58] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73975e4 @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:27:58] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73975d0 @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:27:58] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7397594 @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:27:58] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7397468 @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:27:58] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:27:58] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:27:58] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7347508 @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:27:58] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7346b80 @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:27:58] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7346b1c @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:27:58] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7346ae0 @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:27:58] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7346a40 @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:27:58] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:27:58] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:27:58] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-10 08:27:58] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
+[32m[2011-09-10 08:27:58] DEBUG[0m - Local service appears to be missing: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-10 08:27:58] SYSTEM[0m - Deleted Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:27:58] DEBUG[0m - Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Skipping over remove_remote for germanicus.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:27:58] DEBUG[0m - Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Skipping over remove_remote for octavia.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:27:58] DEBUG[0m - Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:27:58] DEBUG[0m - Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-10 08:27:58] SYSTEM[0m - Removed missing local service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:27:58] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7307e80 @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:27:58] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb730769c @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:27:58] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7307688 @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:27:58] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7307674 @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:27:58] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7307660 @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:27:58] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:27:58] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:27:58] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-10 08:27:58] INFO[0m - Missing service is not local: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[32m[2011-09-10 08:27:58] DEBUG[0m - Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901 belongs to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb72dbd08 @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:27:58] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72db984 @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:27:58] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72db970 @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:27:58] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72db95c @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:27:58] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72db948 @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:27:58] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:27:58] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:27:58] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:27:58] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-10 08:27:58] INFO[0m - Missing service is not local: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:27:58] DEBUG[0m - Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900 belongs to antonia.osburn-sharp.ath.cx
+[33m[2011-09-10 08:27:58] WARN[0m - Failed to connect to server: antonia.osburn-sharp.ath.cx, removing service for it
+[37m[2011-09-10 08:27:58] INFO[0m - Deleted Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:27:58] DEBUG[0m - Failed to connect to server to remove service: germanicus.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:27:58] DEBUG[0m - Failed to connect to server to remove service: octavia.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:27:58] DEBUG[0m - Failed to connect to server to remove service: antonia.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:27:58] DEBUG[0m - Failed to connect to server to remove service: valeria.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:30:23] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb735a75c @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:30:23] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73597a8 @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:30:23] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7359794 @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:30:23] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7359780 @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:30:23] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb735976c @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:30:23] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:30:23] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:30:23] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb730971c @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:30:23] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb730908c @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:30:23] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7309064 @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:30:23] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7309000 @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:30:23] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7308fc4 @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:30:23] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:30:23] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:30:23] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-10 08:30:23] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
+[32m[2011-09-10 08:30:23] DEBUG[0m - Local service appears to be missing: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-10 08:30:23] SYSTEM[0m - Deleted Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:30:23] DEBUG[0m - Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Skipping over remove_remote for germanicus.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:30:23] DEBUG[0m - Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Skipping over remove_remote for octavia.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:30:23] DEBUG[0m - Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:30:23] DEBUG[0m - Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-10 08:30:23] SYSTEM[0m - Removed missing local service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:30:23] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb72ca1c0 @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:30:23] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72c99f0 @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:30:23] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72c99dc @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:30:23] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72c99c8 @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:30:23] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72c99b4 @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:30:23] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:30:23] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:30:23] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-10 08:30:23] INFO[0m - Missing service is not local: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[32m[2011-09-10 08:30:23] DEBUG[0m - Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901 belongs to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb729df1c @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:30:23] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb729db98 @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:30:23] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb729db84 @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:30:23] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb729db70 @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:30:23] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb729db5c @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:30:23] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:30:23] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:30:23] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:30:23] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-10 08:30:23] INFO[0m - Missing service is not local: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:30:23] DEBUG[0m - Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900 belongs to antonia.osburn-sharp.ath.cx
+[33m[2011-09-10 08:30:23] WARN[0m - Failed to connect to server: antonia.osburn-sharp.ath.cx, removing service for it
+[37m[2011-09-10 08:30:23] INFO[0m - Deleted Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:30:23] DEBUG[0m - Failed to connect to server to remove service: germanicus.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:30:23] DEBUG[0m - Failed to connect to server to remove service: octavia.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:30:23] DEBUG[0m - Failed to connect to server to remove service: antonia.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:30:23] DEBUG[0m - Failed to connect to server to remove service: valeria.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:33:31] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73466a8 @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:33:31] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7345708 @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:33:31] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7345690 @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:33:31] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7345654 @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:33:31] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7345640 @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:33:31] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:33:31] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:33:31] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb72f5618 @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:33:31] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72f4eac @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:33:31] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72f4e34 @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:33:31] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72f4e20 @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:33:31] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72f4dbc @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:33:31] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:33:31] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:33:31] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-10 08:33:31] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
+[32m[2011-09-10 08:33:31] DEBUG[0m - Local service appears to be missing: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-10 08:33:31] SYSTEM[0m - Deleted Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:33:31] DEBUG[0m - Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Skipping over remove_remote for germanicus.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:33:31] DEBUG[0m - Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Skipping over remove_remote for octavia.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:33:31] DEBUG[0m - Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:33:31] DEBUG[0m - Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-10 08:33:31] SYSTEM[0m - Removed missing local service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:33:31] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb72b60bc @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:33:31] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72b58d8 @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:33:31] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72b5888 @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:33:31] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72b5838 @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:33:31] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72b5784 @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:33:31] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:33:31] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:33:31] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-10 08:33:31] INFO[0m - Missing service is not local: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[32m[2011-09-10 08:33:31] DEBUG[0m - Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901 belongs to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7289e18 @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:33:31] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7289a94 @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:33:31] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7289a80 @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:33:31] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7289a6c @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:33:31] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7289a58 @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:33:31] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:33:31] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:33:31] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:33:31] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-10 08:33:31] INFO[0m - Missing service is not local: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:33:31] DEBUG[0m - Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900 belongs to antonia.osburn-sharp.ath.cx
+[33m[2011-09-10 08:33:31] WARN[0m - Failed to connect to server: antonia.osburn-sharp.ath.cx, removing service for it
+[37m[2011-09-10 08:33:31] INFO[0m - Deleted Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:33:31] DEBUG[0m - Failed to connect to server to remove service: germanicus.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:33:31] DEBUG[0m - Failed to connect to server to remove service: octavia.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:33:31] DEBUG[0m - Failed to connect to server to remove service: antonia.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:33:31] DEBUG[0m - Failed to connect to server to remove service: valeria.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:34:27] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb749d858 @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:34:27] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb749c994 @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:34:27] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb749c944 @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:34:27] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb749c930 @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:34:27] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb749c908 @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:34:27] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:34:27] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:34:27] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb744c82c @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:34:27] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb744c37c @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:34:27] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb744c368 @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:34:27] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb744c2dc @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:34:27] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb744c28c @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:34:27] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:34:27] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:34:27] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-10 08:34:27] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
+[32m[2011-09-10 08:34:27] DEBUG[0m - Local service appears to be missing: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-10 08:34:27] SYSTEM[0m - Deleted Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:34:27] DEBUG[0m - Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Skipping over remove_remote for germanicus.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:34:27] DEBUG[0m - Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Skipping over remove_remote for octavia.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:34:27] DEBUG[0m - Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:34:27] DEBUG[0m - Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-10 08:34:27] SYSTEM[0m - Removed missing local service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:34:27] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb740d44c @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:34:27] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb740cc40 @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:34:27] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb740cc2c @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:34:27] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb740cc18 @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:34:27] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb740cc04 @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:34:27] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:34:27] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:34:27] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-10 08:34:27] INFO[0m - Missing service is not local: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[32m[2011-09-10 08:34:27] DEBUG[0m - Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901 belongs to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73e102c @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:34:27] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73e0ca8 @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:34:27] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73e0c94 @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:34:27] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73e0c80 @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:34:27] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73e0c6c @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:34:27] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:34:27] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:34:27] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:34:27] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-10 08:34:27] INFO[0m - Missing service is not local: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:34:27] DEBUG[0m - Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900 belongs to antonia.osburn-sharp.ath.cx
+[33m[2011-09-10 08:34:27] WARN[0m - Failed to connect to server: antonia.osburn-sharp.ath.cx, removing service for it
+[37m[2011-09-10 08:34:27] INFO[0m - Deleted Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:34:27] DEBUG[0m - Failed to connect to server to remove service: germanicus.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:34:27] DEBUG[0m - Failed to connect to server to remove service: octavia.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:34:27] DEBUG[0m - Failed to connect to server to remove service: antonia.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:34:27] DEBUG[0m - Failed to connect to server to remove service: valeria.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:36:04] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb737ac78 @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:36:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7379b70 @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:36:04] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7379b48 @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:36:04] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7379ad0 @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:36:04] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7379a94 @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:36:04] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:36:04] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:36:04] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7329968 @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:36:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb732960c @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:36:04] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73295f8 @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:36:04] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73295e4 @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:36:04] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73295d0 @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:36:04] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:36:04] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:36:04] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-10 08:36:04] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
+[32m[2011-09-10 08:36:04] DEBUG[0m - Local service appears to be missing: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-10 08:36:04] SYSTEM[0m - Deleted Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:36:04] DEBUG[0m - Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Skipping over remove_remote for germanicus.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:36:04] DEBUG[0m - Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Skipping over remove_remote for octavia.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:36:04] DEBUG[0m - Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Skipping over remove_remote for antonia.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:36:04] DEBUG[0m - Connected to valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Skipping over remove_remote for valeria.osburn-sharp.ath.cx while removing rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-10 08:36:04] SYSTEM[0m - Removed missing local service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:36:04] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb72ea704 @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:36:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72e9e80 @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:36:04] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72e9e6c @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:36:04] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72e9e44 @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:36:04] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72e9d68 @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:36:04] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:36:04] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:36:04] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-10 08:36:04] INFO[0m - Missing service is not local: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[32m[2011-09-10 08:36:04] DEBUG[0m - Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901 belongs to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb72be168 @port=49202, @fqdn="lucius.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:36:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72bdde4 @port=49202, @fqdn="germanicus.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:36:04] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72bddd0 @port=49202, @fqdn="octavia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:36:04] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72bddbc @port=49202, @fqdn="antonia.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:36:04] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72bdda8 @port=49202, @fqdn="valeria.osburn-sharp.ath.cx", @active=false, @env=:dev, @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:36:04] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:36:04] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:36:04] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:36:04] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-10 08:36:04] INFO[0m - Missing service is not local: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:36:04] DEBUG[0m - Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900 belongs to antonia.osburn-sharp.ath.cx
+[33m[2011-09-10 08:36:04] WARN[0m - Failed to connect to server: antonia.osburn-sharp.ath.cx, removing service for it
+[37m[2011-09-10 08:36:04] INFO[0m - Deleted Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:36:04] DEBUG[0m - Failed to connect to server to remove service: germanicus.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:36:04] DEBUG[0m - Failed to connect to server to remove service: octavia.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:36:04] DEBUG[0m - Failed to connect to server to remove service: antonia.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:36:04] DEBUG[0m - Failed to connect to server to remove service: valeria.osburn-sharp.ath.cx, but who cares!
+[32m[2011-09-10 08:38:36] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:38:36] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74d57f8 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb74d436c @port=49200, @active=false, @env=49902, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:38:36] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74c5f88 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb74c55c4 @port=49200, @active=false, @env=49902, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:38:36] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74b5a34 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb74b4364 @port=49200, @active=false, @env=49902, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:38:36] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74a2d1c @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb74a1638 @port=49200, @active=false, @env=49902, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:38:36] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74966c0 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb74957c0 @port=49200, @active=false, @env=49902, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:38:36] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb748a1f4 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7487c88 @port=49200, @active=false, @env=49902, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:38:36] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7528980 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7526b80 @port=49200, @active=false, @env=49902, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:38:36] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74a3294 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7378d88 @port=49200, @active=false, @env=49902, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:38:36] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb747ab28 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb747a7a4 @port=49200, @active=false, @env=49902, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:38:36] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7475b28 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb74757cc @port=49200, @active=false, @env=49902, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:38:36] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7471870 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb74711a4 @port=49200, @active=false, @env=49902, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:38:36] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb746a6ec @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb746a368 @port=49200, @active=false, @env=49902, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:38:36] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74631e4 @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7462ab4 @port=49200, @active=false, @env=49902, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:38:36] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb745c45c @port=49200, @active=false, @env=49902, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:38:36] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb745b818 @port=49200, @active=false, @env=49902, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:40:49] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:40:49] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74fd7f8 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:40:49] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb74fc36c @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:40:49] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:40:49] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Started up the Jerbil Server
+[32m[2011-09-10 08:40:49] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:40:49] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74e6d50 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:40:49] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb74e5824 @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:40:49] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:40:49] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Started up the Jerbil Server
+[37m[2011-09-10 08:40:49] INFO[0m - Registered Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:40:49] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:40:49] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74c6f28 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:40:49] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb74c6adc @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:40:49] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:40:49] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Started up the Jerbil Server
+[33m[2011-09-10 08:40:49] WARN[0m - Remote registration failed due to unknown server key: INVALID
+[32m[2011-09-10 08:40:49] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:40:49] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74ad910 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:40:49] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb759dbe0 @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:40:49] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:40:49] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Started up the Jerbil Server
+[37m[2011-09-10 08:40:49] INFO[0m - Registered Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2011-09-10 08:40:49] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
+[32m[2011-09-10 08:40:49] DEBUG[0m - Local service appears to be missing: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[33m[2011-09-10 08:40:49] WARN[0m - Attempt was made to remove a service that is not registered: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Removed missing local service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2011-09-10 08:40:49] INFO[0m - Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902 was registered, but did not respond
+[37m[2011-09-10 08:40:49] INFO[0m - Registered Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:40:49] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:40:49] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74a3820 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:40:49] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb74a34c4 @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:40:49] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:40:49] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Started up the Jerbil Server
+[37m[2011-09-10 08:40:49] INFO[0m - Registered Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2011-09-10 08:40:49] INFO[0m - Deleted Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:40:49] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:40:49] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb749cb74 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:40:49] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb749c818 @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:40:49] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:40:49] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:40:49] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:40:49] INFO[0m - Deleted Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[32m[2011-09-10 08:40:49] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:40:49] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7491210 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:40:49] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb749098c @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:40:49] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:40:49] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:40:49] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:40:49] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:40:49] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:40:49] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:40:49] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7483020 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:40:49] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7482cc4 @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:40:49] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:40:49] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:40:49] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:40:49] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:40:49] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:40:49] INFO[0m - Searching for services. Found 3 matching.
+[37m[2011-09-10 08:40:49] INFO[0m -   Arguments: {:name=>:rubytest}
+[32m[2011-09-10 08:40:49] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:40:49] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7474cc8 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:40:49] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb747496c @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:40:49] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:40:49] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:40:49] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:40:49] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:40:49] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:40:49] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:40:49] INFO[0m -   Arguments: {:env=>:prod}
+[32m[2011-09-10 08:40:49] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:40:49] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7467b68 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:40:49] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb746780c @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:40:49] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:40:49] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:40:49] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:40:49] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:40:49] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:40:49] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:40:49] INFO[0m -   Arguments: {:env=>:test}
+[32m[2011-09-10 08:40:49] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:40:49] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7460d68 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:40:49] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7460a0c @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:40:49] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:40:49] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:40:49] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:40:49] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:40:49] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:40:49] INFO[0m - Searching for services. Found 0 matching.
+[37m[2011-09-10 08:40:49] INFO[0m -   Arguments: {:name=>:Bilker}
+[32m[2011-09-10 08:40:49] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:40:49] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74537e4 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:40:49] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7452ee8 @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:40:49] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:40:49] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:40:49] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:40:50] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:40:50] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:40:50] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:40:50] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:40:50] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:40:50] INFO[0m -   Arguments: {:name=>:rubytest, :env=>:prod}
+[37m[2011-09-10 08:40:50] INFO[0m - Get returned rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:40:50] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:40:50] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7442548 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:40:50] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb74416ac @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:40:50] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:40:50] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:40:50] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:40:50] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:40:50] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:40:50] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:40:50] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:40:50] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:40:50] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74347f4 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:40:50] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7433fac @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:40:50] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:40:50] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:40:50] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:40:50] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:40:50] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:40:50] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:40:50] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[33m[2011-09-10 08:40:50] WARN[0m - Get local services failed due to unknown server key: INVALID
+[32m[2011-09-10 08:42:05] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73d6e10 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:42:05] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73d6014 @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:42:05] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:05] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Started up the Jerbil Server
+[32m[2011-09-10 08:42:05] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73c0624 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:42:05] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73bf620 @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:42:05] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:05] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Started up the Jerbil Server
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:05] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73a1954 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:42:05] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73a14a4 @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:42:05] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:05] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Started up the Jerbil Server
+[33m[2011-09-10 08:42:05] WARN[0m - Remote registration failed due to unknown server key: INVALID
+[32m[2011-09-10 08:42:05] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7475f60 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:42:05] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7469d14 @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:42:05] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:05] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Started up the Jerbil Server
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2011-09-10 08:42:05] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
+[32m[2011-09-10 08:42:05] DEBUG[0m - Local service appears to be missing: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[33m[2011-09-10 08:42:05] WARN[0m - Attempt was made to remove a service that is not registered: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Removed missing local service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2011-09-10 08:42:05] INFO[0m - Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902 was registered, but did not respond
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:05] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb737dfcc @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:42:05] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb737dc70 @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:42:05] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:05] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Started up the Jerbil Server
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2011-09-10 08:42:05] INFO[0m - Deleted Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:05] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7377334 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:42:05] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7376ec0 @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:42:05] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:05] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:42:05] INFO[0m - Deleted Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[32m[2011-09-10 08:42:05] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb736b408 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:42:05] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb736ab98 @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:42:05] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:05] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:42:05] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb735db00 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:42:05] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb735d3d0 @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:42:05] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:05] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:42:05] INFO[0m - Searching for services. Found 3 matching.
+[37m[2011-09-10 08:42:05] INFO[0m -   Arguments: {:name=>:rubytest}
+[32m[2011-09-10 08:42:05] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb734f938 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:42:05] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb734f5dc @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:42:05] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:05] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:42:05] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:42:05] INFO[0m -   Arguments: {:env=>:prod}
+[32m[2011-09-10 08:42:05] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7342968 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:42:05] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7342008 @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:42:05] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:05] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:42:05] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:42:05] INFO[0m -   Arguments: {:env=>:test}
+[32m[2011-09-10 08:42:05] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb733bcf8 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:42:05] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb733b99c @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:42:05] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:05] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:42:05] INFO[0m - Searching for services. Found 0 matching.
+[37m[2011-09-10 08:42:05] INFO[0m -   Arguments: {:name=>:Bilker}
+[32m[2011-09-10 08:42:05] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb732ed78 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:42:05] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb732e418 @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:42:05] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:05] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:42:05] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:42:05] INFO[0m -   Arguments: {:name=>:rubytest, :env=>:prod}
+[37m[2011-09-10 08:42:05] INFO[0m - Get returned rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:42:05] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb731de74 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:42:05] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb731d71c @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:42:05] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:05] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:42:05] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7310738 @port=49902, @active=false, @env=:dev, @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx">
+[32m[2011-09-10 08:42:05] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb730fec8 @port=49902, @active=false, @env=:dev, @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx">
+[37m[2011-09-10 08:42:05] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:05] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:42:05] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:05] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:42:05] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[33m[2011-09-10 08:42:05] WARN[0m - Get local services failed due to unknown server key: INVALID
+[32m[2011-09-10 08:42:53] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74fad78 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:42:53] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb74f9e00 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:42:53] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:53] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Started up the Jerbil Server
+[32m[2011-09-10 08:42:53] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74e3060 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:42:53] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb74e165c @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:42:53] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:53] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Started up the Jerbil Server
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:53] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74cbdac @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:42:53] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb74ca344 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:42:53] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:53] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Started up the Jerbil Server
+[33m[2011-09-10 08:42:53] WARN[0m - Remote registration failed due to unknown server key: INVALID
+[32m[2011-09-10 08:42:53] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb758c1d8 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:42:53] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7581d64 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:42:53] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:53] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Started up the Jerbil Server
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2011-09-10 08:42:53] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
+[32m[2011-09-10 08:42:53] DEBUG[0m - Local service appears to be missing: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[33m[2011-09-10 08:42:53] WARN[0m - Attempt was made to remove a service that is not registered: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Removed missing local service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2011-09-10 08:42:53] INFO[0m - Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902 was registered, but did not respond
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:53] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74ad9c4 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:42:53] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb74ad668 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:42:53] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:53] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Started up the Jerbil Server
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2011-09-10 08:42:53] INFO[0m - Deleted Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:53] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb74a786c @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:42:53] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb74a7510 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:42:53] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:53] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:42:53] INFO[0m - Deleted Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[32m[2011-09-10 08:42:53] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb749dad8 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:42:53] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb749d1f0 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:42:53] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:53] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:42:53] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb749327c @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:42:53] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7492b88 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:42:53] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:53] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:42:53] INFO[0m - Searching for services. Found 3 matching.
+[37m[2011-09-10 08:42:53] INFO[0m -   Arguments: {:name=>:rubytest}
+[32m[2011-09-10 08:42:53] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7486680 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:42:53] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7485744 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:42:53] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:53] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:42:53] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:42:53] INFO[0m -   Arguments: {:env=>:prod}
+[32m[2011-09-10 08:42:53] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7479f98 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:42:53] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb74795d4 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:42:53] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:53] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:42:53] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:42:53] INFO[0m -   Arguments: {:env=>:test}
+[32m[2011-09-10 08:42:53] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7470010 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:42:53] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb746fca0 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:42:53] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:53] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:42:53] INFO[0m - Searching for services. Found 0 matching.
+[37m[2011-09-10 08:42:53] INFO[0m -   Arguments: {:name=>:Bilker}
+[32m[2011-09-10 08:42:53] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb746a6ec @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:42:53] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb746a390 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:42:53] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:53] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:42:53] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:42:53] INFO[0m -   Arguments: {:name=>:rubytest, :env=>:prod}
+[37m[2011-09-10 08:42:53] INFO[0m - Get returned rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:42:53] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb745a4f4 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:42:53] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7459db0 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:42:53] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:53] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:42:53] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb744fb44 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:42:53] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb744f748 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:42:53] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:42:53] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:42:53] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:42:53] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:42:53] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[33m[2011-09-10 08:42:53] WARN[0m - Get local services failed due to unknown server key: INVALID
+[32m[2011-09-10 08:44:04] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb745c790 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:44:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb745a6c0 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:44:04] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:44:04] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Started up the Jerbil Server
+[32m[2011-09-10 08:44:04] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7445144 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:44:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7443e5c @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:44:04] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:44:04] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Started up the Jerbil Server
+[37m[2011-09-10 08:44:04] INFO[0m - Registered Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:44:04] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb742d490 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:44:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb742bc1c @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:44:04] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:44:04] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Started up the Jerbil Server
+[33m[2011-09-10 08:44:04] WARN[0m - Remote registration failed due to unknown server key: INVALID
+[32m[2011-09-10 08:44:04] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7412000 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:44:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7500598 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:44:04] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:44:04] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Started up the Jerbil Server
+[37m[2011-09-10 08:44:04] INFO[0m - Registered Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2011-09-10 08:44:04] INFO[0m - Deleted Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:44:04] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb750f098 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:44:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb750d518 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:44:04] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:44:04] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:44:04] INFO[0m - Deleted Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[32m[2011-09-10 08:44:04] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7406ac0 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:44:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7406304 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:44:04] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:44:04] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:44:04] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:44:04] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:44:04] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73fa93c @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:44:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73fa248 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:44:04] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:44:04] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:44:04] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:44:04] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:44:04] INFO[0m - Searching for services. Found 3 matching.
+[37m[2011-09-10 08:44:04] INFO[0m -   Arguments: {:name=>:rubytest}
+[32m[2011-09-10 08:44:04] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73eadc0 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:44:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73eaa64 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:44:04] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:44:04] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:44:04] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:44:04] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:44:04] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:44:04] INFO[0m -   Arguments: {:env=>:prod}
+[32m[2011-09-10 08:44:04] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73dc450 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:44:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73dc0f4 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:44:04] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:44:04] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:44:04] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:44:04] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:44:04] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:44:04] INFO[0m -   Arguments: {:env=>:test}
+[32m[2011-09-10 08:44:04] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73ce724 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:44:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73ce3c8 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:44:04] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:44:04] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:44:04] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:44:04] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:44:04] INFO[0m - Searching for services. Found 0 matching.
+[37m[2011-09-10 08:44:04] INFO[0m -   Arguments: {:name=>:Bilker}
+[32m[2011-09-10 08:44:04] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73c7a14 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:44:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73c7690 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:44:04] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:44:04] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:44:04] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:44:04] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[37m[2011-09-10 08:44:04] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:44:04] INFO[0m -   Arguments: {:name=>:rubytest, :env=>:prod}
+[37m[2011-09-10 08:44:04] INFO[0m - Get returned rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:44:04] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73b5328 @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:44:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73b4fa4 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:44:04] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:44:04] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:44:04] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:44:04] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[32m[2011-09-10 08:44:04] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb73a6f6c @key="ABCDE", @fqdn="lucius.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[32m[2011-09-10 08:44:04] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb73a6ae4 @key="JKLMNOP", @fqdn="germanicus.osburn-sharp.ath.cx", @port=49902, @active=false, @env=:dev>
+[37m[2011-09-10 08:44:04] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:44:04] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:44:04] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:44:04] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2011-09-10 08:44:04] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2011-09-10 08:44:04] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
+[33m[2011-09-10 08:44:04] WARN[0m - Get local services failed due to unknown server key: INVALID
+[32m[2011-09-10 08:47:43] DEBUG[0m - Started the Logger
+[32m[2011-09-10 08:47:43] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb70ff0d4 @active=false, @port=49202, @env=:dev, @fqdn="lucius.osburn-sharp.ath.cx", @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-10 08:47:43] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb70fed64 @active=false, @port=49202, @env=:dev, @fqdn="germanicus.osburn-sharp.ath.cx", @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-10 08:47:43] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:47:43] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb70fed50 @active=false, @port=49202, @env=:dev, @fqdn="octavia.osburn-sharp.ath.cx", @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-10 08:47:43] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:47:43] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb70fed3c @active=false, @port=49202, @env=:dev, @fqdn="antonia.osburn-sharp.ath.cx", @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-10 08:47:43] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:47:43] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb70fed28 @active=false, @port=49202, @env=:dev, @fqdn="valeria.osburn-sharp.ath.cx", @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-10 08:47:43] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-10 08:47:43] DEBUG[0m - Got remote services: []
+[36m[2011-09-10 08:47:43] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-10 08:48:06] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:48:06] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-10 08:48:06] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:48:06] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-10 08:48:06] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-10 08:49:00] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
+[37m[2011-09-10 08:49:00] INFO[0m - Missing service was found to be OK: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[33m[2011-09-10 08:49:00] WARN[0m - Service: lucius.osburn-sharp.ath.cx:49902-dev already registered
+[37m[2011-09-10 08:50:14] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:50:14] INFO[0m -   Arguments: {}
+[37m[2011-09-10 08:50:14] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
+[37m[2011-09-10 08:50:14] INFO[0m - Missing service was found to be OK: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2011-09-10 08:51:48] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-10 08:51:48] INFO[0m -   Arguments: {}
+[37m[2011-09-10 08:51:48] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
+[37m[2011-09-10 08:51:48] INFO[0m - Missing service was found to be OK: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902

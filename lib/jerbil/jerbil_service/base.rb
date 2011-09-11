@@ -80,8 +80,9 @@ module JerbilService
       @private_key = pkey
 
       # start up a logger
-      @logger = Jelly.new(@name, options[:log_dir], false, options[:log_rotation], options[:log_length])
-      @logger.log_level = options[:log_level]
+      log_opts = Jelly::Logger.get_options(options)
+      @logger = Jelly::Logger.new(@name, log_opts)
+      # @logger.log_level = options[:log_level]
 
       @exit = options[:exit_on_stop]
 
@@ -89,7 +90,7 @@ module JerbilService
         @service = Jerbil::ServiceRecord.new(name, @env, :verify_callback, :stop_callback)
 
         # register the service
-        @jerbil_server = Jerbil.get_local_server
+        @jerbil_server = Jerbil.get_local_server(options[:jerbil_config])
 
         # now connect to it
         jerbil = @jerbil_server.connect

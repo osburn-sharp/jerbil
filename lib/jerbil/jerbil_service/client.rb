@@ -118,7 +118,7 @@ module JerbilService
 
       begin
         # find jerbil
-        @jerbil_server = Jerbil.get_local_server
+        @jerbil_server = Jerbil.get_local_server(options[:jerbil_config])
 
         # now connect to it
         jerbil = @jerbil_server.connect

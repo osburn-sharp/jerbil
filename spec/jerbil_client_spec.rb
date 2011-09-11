@@ -20,17 +20,18 @@ require 'jerbil/errors'
 require 'socket'
 
 config_file = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/test')
+jerbil_config = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/jerbil.conf')
 log_filename = File.expand_path(File.dirname(__FILE__) + '/../log/client.log')
 localhost = Socket.gethostname
 
 describe "Test Jerbil Client Interface" do
 
   before(:all) do
-    @client_opts = {:local=>true, :environment=>:dev, :quiet=>true}
+    @client_opts = {:local=>true, :environment=>:dev, :quiet=>true, :jerbil_config=>jerbil_config}
   end
 
   it "should respond to the old connect method" do
-    client_opts = {:local=>true, :config_file=>config_file, :quiet=>true}
+    client_opts = {:local=>true, :config_file=>config_file, :quiet=>true, :jerbil_config=>jerbil_config}
     JerbilService::Client.connect(RubyTest, client_opts) do |rubytest|
       rubytest.action.should == 'Hello'
       rubytest.host.should == localhost
@@ -92,7 +93,7 @@ end
 
 describe "Jerbil Clients that do different things" do
   before(:all) do
-    @client_opts = {:local=>true, :config_file=>config_file, :quiet=>true}
+    @client_opts = {:local=>true, :config_file=>config_file, :quiet=>true, :jerbil_config=>jerbil_config}
   end
 
   it "should not find an invalid service" do

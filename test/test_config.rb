@@ -90,6 +90,11 @@ module RubyTest
 
       a_writable_dir(path)
     end
+    
+    def configure_jerbil_config(path)
+      comment "jerbil config location"
+      a_readable_file(path)
+    end
 
 
   end

@@ -135,10 +135,10 @@ module Jerbil
   def Jerbil.get_server(fqdn, config=nil)
 
     # check that a config has been specified
-    if config.nil? then
+    #if config.nil? then
       # no, so get the default
-      config = Jerbil.get_config
-    end
+      config = Jerbil.get_config(config)
+    #end
 
     # get the servers that have been defined
     servers = config[:servers]

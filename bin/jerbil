@@ -23,11 +23,12 @@ require 'drb'
 require 'optparse'
 require 'rubygems'
 
-require 'term/ansicolor'
-class String
-  # makes the colouring functions into string methods
-  include Term::ANSIColor
-end
+# require 'term/ansicolor'
+# class String
+#   # makes the colouring functions into string methods
+#   include Term::ANSIColor
+# end
+require 'colored'
 
 config_file = Jeckyl::ConfigRoot + '/jerbil-client.conf'
 cmd = :check_local
@@ -91,7 +92,7 @@ end.parse!
 puts "Welcome to Jerbil (" + Jerbil::Ident + ')' unless quiet
 
 config = Jerbil.get_config(config_file)
-local = Jerbil.get_local_server(config)
+local = Jerbil.get_local_server(config_file)
 #puts options.inspect
 
 if quiet then
@@ -111,7 +112,7 @@ when :check_local
   begin
     jerbs = local.connect
     started = jerbs.started
-    puts "  Jerbil server found, version: #{jerbs.version}"
+    puts "  Jerbil server found, version: #{jerbs.version}".green
     puts "  Server has been up since #{started.strftime('%d %b %Y at %H:%M')}"
     puts "  and has had #{jerbs.registrations.to_s} registrations"
   rescue Exception => err
@@ -122,7 +123,7 @@ when :check_local
 when :config_servers
   puts "Jerbil is configured with the following servers:"
   config[:servers].each do |server|
-    puts "  #{server.fqdn}, key: [#{server.key}]"
+    puts "  #{server.fqdn}, key: [#{server.key}]".cyan
   end
 
 when :servers
@@ -140,9 +141,9 @@ when :servers
       # do nothing
     end
     if connect then
-      puts "   #{server.fqdn}: #{version}"
+      puts "   #{server.fqdn}: #{version}".cyan
     else
-      puts "   #{server.fqdn}: no response"
+      puts "   #{server.fqdn}: no response".yellow
     end
   end
 
@@ -152,18 +153,18 @@ when :list
     jerbs = local.connect
     services = jerbs.get_all(true) # ignore this access
   rescue
-    puts "Failed to connect to the local Jerbil server"
+    puts "Failed to connect to the local Jerbil server".red.bold
   end
   puts "There are #{services.length} services registered with Jerbil:"
   services.each do |s|
-    puts "  #{s.name}[:#{s.env}]@#{s.host}:#{s.port}"
+    puts "  #{s.name}[:#{s.env}]@#{s.host}:#{s.port}".cyan
     puts "    started at: #{s.registered_at.strftime('%d/%m/%y %H:%M')}" if verbose
     puts "    accessed #{s.access_count.to_s} times, last time at: #{s.accessed_at.strftime('%d/%m/%y %H:%M')}" if verbose
     if verify then
       if jerbs.service_missing?(s) then
-        puts "  Verify failed. Service has been removed"
+        puts "  Verify failed. Service should have been removed".red
       else
-        puts "  Verify succeeded"
+        puts "  Verify succeeded".green
       end
     end
   end

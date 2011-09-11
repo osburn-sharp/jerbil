@@ -91,13 +91,20 @@ puts "Starting the Jerbil Server (#{Jerbil::Ident})" if verbose
 begin
   config = Jerbil.get_config(config_file)
 
-  my_self = Jerbil.get_local_server(config)
+  my_self = Jerbil.get_local_server(config_file)
 rescue Jerbil::JerbilConfigError => err
   puts "Error in Jerbil Config File: #{err.message}"
   exit 1
 rescue Jerbil::MissingServer
   puts "Failed to find a local server in the config file. Check environment settings"
   exit 1
+end
+
+if verbose then
+  puts "Config hash:"
+  config.each_pair do |key, value|
+    puts "  #{key}:  #{value}"
+  end
 end
 
 # create a private key for jerbil
@@ -111,7 +118,7 @@ unless config[:pid_dir] then
 end
 
 # prevent the server from generating syslogs
-Jelly.disable_syslog unless log_to_syslog
+Jelly::Logger.disable_syslog unless log_to_syslog
 
 # create a local log
 
@@ -130,16 +137,19 @@ begin
     puts "Running in the foreground" if verbose
   end
 end
+log_opts = Jelly::Logger.get_options(config)
+log_opts[:log_level] = :debug
+logger = Jelly::Logger.new('jerbilsd', log_opts)
 
-logger = Jelly.new('jerbilsd', config[:log_dir], false, config[:log_rotation], config[:log_length])
-logger.log_level = :debug
+config = config.merge(log_opts) # add them back!
+
 logger.info "Logging started"
 logger.puts "Daemonized?" if verbose 
 
 servers = config.delete(:servers)
 
 # prevent the server from generating syslogs
-Jelly.disable_syslog unless log_to_syslog
+#Jelly.disable_syslog unless log_to_syslog
 
 $SAFE = 1 # using DRb, so prevent anything nasty
 

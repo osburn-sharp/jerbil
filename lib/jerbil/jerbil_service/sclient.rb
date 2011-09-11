@@ -130,7 +130,7 @@ module JerbilService
 
       if @no_syslog then
         @output.puts "Disabling messages to syslog"
-        Jelly.disable_syslog
+        Jelly::Logger.disable_syslog
       else
         @output.puts "Sending messages to syslog"
       end
@@ -172,7 +172,7 @@ module JerbilService
 
       begin
         # find jerbil
-        jerbil_server = Jerbil.get_local_server
+        jerbil_server = Jerbil.get_local_server(config[:jerbil_config])
 
         # now connect to it
         jerbil = jerbil_server.connect

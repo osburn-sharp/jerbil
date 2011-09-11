@@ -289,3 +289,21 @@ D, [2011-05-31 16:41:02 #17106] DEBUG -- : Someone called the action method!
 I, [2011-06-01 10:52:47 #17106]  INFO -- : Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
 I, [2011-08-02 18:24:25 #10641]  INFO -- : Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
 I, [2011-08-03 07:40:48 #15166]  INFO -- : Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2011-09-10 08:18:43] SYSTEM[0m - Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-10 08:22:37] DEBUG[0m - Someone called the action method!
+[32m[2011-09-10 08:23:02] DEBUG[0m - Someone called the action method!
+[32m[2011-09-10 08:23:02] DEBUG[0m - Someone called the action method!
+[32m[2011-09-10 08:23:02] DEBUG[0m - Someone called the action method!
+[32m[2011-09-10 08:23:02] DEBUG[0m - Someone called the action method!
+[32m[2011-09-10 08:23:02] DEBUG[0m - Someone called the action method!
+[32m[2011-09-10 08:24:32] DEBUG[0m - Someone called the action method!
+[32m[2011-09-10 08:24:32] DEBUG[0m - Someone called the action method!
+[32m[2011-09-10 08:24:32] DEBUG[0m - Someone called the action method!
+[32m[2011-09-10 08:24:32] DEBUG[0m - Someone called the action method!
+[32m[2011-09-10 08:24:32] DEBUG[0m - Someone called the action method!
+[32m[2011-09-10 08:24:32] DEBUG[0m - Someone called the action method!
+[31m[2011-09-10 08:40:49] ERROR[0m - Call made with Invalid Service Key: 70b1f68ce2
+[31m[2011-09-10 08:42:05] ERROR[0m - Call made with Invalid Service Key: 7dd6b38b95
+[31m[2011-09-10 08:42:53] ERROR[0m - Call made with Invalid Service Key: 53af41844f
+[36m[2011-09-10 08:48:06] SYSTEM[0m - Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[1m[31m[2011-09-10 08:49:00] FATAL[0m[0m - Error with Jerbil Service: Jerbil::ServiceAlreadyRegistered

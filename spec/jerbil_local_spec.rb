@@ -28,7 +28,7 @@ describe "A Jerbil Session" do
     me = Socket::gethostname
     my_server = Jerbil::ServerRecord.new(me, 'ABCDE', 49902)
     my_servers = [my_server]
-    my_options = {:log_dir=>log_dir, :log_level=>:verbose}
+    my_options = {:logdir=>log_dir, :level=>:debug, :environment=>:dev}
     pkey = "ABCDEFG"
 
     @my_session = Jerbil::Broker.new(my_server, my_servers, my_options, pkey)
@@ -53,6 +53,7 @@ describe "A Jerbil Session" do
 
   it "should not be possible to register the same service twice" do
     Syslog.should_receive(:info).once.and_return(true)
+    @my_service.should_receive(:connect).and_return(true) # make it appear the service is live
     @my_session.register(@my_service)
     lambda{@my_session.register(@my_service)}.should raise_error{Jerbil::ServiceAlreadyRegistered}
   end

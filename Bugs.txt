@@ -1,10 +1,27 @@
 == Bugs
 
+09-Sep-2011
+
+There is no checking that services registered locally have the same hostname as the
+server. Should not be an issue, but did cause problems during testing.
+
+There is no way of directing a client or service to a particular jerbil server. Should
+only be relevant to testing, could add a :jerbil_config key to the options hash when calling
+get_server, which would always return nil if it had not been set anyway.
+
+05-Sep-2011
+
+When a server assumes control of a missing service because the server is not there, it fails
+to delete its own copy! And when the missing server resumes, it cannot delete the un-deleted
+service because it does not have the right key for that service anymore.
+
+Colored success response for jerbl -v would be a big benefit
+
 01-Aug-2011
 
 1. service-missing is not working as expected. Needs to be tested to see what happens 
 when a server is ungracefully removed. May need to change logic from removing services
-to removing servers.
+to removing servers. - See above
 
 2. Need to add client config file for jerbil to avoid having readable files everywhere.
 
