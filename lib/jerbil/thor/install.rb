@@ -50,7 +50,7 @@ class Installer < Thor::Group
     
   def check_install
     quit = false
-    unless Process.uid == 1
+    unless Process.uid == 0 # this is root...
       say_status "error", "you must be logged in as root", :red
       quit = true
     end

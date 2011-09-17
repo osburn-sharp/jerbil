@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.2.1_beta1 17-Sep-2011
+
+Correct uid in jerbs install
+
 jerbil-0.2.1 17-Sep-2011
 
 Adds in the jerbs executable, being a prospective replacement for bin/jerbil using thor
