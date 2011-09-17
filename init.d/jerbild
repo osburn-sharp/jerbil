@@ -21,7 +21,8 @@ start() {
     [ "${VERBOSE}" == "true" ] && [ "${QUIET}" != "true" ] && myopts="${myopts} -V"
     [ -n "${NO_SYSLOG}" ] && myopts="${myopts} -S"
 
-    /bin/su -m -c "/usr/local/sbin/jerbild ${myopts}" - jermine
+    #/bin/su -m -c "/usr/sbin/jerbild ${myopts}" - jermine
+    /usr/sbin/jerbild ${myopts}
 
   eend $?
 }
@@ -35,7 +36,7 @@ status() {
 
 stop() {
   ebegin "Stopping Jerbil Server"
-    /usr/local/sbin/jerbil-stop
+    /usr/sbin/jerbil-stop
   eend $?
 }
 
