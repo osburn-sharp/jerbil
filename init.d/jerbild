@@ -39,23 +39,3 @@ stop() {
   eend $?
 }
 
-install() {
-  einfo "Installing Jerbil Server"
-  ebegin "Creating User"
-    /usr/sbin/useradd -d /var/run/jermine -u 603 -s /bin/bash jermine >&/dev/null
-  eend $?
-  ebegin "Creating Group"
-    /usr/sbin/groupadd -g 603 -f jermine >&/dev/null
-    /usr/sbin/gpasswd -a jermine jermine >&/dev/null
-    /usr/sbin/gpasswd -a robert jermine >&/dev/null
-  ebegin "Creating directories"
-    mkdir -p /var/log/jermine >&/dev/null
-    mkdir -p /var/run/jermine >&/dev/null
-  eend $?
-  ebegin "Changing log directory ownership"
-    chown jermine:jermine /var/log/jermine >&/dev/null
-    chown jermine:jermine /var/run/jermine >&/dev/null
-    chmod g+w /var/log/jermine >&/dev/null
-    chmod g+w /var/run/jermine >&/dev/null
-  eend $?
-}

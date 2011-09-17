@@ -1727,3 +1727,218 @@ D, [2011-04-28 10:35:08 #14812] DEBUG -- : ca5aa08e70be4054f524
 [37m[2011-09-10 08:51:48] INFO[0m -   Arguments: {}
 [37m[2011-09-10 08:51:48] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
 [37m[2011-09-10 08:51:48] INFO[0m - Missing service was found to be OK: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2011-09-12 09:29:18] DEBUG[0m - Started the Logger
+[32m[2011-09-12 09:29:18] DEBUG[0m - Registered myself as: #<Jerbil::ServerRecord:0xb7229914 @active=false, @port=49202, @env=:dev, @fqdn="lucius.osburn-sharp.ath.cx", @key="Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK">
+[32m[2011-09-12 09:29:18] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb72295a4 @active=false, @port=49202, @env=:dev, @fqdn="germanicus.osburn-sharp.ath.cx", @key="2lR3hsR8mrpcQ8GfN7Tpukwt15/u1Npctp1owQt89jLEZEbpOZWmK/C1aQW4">
+[37m[2011-09-12 09:29:18] INFO[0m - Failed to get remote services from server: germanicus.osburn-sharp.ath.cx
+[32m[2011-09-12 09:29:18] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7229590 @active=false, @port=49202, @env=:dev, @fqdn="octavia.osburn-sharp.ath.cx", @key="WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3">
+[37m[2011-09-12 09:29:18] INFO[0m - Failed to get remote services from server: octavia.osburn-sharp.ath.cx
+[32m[2011-09-12 09:29:18] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb722957c @active=false, @port=49202, @env=:dev, @fqdn="antonia.osburn-sharp.ath.cx", @key="gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV">
+[37m[2011-09-12 09:29:18] INFO[0m - Failed to get remote services from server: antonia.osburn-sharp.ath.cx
+[32m[2011-09-12 09:29:18] DEBUG[0m - Getting Remote Services. Connecting to : #<Jerbil::ServerRecord:0xb7229568 @active=false, @port=49202, @env=:dev, @fqdn="valeria.osburn-sharp.ath.cx", @key="V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ">
+[37m[2011-09-12 09:29:18] INFO[0m - Failed to get remote services from server: valeria.osburn-sharp.ath.cx
+[32m[2011-09-12 09:29:18] DEBUG[0m - Got remote services: []
+[36m[2011-09-12 09:29:18] SYSTEM[0m - Started up the Jerbil Server
+[36m[2011-09-12 09:33:45] SYSTEM[0m - Registered Local Service: jemb[test]@lucius.osburn-sharp.ath.cx:49213
+[32m[2011-09-12 09:33:45] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[32m[2011-09-12 09:33:45] DEBUG[0m - Registering remote. Connected to octavia.osburn-sharp.ath.cx
+[32m[2011-09-12 09:33:45] DEBUG[0m - Registering remote. Connected to antonia.osburn-sharp.ath.cx
+[32m[2011-09-12 09:33:45] DEBUG[0m - Registering remote. Connected to valeria.osburn-sharp.ath.cx
+[37m[2011-09-12 10:41:52] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 10:41:52] INFO[0m -   Arguments: {}
+[37m[2011-09-12 10:41:52] INFO[0m - Local service missing for jemb[test]@lucius.osburn-sharp.ath.cx:49213?
+[37m[2011-09-12 10:41:52] INFO[0m - Missing service was found to be OK: jemb[test]@lucius.osburn-sharp.ath.cx:49213
+[37m[2011-09-12 10:45:12] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 10:45:12] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 10:45:27] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 10:45:27] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 10:45:50] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 10:45:50] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 10:46:06] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 10:46:06] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 11:30:43] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 11:30:43] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 11:30:47] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 11:30:47] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 13:27:04] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 13:27:04] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 13:27:33] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 13:27:33] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 13:27:35] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 13:27:35] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 13:27:35] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 13:27:35] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 15:18:35] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 15:18:35] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 15:18:40] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 15:18:40] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 15:18:40] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 15:18:40] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 15:34:26] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 15:34:26] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 15:34:26] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 15:34:26] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 15:34:29] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 15:34:29] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 15:34:29] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 15:34:29] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 15:53:23] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 15:53:23] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 16:00:59] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 16:00:59] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 16:01:00] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 16:01:00] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 16:01:00] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 16:01:00] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 16:34:17] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 16:34:17] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 16:34:21] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 16:34:21] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-12 16:34:21] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-12 16:34:21] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 07:30:01] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 07:30:01] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 08:54:38] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 08:54:38] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 08:54:40] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 08:54:40] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 08:54:40] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 08:54:40] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 09:39:52] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 09:39:52] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 09:39:53] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 09:39:53] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 09:39:53] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 09:39:53] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 10:53:37] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 10:53:37] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 10:53:39] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 10:53:39] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 10:53:39] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 10:53:39] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 11:39:11] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 11:39:11] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 11:39:17] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 11:39:17] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 11:39:17] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 11:39:17] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 12:02:01] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 12:02:01] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 12:02:01] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 12:02:01] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 12:18:17] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 12:18:17] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 12:18:18] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 12:18:18] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 12:37:30] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 12:37:30] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 12:37:30] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 12:37:30] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 12:50:12] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 12:50:12] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 12:50:12] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 12:50:12] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 15:24:20] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 15:24:20] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 15:24:22] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 15:24:22] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 15:24:22] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 15:24:22] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 15:58:26] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 15:58:26] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-13 15:58:26] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-13 15:58:26] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 09:27:34] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 09:27:34] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 09:27:34] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 09:27:34] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 10:23:22] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 10:23:22] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 10:23:26] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 10:23:26] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 10:23:26] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 10:23:26] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 11:07:32] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 11:07:32] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 11:07:34] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 11:07:34] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 11:07:34] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 11:07:34] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 12:08:54] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 12:08:54] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 12:08:58] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 12:08:58] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 12:08:58] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 12:08:58] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 13:56:36] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 13:56:36] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 13:56:45] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 13:56:45] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 13:56:45] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 13:56:45] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 14:28:09] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 14:28:09] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 14:28:09] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 14:28:09] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 14:36:33] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 14:36:33] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 14:36:33] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 14:36:33] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 16:53:57] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 16:53:57] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 16:53:58] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 16:53:58] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-14 16:53:58] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-14 16:53:58] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 09:06:05] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 09:06:05] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 09:06:08] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 09:06:08] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 09:06:08] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 09:06:08] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 10:39:05] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 10:39:05] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 10:39:08] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 10:39:08] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 10:39:08] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 10:39:08] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 13:59:03] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 13:59:03] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 13:59:03] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 13:59:03] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 13:59:18] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 13:59:18] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 13:59:20] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 13:59:20] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 13:59:20] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 13:59:20] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 14:09:34] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 14:09:34] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 14:09:52] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 14:09:52] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 14:09:55] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 14:09:55] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 14:09:55] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 14:09:55] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 14:43:41] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 14:43:41] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 14:43:41] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 14:43:41] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 15:06:27] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 15:06:27] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 15:06:27] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 15:06:27] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 15:42:10] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 15:42:10] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 15:42:10] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 15:42:10] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 17:41:12] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 17:41:12] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 17:41:14] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 17:41:14] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 17:41:14] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 17:41:14] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 18:04:37] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 18:04:37] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}
+[37m[2011-09-15 18:04:37] INFO[0m - Searching for services. Found 1 matching.
+[37m[2011-09-15 18:04:37] INFO[0m -   Arguments: {:env=>:test, :name=>:jemb, :host=>"lucius.osburn-sharp.ath.cx"}

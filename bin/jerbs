@@ -1,0 +1,139 @@
+#!/usr/bin/env ruby
+#
+#
+# = Jerbil command line utility
+#
+# == control and display jerbil related info
+#
+# Author:: Robert Sharp
+# Copyright:: Copyright (c) 2011 Robert Sharp
+# License:: Open Software Licence v3.0
+#
+# This software is licensed for use under the Open Software Licence v. 3.0
+# The terms of this licence can be found at http://www.opensource.org/licenses/osl-3.0.php
+# and in the file copyright.txt. Under the terms of this licence, all derivative works
+# must themselves be licensed under the Open Software Licence v. 3.0
+#
+# Trial using Thor
+#
+require 'thor'
+require 'thor/group'
+require 'jerbil'
+require 'colored'
+
+$LOAD_PATH.unshift File.expand_path('../lib', File.dirname(__FILE__))
+require 'jerbil/thor/install'
+
+# define subcommands relating to Jerbil Servers
+class Server < Thor
+
+  default_task :local
+  class_option :config, :aliases=>'-c', :desc=>'use the given config file'
+
+  desc "local", "display information about the local jerbil server"
+  def local
+    config = Jerbil.get_config(options[:config])
+    local = Jerbil.get_local_server(options[:config])
+    puts "Checking for local Jerbil server"
+    begin
+      jerbs = local.connect
+      started = jerbs.started
+      puts "  Jerbil server found, version: #{jerbs.version}".green
+      puts "  Server has been up since #{started.strftime('%d %b %Y at %H:%M')}"
+      puts "  and has had #{jerbs.registrations.to_s} registrations"
+    rescue Exception => err
+      puts "  Server did not respond: #{err.message}".red.bold
+    end
+
+  end
+  
+  desc "list", "list information about the network's Jerbil servers"
+  def list
+    config = Jerbil.get_config(options[:config])
+    puts "Jerbil is configured with the following servers:"
+    config[:servers].each do |server|
+      puts "  #{server.fqdn}, key: [#{server.key}]".cyan
+    end
+  
+  end
+  
+  desc "check", "check servers"
+  def check
+
+    config = Jerbil.get_config(options[:config])
+    puts "Jerbil server status is:"
+  
+    config[:servers].each do |server|
+      connect = false
+      version = "0"
+      begin
+        jerbs = server.connect
+        jerbs.verify
+        connect = true
+        version = jerbs.version
+      rescue
+        # do nothing
+      end
+      if connect then
+        puts "   #{server.fqdn}: #{version}".cyan
+      else
+        puts "   #{server.fqdn}: no response".yellow
+      end
+    end
+  end
+end
+
+class Service < Thor
+
+  default_task :list
+  class_option :verbose, :default=>false, :aliases=>'-V', :desc=>'print more information'
+
+  desc "list", "List services"
+  def list
+    config = Jerbil.get_config(options[:config])
+    local = Jerbil.get_local_server(options[:config])
+    services = []
+    begin
+      jerbs = local.connect
+      services = jerbs.get_all(true) # ignore this access
+    rescue
+      puts "Failed to connect to the local Jerbil server".red.bold
+    end
+    puts "There are #{services.length} services registered with Jerbil:"
+    services.each do |s|
+      puts "  #{s.name}[:#{s.env}]@#{s.host}:#{s.port}".cyan
+      puts "    started at: #{s.registered_at.strftime('%d/%m/%y %H:%M')}" if options[:verbose]
+      puts "    accessed #{s.access_count.to_s} times, last time at: #{s.accessed_at.strftime('%d/%m/%y %H:%M')}" if options[:verbose]
+    end
+  end
+
+end
+
+# the main thor handler
+class Jerbs < Thor
+  
+  #class_option :verbose, :default=>false, :aliases=>'-V', :desc=>'print more information'
+  
+  desc "test", "This is just to test things"
+  method_option :debug, :aliases=>'-D', :desc=>'display debug information'
+  def test
+    puts "Hello World"
+    if options[:debug] then
+      puts "Debugging..."
+      puts "  Load Path:"
+      $LOAD_PATH.each do |lpath|
+        puts "    #{lpath.to_s}"
+      end
+    end
+  end
+  
+  
+  register Server, :server, "server", "show information about jerbil servers"
+
+  register Service, :service, "service", "show information about registered services"
+
+  register Installer, :install, "install", "install jerbil on local machine"
+  
+end
+
+Jerbs.start

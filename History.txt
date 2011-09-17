@@ -1,5 +1,10 @@
 ==History
 
+jerbil-0.2.1 17-Sep-2011
+
+Adds in the jerbs executable, being a prospective replacement for bin/jerbil using thor
+and including an install command
+
 jerbil-0.2.0 08-Sep-2011
 
 Migrate to Jelly 1.0

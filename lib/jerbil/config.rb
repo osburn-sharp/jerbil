@@ -18,7 +18,7 @@ require 'jerbil/server'
 
 module Jerbil
 
-  DefaultConfigFile = Jeckyl::ConfigRoot + '/jerbil.conf'
+  DefaultConfigFile = Jeckyl::ConfigRoot + '/jerbil.rb'
 
   class Config < Jeckyl::Options
 
