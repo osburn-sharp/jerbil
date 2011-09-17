@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.2.5 17-Sep-2011
+
+Adjust RUBYOPT etc in runscript
+
 jerbil-0.2.4 17-Sep-2011
 
 Add chmod to install
