@@ -93,7 +93,8 @@ class Installer < Thor::Group
     say_status "invoke", "Installing files in /usr/sbin", :white
     self.destination_root = '/usr'
     Install_sbin_files.each do |sbin|
-      copy_file(sbin)      
+      copy_file(sbin)
+      chmod(sbin, 0755)
     end
   end
   

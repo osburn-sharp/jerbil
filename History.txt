@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.2.4 17-Sep-2011
+
+Add chmod to install
+
 jerbil-0.2.3 17-Sep-2011
 
 Correct runscript!
