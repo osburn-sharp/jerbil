@@ -1,5 +1,11 @@
 ==History
 
+jerbil-0.2.6 21-Sep-2011
+
+Include new jerbs command based on thor, and change Jerbil.remove so that it
+attempts to remove a service from remote servers even if it is not registered
+locally.
+
 jerbil-0.2.5 17-Sep-2011
 
 Adjust RUBYOPT etc in runscript

@@ -188,21 +188,22 @@ module Jerbil
         # its a local one
         @store.delete(service)
         @logger.system("Deleted Service: #{service.ident}")
-        @remote_servers.each do |rserver|
-          rjerbil = rserver.connect
-          unless rjerbil.nil?
-            @logger.debug("Connected to #{rserver.fqdn}")
-            begin
-              rjerbil.remove_remote(@local.key, service)
-              @logger.verbose("Removed Service from remote server: #{service.ident}")
-            rescue DRb::DRbConnError
-              # assume it is not working
-              @logger.debug("Skipping over remove_remote for #{rserver.fqdn} while removing #{service.ident}")
-            end
-          end
-        end
       else
         @logger.warn("Attempt was made to remove a service that is not registered: #{service.ident}")
+        @logger.warn("Trying to remove it remotely anyway")
+      end
+      @remote_servers.each do |rserver|
+        rjerbil = rserver.connect
+        unless rjerbil.nil?
+          @logger.debug("Connected to #{rserver.fqdn}")
+          begin
+            rjerbil.remove_remote(@local.key, service)
+            @logger.verbose("Removed Service from remote server: #{service.ident}")
+          rescue DRb::DRbConnError
+            # assume it is not working
+            @logger.debug("Skipping over remove_remote for #{rserver.fqdn} while removing #{service.ident}")
+          end
+        end
       end
     end
 

@@ -1,0 +1,4 @@
+#NO_DAEMON=true
+#NO_SYSLOG=true
+#CONF_FILE=/home/robert/dev/projects/jerbil/test/conf.d/jerbil.conf
+#VERBOSE=true
