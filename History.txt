@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.2.8 21-Sep-2011
+
+Update jerbs install to ensure files are moved to the correct place
+
 jerbil-0.2.7 21-Sep-2011
 
 Add 'etc' to gemspec

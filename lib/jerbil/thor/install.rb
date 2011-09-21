@@ -96,29 +96,32 @@ class Installer < Thor::Group
   def install_etc_files
     say_status "invoke", "Installing files in /etc", :white
     self.destination_root = '/etc'
-    etc_root = 'etc'#File.join(ProjectRoot, 'etc')
+    etc_root = File.join(ProjectRoot, 'etc')
     files = {} #gather up all the files
-    Dir["#{etc_root}/**"].each do |dir|
-      Dir["#{dir}/*"].each do |file|
-        dest_file = file.sub(/^[^\/]*\//,'') # trim root from path
-        files[file] = dest_file
-      end
-    end
+    # Dir["#{etc_root}/**"].each do |dir|
+    #   Dir["#{dir}/*"].each do |file|
+    #     dest_file = file.sub(/^[^\/]*\//,'') # trim root from path
+    #     files[file] = dest_file
+    #   end
+    #end
     
-    files.each_pair do |source, destination|
-      #say_status source, destination
-      copy_file(source, destination)
-    end
+    directory(etc_root, '/etc')
+    
+    # files.each_pair do |source, destination|
+    #   say_status source, destination
+    #   copy_file(source, destination)
+    # end
   end
   
   def install_sbin_files
     say_status "invoke", "Installing files in /usr/sbin", :white
-    self.destination_root = '/usr'
+    self.destination_root = '/usr/sbin'
     sbin_root = File.join(ProjectRoot, 'sbin')
-    Dir["#{sbin_root}/*"].each do |sbin|
-      copy_file(sbin)
-      chmod(sbin, 0755)
-    end
+    # Dir["#{sbin_root}/*"].each do |sbin|
+    #   copy_file(sbin)
+    #   chmod(sbin, 0755)
+    # end
+    directory(sbin_root, '/usr/sbin')
   end
   
 end
