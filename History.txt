@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.2.7 21-Sep-2011
+
+Add 'etc' to gemspec
+
 jerbil-0.2.6 21-Sep-2011
 
 Include new jerbs command based on thor, and change Jerbil.remove so that it
