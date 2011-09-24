@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.2.10 24-Sep-2011
+
+thor actions: check that a link exists before testing it is equal
+
 jerbil-0.2.9 24-Sep-2011
 
 Add separate re-useable thor module for common install actions

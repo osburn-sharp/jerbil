@@ -26,7 +26,7 @@ module Jermine
         say_status "error", "Missing target file #{target}", :red
         exit 1 unless pretend
       end
-      if File.readlink(link) == target then
+      if File.exists?(link) && File.readlink(link) == target then
         say_status "identical", link, :blue
       else
         say_status "linking", "#{link}"
