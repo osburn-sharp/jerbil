@@ -1,10 +1,10 @@
 # Created by Jevoom
 #
-# 21-Sep-2011
-#   Update jerbs install to ensure files are moved to the correct place
+# 24-Sep-2011
+#   Add separate re-useable thor module for common install actions
 
 module Jerbil
-  Version = '0.2.8'
-  Version_Date = '21-Sep-2011'
-  Ident = 'jerbil-0.2.8 21-Sep-2011'
+  Version = '0.2.9'
+  Version_Date = '24-Sep-2011'
+  Ident = 'jerbil-0.2.9 24-Sep-2011'
 end

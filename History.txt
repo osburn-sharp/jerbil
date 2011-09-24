@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.2.9 24-Sep-2011
+
+Add separate re-useable thor module for common install actions
+
 jerbil-0.2.8 21-Sep-2011
 
 Update jerbs install to ensure files are moved to the correct place

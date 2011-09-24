@@ -34,8 +34,15 @@ class Installer < Thor::Group
   
   add_runtime_options!
   
-  Project = 'Jerbil'
-  ProjectRoot = File.expand_path('../../..', File.dirname(__FILE__))
+  # Project = 'Jerbil'
+  # ProjectRoot = File.expand_path('../../..', File.dirname(__FILE__))
+  def self.project
+    'Jerbil'
+  end
+  
+  def self.project_root
+    File.expand_path('../../..', File.dirname(__FILE__))
+  end
     
   Install_dirs = %w{/var/log/jermine /var/run/jermine}
   # Install_etc_files = {'init.d/jerbild'=>'init.d/jerbild',
@@ -48,12 +55,12 @@ class Installer < Thor::Group
   # set the source root to project root, assuming that this file is
   # in lib/project/thor
   def self.source_root
-    ProjectRoot
+    self.project_root
   end
     
   def welcome
-    say "Welcome to #{Project}"
-    say "About to install #{Project}, checking"
+    say "Welcome to #{self.class.project} V2"
+    say "About to install #{self.class.project}, checking"
     say "Only pretending though!", :yellow if options[:pretend]
   end
     
@@ -96,7 +103,7 @@ class Installer < Thor::Group
   def install_etc_files
     say_status "invoke", "Installing files in /etc", :white
     self.destination_root = '/etc'
-    etc_root = File.join(ProjectRoot, 'etc')
+    etc_root = File.join(self.class.project_root, 'etc')
     files = {} #gather up all the files
     # Dir["#{etc_root}/**"].each do |dir|
     #   Dir["#{dir}/*"].each do |file|
@@ -116,7 +123,7 @@ class Installer < Thor::Group
   def install_sbin_files
     say_status "invoke", "Installing files in /usr/sbin", :white
     self.destination_root = '/usr/sbin'
-    sbin_root = File.join(ProjectRoot, 'sbin')
+    sbin_root = File.join(self.class.project_root, 'sbin')
     # Dir["#{sbin_root}/*"].each do |sbin|
     #   copy_file(sbin)
     #   chmod(sbin, 0755)
