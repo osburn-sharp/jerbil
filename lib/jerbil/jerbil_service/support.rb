@@ -38,7 +38,7 @@ module JerbilService
       # check that the config_file has been specified
       if config_file.nil? then
         # no, so set the default
-        config_file = Jeckyl::ConfigRoot + "/#{self.to_s.downcase}.conf"
+        config_file = Jeckyl::ConfigRoot + "/#{self.to_s.downcase}.rb"
       end
 
       # read the config file
