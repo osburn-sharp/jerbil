@@ -168,7 +168,7 @@ module Jerbil
             @logger.debug("Registering remote. Connected to #{rserver.fqdn}")
             begin
               rjerbil.register_remote(@local.key, service)
-              @logger.verbose("Registered Service on remote server: #{service.name}")
+              @logger.verbose("Registered Service: #{service.name} on server: #{rserver.fqdn}")
             rescue DRb::DRbConnError
               # assume it is not working
             end
@@ -437,7 +437,7 @@ module Jerbil
     def remove_remote(key, service)
       @remote_servers.each do |remote|
         if remote.key == key then
-          @remote_store.delete_if {|s| s === service}
+          @remote_store.delete_if {|s| s == service}
           @logger.info("Deleted Remote Service: #{service.ident}")
           return true
         end
@@ -456,7 +456,7 @@ module Jerbil
     #
     def add_service_to_store(store, service)
       store.each do |s|
-        if s == service then
+        if s.same_service?(service) then
           # there is already a service registered, but is it active?
           if self.service_missing?(s) then
             @logger.verbose "Service: #{s.ident} was registered, but did not respond"

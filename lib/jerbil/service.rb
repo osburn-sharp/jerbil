@@ -126,13 +126,13 @@ module Jerbil
 
     # compares services directly and returns true if they have the same
     # name, env, and host
-    def ==(rhs)
+    def same_service?(rhs)
       self.matches?(:name=>rhs.name, :env=>rhs.env, :host=>rhs.host)
     end
 
     # compares services directly and returns true if they have the same
     # name, env, host and key
-    def ===(rhs)
+    def ==(rhs)
       self.matches?(:name=>rhs.name, :env=>rhs.env, :host=>rhs.host, :key=>rhs.key)
     end
 
