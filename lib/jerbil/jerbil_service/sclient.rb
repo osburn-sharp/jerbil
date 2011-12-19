@@ -41,6 +41,7 @@ module JerbilService
       @quiet = false
       @no_syslog = false
       @output = $stderr
+      @logger = nil
       @set_log_daemon = false # flag to log the daemon itself
       @klass = klass
       @name = klass.to_s.downcase
@@ -121,7 +122,10 @@ module JerbilService
         Jelly::Logger.disable_syslog if @no_syslog
         log_opts = Jelly::Logger.get_options(config)
         log_opts[:log_level] = :debug if @verbose
-        @output = Jelly::Logger.new("#{@klass.to_s.downcase}_sd", log_opts)
+        @logger = Jelly::Logger.new("#{@klass.to_s.downcase}_sd", log_opts)
+        @output.puts "Logging output to #{@logger.logfilename}"
+        @output.flush
+        @output = @logger
       end
 
       
@@ -141,7 +145,12 @@ module JerbilService
 
       if @daemonize then
         @output.puts "About to demonize this service"
-        Daemons.daemonize
+        dopts = @logger.nil? ? {} : {:backtrace=>true,
+          :log_dir=>File.dirname(@logger.logfilename),
+          :log_output=>true,
+          :dir_mode=>:normal,
+          :dir=>File.dirname(@logger.logfilename)} 
+        Daemons.daemonize(dopts)
       else
         @output.puts "Service is running in the foreground"
       end
@@ -167,9 +176,9 @@ module JerbilService
 
       @output.puts "Service has stopped"
       
-    rescue Exception => err
-      @output.puts "Error while starting service: #{err.message}"
-      @output.puts err.backtrace if @verbose
+    rescue => err
+      @output.puts "Error while starting service: #{err.class.to_s}, #{err.message}"
+      @output.puts err.backtrace.join('\n') if @verbose
     end
 
     # stop a Jerbil Service
