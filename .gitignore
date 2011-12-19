@@ -22,3 +22,5 @@ log/**
 ## PROJECT::SPECIFIC
 test/pids/**
 .redcar/**
+
+*.gem

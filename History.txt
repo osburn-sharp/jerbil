@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.2.14 19-Dec-2011
+
+improvements to supervisor class to add daemon log and catch errors more often
+
 jerbil-0.2.12 27-Nov-2011
 
 Attempt to fix bug where restarting service with old records on other servers 

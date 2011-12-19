@@ -1,5 +1,14 @@
 == Bugs
 
+01-Dec-2011
+
+JerbilService::Client should be relaxed about config options!
+
+Nov-2011
+
+Nasty race condition where remote server deletes registering service from its local 
+server, so everyone knows about a service except the local server! (Should be fixed in 0.2.12)
+
 09-Sep-2011
 
 There is no checking that services registered locally have the same hostname as the
@@ -7,7 +16,7 @@ server. Should not be an issue, but did cause problems during testing.
 
 There is no way of directing a client or service to a particular jerbil server. Should
 only be relevant to testing, could add a :jerbil_config key to the options hash when calling
-get_server, which would always return nil if it had not been set anyway.
+get_server, which would always return nil if it had not been set anyway. (Addressed)
 
 05-Sep-2011
 

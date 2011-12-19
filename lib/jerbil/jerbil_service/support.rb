@@ -30,7 +30,7 @@ module JerbilService
     # This uses Jeckyl configuration and defaults to the conf file for the service module
     # in the location defined by Jeckyl::ConfigRoot.
     #
-    # e.g. for RubyTest, it will default to /etc/jermine/rubytest.conf
+    # e.g. for RubyTest, it will default to /etc/jermine/rubytest.rb
     #
     # Provide a different filename to change this.
     #

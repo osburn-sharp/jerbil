@@ -32,26 +32,22 @@ class Installer < Thor::Group
   
   class_option :system, :type=>:boolean, :default=>:false, :desc=>'Do system actions (add users etc)'
   
+  # add standard options; -f, -p, -v, -s
   add_runtime_options!
   
-  # Project = 'Jerbil'
-  # ProjectRoot = File.expand_path('../../..', File.dirname(__FILE__))
+  # define the name of the project - need to redefine this in sub-classes
   def self.project
     'Jerbil'
   end
   
+  # ensure that the resulting path will take you from the file
+  # in which this is defined to the project root.
   def self.project_root
     File.expand_path('../../..', File.dirname(__FILE__))
   end
     
   Install_dirs = %w{/var/log/jermine /var/run/jermine}
-  # Install_etc_files = {'init.d/jerbild'=>'init.d/jerbild',
-  #   'conf.d/jerbild'=>'conf.d/jerbild',
-  #   'conf.d/jerbil.rb'=>'jermine/jerbil.rb',
-  #   'conf.d/jerbil-client.rb'=>'jermine/jerbil-client.rb'
-  # }
-  # Install_sbin_files = %w{sbin/jerbild sbin/jerbil-stop}
-  
+
   # set the source root to project root, assuming that this file is
   # in lib/project/thor
   def self.source_root
@@ -64,6 +60,7 @@ class Installer < Thor::Group
     say "Only pretending though!", :yellow if options[:pretend]
   end
     
+  # ensure it is OK to do this install.
   def check_install
     quit = false
     unless Process.uid == 0 # this is root...
@@ -85,6 +82,7 @@ class Installer < Thor::Group
   # ensure that the standard jerbil-related directories
   # have been installed already, and install them if not
   def create_dirs
+    return unless options[:system]
     say_status "invoke", "Creating Directories", :white
     Install_dirs.each do |idir|
       
@@ -99,35 +97,24 @@ class Installer < Thor::Group
     end
   end
   
-  # install files that are in the etc directory
+  # install files that are in the etc directory, recursively.
+  # these files need to be in the correct sub-directory
   def install_etc_files
     say_status "invoke", "Installing files in /etc", :white
     self.destination_root = '/etc'
     etc_root = File.join(self.class.project_root, 'etc')
-    files = {} #gather up all the files
-    # Dir["#{etc_root}/**"].each do |dir|
-    #   Dir["#{dir}/*"].each do |file|
-    #     dest_file = file.sub(/^[^\/]*\//,'') # trim root from path
-    #     files[file] = dest_file
-    #   end
-    #end
     
     directory(etc_root, '/etc')
     
-    # files.each_pair do |source, destination|
-    #   say_status source, destination
-    #   copy_file(source, destination)
-    # end
   end
   
+  # install files that are in the sbin directory into /usr/sbin
+  # assuming they already have the required permissions
   def install_sbin_files
     say_status "invoke", "Installing files in /usr/sbin", :white
     self.destination_root = '/usr/sbin'
     sbin_root = File.join(self.class.project_root, 'sbin')
-    # Dir["#{sbin_root}/*"].each do |sbin|
-    #   copy_file(sbin)
-    #   chmod(sbin, 0755)
-    # end
+
     directory(sbin_root, '/usr/sbin')
   end
   

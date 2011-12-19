@@ -41,6 +41,7 @@ module JerbilService
       @quiet = false
       @no_syslog = false
       @output = $stderr
+      @set_log_daemon = false # flag to log the daemon itself
       @klass = klass
       @name = klass.to_s.downcase
       @name_symbol = @name.to_sym
@@ -48,9 +49,10 @@ module JerbilService
       if block_given? then
         block.call(self)
       else
-        return self
+        return self # created for stop
       end
-
+      
+      # only gets here for a start
       self.start_service
 
     end
@@ -80,11 +82,18 @@ module JerbilService
       @config_file = cfile
     end
 
+    # set the output to a file (object, not path)
     def output=(ofile)
       @output = ofile unless @quiet
     end
+    
+    def log_daemon
+      @set_log_daemon = true
+    end
 
 
+    # create an instance of the supervisor to
+    # stop a Jerbil service
     def self.stop(klass, &block)
 
       sclient = self.new(klass)
@@ -95,6 +104,7 @@ module JerbilService
 
     end
 
+    # start a Jerbil Service
     def start_service
 
       @output.puts "Welcome to #{@klass.to_s} (#{@klass.ident})"
@@ -103,10 +113,18 @@ module JerbilService
         @output.puts "Quiet is: #{@quiet ? 'on' : 'off'}"
         @output.puts "Verbose is: #{@verbose ? 'on' : 'off'}"
       end
-
-
+      
       config = @klass.get_config(@config_file)
 
+      # create a Jelly logging object if requested
+      if @set_log_daemon then
+        Jelly::Logger.disable_syslog if @no_syslog
+        log_opts = Jelly::Logger.get_options(config)
+        log_opts[:log_level] = :debug if @verbose
+        @output = Jelly::Logger.new("#{@klass.to_s.downcase}_sd", log_opts)
+      end
+
+      
       @output.puts "Obtained configuration options"
 
       if @verbose then
@@ -148,9 +166,13 @@ module JerbilService
       @service.wait(pkey)
 
       @output.puts "Service has stopped"
-
+      
+    rescue Exception => err
+      @output.puts "Error while starting service: #{err.message}"
+      @output.puts err.backtrace if @verbose
     end
 
+    # stop a Jerbil Service
     def stop_service
 
       config = @klass.get_config(@config_file)
@@ -209,7 +231,7 @@ module JerbilService
       @output.puts "Error in Configuration file: #{jerr.message}"
       # there is no pid, so just exit
     rescue Exception => err
-      @output.puts "Error: #{err.message}" if @verbose
+      @output.puts "Error while stopping service: #{err.message}"
       @output.puts err.backtrace if @verbose
       # it went wrong, so fall back on pid killing
       if pid > 0 then
