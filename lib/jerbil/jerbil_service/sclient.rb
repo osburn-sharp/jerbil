@@ -116,6 +116,7 @@ module JerbilService
       end
       
       config = @klass.get_config(@config_file)
+      log_opts = {}
 
       # create a Jelly logging object if requested
       if @set_log_daemon then
@@ -151,6 +152,11 @@ module JerbilService
           :dir_mode=>:normal,
           :dir=>File.dirname(@logger.logfilename)} 
         Daemons.daemonize(dopts)
+        
+        # all those open files are closed?
+        # so open the logger again
+        @output = Jelly::Logger.new("#{@klass.to_s.downcase}_sd", log_opts) if @set_log_daemon
+        
       else
         @output.puts "Service is running in the foreground"
       end
