@@ -43,6 +43,7 @@ module JerbilService
       @output = $stderr
       @logger = nil
       @set_log_daemon = false # flag to log the daemon itself
+      @jerbil_config_file = nil
       @klass = klass
       @name = klass.to_s.downcase
       @name_symbol = @name.to_sym
@@ -91,6 +92,10 @@ module JerbilService
     def log_daemon
       @set_log_daemon = true
     end
+    
+    def jerbil_config_file=(jfile)
+      @jerbil_config_file = jfile
+    end
 
 
     # create an instance of the supervisor to
@@ -116,6 +121,11 @@ module JerbilService
       end
       
       config = @klass.get_config(@config_file)
+      
+      if @jerbil_config_file then
+        config[:jerbil_config] = @jerbil_config_file
+      end
+      
       log_opts = {}
 
       # create a Jelly logging object if requested
@@ -155,7 +165,12 @@ module JerbilService
         
         # all those open files are closed?
         # so open the logger again
-        @output = Jelly::Logger.new("#{@klass.to_s.downcase}_sd", log_opts) if @set_log_daemon
+        if @set_log_daemon then
+          @output = Jelly::Logger.new("#{@klass.to_s.downcase}_sd", log_opts)
+        else
+          # no logger, so write any messages to /dev/null
+          @output = File.open('/dev/null', 'w')
+        end
         
       else
         @output.puts "Service is running in the foreground"
@@ -209,7 +224,7 @@ module JerbilService
 
       begin
         # find jerbil
-        jerbil_server = Jerbil.get_local_server(config[:jerbil_config])
+        jerbil_server = Jerbil.get_local_server(@jerbil_config_file)
 
         # now connect to it
         jerbil = jerbil_server.connect
@@ -245,7 +260,7 @@ module JerbilService
     rescue Jeckyl::JeckylError => jerr
       @output.puts "Error in Configuration file: #{jerr.message}"
       # there is no pid, so just exit
-    rescue Exception => err
+    rescue => err
       @output.puts "Error while stopping service: #{err.message}"
       @output.puts err.backtrace if @verbose
       # it went wrong, so fall back on pid killing
