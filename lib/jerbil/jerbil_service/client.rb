@@ -210,7 +210,16 @@ module JerbilService
       # This is needed cos sending an unknown method over DRb with $SAFE = 1
       # raises a Security Error. Could catch this, but it might happen for
       # different reasons so best not to.
-      raise NoMethodError unless @klass.instance_methods.include?(symb.to_s)
+      
+      # need to fix symbols problem
+      if String.instance_methods.first.instance_of?(String) then
+        # < 1.9 Ruby
+        method_id = symb.to_s
+      else
+        method_id = symb
+      end
+      
+      raise NoMethodError unless @klass.instance_methods.include?(method_id)
 
       retries = 0
       begin

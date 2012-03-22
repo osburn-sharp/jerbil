@@ -32,7 +32,9 @@ module JerbilService
   class Supervisor
 
     # create and run a service daemon for the given class, which should be a JerbilService
-    # class
+    # class. Within the block, use the methods below to set parameters and the service
+    # will then be launched when the block returns
+    #
     def initialize(klass, &block)
 
       @daemonize = true
@@ -48,6 +50,8 @@ module JerbilService
       @name = klass.to_s.downcase
       @name_symbol = @name.to_sym
 
+      # only called without a block internally to effect the stop
+      # see below
       if block_given? then
         block.call(self)
       else
@@ -76,10 +80,14 @@ module JerbilService
       @output = File.open('/dev/null', 'w')
     end
 
+    # ensure logging does not log to syslog
+    # see Jelly.disable_syslog for details
     def no_syslog
       @no_syslog = true
     end
 
+    # set the condif file for the service. Overides the
+    # default, which is defined by Jeckyl
     def config_file=(cfile)
       @config_file = cfile
     end
@@ -89,19 +97,26 @@ module JerbilService
       @output = ofile unless @quiet
     end
     
+    # create a log for the daemon task, the output of
+    # which is otherwise lost
     def log_daemon
       @set_log_daemon = true
     end
     
+    # override the default jerbil config file, used only
+    # for testing new versions of jerbil
     def jerbil_config_file=(jfile)
       @jerbil_config_file = jfile
     end
 
 
-    # create an instance of the supervisor to
-    # stop a Jerbil service
+    # this class method if called to create an instance of the supervisor to
+    # stop a Jerbil service. Use the methods above in the block to set
+    # parameters
     def self.stop(klass, &block)
 
+      # create an instance of this class without starting the service
+      # (no block)
       sclient = self.new(klass)
 
       block.call(sclient)
@@ -110,22 +125,24 @@ module JerbilService
 
     end
 
-    # start a Jerbil Service
+    # this method is called by the initialize method to start a Jerbil Service
+    # messages are logged through @output, which is stderr by default or
+    # /dev/null if quiet was enabled, or a Jelly logger.
+    #
     def start_service
 
       @output.puts "Welcome to #{@klass.to_s} (#{@klass.ident})"
-
-      if @verbose then
-        @output.puts "Quiet is: #{@quiet ? 'on' : 'off'}"
-        @output.puts "Verbose is: #{@verbose ? 'on' : 'off'}"
-      end
       
+      # get the config options for this service
       config = @klass.get_config(@config_file)
       
+      # check if there is a jerbil config file specified by the caller
+      # and add/override the config option
       if @jerbil_config_file then
         config[:jerbil_config] = @jerbil_config_file
       end
       
+      # create a hash for logger options
       log_opts = {}
 
       # create a Jelly logging object if requested
@@ -139,21 +156,22 @@ module JerbilService
         @output = @logger
       end
 
-      
-      @output.puts "Obtained configuration options"
-
+      # log the configuration options if requested
       if @verbose then
+        @output.puts "Obtained configuration options"
         config.each_pair do |key, value|
           @output.puts "  :#{key} => #{value}"
         end
       end
 
       @output.puts "Running Service in environment: #{config[:environment]}"
-
+      
+      # create a private key for the service
       pkey = Jerbil::Support.create_private_key(@name_symbol, config[:environment], config[:key_dir])
 
       @output.puts "Created a private key in: #{config[:key_dir]}" if @verbose
 
+      # the service will be daemonized so need to set up daemon parameters
       if @daemonize then
         @output.puts "About to demonize this service"
         dopts = @logger.nil? ? {} : {:backtrace=>true,
@@ -199,7 +217,7 @@ module JerbilService
       
     rescue => err
       @output.puts "Error while starting service: #{err.class.to_s}, #{err.message}"
-      @output.puts err.backtrace.join('\n') if @verbose
+      @output.puts err.backtrace.join("\n") if @verbose
     end
 
     # stop a Jerbil Service

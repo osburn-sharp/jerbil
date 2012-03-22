@@ -1,9 +1,19 @@
 ==History
 
+jerbil-0.2.19 22-Mar-2012
+
+Fix a bug where 1.9 was failing cos instance_methods returns symbols instead of
+strings.
+
+jerbil-0.2.18 23-Dec-2011
+
+Some refactoring and ensuring exception backtraces have newlines and not \n between
+them!
+
 jerbil-0.2.17 19-Dec-2011
 
 Attempt to fix error when stopping services: cannot read symbol as string. Assume that
-it is caused by :jerbil_config option
+it is caused by :jerbil_config option. It Worked!
 
 jerbil-0.2.16 19-Dec-2011
 
