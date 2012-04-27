@@ -215,11 +215,17 @@ module JerbilService
       if String.instance_methods.first.instance_of?(String) then
         # < 1.9 Ruby
         method_id = symb.to_s
+        @output.puts "Setting method id to a string: #{method_id}"
       else
         method_id = symb
+        @output.puts "Ensuring method id is a symbol: #{method_id}"
       end
       
-      raise NoMethodError unless @klass.instance_methods.include?(method_id)
+      unless @klass.instance_methods.include?(method_id)
+        @output.puts "Failed to find method id:"
+        @output.puts "#{@klass.instance_methods.inspect}"
+        raise NoMethodError, "Failed to find method: #{method_id}"
+      end
 
       retries = 0
       begin

@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.2.20 28-Apr-2012
+
+Annotate the client calls to try to understand the NoMethod errors raised
+
 jerbil-0.2.19 22-Mar-2012
 
 Fix a bug where 1.9 was failing cos instance_methods returns symbols instead of
