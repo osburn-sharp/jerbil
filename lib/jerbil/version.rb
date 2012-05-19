@@ -1,13 +1,13 @@
 # Created by Jevoom
 #
-# 28-Apr-2012
-#   Annotate the client calls to try to understand the NoMethod errors raised
+# 19-May-2012
+#   Added Aurelius to the default files and rename jers to jerbil
 
 module Jerbil
-  # version set to 0.2.20
-  Version = '0.2.20'
-  # date set to 28-Apr-2012
-  Version_Date = '28-Apr-2012'
-  #ident string set to: jerbil-0.2.20 28-Apr-2012
-  Ident = 'jerbil-0.2.20 28-Apr-2012'
+  # version set to 0.2.21
+  Version = '0.2.21'
+  # date set to 19-May-2012
+  Version_Date = '19-May-2012'
+  #ident string set to: jerbil-0.2.21 19-May-2012
+  Ident = 'jerbil-0.2.21 19-May-2012'
 end

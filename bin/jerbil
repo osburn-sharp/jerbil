@@ -1,9 +1,12 @@
-#! /usr/bin/ruby
+#!/usr/bin/env ruby
 #
-# Jerbil - Jumpin Emin's Reliable Broker for Integrated Linux services
+#
+# = Jerbil command line utility
+#
+# == control and display jerbil related info
 #
 # Author:: Robert Sharp
-# Copyright:: Copyright (c) 2010 Robert Sharp
+# Copyright:: Copyright (c) 2011 Robert Sharp
 # License:: Open Software Licence v3.0
 #
 # This software is licensed for use under the Open Software Licence v. 3.0
@@ -11,165 +14,48 @@
 # and in the file copyright.txt. Under the terms of this licence, all derivative works
 # must themselves be licensed under the Open Software Licence v. 3.0
 #
-# user utility to question the Jerbil network
-# 
-require 'jeckyl'
+# Trial using Thor
+#
+require 'thor'
+require 'thor/group'
 require 'jerbil'
-require 'jerbil/server'
-require 'jerbil/config'
-require 'jerbil/version'
-require 'socket'
-require 'drb'
-require 'optparse'
-require 'rubygems'
-
-# require 'term/ansicolor'
-# class String
-#   # makes the colouring functions into string methods
-#   include Term::ANSIColor
-# end
 require 'colored'
 
-config_file = Jeckyl::ConfigRoot + '/jerbil-client.conf'
-cmd = :check_local
-verbose = false
-quiet = false
-verify = false
-env = :null
+$LOAD_PATH.unshift File.expand_path('../lib', File.dirname(__FILE__))
+require 'jerbil/thor/install'
+require 'jerbil/thor/server'
+require 'jerbil/thor/service'
 
-OptionParser.new do |opts|
 
-  opts.banner = "Usage: jerbil [opts]"
-  opts.separator ""
-  opts.separator " Utility to interogate and manage the local Jerbil server"
-  opts.separator ""
 
-  opts.on("-l", "--list", "List Services") do
-    cmd = :list
-  end
-
-  opts.on("-S", "--servers", "List live Servers") do
-    cmd = :servers
-  end
+# the main thor handler
+class Jerbs < Thor
   
-  opts.on("-C", "--config-servers", "List Servers in config file") do
-    cmd = :config_servers
-  end
-
-  opts.on("-c", "--config [file]", String, "use this config file to find Jerbil" ) do |cfile|
-    if FileTest.readable?(cfile) then
-      config_file = cfile
-    else
-      puts "Config file cannot be read."
-      exit 1
-    end
-  end
-
-  opts.on("-e", "--environment [TYPE]", [:prod, :test, :dev], "Select env (prod, test, dev), default is prod") do |e|
-    env = e
-  end
-
-  opts.on("-v", "--verify", "verify that services are running") do
-    verify = true
-  end
-
-  opts.on("-V", "--verbose", "output more information about what is going on ") do
-    verbose = true
-  end
-
-  opts.on("-q", "--quiet", "output nothing and return 0 or 1 depending on local server") do
-    quiet = true
-  end
-
-  opts.on("-h", "--help", "Provide Help") do |h|
-    opts.separator ""
-    puts opts
-    exit 0
-  end
-
-end.parse!
-
-puts "Welcome to Jerbil (" + Jerbil::Ident + ')' unless quiet
-
-config = Jerbil.get_config(config_file)
-local = Jerbil.get_local_server(config_file)
-#puts options.inspect
-
-if quiet then
-  begin
-    jerbs = local.connect
-    jerbs.verify
-    exit 0
-  rescue
-    exit 1
-  end
-end
-
-case cmd
-
-when :check_local
-  puts "Checking for local Jerbil server"
-  begin
-    jerbs = local.connect
-    started = jerbs.started
-    puts "  Jerbil server found, version: #{jerbs.version}".green
-    puts "  Server has been up since #{started.strftime('%d %b %Y at %H:%M')}"
-    puts "  and has had #{jerbs.registrations.to_s} registrations"
-  rescue Exception => err
-    puts "  Server did not respond: #{err.message}".red.bold
-  end
-
-
-when :config_servers
-  puts "Jerbil is configured with the following servers:"
-  config[:servers].each do |server|
-    puts "  #{server.fqdn}, key: [#{server.key}]".cyan
-  end
-
-when :servers
-  puts "Jerbil server status is:"
-
-  config[:servers].each do |server|
-    connect = false
-    version = "0"
-    begin
-      jerbs = server.connect
-      jerbs.verify
-      connect = true
-      version = jerbs.version
-    rescue
-      # do nothing
-    end
-    if connect then
-      puts "   #{server.fqdn}: #{version}".cyan
-    else
-      puts "   #{server.fqdn}: no response".yellow
-    end
-  end
-
-when :list
-  services = []
-  begin
-    jerbs = local.connect
-    services = jerbs.get_all(true) # ignore this access
-  rescue
-    puts "Failed to connect to the local Jerbil server".red.bold
-  end
-  puts "There are #{services.length} services registered with Jerbil:"
-  services.each do |s|
-    puts "  #{s.name}[:#{s.env}]@#{s.host}:#{s.port}".cyan
-    puts "    started at: #{s.registered_at.strftime('%d/%m/%y %H:%M')}" if verbose
-    puts "    accessed #{s.access_count.to_s} times, last time at: #{s.accessed_at.strftime('%d/%m/%y %H:%M')}" if verbose
-    if verify then
-      if jerbs.service_missing?(s) then
-        puts "  Verify failed. Service should have been removed".red
-      else
-        puts "  Verify succeeded".green
+  #class_option :verbose, :default=>false, :aliases=>'-V', :desc=>'print more information'
+  
+  desc "test", "This is just to test things"
+  method_option :debug, :aliases=>'-D', :desc=>'display debug information'
+  def test
+    puts "Hello World"
+    if options[:debug] then
+      puts "Debugging..."
+      puts "  Load Path:"
+      $LOAD_PATH.each do |lpath|
+        puts "    #{lpath.to_s}"
       end
     end
   end
+  
+  
+  register Server, :server, "server", "show information about jerbil servers"
+  
 
+  register Service, :service, "service", "show information about registered services"
+  
+  map "services"=>"service"
+
+  register Installer, :install, "install", "install jerbil on local machine"
+  
 end
 
-exit 0
-
+Jerbs.start

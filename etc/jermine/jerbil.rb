@@ -22,6 +22,8 @@ log_dir "/var/log/jermine"
 log_level :debug
 
 # Array of Jerbil::Server, one for each server in the system
+# use openssl to greate a key and take a line from this. e.g.
+#  openssl genrsa -des3 -out /tmp/key 2048
 require 'jerbil/server'
 
 my_servers = Array.new
@@ -30,6 +32,7 @@ my_servers << Jerbil::ServerRecord.new("germanicus.osburn-sharp.ath.cx","2lR3hsR
 my_servers << Jerbil::ServerRecord.new("octavia.osburn-sharp.ath.cx","WJbgpOfYOBjlSjcPGyheouPBIJNwhJrKmIqUFly5oLBaHJ8NtI1nhTDrk5p3", env)
 my_servers << Jerbil::ServerRecord.new("antonia.osburn-sharp.ath.cx","gpbYk9BEcmyO4xZfZuwu1/Nkd6Dnxjo+INRtrkBmGEQUq3KYi7NfBVW4pfGV", env)
 my_servers << Jerbil::ServerRecord.new("valeria.osburn-sharp.ath.cx","V05+VKO0rxNm0qz0BqfJKaAyxZOO1YsyXnYknE3PmzKJg5tbUFsz39YA12LJ", env)
+my_servers << Jerbil::ServerRecord.new("aurelius.osburn-sharp.ath.cx","F9uOyptcP6XT9FnJCI1RpPKXhqakz95tI2kxmKU6JwMQ2slVtPQkRk4t11TGqtt7", env)
 
 servers my_servers
 

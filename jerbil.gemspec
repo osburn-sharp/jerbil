@@ -29,7 +29,7 @@ Gem::Specification.new do |s|
   s.add_dependency('jelly')
   s.add_dependency('jeckyl')
   
-  s.executables << 'jerbs'
+  s.executables << 'jerbil'
 
 #  s.executables       = %w( #{name} )
   s.description       = File.read("Intro.txt")

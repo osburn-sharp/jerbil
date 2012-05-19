@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.2.21 19-May-2012
+
+Added Aurelius to the default files and rename jers to jerbil
+
 jerbil-0.2.20 28-Apr-2012
 
 Annotate the client calls to try to understand the NoMethod errors raised
