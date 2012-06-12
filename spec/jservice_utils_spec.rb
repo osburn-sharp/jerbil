@@ -11,15 +11,16 @@
 # must themselves be licensed under the Open Software Licence v. 3.0
 # 
 # 
-require 'rubygems'
 
-require 'jerbil/jerbil_service/client'
-
-client = JerbilClient.new(:rubytest, :test)
-
-puts client.action
-
-puts client.not_an_action
+require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+require 'jerbil/jerbil_service/utils'
 
 
-
+describe "utils" do
+  
+  it "should classify a string" do
+    JerbilService::Utils.classify('robert_sharp').should == "RobertSharp"
+    JerbilService::Utils.classify('robert/sharp').should == "Robert::Sharp"
+  end
+  
+end

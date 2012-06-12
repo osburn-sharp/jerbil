@@ -1,0 +1,70 @@
+#!/usr/bin/env ruby18
+
+#
+#
+# = Jerbil Installation
+#
+# == Uses Jenny to install Jerbil Files
+#
+# Author:: Robert Sharp
+# Copyright:: Copyright (c) 2011 Robert Sharp
+# License:: Open Software Licence v3.0
+#
+# This software is licensed for use under the Open Software Licence v. 3.0
+# The terms of this licence can be found at http://www.opensource.org/licenses/osl-3.0.php
+# and in the file copyright.txt. Under the terms of this licence, all derivative works
+# must themselves be licensed under the Open Software Licence v. 3.0
+#
+# 
+#
+require 'rubygems'
+require 'jenny'
+require 'optparse'
+
+
+pretend = false
+verbose = false
+
+OptionParser.new do |opts|
+
+  opts.banner = "Usage: jerbil-install [opts]"
+  opts.separator ""
+  opts.separator " install jerbil related files after gem install"
+  opts.separator ""
+
+
+  opts.on("-p", "--pretend", "show what would be installed without installing it") do |pfile|
+    pretend = true
+  end
+
+  opts.on("-v", "--verbose", "provide extra messages about what the installation is doing") do |pfile|
+    verbose = true
+  end
+
+  opts.on("-h", "--help", "You are looking at it") do |h|
+    opts.separator ""
+    puts opts
+    exit 0
+  end
+
+end.parse!
+
+
+Jenny::Installer.construct('jerbil') do |jenny|
+  jenny.pretend(pretend)
+  jenny.verbose(verbose)
+  
+  # configuration file to run the service
+  jenny.file('etc/conf.d/jerbild', '/etc/conf.d/jerbild')
+  # and the init script itself
+  jenny.file('etc/init.d/jerbild', '/etc/init.d/jerbild')
+  # and init files for jservice
+  jenny.file('etc/conf.d/jserviced', '/etc/conf.d/jserviced')
+  jenny.file('etc/init.d/jserviced', '/etc/init.d/jserviced')
+  # the daemon itself, which is executable
+  jenny.wrapper('sbin/jerbild', '/usr/sbin/jerbild')
+  jenny.wrapper('sbin/jerbil-stop', '/usr/sbin/jerbil-stop')
+  jenny.wrapper('sbin/jserviced', '/usr/sbin/jserviced')
+  jenny.wrapper('sbin/jservice-stop', '/usr/sbin/jservice-stop')
+  jenny.wrapper('sbin/jservice-status', '/usr/sbin/jservice-status')
+end

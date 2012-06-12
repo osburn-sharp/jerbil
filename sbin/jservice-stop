@@ -1,8 +1,12 @@
-#! /usr/bin/ruby
-# Description
+#!/usr/bin/env ruby18
+#
+#
+# = Jerbil Service Stop
+#
+# == stops a jerbil service
 #
 # Author:: Robert Sharp
-# Copyright:: Copyright (c) 2010 Robert Sharp
+# Copyright:: Copyright (c) 2012 Robert Sharp
 # License:: Open Software Licence v3.0
 #
 # This software is licensed for use under the Open Software Licence v. 3.0
@@ -10,18 +14,9 @@
 # and in the file copyright.txt. Under the terms of this licence, all derivative works
 # must themselves be licensed under the Open Software Licence v. 3.0
 #
-# Template for a supervisor script to stop a Jerbil-based service. Tailor to suit.
-# This could be a single program that stops any jerbil service, but its probably
-# easier to tailor this script for each service
-#
-# By default, outputs to stderr, unless quiet is selected. Could add another
-# option to output to a file...
+# 
 #
 require 'rubygems'
-# make sure this picks up the local jerbil lib
-root_dir = File.expand_path('..', File.dirname(__FILE__))
-$LOAD_PATH.unshift(File.join(root_dir, 'lib'))
-$LOAD_PATH.unshift(File.join(root_dir, 'test', 'lib'))
 
 require 'jerbil/jerbil_service/sclient'
 require 'jerbil/jerbil_service/utils'
@@ -40,6 +35,14 @@ OptionParser.new do |opts|
 
   opts.on("-s", "--service [name]", String, "start the given service") do |name|
     my_service = name
+  end
+
+  opts.on("-n", "--no-daemon", "Do not daemonize") do
+    daemonize = false
+  end
+
+  opts.on("-S", "--no-syslog", "Do not log to syslog") do
+    log_to_syslog = false
   end
 
 
@@ -79,8 +82,8 @@ else
   the_service = Module.const_get(service_name)
 end
 
-JerbilService::Supervisor.stop(the_service) do |rubytest|
-  rubytest.verbose if verbose
-  rubytest.quiet if quiet
-  rubytest.config_file = config_file
+JerbilService::Supervisor.stop(the_service) do |jservice|
+  jservice.verbose if verbose
+  jservice.quiet if quiet
+  jservice.config_file = config_file
 end

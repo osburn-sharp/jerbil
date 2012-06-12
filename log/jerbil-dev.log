@@ -2161,3 +2161,635 @@ D, [2011-04-28 10:35:08 #14812] DEBUG -- : ca5aa08e70be4054f524
 [37m[2011-11-18 10:33:04] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
 [37m[2011-11-18 10:33:04] INFO[0m - Registered Remote Service: rubytest[prod]@antonia.osburn-sharp.ath.cx:49900
 [33m[2011-11-18 10:33:04] WARN[0m - Get local services failed due to unknown server key: INVALID
+[32m[2012-06-11 10:27:28] DEBUG[0m - Started the Logger
+[32m[2012-06-11 10:28:47] DEBUG[0m - Started the Logger
+[32m[2012-06-11 10:28:52] DEBUG[0m - Started the Logger
+[32m[2012-06-11 10:30:47] DEBUG[0m - Started the Logger
+[32m[2012-06-11 10:30:47] DEBUG[0m - Started the Logger
+[32m[2012-06-11 10:30:47] DEBUG[0m - Started the Logger
+[32m[2012-06-11 10:30:48] DEBUG[0m - Started the Logger
+[32m[2012-06-11 10:30:48] DEBUG[0m - Started the Logger
+[32m[2012-06-11 10:30:48] DEBUG[0m - Started the Logger
+[32m[2012-06-11 10:30:48] DEBUG[0m - Started the Logger
+[32m[2012-06-11 10:30:48] DEBUG[0m - Started the Logger
+[32m[2012-06-11 10:30:48] DEBUG[0m - Started the Logger
+[32m[2012-06-11 10:30:48] DEBUG[0m - Started the Logger
+[32m[2012-06-11 10:30:54] DEBUG[0m - Started the Logger
+[32m[2012-06-11 10:31:36] DEBUG[0m - Started the Logger
+[36m[2012-06-11 10:31:42] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 10:33:49] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 10:33:49] INFO[0m - Searching for remote servers
+[37m[2012-06-11 10:33:55] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 10:33:55] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 10:34:54] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 10:34:54] INFO[0m - Searching for remote servers
+[37m[2012-06-11 10:35:00] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 10:35:00] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 10:35:00] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 10:35:00] INFO[0m - Searching for remote servers
+[37m[2012-06-11 10:35:06] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 10:35:06] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 10:35:06] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 10:35:06] INFO[0m - Searching for remote servers
+[37m[2012-06-11 10:35:11] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 10:35:11] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 10:35:11] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 10:35:11] INFO[0m - Searching for remote servers
+[37m[2012-06-11 10:35:17] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 10:35:17] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 10:35:17] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 10:35:17] INFO[0m - Searching for remote servers
+[37m[2012-06-11 10:35:23] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 10:35:23] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 10:35:23] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 10:35:23] INFO[0m - Searching for remote servers
+[37m[2012-06-11 10:35:29] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 10:35:29] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 10:35:29] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 10:35:29] INFO[0m - Searching for remote servers
+[37m[2012-06-11 10:35:34] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 10:35:34] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 10:35:34] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 10:35:34] INFO[0m - Searching for remote servers
+[37m[2012-06-11 10:35:40] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 10:35:40] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 10:35:40] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 10:35:40] INFO[0m - Searching for remote servers
+[37m[2012-06-11 10:35:46] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 10:35:46] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 10:35:46] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 10:35:46] INFO[0m - Searching for remote servers
+[37m[2012-06-11 10:35:51] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 10:35:51] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 10:42:41] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 10:42:41] INFO[0m - Searching for remote servers
+[37m[2012-06-11 10:42:47] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 10:42:47] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 10:42:47] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 10:42:47] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2012-06-11 10:43:04] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 10:43:04] INFO[0m - Searching for remote servers
+[37m[2012-06-11 10:43:10] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 10:43:10] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 10:43:10] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 10:43:10] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2012-06-11 10:43:35] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 10:43:35] INFO[0m - Searching for remote servers
+[37m[2012-06-11 10:43:40] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 10:43:40] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 10:43:40] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 10:43:40] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2012-06-11 10:45:22] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 10:45:22] INFO[0m - Searching for remote servers
+[37m[2012-06-11 10:45:27] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 10:45:27] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 10:45:27] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 10:45:27] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-11 10:45:27] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
+[37m[2012-06-11 10:45:27] INFO[0m - Missing service was found to be OK: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[33m[2012-06-11 10:45:27] WARN[0m - Service: lucius.osburn-sharp.ath.cx:49902-dev already registered
+[32m[2012-06-11 10:45:57] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 10:45:57] INFO[0m - Searching for remote servers
+[37m[2012-06-11 10:46:03] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 10:46:03] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 10:46:03] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 10:46:03] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 10:46:03] SYSTEM[0m - Deleted Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2012-06-11 10:46:30] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 10:46:30] INFO[0m - Searching for remote servers
+[37m[2012-06-11 10:46:35] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 10:46:35] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 10:46:35] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 10:46:35] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 10:46:35] SYSTEM[0m - Deleted Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2012-06-11 10:57:42] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 10:57:42] INFO[0m - Searching for remote servers
+[37m[2012-06-11 10:57:47] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 10:57:47] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 10:57:47] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 10:57:47] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[33m[2012-06-11 10:57:47] WARN[0m - Attempt was made to remove a service that is not registered: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[33m[2012-06-11 10:57:47] WARN[0m - Trying to remove it remotely anyway
+[32m[2012-06-11 11:27:23] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 11:27:23] INFO[0m - Searching for remote servers
+[37m[2012-06-11 11:27:28] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 11:27:28] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 11:27:28] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 11:27:28] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[33m[2012-06-11 11:27:28] WARN[0m - Attempt was made to remove a service that is not registered: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[33m[2012-06-11 11:27:28] WARN[0m - Trying to remove it remotely anyway
+[32m[2012-06-11 11:31:21] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 11:31:21] INFO[0m - Searching for remote servers
+[37m[2012-06-11 11:31:27] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 11:31:27] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 11:31:27] INFO[0m - Searching for services. Found 0 matching.
+[37m[2012-06-11 11:31:27] INFO[0m -   Arguments: {}
+[32m[2012-06-11 11:32:53] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 11:32:53] INFO[0m - Searching for remote servers
+[37m[2012-06-11 11:32:59] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 11:32:59] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 11:32:59] INFO[0m - Searching for services. Found 0 matching.
+[37m[2012-06-11 11:32:59] INFO[0m -   Arguments: {}
+[37m[2012-06-11 11:32:59] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 11:32:59] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 11:34:01] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 11:34:01] INFO[0m - Searching for remote servers
+[37m[2012-06-11 11:34:06] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 11:34:06] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 11:34:06] INFO[0m - Searching for services. Found 0 matching.
+[37m[2012-06-11 11:34:06] INFO[0m -   Arguments: {}
+[37m[2012-06-11 11:34:06] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 11:34:06] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 11:51:07] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 11:51:07] INFO[0m - Searching for remote servers
+[37m[2012-06-11 11:51:12] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 11:51:12] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 11:51:12] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 11:51:12] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-11 11:51:12] INFO[0m - Searching for services. Found 1 matching.
+[37m[2012-06-11 11:51:12] INFO[0m -   Arguments: {}
+[37m[2012-06-11 11:51:12] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 11:51:12] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 11:54:48] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 11:54:48] INFO[0m - Searching for remote servers
+[37m[2012-06-11 11:54:54] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 11:54:54] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 11:54:54] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 11:54:54] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-11 11:54:54] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 11:54:54] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 11:55:53] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 11:55:53] INFO[0m - Searching for remote servers
+[37m[2012-06-11 11:55:59] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 11:55:59] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 11:55:59] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 11:55:59] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-11 11:55:59] INFO[0m - Searching for services. Found 1 matching.
+[37m[2012-06-11 11:55:59] INFO[0m -   Arguments: {:ignore_access=>{:ignore_access=>true}}
+[37m[2012-06-11 11:55:59] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 11:55:59] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 11:58:23] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 11:58:23] INFO[0m - Searching for remote servers
+[37m[2012-06-11 11:58:29] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 11:58:29] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 11:58:29] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 11:58:29] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-11 11:58:29] INFO[0m - Searching for services. Found 1 matching.
+[37m[2012-06-11 11:58:29] INFO[0m -   Arguments: {:ignore_access=>{:ignore_access=>true}}
+[37m[2012-06-11 11:58:29] INFO[0m - Searching for services. Found 1 matching.
+[37m[2012-06-11 11:58:29] INFO[0m -   Arguments: {:ignore_access=>true, :host=>nil}
+[37m[2012-06-11 11:58:29] INFO[0m - Get returned rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-11 11:58:29] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 11:58:29] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 12:41:39] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 12:41:39] INFO[0m - Searching for remote servers
+[37m[2012-06-11 12:41:45] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 12:41:45] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 12:41:45] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 12:41:45] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-11 12:41:45] INFO[0m - Searching for services. Found 1 matching.
+[37m[2012-06-11 12:41:45] INFO[0m -   Arguments: {:ignore_access=>{:ignore_access=>true}}
+[37m[2012-06-11 12:41:45] INFO[0m - Searching for services. Found 1 matching.
+[37m[2012-06-11 12:41:45] INFO[0m -   Arguments: {:ignore_access=>true, :host=>nil}
+[37m[2012-06-11 12:41:45] INFO[0m - Get returned rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-11 12:41:45] INFO[0m - Searching for services. Found 0 matching.
+[37m[2012-06-11 12:41:45] INFO[0m -   Arguments: {:ignore_access=>true, :name=>"Another"}
+[37m[2012-06-11 12:41:45] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 12:41:45] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 12:50:31] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 12:50:31] INFO[0m - Searching for remote servers
+[37m[2012-06-11 12:50:36] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 12:50:36] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 12:50:36] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 12:50:36] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 12:50:58] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 12:50:58] INFO[0m - Searching for remote servers
+[37m[2012-06-11 12:51:04] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 12:51:04] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 12:51:04] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 12:51:04] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 12:51:31] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 12:51:31] INFO[0m - Searching for remote servers
+[32m[2012-06-11 12:51:41] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 12:51:41] INFO[0m - Searching for remote servers
+[37m[2012-06-11 12:51:46] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 12:51:46] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 12:52:23] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 12:52:23] INFO[0m - Searching for remote servers
+[37m[2012-06-11 12:52:29] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 12:52:29] SYSTEM[0m - Started up the Jerbil Server
+[31m[2012-06-11 12:52:29] ERROR[0m - get_local_services: incorrect key
+[31m[2012-06-11 12:52:29] ERROR[0m - get_local_services: incorrect key
+[31m[2012-06-11 12:52:29] ERROR[0m - get_local_services: incorrect key
+[37m[2012-06-11 12:52:29] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 12:52:29] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 12:56:43] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 12:56:43] INFO[0m - Searching for remote servers
+[37m[2012-06-11 12:56:48] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 12:56:48] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 12:56:48] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 12:56:48] INFO[0m - Added rubytest[:prod]
+[37m[2012-06-11 12:56:48] INFO[0m - Registered Remote Service: rubytest[:prod]
+[37m[2012-06-11 12:56:48] INFO[0m - About to stop the Jerbil Server
+[32m[2012-06-11 12:57:31] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 12:57:31] INFO[0m - Searching for remote servers
+[37m[2012-06-11 12:57:37] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 12:57:37] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 12:57:37] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 12:57:37] INFO[0m - Added rubytest[:prod]
+[37m[2012-06-11 12:57:37] INFO[0m - Registered Remote Service: rubytest[:prod]
+[37m[2012-06-11 12:57:37] INFO[0m - About to stop the Jerbil Server
+[37m[2012-06-11 12:57:37] INFO[0m - Closing connection to; germanicus.osburn-sharp.ath.cx[:dev]
+[32m[2012-06-11 13:02:56] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 13:02:56] INFO[0m - Searching for remote servers
+[37m[2012-06-11 13:03:02] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 13:03:02] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 13:03:02] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 13:03:02] INFO[0m - Added rubytest[:prod]
+[37m[2012-06-11 13:03:02] INFO[0m - Registered Remote Service: rubytest[:prod]
+[37m[2012-06-11 13:03:02] INFO[0m - About to stop the Jerbil Server
+[37m[2012-06-11 13:03:02] INFO[0m - Closing connection to; germanicus.osburn-sharp.ath.cx[:dev]
+[32m[2012-06-11 13:05:22] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 13:05:22] INFO[0m - Searching for remote servers
+[37m[2012-06-11 13:05:28] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 13:05:28] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 13:05:28] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 13:05:28] INFO[0m - Added rubytest[:prod]
+[37m[2012-06-11 13:05:28] INFO[0m - Registered Remote Service: rubytest[:prod]
+[37m[2012-06-11 13:05:28] INFO[0m - About to stop the Jerbil Server
+[37m[2012-06-11 13:05:28] INFO[0m - Closing connection to; germanicus.osburn-sharp.ath.cx[:dev]
+[32m[2012-06-11 13:06:29] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 13:06:29] INFO[0m - Searching for remote servers
+[37m[2012-06-11 13:06:34] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 13:06:34] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 13:06:34] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 13:06:34] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-11 13:06:34] INFO[0m - Registered Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-11 13:06:34] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 13:06:34] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 13:10:51] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 13:10:51] INFO[0m - Searching for remote servers
+[37m[2012-06-11 13:10:57] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 13:10:57] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 13:10:57] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 13:10:57] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-11 13:10:57] INFO[0m - Registered Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-11 13:10:57] INFO[0m - About to stop the Jerbil Server
+[37m[2012-06-11 13:10:57] INFO[0m - Closing connection to; germanicus.osburn-sharp.ath.cx[:dev]
+[32m[2012-06-11 13:14:24] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 13:14:24] INFO[0m - Searching for remote servers
+[37m[2012-06-11 13:14:30] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 13:14:30] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 13:14:30] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 13:14:30] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-11 13:14:30] INFO[0m - Registered Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-11 13:14:30] INFO[0m - About to detach a remote server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 13:14:30] INFO[0m - Detached server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 13:14:30] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 13:14:30] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 13:28:16] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 13:28:16] INFO[0m - Searching for remote servers
+[37m[2012-06-11 13:28:21] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 13:28:21] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 13:28:21] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 13:28:21] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-11 13:28:21] INFO[0m - Registered Remote Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-11 13:28:21] INFO[0m - About to detach a remote server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 13:28:21] INFO[0m - Detached server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 13:28:21] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 13:28:21] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 13:31:04] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 13:31:04] INFO[0m - Searching for remote servers
+[37m[2012-06-11 13:31:10] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 13:31:10] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 13:31:10] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 13:31:10] INFO[0m - Added rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2012-06-11 13:31:10] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2012-06-11 13:31:10] INFO[0m - About to detach a remote server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 13:31:10] INFO[0m - Detached server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 13:31:10] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 13:31:10] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 13:32:42] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 13:32:42] INFO[0m - Searching for remote servers
+[37m[2012-06-11 13:32:47] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 13:32:47] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 13:32:47] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[32m[2012-06-11 13:32:47] DEBUG[0m - mismatching secret: INVALID
+[31m[2012-06-11 13:32:47] ERROR[0m - Secret key from germanicus.osburn-sharp.ath.cx does not match
+[37m[2012-06-11 13:32:47] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 13:32:47] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 13:36:32] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 13:36:32] INFO[0m - Searching for remote servers
+[37m[2012-06-11 13:36:37] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 13:36:37] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 13:36:37] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[31m[2012-06-11 13:36:37] ERROR[0m - get_local_services: incorrect key
+[37m[2012-06-11 13:36:37] INFO[0m - About to stop the Jerbil Server
+[37m[2012-06-11 13:36:37] INFO[0m - Closing connection to; germanicus.osburn-sharp.ath.cx[:dev]
+[32m[2012-06-11 13:37:21] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 13:37:21] INFO[0m - Searching for remote servers
+[37m[2012-06-11 13:37:27] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 13:37:27] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 13:37:27] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[31m[2012-06-11 13:37:27] ERROR[0m - get_local_services: incorrect key
+[37m[2012-06-11 13:37:27] INFO[0m - About to detach a remote server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 13:37:27] INFO[0m - Detached server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 13:37:27] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 13:37:27] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 13:59:31] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 13:59:31] INFO[0m - Searching for remote servers
+[37m[2012-06-11 13:59:36] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 13:59:36] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 13:59:36] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 13:59:36] INFO[0m - Added rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2012-06-11 13:59:36] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2012-06-11 13:59:36] INFO[0m - Deleted Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2012-06-11 13:59:36] INFO[0m - About to stop the Jerbil Server
+[37m[2012-06-11 13:59:36] INFO[0m - Closing connection to; germanicus.osburn-sharp.ath.cx[:dev]
+[32m[2012-06-11 14:00:18] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 14:00:18] INFO[0m - Searching for remote servers
+[37m[2012-06-11 14:00:23] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 14:00:23] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 14:00:23] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 14:00:23] INFO[0m - Added rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2012-06-11 14:00:23] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2012-06-11 14:00:23] INFO[0m - Deleted Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2012-06-11 14:00:23] INFO[0m - About to detach a remote server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 14:00:23] INFO[0m - Detached server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 14:00:23] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 14:00:23] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 14:03:12] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 14:03:12] INFO[0m - Searching for remote servers
+[37m[2012-06-11 14:03:18] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 14:03:18] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 14:03:18] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 14:03:18] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 14:03:18] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2012-06-11 14:03:18] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2012-06-11 14:03:18] INFO[0m - Deleted Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2012-06-11 14:03:18] INFO[0m - About to detach a remote server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 14:03:18] INFO[0m - Detached server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 14:03:18] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 14:03:18] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 16:48:34] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 16:48:34] INFO[0m - Searching for remote servers
+[37m[2012-06-11 16:48:40] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 16:48:40] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 16:48:40] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 16:48:40] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2012-06-11 16:48:40] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 16:48:40] INFO[0m - About to detach a remote server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 16:48:40] INFO[0m - Detached server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 16:48:40] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 16:48:40] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 16:51:07] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 16:51:07] INFO[0m - Searching for remote servers
+[37m[2012-06-11 16:51:13] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 16:51:13] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 16:51:13] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 16:51:13] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 16:51:13] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2012-06-11 16:51:13] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2012-06-11 16:51:13] INFO[0m - Deleted Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2012-06-11 16:51:13] INFO[0m - About to detach a remote server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 16:51:13] INFO[0m - Detached server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 16:51:13] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 16:51:13] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 16:51:25] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 16:51:25] INFO[0m - Searching for remote servers
+[37m[2012-06-11 16:51:30] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 16:51:30] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 16:51:30] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 16:51:30] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2012-06-11 16:51:30] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 16:51:30] INFO[0m - Added rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2012-06-11 16:51:30] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2012-06-11 16:51:30] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2012-06-11 16:51:30] INFO[0m - About to detach a remote server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 16:51:30] INFO[0m - Detached server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 16:51:30] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 16:51:30] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 17:16:52] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 17:16:52] INFO[0m - Searching for remote servers
+[37m[2012-06-11 17:16:58] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 17:16:58] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 17:16:58] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 17:16:58] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2012-06-11 17:16:58] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 17:16:58] INFO[0m - Added rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2012-06-11 17:16:58] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2012-06-11 17:16:58] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2012-06-11 17:16:58] INFO[0m - About to detach a remote server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 17:16:58] INFO[0m - Detached server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 17:16:58] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 17:16:58] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 18:17:13] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 18:17:13] INFO[0m - Searching for remote servers
+[37m[2012-06-11 18:17:19] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 18:17:19] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 18:17:19] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 18:17:19] INFO[0m - Added rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2012-06-11 18:17:19] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2012-06-11 18:17:19] INFO[0m - About to detach a remote server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 18:17:19] INFO[0m - Detached server: germanicus.osburn-sharp.ath.cx[:dev]
+[32m[2012-06-11 18:17:19] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[32m[2012-06-11 18:17:19] DEBUG[0m - mismatching secret: INVALID
+[31m[2012-06-11 18:17:19] ERROR[0m - Secret key from germanicus.osburn-sharp.ath.cx does not match
+[32m[2012-06-11 18:17:19] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[31m[2012-06-11 18:17:19] ERROR[0m - get_local_services: incorrect key
+[37m[2012-06-11 18:17:19] INFO[0m - About to detach a remote server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 18:17:19] INFO[0m - Detached server: germanicus.osburn-sharp.ath.cx[:dev]
+[32m[2012-06-11 18:17:19] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 18:17:19] INFO[0m - Added rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2012-06-11 18:17:19] INFO[0m - Registered Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2012-06-11 18:17:19] INFO[0m - Deleted Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2012-06-11 18:17:19] INFO[0m - About to detach a remote server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 18:17:19] INFO[0m - Detached server: germanicus.osburn-sharp.ath.cx[:dev]
+[32m[2012-06-11 18:17:19] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 18:17:19] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 18:17:19] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2012-06-11 18:17:19] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2012-06-11 18:17:19] INFO[0m - Deleted Remote Service: rubytest[test]@germanicus.osburn-sharp.ath.cx:49901
+[37m[2012-06-11 18:17:19] INFO[0m - About to detach a remote server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 18:17:19] INFO[0m - Detached server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 18:17:19] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
+[32m[2012-06-11 18:17:19] DEBUG[0m - Local service appears to be missing: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 18:17:19] SYSTEM[0m - Deleted Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 18:17:19] SYSTEM[0m - Removed missing local service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-11 18:17:19] INFO[0m - Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902 was registered, but did not respond
+[37m[2012-06-11 18:17:19] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-11 18:17:19] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[32m[2012-06-11 18:17:19] DEBUG[0m - Attempting to register server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 18:17:19] INFO[0m - Added rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[36m[2012-06-11 18:17:19] SYSTEM[0m - Registered Local Service: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[32m[2012-06-11 18:17:19] DEBUG[0m - Registering remote. Connected to germanicus.osburn-sharp.ath.cx
+[37m[2012-06-11 18:17:19] INFO[0m - About to detach a remote server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 18:17:19] INFO[0m - Detached server: germanicus.osburn-sharp.ath.cx[:dev]
+[37m[2012-06-11 18:17:19] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 18:17:19] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 18:51:14] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 18:51:14] INFO[0m - Searching for remote servers
+[37m[2012-06-11 18:51:20] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 18:51:20] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 22:23:42] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 22:23:42] INFO[0m - Searching for remote servers
+[37m[2012-06-11 22:23:48] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 22:23:48] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 22:25:49] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 22:25:49] INFO[0m - Searching for remote servers
+[37m[2012-06-11 22:25:55] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 22:25:55] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 22:27:24] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 22:27:24] INFO[0m - Searching for remote servers
+[37m[2012-06-11 22:27:30] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 22:27:30] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 22:29:26] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 22:29:26] INFO[0m - Searching for remote servers
+[37m[2012-06-11 22:29:31] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 22:29:31] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 22:31:11] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 22:31:11] INFO[0m - Searching for remote servers
+[37m[2012-06-11 22:31:17] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 22:31:17] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 22:32:03] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 22:32:03] INFO[0m - Searching for remote servers
+[37m[2012-06-11 22:32:09] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 22:32:09] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 22:33:18] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 22:33:18] INFO[0m - Searching for remote servers
+[37m[2012-06-11 22:33:24] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 22:33:24] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 22:34:28] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 22:34:28] INFO[0m - Searching for remote servers
+[37m[2012-06-11 22:34:34] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 22:34:34] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 22:35:02] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 22:35:02] INFO[0m - Searching for remote servers
+[37m[2012-06-11 22:35:08] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 22:35:08] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 22:35:08] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 22:35:08] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 22:38:08] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 22:38:08] INFO[0m - Searching for remote servers
+[37m[2012-06-11 22:38:13] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 22:38:13] SYSTEM[0m - Started up the Jerbil Server
+[32m[2012-06-11 22:38:35] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 22:38:35] INFO[0m - Searching for remote servers
+[37m[2012-06-11 22:38:41] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 22:38:41] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-11 22:38:41] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 22:38:41] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 22:39:42] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 22:39:42] INFO[0m - Searching for remote servers
+[37m[2012-06-11 22:39:48] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 22:39:48] SYSTEM[0m - Started up the Jerbil Server
+[36m[2012-06-11 22:39:48] SYSTEM[0m - Stop called with incorrect private key
+[32m[2012-06-11 22:39:48] DEBUG[0m -  Private Key provided:
+[32m[2012-06-11 22:39:48] DEBUG[0m - 123456
+[32m[2012-06-11 22:39:48] DEBUG[0m -  Private Key required
+[32m[2012-06-11 22:39:48] DEBUG[0m - ABCDEFG
+[37m[2012-06-11 22:39:48] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 22:39:48] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 22:41:14] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 22:41:14] INFO[0m - Searching for remote servers
+[37m[2012-06-11 22:41:19] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 22:41:19] SYSTEM[0m - Started up the Jerbil Server
+[36m[2012-06-11 22:41:19] SYSTEM[0m - Stop called with incorrect private key
+[32m[2012-06-11 22:41:19] DEBUG[0m -  Private Key provided:
+[32m[2012-06-11 22:41:19] DEBUG[0m - 123456
+[32m[2012-06-11 22:41:19] DEBUG[0m -  Private Key required
+[32m[2012-06-11 22:41:19] DEBUG[0m - ABCDEFG
+[37m[2012-06-11 22:41:19] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 22:41:19] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 22:41:35] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 22:41:35] INFO[0m - Searching for remote servers
+[37m[2012-06-11 22:41:41] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 22:41:41] SYSTEM[0m - Started up the Jerbil Server
+[36m[2012-06-11 22:41:41] SYSTEM[0m - Stop called with incorrect private key
+[32m[2012-06-11 22:41:41] DEBUG[0m -  Private Key provided:
+[32m[2012-06-11 22:41:41] DEBUG[0m - 123456
+[32m[2012-06-11 22:41:41] DEBUG[0m -  Private Key required
+[32m[2012-06-11 22:41:41] DEBUG[0m - ABCDEFG
+[37m[2012-06-11 22:41:41] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 22:41:41] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 22:43:09] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 22:43:09] INFO[0m - Searching for remote servers
+[37m[2012-06-11 22:43:14] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 22:43:14] SYSTEM[0m - Started up the Jerbil Server
+[36m[2012-06-11 22:43:14] SYSTEM[0m - Stop called with incorrect private key
+[32m[2012-06-11 22:43:14] DEBUG[0m -  Private Key provided:
+[32m[2012-06-11 22:43:14] DEBUG[0m - 123456
+[32m[2012-06-11 22:43:14] DEBUG[0m -  Private Key required
+[32m[2012-06-11 22:43:14] DEBUG[0m - ABCDEFG
+[37m[2012-06-11 22:43:14] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 22:43:14] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-11 22:43:53] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-11 22:43:53] INFO[0m - Searching for remote servers
+[37m[2012-06-11 22:43:58] INFO[0m - Found 0 remote servers
+[36m[2012-06-11 22:43:58] SYSTEM[0m - Started up the Jerbil Server
+[36m[2012-06-11 22:43:58] SYSTEM[0m - Stop called with incorrect private key
+[32m[2012-06-11 22:43:58] DEBUG[0m -  Private Key provided:
+[32m[2012-06-11 22:43:58] DEBUG[0m - 123456
+[32m[2012-06-11 22:43:58] DEBUG[0m -  Private Key required
+[32m[2012-06-11 22:43:58] DEBUG[0m - ABCDEFG
+[37m[2012-06-11 22:43:58] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-11 22:43:58] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-12 12:16:32] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-12 12:16:32] INFO[0m - Searching for remote servers
+[37m[2012-06-12 12:16:38] INFO[0m - Found 0 remote servers
+[36m[2012-06-12 12:16:38] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-12 12:16:38] INFO[0m - Searching for services. Found 0 matching.
+[37m[2012-06-12 12:16:38] INFO[0m -   Arguments: {:ignore_access=>false}
+[37m[2012-06-12 12:16:38] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-12 12:16:38] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-12 12:16:38] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-12 12:16:38] INFO[0m - Searching for remote servers
+[37m[2012-06-12 12:16:44] INFO[0m - Found 0 remote servers
+[36m[2012-06-12 12:16:44] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-12 12:16:44] INFO[0m - About to register a local service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-12 12:16:44] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-12 12:16:44] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-12 12:16:44] INFO[0m - Searching for services. Found 1 matching.
+[37m[2012-06-12 12:16:44] INFO[0m -   Arguments: {:ignore_access=>{:ignore_access=>true}}
+[37m[2012-06-12 12:16:44] INFO[0m - Searching for services. Found 1 matching.
+[37m[2012-06-12 12:16:44] INFO[0m -   Arguments: {:host=>nil, :ignore_access=>true}
+[37m[2012-06-12 12:16:44] INFO[0m - Get returned rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-12 12:16:44] INFO[0m - Searching for services. Found 0 matching.
+[37m[2012-06-12 12:16:44] INFO[0m -   Arguments: {:name=>"Another", :ignore_access=>true}
+[37m[2012-06-12 12:16:44] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-12 12:16:44] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-12 12:16:44] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-12 12:16:44] INFO[0m - Searching for remote servers
+[37m[2012-06-12 12:16:49] INFO[0m - Found 0 remote servers
+[36m[2012-06-12 12:16:49] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-12 12:16:49] INFO[0m - About to register a local service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-12 12:16:49] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-12 12:16:49] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-12 12:16:49] INFO[0m - About to register a local service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-12 12:16:49] INFO[0m - There is already a service registered: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-12 12:16:49] INFO[0m - Local service missing for rubytest[dev]@lucius.osburn-sharp.ath.cx:49902?
+[37m[2012-06-12 12:16:49] INFO[0m - Missing service was found to be OK: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[33m[2012-06-12 12:16:49] WARN[0m - Service: lucius.osburn-sharp.ath.cx:49902-dev already registered
+[37m[2012-06-12 12:16:49] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-12 12:16:49] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-12 12:16:49] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-12 12:16:49] INFO[0m - Searching for remote servers
+[37m[2012-06-12 12:16:55] INFO[0m - Found 0 remote servers
+[36m[2012-06-12 12:16:55] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-12 12:16:55] INFO[0m - About to register a local service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-12 12:16:55] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-12 12:16:55] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-12 12:16:55] SYSTEM[0m - Deleted Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-12 12:16:55] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-12 12:16:55] SYSTEM[0m - Stopping the Jerbil Server now
+[32m[2012-06-12 12:16:55] DEBUG[0m - Started the Logger for Jerbil
+[37m[2012-06-12 12:16:55] INFO[0m - Searching for remote servers
+[37m[2012-06-12 12:17:01] INFO[0m - Found 0 remote servers
+[36m[2012-06-12 12:17:01] SYSTEM[0m - Started up the Jerbil Server
+[37m[2012-06-12 12:17:01] INFO[0m - About to register a local service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-12 12:17:01] INFO[0m - Added rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-12 12:17:01] SYSTEM[0m - Registered Local Service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[33m[2012-06-12 12:17:01] WARN[0m - Attempt was made to remove a service that is not registered: rubytest[test]@lucius.osburn-sharp.ath.cx:49901
+[33m[2012-06-12 12:17:01] WARN[0m - Trying to remove it remotely anyway
+[37m[2012-06-12 12:17:01] INFO[0m - About to stop the Jerbil Server
+[36m[2012-06-12 12:17:01] SYSTEM[0m - Stopping the Jerbil Server now

@@ -10,16 +10,28 @@
 # and in the file copyright.txt. Under the terms of this licence, all derivative works
 # must themselves be licensed under the Open Software Licence v. 3.0
 # 
-# 
-require 'rubygems'
+#
+require 'jerbil/jerbil_service/base'
+require 'jerbil/jerbil_service/support'
 
-require 'jerbil/jerbil_service/client'
+# Test Service for Jerbil
 
-client = JerbilClient.new(:rubytest, :test)
+module RubyTest
 
-puts client.action
+  extend JerbilService::Support
 
-puts client.not_an_action
+  class Service < JerbilService::Base
 
+    def initialize(pkey, options)
+      super(:rubytest, pkey, options)
+    end
 
+    def action
+      @logger.debug("Someone called the action method!")
+      return "Hello"
+    end
+
+  end
+
+end
 

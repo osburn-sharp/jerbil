@@ -25,8 +25,8 @@ class Server < Thor
   desc "local", "display information about the local jerbil server"
   def local
     config = Jerbil.get_config(options[:config])
-    local = Jerbil.get_local_server(options[:config])
-    puts "Checking for local Jerbil server"
+    local = Jerbil::Servers.get_local_server(config[:environment])
+    puts "Checking for local Jerbil server running in env: #{config[:environment]}"
     begin
       jerbs = local.connect
       started = jerbs.started

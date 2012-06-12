@@ -13,7 +13,8 @@
 # The purpose of these tests is to check the local interface to a Jerbil Broker only
 # 
 require 'rubygems'
-require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+require 'rspec/mocks/standalone'
 require 'jerbil/servers'
 require 'jerbil/service'
 require 'jerbil/config'
@@ -21,10 +22,10 @@ require 'jerbil'
 require 'jelly'
 
 
-conf_file = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/jerbil_local.rb')
+conf_file = File.expand_path(File.dirname(__FILE__) + '/../../test/conf.d/jerbil_test.rb')
 
 
-describe "A local Jerbil Session" do
+describe "A local Jerbil Session running under a daemon" do
   
   before(:all) do
     Jelly::Logger.disable_syslog
@@ -32,57 +33,48 @@ describe "A local Jerbil Session" do
 
   before(:each) do
 
-    @pkey = "ABCDEFG"
     my_conf = Jerbil::Config.new(conf_file)
-    #puts my_conf.inspect
-    @my_session = Jerbil::Broker.new(my_conf, @pkey)
+    test_server = Jerbil::Servers.get_local_server(my_conf[:environment])
+    @my_session = test_server.connect
+    @start_count = @my_session.service_count
+    @registrations = @my_session.registrations
     @my_service = Jerbil::ServiceRecord.new(:rubytest, :dev)
     @a_service = Jerbil::ServiceRecord.new(:rubytest, :test)
   end
 
-  after(:each) do
-    @my_session.stop(@pkey)
-  end
 
   it "should be easily created" do
     @my_session.started.should be_true
-    @my_session.registrations.should == 0
-    @my_session.service_count.should == 0
-    @my_session.local_service_count.should == 0
-    @my_session.remote_service_count.should == 0
+    @my_session.registrations.should == @registrations
+    @my_session.service_count.should == @start_count
     @my_session.get_all.should == []
   end
 
   it "should be easy to add a service" do
     @my_session.register(@my_service)
-    @my_session.registrations.should == 1
-    @my_session.service_count.should == 1
-    @my_session.local_service_count.should == 1
-    @my_session.remote_service_count.should == 0
+    @my_session.registrations.should == @registrations + 1
+    @my_session.service_count.should == @start_count + 1
     services = @my_session.get_all(:ignore_access => true)
     services[0].should == @my_service
     service = @my_session.get_local(:ignore_access => true)
     service.should == @my_service
     @my_session.find(:name=>'Another', :ignore_access => true).should == []
+    @my_session.remove(@my_service)
   end
 
-it "should not be possible to register the same service twice" do
-    @my_service.should_receive(:connect).and_return(true) # make it appear the service is live
-    @my_session.register(@my_service)
-    lambda{@my_session.register(@my_service)}.should raise_error{Jerbil::ServiceAlreadyRegistered}
-  end
+  # cannot stub on a live server so cannot test registration twice without a live service!
 
   it "should be easy to remove a service" do
     @my_session.register(@my_service)
     @my_session.remove(@my_service)
-    @my_session.service_count.should == 0
+    @my_session.service_count.should == @start_count
   end
 
   it "should do nothing if you remove an unregistered service" do
     @my_session.register(@my_service)
     @my_session.remove(@a_service)
-    @my_session.service_count.should == 1
-
+    @my_session.service_count.should == @start_count + 1
+    @my_session.remove(@my_service)
   end
 
 

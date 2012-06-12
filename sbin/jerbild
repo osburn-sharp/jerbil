@@ -1,4 +1,4 @@
-#! /usr/bin/ruby
+#!/usr/bin/env ruby18
 # Description
 #
 # Author:: Robert Sharp
@@ -17,7 +17,7 @@
 #
 
 require 'jerbil'
-require 'jerbil/server'
+require 'jerbil/servers'
 require 'jerbil/config'
 require 'jerbil/version'
 require 'jerbil/support'
@@ -91,7 +91,7 @@ puts "Starting the Jerbil Server (#{Jerbil::Ident})" if verbose
 begin
   config = Jerbil.get_config(config_file)
 
-  my_self = Jerbil.get_local_server(config_file)
+  #my_self = Jerbil.get_local_server(config_file)
 rescue Jerbil::JerbilConfigError => err
   puts "Error in Jerbil Config File: #{err.message}"
   exit 1
@@ -146,14 +146,17 @@ config = config.merge(log_opts) # add them back!
 logger.info "Logging started"
 logger.puts "Daemonized?" if verbose 
 
-servers = config.delete(:servers)
+#servers = config.delete(:servers)
+
+# servers = Jerbil::ServerRecord.find_servers(config[:environment],0.1)
+my_self = Jerbil::Servers.create_local_server(config[:environment], pkey)
 
 # prevent the server from generating syslogs
 #Jelly.disable_syslog unless log_to_syslog
 
 $SAFE = 1 # using DRb, so prevent anything nasty
 
-jerbild = Jerbil::Broker.new(my_self, servers, config, pkey)
+jerbild = Jerbil::Broker.new(config, pkey)
 
 DRb.start_service(my_self.drb_address, jerbild)
 

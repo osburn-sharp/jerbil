@@ -1,0 +1,57 @@
+#!/sbin/runscript
+#
+# INIT Script for a Jerbil Service
+
+# create dependencies from the list of services in $NEEDS and $USES
+depend() {
+  for need_service in $NEEDS
+  do
+    need $need_service
+  done
+  for use_service in $USES
+  do
+    use $use_service
+  done
+}
+
+# make sure there are no unexpected rubylibs
+export RUBYLIB=""
+
+myopts=""
+[ -n "${NO_DAEMON}" ] && myopts="${myopts} -n"
+[ -n "${CONF_FILE}" ] && myopts="${myopts} -c ${CONF_FILE}"
+[ "${VERBOSE}" == "true" ] && [ "${QUIET}" != "true" ] && myopts="${myopts} -V"
+[ -n "${NO_SYSLOG}" ] && myopts="${myopts} -S"
+[ "$SERVICE_NAME" == "" ] && SERVICE_NAME="${SVCNAME}"
+
+start() {
+  ebegin "Starting Jerbil Service ${SERVICE_NAME}"
+
+
+    # create the options for starting the daemon from the settings in the
+    # /etc/conf.d/jservice file (same name as this link)
+
+    #/bin/su -m -c "/usr/sbin/jerbild ${myopts}" - jermine
+    /usr/sbin/jserviced ${myopts} -s ${SERVICE_NAME}
+
+  eend $?
+}
+
+status() {
+  ebegin "Checking status for Jerbil Service ${SERVICE_NAME}"
+    /usr/sbin/jservice-status ${myopts} -s ${SERVICE_NAME}
+  eend $?
+}
+
+
+stop() {
+  ebegin "Stopping Jerbil Service ${SERVICE_NAME}"
+    /usr/sbin/jservice-stop ${myopts} -s ${SERVICE_NAME}
+  eend $?
+}
+  
+describe() {
+  einfo ${DESCRIPTION}
+
+}
+

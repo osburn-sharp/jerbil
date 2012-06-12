@@ -114,7 +114,7 @@ module Jerbil
      # check that the config_file has been specified
     if config_file.nil? then
       # no, so set the default
-      config_file = Jerbil::DefaultConfigFile
+      config_file = Jeckyl::ConfigRoot + "/jerbil.rb"
     end
 
     # read the config file

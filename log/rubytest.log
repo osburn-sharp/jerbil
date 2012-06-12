@@ -307,3 +307,36 @@ I, [2011-08-03 07:40:48 #15166]  INFO -- : Started service: rubytest[dev]@lucius
 [31m[2011-09-10 08:42:53] ERROR[0m - Call made with Invalid Service Key: 53af41844f
 [36m[2011-09-10 08:48:06] SYSTEM[0m - Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
 [1m[31m[2011-09-10 08:49:00] FATAL[0m[0m - Error with Jerbil Service: Jerbil::ServiceAlreadyRegistered
+[1m[31m[2012-06-01 07:12:40] FATAL[0m[0m - Error setting up DRb Server: druby://lucius.osburn-sharp.ath.cx:49202 - #<Errno::ECONNREFUSED: Connection refused - connect(2)>
+[36m[2012-06-01 07:14:59] SYSTEM[0m - Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-01 07:17:52] SYSTEM[0m - Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-01 07:18:02] SYSTEM[0m - Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-01 07:18:38] SYSTEM[0m - Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-01 07:22:42] SYSTEM[0m - Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-01 07:23:08] SYSTEM[0m - Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-01 07:24:19] SYSTEM[0m - Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-01 07:25:15] SYSTEM[0m - Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-01 07:25:55] SYSTEM[0m - Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-01 07:26:10] SYSTEM[0m - Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-01 18:31:15] SYSTEM[0m - Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-01 18:33:22] SYSTEM[0m - Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[37m[2012-06-01 18:33:47] INFO[0m - No user specified
+[36m[2012-06-01 18:33:50] SYSTEM[0m - Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-01 18:34:04] SYSTEM[0m - Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-02 07:49:59] SYSTEM[0m - Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-02 07:51:36] SYSTEM[0m - Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-02 07:52:18] SYSTEM[0m - Set UID to 501
+[36m[2012-06-02 07:52:21] SYSTEM[0m - Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-02 07:53:57] SYSTEM[0m - Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-02 10:23:56] SYSTEM[0m - Set UID to 501
+[36m[2012-06-02 10:23:59] SYSTEM[0m - Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-02 10:24:27] SYSTEM[0m - Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-02 10:28:06] SYSTEM[0m - Set UID to 501
+[36m[2012-06-02 10:28:09] SYSTEM[0m - Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-03 07:47:49] SYSTEM[0m - Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-03 08:11:23] SYSTEM[0m - Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-03 08:21:49] SYSTEM[0m - Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-06 10:34:54] SYSTEM[0m - Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-06 10:35:41] SYSTEM[0m - Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-06 13:04:02] SYSTEM[0m - Started service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902
+[36m[2012-06-06 13:05:45] SYSTEM[0m - Stopped service: rubytest[dev]@lucius.osburn-sharp.ath.cx:49902

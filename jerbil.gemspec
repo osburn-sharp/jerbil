@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.authors           = [ "Dr Robert" ]
   s.has_rdoc          = true
 
-  s.files             = %w( README.txt History.txt LICENCE.txt Bugs.txt )
+  s.files             = %w( README.rdoc History.txt LICENCE.rdoc Bugs.rdoc )
   s.files            += Dir.glob("lib/**/*")
   s.files            += Dir.glob("bin/**/*")
   s.files            += Dir.glob("sbin/**/*")
@@ -28,6 +28,10 @@ Gem::Specification.new do |s|
   s.add_dependency('colored')
   s.add_dependency('jelly')
   s.add_dependency('jeckyl')
+  s.add_dependency('thor')
+  s.add_dependency('term-ansicolor')
+  s.add_dependency('daemons')
+  
   
   s.executables << 'jerbil'
 

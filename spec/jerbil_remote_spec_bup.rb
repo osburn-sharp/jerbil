@@ -10,7 +10,6 @@
 # and in the file copyright.txt. Under the terms of this licence, all derivative works
 # must themselves be licensed under the Open Software Licence v. 3.0
 # 
-# The purpose of these tests is to check the remote interface to the Jerbil Server
 # 
 
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
@@ -28,7 +27,7 @@ conf_file = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/jerbil_lo
 log_dir = File.expand_path(File.dirname(__FILE__) + '/../log')
 key_file = File.expand_path(File.dirname(__FILE__) + '/../test/private_key_file.asc')
 
-describe "A Remote Jerbil Session" do
+describe "A Jerbil Session" do
 
   before(:all) do |variable|
     @calling_key = 'JKLMNOP'
@@ -37,7 +36,6 @@ describe "A Remote Jerbil Session" do
     @calling_server = Jerbil::Servers.new('germanicus.osburn-sharp.ath.cx', @calling_key, :dev, 49902)
     @third_server = Jerbil::Servers.new('antonia.osburn-sharp.ath.cx', @third_key, :dev, 49902)  
     @my_service = Jerbil::ServiceRecord.new(:rubytest, :dev)
-    @another_service = Jerbil::ServiceRecord.new(:rubytest, :test)
     @my_conf = Jerbil::Config.new(conf_file)
     @secret = @my_conf[:secret]
     @env = @my_conf[:environment]
@@ -98,18 +96,73 @@ describe "A Remote Jerbil Session" do
     @my_session.service_count.should == 1
     @my_session.detach_server(rkey, @calling_server)
   end
-  
-  it "should return a locally registered service when asked" do
-    @my_session.register(@my_service)
-    rkey = @my_session.register_server(@calling_server, @secret, @env)    
-    services = @my_session.get_local_services(rkey)
-    services[0].should == @my_service
-    @my_session.register(@another_service)
-    @my_session.local_service_count.should == 2
-    services.length.should == 1
-    @my_session.detach_server(rkey, @calling_server)
-    
+
+  describe "Services" do
+
+    before(:each) do
+      #Syslog.should_receive(:info).exactly(3).times.and_return(true)
+      @my_session.register(@my_service)
+      @my_session.register_remote(@calling_key, @a_service)
+      @my_session.register_remote(@calling_key, @b_service)
+    end
+
+    it "should be easy to add multiple services" do
+      @my_session.services.should == 3
+    end
+
+    it "should be possible to find a service by name" do
+      services = @my_session.find(:name=>:rubytest)
+      services.length.should == 3
+      services[0].should == @my_service
+    end
+
+    it "should be possible to find a service by env" do
+      services = @my_session.find(:env=>:prod)
+      services.length.should == 1
+      services[0].should == @b_service
+      services[0].host.should == 'antonia.osburn-sharp.ath.cx'
+    end
+
+    it "should be possible to find a service by env" do
+      services = @my_session.find(:env=>:test)
+      services.length.should == 1
+      services[0].should == @a_service
+      services[0].host.should == @remote_host
+    end
+
+    it "should not be possible to find a service not registered" do
+      services = @my_session.find(:name=>:Bilker)
+      services.length.should == 0
+    end
+
+    it "should be possible to get a service in one go" do
+      my_service = @my_session.get({:name=>:rubytest, :env=>:prod}, true)
+      my_service.should be_a_kind_of(Jerbil::ServiceRecord)
+      my_service.env.should == :prod
+
+    end
   end
 
+
+  describe "remote server calls" do
+
+    before(:each) do
+      #Syslog.should_receive(:info).exactly(3).times.and_return(true)
+      @my_session.register(@my_service)
+      @my_session.register_remote(@calling_key, @a_service)
+      @my_session.register_remote(@calling_key, @b_service)
+    end
+
+    it "should return all locally registered services" do
+      local_services = @my_session.get_local_services(@calling_key)
+      local_services.length.should == 1
+    end
+
+    it "should not be possible to get local services without a valid server key" do
+      #Syslog.should_not_receive(:info)
+      lambda{@my_session.get_local_services('INVALID')}.should raise_error{Jerbil::InvalidServerKey}
+    end
+
+  end
 
 end

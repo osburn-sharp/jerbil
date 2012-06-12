@@ -12,6 +12,7 @@
 # 
 #
 require 'jerbil/service'
+require 'jerbil/servers'
 require 'jerbil/errors'
 require 'jerbil/config'
 require 'jerbil/support'
@@ -65,24 +66,64 @@ module JerbilService
     #   * log_level - :system, :verbose, :debug (see Jelly)
     #   * log_rotation - number of log files to keep
     #   * log_length - size of log files (in bytes)
-    #   * jerbil_config - the config file for Jerbil - defaults to /etc/jermine/jerbil.conf
     #   * exit_on_stop - set to false to prevent the stop method invoking exit! For testing.
     #   * unsafe - set to true to prevent init from setting $SAFE > 0
+    #   * user - set to the name of a user to switch to
+    #   * environment - set to one of :dev, :test, :prod
     #
     # * pkey - string containing a private key that has to be provided when calling the
-    #   stop_callback
+    #   stop_callback, and can optionally be required for all calls. Users can get the private
+    #   key either from the Jerbil::ServiceRecord provided by Jerbil, or from the key file
     #
-    # There is a Jeckyl config class defined as a template that includes these options.
+    # There is a Jeckyl::Service config class defined as a template that includes these options.
+    #
+    # Note that generally it is not necessary to call this method directly, but instead use the 
+    # jerbil/jerbil_service/sclient interface to set up a service. This is also automated using
+    # the jserviced script and init files. For example, to create a service call TestService, package as
+    # a gem and publish, You can then create a symbolic link to the jserviced init script called 
+    # test_service and a config file by the same name, and it should start the script automatically!
     #
     def initialize(name, pkey, options)
       @name = name.to_s.capitalize
       @env = options[:environment]
       @private_key = pkey
+      
+      # change the process name 
+      $0 = "#{@name.downcase}-#{@env}"
+      
+      # can't start the logger yet so need to remember what happened
+      set_uid = false
+      new_uid = nil
+      no_user = false
+      failed_setuid = false
+      
+      if options[:user] && Process.uid == 0 then
+        # this is root and we want to become someone else
+        begin
+          new_uid = Etc.getpwnam(options[:user]).uid
+          Process::Sys.setuid(new_uid)
+          set_uid = true
+        rescue ArgumentError
+          # no such user?
+          no_user = true
+        rescue Errno::EPERM
+          failed_setuid = true
+        end
+      end
 
       # start up a logger
       log_opts = Jelly::Logger.get_options(options)
       @logger = Jelly::Logger.new(@name, log_opts)
       # @logger.log_level = options[:log_level]
+      
+      # now remember what happenned
+      @logger.system "Set UID to #{new_uid}" if set_uid
+      @logger.system "Failed to setuid: invalid user #{options[:user]}" if no_user
+      @logger.system "Failed to setuid: no permissions" if failed_setuid
+      
+      unless options[:user]
+        @logger.info "No user specified"
+      end
 
       @exit = options[:exit_on_stop]
 
@@ -90,7 +131,10 @@ module JerbilService
         @service = Jerbil::ServiceRecord.new(name, @env, :verify_callback, :stop_callback)
 
         # register the service
-        @jerbil_server = Jerbil.get_local_server(options[:jerbil_config])
+        # Note that if the options hash includes a :jerbil_env, then this
+        # will be passed to select a Jerbil system running at other than :prod, the default
+        # This is not documented above because it is for testing Jerbil only
+        @jerbil_server = Jerbil::Servers.get_local_server(options[:jerbil_env])
 
         # now connect to it
         jerbil = @jerbil_server.connect

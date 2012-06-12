@@ -1,4 +1,4 @@
-#! /usr/bin/ruby
+#!/usr/bin/env ruby18
 #
 # Jerbil
 #
@@ -15,7 +15,7 @@
 # stop the jerbil server on this host
 # 
 require 'jerbil'
-require 'jerbil/server'
+require 'jerbil/servers'
 require 'jerbil/version'
 require 'jerbil/config'
 require 'jerbil/support'
@@ -62,7 +62,7 @@ puts "Stopping the local Jerbil Server" if verbose
 puts "Version: jerbil-" + Jerbil::Version + " [#{Jerbil::Version_Date}]" if verbose
 
 options = Jerbil::Config.new(config_file)
-servers = options[:servers]
+#servers = options[:servers]
 
 if env != :null then
   server_env = env
@@ -72,7 +72,7 @@ end
 
 puts "Running with environment: #{server_env}" if verbose
 
-local = Jerbil::ServerRecord.get_local_server(servers, server_env)
+local = Jerbil::Servers.get_local_server(server_env)
 
 if local.nil? then
   puts "Cannot find record for a local Jerbil Server" if verbose

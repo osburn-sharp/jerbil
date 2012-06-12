@@ -13,7 +13,7 @@
 # The purpose of these tests is to check the remote interface to the Jerbil Server
 # 
 
-require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
 require 'jerbil/servers'
 require 'jerbil/service'
 require 'jerbil/config'
@@ -23,26 +23,26 @@ require 'syslog'
 require 'jelly'
 require 'rspec/mocks/standalone'
 
-conf_file = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/jerbil_local.rb')
+conf_file = File.expand_path(File.dirname(__FILE__) + '/../../test/conf.d/jerbil_test.rb')
 
-log_dir = File.expand_path(File.dirname(__FILE__) + '/../log')
-key_file = File.expand_path(File.dirname(__FILE__) + '/../test/private_key_file.asc')
 
-describe "A Remote Jerbil Session" do
+describe "A Remote Jerbil Session running under a daemon" do
 
   before(:all) do |variable|
     @calling_key = 'JKLMNOP'
     @third_key = 'GFHNBDUC'
     @pkey = '123456'
-    @calling_server = Jerbil::Servers.new('germanicus.osburn-sharp.ath.cx', @calling_key, :dev, 49902)
-    @third_server = Jerbil::Servers.new('antonia.osburn-sharp.ath.cx', @third_key, :dev, 49902)  
+    @calling_server = Jerbil::Servers.new('germanicus.osburn-sharp.ath.cx', @calling_key, :test, 49902)
+    @third_server = Jerbil::Servers.new('antonia.osburn-sharp.ath.cx', @third_key, :test, 49902)  
     @my_service = Jerbil::ServiceRecord.new(:rubytest, :dev)
     @another_service = Jerbil::ServiceRecord.new(:rubytest, :test)
     @my_conf = Jerbil::Config.new(conf_file)
     @secret = @my_conf[:secret]
+    puts @secret
     @env = @my_conf[:environment]
 
-    @my_session = Jerbil::Broker.new(@my_conf, @pkey)
+    test_server = Jerbil::Servers.get_local_server(@my_conf[:environment])
+    @my_session = test_server.connect
 
     @remote_host = 'germanicus.osburn-sharp.ath.cx'
     Socket.stub(:gethostname).and_return(@remote_host)
@@ -51,10 +51,6 @@ describe "A Remote Jerbil Session" do
     @b_service = Jerbil::ServiceRecord.new(:rubytest, :prod)
     Socket.unstub(:gethostname)
     Jelly::Logger.disable_syslog
-  end
-
-  after(:all) do
-    @my_session.stop(@pkey)
   end
 
   it "should be easily created" do
@@ -97,6 +93,7 @@ describe "A Remote Jerbil Session" do
     @my_session.remove_remote(rkey, @a_service)
     @my_session.service_count.should == 1
     @my_session.detach_server(rkey, @calling_server)
+    @my_session.remove(@my_service)    
   end
   
   it "should return a locally registered service when asked" do
@@ -107,7 +104,9 @@ describe "A Remote Jerbil Session" do
     @my_session.register(@another_service)
     @my_session.local_service_count.should == 2
     services.length.should == 1
-    @my_session.detach_server(rkey, @calling_server)
+    #@my_session.detach_server(rkey, @calling_server)
+    @my_session.remove(@my_service)    
+    @my_session.remove(@another_service)    
     
   end
 

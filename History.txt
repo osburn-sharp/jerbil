@@ -1,5 +1,13 @@
 ==History
 
+jerbil-0.99.01 08-June-2012
+
+First pre-release of Jerbil 1.0.0, offering flexible server configuration and a single
+script for controlling services.
+
+* reconfigured options to use Jeckyl::Service and to add net address and mask details
+* renamed Jerbil::ServerRecord to Jerbil::Servers to reflect the role of the class
+
 jerbil-0.2.21 19-May-2012
 
 Added Aurelius to the default files and rename jers to jerbil

@@ -171,51 +171,6 @@ module Jerbil
       DRb.stop_service if @close
     end
 
-#    def stop(kill=true)
-#      begin
-#        unless @stop_callback.nil?
-#          service = self.connect(false)
-#          service.send @stop_callback, @key
-#        end
-#      rescue
-#        # do I need this?
-#      ensure
-#        # could not contact service
-#        # assume it is misbehaving
-#        Process.kill("SIGKILL", @pid) if kill
-#        # and do no more
-#      end
-#    end
-
-    # mark the service as locked so server knows not
-    # to release record to another client
-    # * client_key - the random key given to the client when
-    #   it registers with Jerbil
-    def lock(client_key)
-      @lock = client_key
-    end
-
-    # unlock the service to allow anyone to use it
-    #
-    # * client_key - to prevent other clients from unlocking the service
-    def unlock(client_key)
-      @lock = nil if @lock == client_key
-    end
-
-    # returns true if the service is locked
-    def locked?
-      return @lock.nil?
-    end
-
-    # WHY???
-    def to_hash
-      my_hash = Hash.new
-      my_hash[:name] = @name unless @name.nil?
-      my_hash[:port] = @port unless @port.nil?
-      my_hash[:env] = @env unless @env.nil?
-      my_hash[:pid] = @pid unless @pid.nil?
-      return my_hash
-    end
     
   protected
 

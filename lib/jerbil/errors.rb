@@ -49,9 +49,15 @@ module Jerbil
 
   # create a class for all server related errors
   class JerbilServerError < JerbilError; end
+  
+  # authentication of a server etc failed
+  class JerbilAuthenticationError < JerbilError; end
 
   # error in the jerbil config file
   class JerbilConfigError < JerbilServerError; end
+  
+  # no jerbil service
+  class MissingJerbilService < JerbilServerError; end
 
   # failed to find the server in the list of servers provided in config
   class MissingServer < JerbilServerError; end

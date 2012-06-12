@@ -33,7 +33,7 @@ describe "Service" do
       a_service.matches?(:name=>:rubytest, :env=>:dev, :key=>my_key).should be_true
     end
 
-    it "should match the serice with the same name" do
+    it "should match the service with the same name" do
       a_service = Jerbil::ServiceRecord.new(:rubytest, :dev)
       a_service.matches?(:name=>:rubytest).should be_true
     end

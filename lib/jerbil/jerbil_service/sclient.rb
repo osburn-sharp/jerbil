@@ -18,6 +18,7 @@ require 'socket'
 
 require 'jelly'
 require 'jerbil/support'
+require 'jerbil/servers'
 require 'jeckyl/errors'
 
 module JerbilService
@@ -45,7 +46,7 @@ module JerbilService
       @output = $stderr
       @logger = nil
       @set_log_daemon = false # flag to log the daemon itself
-      @jerbil_config_file = nil
+      @jerbil_env = nil
       @klass = klass
       @name = klass.to_s.downcase
       @name_symbol = @name.to_sym
@@ -105,8 +106,8 @@ module JerbilService
     
     # override the default jerbil config file, used only
     # for testing new versions of jerbil
-    def jerbil_config_file=(jfile)
-      @jerbil_config_file = jfile
+    def jerbil_env=(env)
+      @jerbil_env = env
     end
 
 
@@ -135,15 +136,15 @@ module JerbilService
       
       # get the config options for this service
       config = @klass.get_config(@config_file)
-      
-      # check if there is a jerbil config file specified by the caller
-      # and add/override the config option
-      if @jerbil_config_file then
-        config[:jerbil_config] = @jerbil_config_file
-      end
-      
+            
       # create a hash for logger options
       log_opts = {}
+      
+      # to test a new jerbil server, this needs to be set to the
+      # jerbil server's environment. Only needed for test purposes
+      if @jerbil_env then
+        config[:jerbil_env] = @jerbil_env
+      end
 
       # create a Jelly logging object if requested
       if @set_log_daemon then
@@ -242,7 +243,7 @@ module JerbilService
 
       begin
         # find jerbil
-        jerbil_server = Jerbil.get_local_server(@jerbil_config_file)
+        jerbil_server = Jerbil::Servers.get_local_server(@jerbil_env)
 
         # now connect to it
         jerbil = jerbil_server.connect

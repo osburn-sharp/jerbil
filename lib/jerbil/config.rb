@@ -1,8 +1,11 @@
 #
-# Description
+#
+# = Jerbil Config
+#
+# == Update to use Jeckyl::Service
 #
 # Author:: Robert Sharp
-# Copyright:: Copyright (c) 2010 Robert Sharp
+# Copyright:: Copyright (c) 2012 Robert Sharp
 # License:: Open Software Licence v3.0
 #
 # This software is licensed for use under the Open Software Licence v. 3.0
@@ -10,89 +13,49 @@
 # and in the file copyright.txt. Under the terms of this licence, all derivative works
 # must themselves be licensed under the Open Software Licence v. 3.0
 #
-# Define a Jeckyl class to collect parameters from config file into an options hash
 # 
+#
+
+require 'jeckyl/service'
 require 'jeckyl'
-require 'jeckyl/errors'
-require 'jerbil/server'
 
 module Jerbil
-
-  DefaultConfigFile = Jeckyl::ConfigRoot + '/jerbil.rb'
-
-  class Config < Jeckyl::Options
-
-    def configure_environment(env)
-      default :prod
-      comment "Set the default environment for jerbil related commands etc. This should",
-        "match the environment used in the servers below.",
-        "",
-        "Can be one of :prod, :test, :dev"
-
-      env_set = [:prod, :test, :dev]
-      a_member_of(env, env_set)
-      
-    end
-
-    def configure_servers(ary)
-      comment "Array of Jerbil::Server, one for each server in the system"
-
-      an_array_of(ary, Jerbil::ServerRecord)
-      
-    end
-
-    def configure_log_dir(dir)
-      default '/tmp'
-      comment "Location for Jelly (logging utility) to save log files"
-
-      a_writable_dir(dir)
-
-    end
-
-    def configure_log_level(lvl)
-      default :system
-      comment "Controls the amount of logging done by Jelly",
-        "",
-        " * :system - standard message, plus log to syslog",
-        " * :verbose - more generous logging to help resolve problems",
-        " * :debug - usually used only for resolving problems during development",
-        ""
-
-      lvl_set = [:system, :verbose, :debug]
-      a_member_of(lvl, lvl_set)
-
-    end
-
-    # log_rotation === 0..20 files
-    def configure_log_rotation(int)
-      default 2
-      comment "Number of log files to retain at any moment"
-
-      a_type_of(int, Integer) && in_range(int, 0, 20)
-
-    end
-
-    # log_length === 1..20 Mb
-    def configure_log_length(int)
-      default 1 #Mbyte
-      comment "Size of a log file (in MB) before switching to the next log"
-
-      a_type_of(int, Integer) && in_range(int, 1, 20)
-      @parameter = int * 1024 * 1024
-    end
-
-    def configure_key_dir(path)
-      comment "private key dir used to authenticate privileged users"
-      
-      a_writable_dir(path)
-    end
-
-    def configure_pid_dir(path)
-      comment "directory used to store the daemons pid to assist in stopping reluctant servers"
-
-      a_writable_dir(path)
-    end
-
-  end
   
+  # standard service config parameters are all that are needed
+  # see Jeckyl::Service for details
+  #
+  # Updated to find other jerbil servers rather than hard-wire their details in
+  class Config < Jeckyl::Service
+    
+    def configure_net_address(naddr)
+      default '192.168.0.1'
+      comment "A valid IPv4 address for the LAN on which the servers will operate.",
+        "Note that the broker uses this address to search for all servers.",
+        "Therefore a large range will take a long time to search. Set the net_mask to limit this."
+      a_matching_string(naddr, /\A\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\z/)
+    end
+    
+    def configure_net_mask(nmask)
+      default 26
+      comment "A valid netmask for the hosts to search using the above net address. This should be",
+        "between 24 (a class C network) and 30, beyound which its not much of a network. If you only have a few"
+        "hosts it will be easier to restrict them to a small subnet"
+      in_range(nmask, 24, 30)
+    end
+    
+    def configure_scan_timeout(tim)
+      default 0.1
+      comment "Provide a timeout when searching for jerbil servers on the net. Depending on the size of the net mask",
+        "this timeout may make the search long. The default should work in most cases"
+        
+      a_type_of(tim, Numeric)
+    end
+    
+    def configure_secret(scrt)
+      comment "A secret key available to all Jerbil Servers and used to authenticate the inital registration.",
+       "If security is an issue, ensure that this config file is readable only be trusted users"
+      a_type_of(scrt, String)
+    end
+    
+  end
 end
