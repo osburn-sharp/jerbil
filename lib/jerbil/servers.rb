@@ -66,9 +66,9 @@ module Jerbil
       naddr.enumerate.each do |ip|
         servers << self.new(Resolv.getname(ip), '', env, port) if self.server_up?(ip, port, seconds)
       end
-      servers.each do |server|
-        server.get_key
-      end
+      # servers.each do |server|
+      #   server.get_key
+      # end
       return servers
     end
 

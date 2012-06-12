@@ -1,5 +1,9 @@
 ==History
 
+jerbil-0.99.02 12-June-2012
+
+Fix mistaken call to get_key, now gone
+
 jerbil-0.99.01 08-June-2012
 
 First pre-release of Jerbil 1.0.0, offering flexible server configuration and a single
