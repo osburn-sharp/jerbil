@@ -25,6 +25,8 @@ log_level :debug
 # private key file used to authenticate privileged users
 key_dir "#{project_root}/test/pids"
 
+user 'robert'
+
 
 # netmask
 net_address '192.168.0.1'

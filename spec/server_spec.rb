@@ -36,7 +36,7 @@ describe "Jerbil Server Record" do
   end
   
   after(:all) do
-    @my_session.stop(@pkey)
+    #@my_session.stop(@pkey) should be stopped anyway
   end
 
   it "should create a server object" do

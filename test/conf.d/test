@@ -5,3 +5,4 @@ key_dir "/home/robert/dev/projects/jerbil/test/pids"
 pid_dir "/home/robert/dev/projects/jerbil/test/pids"
 jerbil_config "/etc/jermine/jerbil-client.rb"
 user 'robert'
+jerbil_env :test

@@ -21,6 +21,7 @@ require 'jerbil/servers'
 require 'jerbil/config'
 require 'jerbil/version'
 require 'jerbil/support'
+require 'jerbil/chuser'
 require 'jelly'
 require 'jeckyl'
 require 'socket'
@@ -100,11 +101,24 @@ rescue Jerbil::MissingServer
   exit 1
 end
 
+if env then
+  config[:environment] = env
+end
+
 if verbose then
   puts "Config hash:"
   config.each_pair do |key, value|
     puts "  #{key}:  #{value}"
   end
+end
+
+# change user if required
+if Jerbil::Chuser.change(config[:user]) then
+  puts "Changed user to #{config[:user]}" if verbose
+  # having changed user, reload the config data to check its still OK
+  config = Jerbil.get_config(config_file)
+else
+  puts "User was not changed" if verbose
 end
 
 # create a private key for jerbil
@@ -123,44 +137,54 @@ Jelly::Logger.disable_syslog unless log_to_syslog
 # create a local log
 
 dopts = {:backtrace=>true,
-  :log_dir=>'/tmp',
+  :log_dir=>config[:log_dir],
   :log_output=>true,
   :dir_mode=>:normal,
   :dir=>config[:pid_dir]
 }
   
+logger = nil
+
 begin
   if daemonize then
     puts "Daemonizing now" if verbose
     Daemons.daemonize(dopts)
+    log_opts = Jelly::Logger.get_options(config)
+    #log_opts[:log_level] = :debug
+    logger = Jelly::Logger.new('jerbilsd', log_opts)
+    config = config.merge(log_opts) # add them back!
   else
     puts "Running in the foreground" if verbose
+    logger = $stderr
   end
 end
-log_opts = Jelly::Logger.get_options(config)
-log_opts[:log_level] = :debug
-logger = Jelly::Logger.new('jerbilsd', log_opts)
 
-config = config.merge(log_opts) # add them back!
 
-logger.info "Logging started"
-logger.puts "Daemonized?" if verbose 
 
-#servers = config.delete(:servers)
+logger.puts "Logging started for Jerbil Daemon"
+logger.puts "Daemonized" if verbose && daemonize
 
-# servers = Jerbil::ServerRecord.find_servers(config[:environment],0.1)
 my_self = Jerbil::Servers.create_local_server(config[:environment], pkey)
 
-# prevent the server from generating syslogs
-#Jelly.disable_syslog unless log_to_syslog
-
-$SAFE = 1 # using DRb, so prevent anything nasty
+logger.puts "Created local server: #{my_self.ident}"
 
 jerbild = Jerbil::Broker.new(config, pkey)
 
+logger.puts "Started Broker"
+
 DRb.start_service(my_self.drb_address, jerbild)
+
+logger.puts "Started DRb"
 
 # now create the pid file
 Jerbil::Support.write_pid_file(:jerbil, config[:environment], config[:pid_dir])
+
+logger.puts "Written pid #{Process.pid} to pid file"
+
+$0 = "jerbild-#{config[:environment]}"
+
+logger.puts "Changed process name to #{my_self.ident}"
+
+$SAFE = 1 # using DRb, so prevent anything nasty
 
 DRb.thread.join

@@ -16,10 +16,12 @@
 #
 # Trial using Thor
 #
+require 'rubygems'
 require 'thor'
 require 'thor/group'
 require 'jerbil'
 require 'colored'
+
 
 $LOAD_PATH.unshift File.expand_path('../lib', File.dirname(__FILE__))
 require 'jerbil/thor/install'
@@ -54,7 +56,8 @@ class Jerbs < Thor
   
   map "services"=>"service"
 
-  register Installer, :install, "install", "install jerbil on local machine"
+  # use separate jenny installer
+  #register Installer, :install, "install", "install jerbil on local machine"
   
 end
 

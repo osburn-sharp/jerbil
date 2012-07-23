@@ -115,6 +115,9 @@ module Jerbil
 
     # the number of registrations since the server started
     attr_reader :registrations
+    
+    # the remote servers at any one time
+    attr_reader :remote_servers
 
     # return the current version of Jerbil
     def version
@@ -345,7 +348,7 @@ module Jerbil
           begin
             rjerbil = rserver.connect
             @logger.verbose("Closing connection to; #{rserver.ident}")
-            rjerbil.detach_server(@local, rserver.key) 
+            rjerbil.detach_server(rserver.key, @local) 
           rescue ServerConnectError, DRb::DRbConnError
             @logger.error("Failed to connect to #{rserver.ident}")
           end
@@ -364,6 +367,8 @@ module Jerbil
       end
     rescue ServerConnectError
       @logger.error("Connection to remote server failed")
+    rescue InvalidPrivateKey
+      raise
     rescue => err
       @logger.exception(err)
     end

@@ -16,6 +16,7 @@ require 'jerbil/servers'
 require 'jerbil/errors'
 require 'jerbil/config'
 require 'jerbil/support'
+require 'jerbil/chuser'
 require 'jelly'
 require 'socket'
 require 'drb'
@@ -92,24 +93,7 @@ module JerbilService
       $0 = "#{@name.downcase}-#{@env}"
       
       # can't start the logger yet so need to remember what happened
-      set_uid = false
-      new_uid = nil
-      no_user = false
-      failed_setuid = false
-      
-      if options[:user] && Process.uid == 0 then
-        # this is root and we want to become someone else
-        begin
-          new_uid = Etc.getpwnam(options[:user]).uid
-          Process::Sys.setuid(new_uid)
-          set_uid = true
-        rescue ArgumentError
-          # no such user?
-          no_user = true
-        rescue Errno::EPERM
-          failed_setuid = true
-        end
-      end
+      #set_uid = Jerbil::Chuser.change(options[:user])
 
       # start up a logger
       log_opts = Jelly::Logger.get_options(options)
@@ -117,13 +101,13 @@ module JerbilService
       # @logger.log_level = options[:log_level]
       
       # now remember what happenned
-      @logger.system "Set UID to #{new_uid}" if set_uid
-      @logger.system "Failed to setuid: invalid user #{options[:user]}" if no_user
-      @logger.system "Failed to setuid: no permissions" if failed_setuid
-      
-      unless options[:user]
-        @logger.info "No user specified"
-      end
+      # if set_uid then
+      #   @logger.system "Set UID to #{options[:user]}" if set_uid
+      # elsif options[:user] then
+      #   @logger.system "Failed to setuid for #{options[:user]}"
+      # else
+      #   @logger.system "Remaining with existing user"
+      # end
 
       @exit = options[:exit_on_stop]
 

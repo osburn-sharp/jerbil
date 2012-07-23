@@ -19,6 +19,7 @@ require 'socket'
 require 'jelly'
 require 'jerbil/support'
 require 'jerbil/servers'
+require 'jerbil/chuser'
 require 'jeckyl/errors'
 
 module JerbilService
@@ -136,6 +137,11 @@ module JerbilService
       
       # get the config options for this service
       config = @klass.get_config(@config_file)
+      
+      if Jerbil::Chuser.change(config[:user]) then
+        @output.puts "Changed user to #{config[:user]}"
+        config = @klass.get_config(@config_file)
+      end
             
       # create a hash for logger options
       log_opts = {}
@@ -226,6 +232,12 @@ module JerbilService
 
       config = @klass.get_config(@config_file)
       pid = 0
+      
+      # to test a new jerbil server, this needs to be set to the
+      # jerbil server's environment. Only needed for test purposes
+      if @jerbil_env then
+        config[:jerbil_env] = @jerbil_env
+      end
 
       if @verbose then
         @output.puts "Obtained configuration options"
@@ -243,7 +255,7 @@ module JerbilService
 
       begin
         # find jerbil
-        jerbil_server = Jerbil::Servers.get_local_server(@jerbil_env)
+        jerbil_server = Jerbil::Servers.get_local_server(config[:jerbil_env])
 
         # now connect to it
         jerbil = jerbil_server.connect

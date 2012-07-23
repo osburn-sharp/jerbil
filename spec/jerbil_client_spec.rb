@@ -13,8 +13,8 @@
 # 
 
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
-require File.expand_path(File.dirname(__FILE__) + '/../test/test_service')
-require File.expand_path(File.dirname(__FILE__) + '/../test/test_config')
+require File.expand_path(File.dirname(__FILE__) + '/../test/lib/ruby_test')
+require File.expand_path(File.dirname(__FILE__) + '/../test/lib/ruby_test/config')
 require 'jerbil/jerbil_service/client'
 require 'jerbil/errors'
 require 'socket'
@@ -27,11 +27,11 @@ localhost = Socket.gethostname
 describe "Test Jerbil Client Interface" do
 
   before(:all) do
-    @client_opts = {:local=>true, :environment=>:dev, :quiet=>true, :jerbil_config=>jerbil_config}
+    @client_opts = {:local=>true, :environment=>:dev, :quiet=>true, :jerbil_env=>:test}
   end
 
   it "should respond to the old connect method" do
-    client_opts = {:local=>true, :config_file=>config_file, :quiet=>true, :jerbil_config=>jerbil_config}
+    client_opts = {:local=>true, :config_file=>config_file, :quiet=>true, :jerbil_env=>:test}
     JerbilService::Client.connect(RubyTest, client_opts) do |rubytest|
       rubytest.action.should == 'Hello'
       rubytest.host.should == localhost
@@ -93,7 +93,7 @@ end
 
 describe "Jerbil Clients that do different things" do
   before(:all) do
-    @client_opts = {:local=>true, :config_file=>config_file, :quiet=>true, :jerbil_config=>jerbil_config}
+    @client_opts = {:local=>true, :config_file=>config_file, :quiet=>true, :jerbil_env=>:test}
   end
 
   it "should not find an invalid service" do

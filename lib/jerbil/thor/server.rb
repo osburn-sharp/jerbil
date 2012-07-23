@@ -21,6 +21,7 @@ class Server < Thor
 
   default_task :local
   class_option :config, :aliases=>'-c', :desc=>'use the given config file'
+  class_option :verify, :aliases=>'-v', :desc=>'check the server is running'
 
   desc "local", "display information about the local jerbil server"
   def local
@@ -42,35 +43,34 @@ class Server < Thor
   desc "list", "list information about the network's Jerbil servers"
   def list
     config = Jerbil.get_config(options[:config])
-    puts "Jerbil is configured with the following servers:"
-    config[:servers].each do |server|
-      puts "  #{server.fqdn}, key: [#{server.key}]".cyan
+    local = Jerbil::Servers.get_local_server(config[:environment])
+    puts "Checking for Jerbil servers running in env: #{config[:environment]}"
+    begin
+      jerbs = local.connect
+      remotes = jerbs.remote_servers
+      remotes.each do |remote|
+        if options[:verify] then
+          begin
+            remote.connect.verify
+            puts "  #{remote.ident}".green
+          rescue
+            puts "  #{remote.ident}".red
+          end
+        else
+          puts "  #{remote.ident}".cyan
+        end
+      end
+    rescue Exception => err
+      puts "  Server did not respond: #{err.message}".red.bold
     end
   
   end
   
-  desc "check", "check servers"
-  def check
+  desc "secret", "generate a secret key for a new installation"
+  def secret
+    key = Digest::SHA1.hexdigest(Time.now.to_s + rand(12341234).to_s)
+    puts 'secret "' + key + '"'
+  end
+  
 
-    config = Jerbil.get_config(options[:config])
-    puts "Jerbil server status is:"
-  
-    config[:servers].each do |server|
-      connect = false
-      version = "0"
-      begin
-        jerbs = server.connect
-        jerbs.verify
-        connect = true
-        version = jerbs.version
-      rescue
-        # do nothing
-      end
-      if connect then
-        puts "   #{server.fqdn}: #{version}".cyan
-      else
-        puts "   #{server.fqdn}: no response".yellow
-      end
-    end
-  end
 end

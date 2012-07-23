@@ -19,52 +19,35 @@
 #
 require 'rubygems'
 require 'jenny'
-require 'optparse'
 
 
-pretend = false
-verbose = false
-
-OptionParser.new do |opts|
-
-  opts.banner = "Usage: jerbil-install [opts]"
-  opts.separator ""
-  opts.separator " install jerbil related files after gem install"
-  opts.separator ""
-
-
-  opts.on("-p", "--pretend", "show what would be installed without installing it") do |pfile|
-    pretend = true
-  end
-
-  opts.on("-v", "--verbose", "provide extra messages about what the installation is doing") do |pfile|
-    verbose = true
-  end
-
-  opts.on("-h", "--help", "You are looking at it") do |h|
-    opts.separator ""
-    puts opts
-    exit 0
-  end
-
-end.parse!
-
-
-Jenny::Installer.construct('jerbil') do |jenny|
-  jenny.pretend(pretend)
-  jenny.verbose(verbose)
+Jenny::Installer.new_from_gem('jerbil') do |jenny|
+  jenny.optparse(ARGV)
+  
+  # create a user, if not already created, with its own group
+  jenny.user('jermine', :skip=>true, :user_group=>true)
+  
+  # make the required directories, if they do not already exist
+  jenny.empty_directory('/etc/jermine')
+  jenny.empty_directory('/var/log/jermine', :chown=>'jermine', :chgrp=>'jermine')
+  jenny.empty_directory('/var/run/jermine', :chown=>'jermine', :chgrp=>'jermine')
+  
+  
+  jenny.file('etc/jermine/jerbil-test.rb', '/etc/jermine/jerbil-test.rb', :chmod=>0400)
+  jenny.message(:install, "Create a secret with jerbil server secret", :warning)
   
   # configuration file to run the service
   jenny.file('etc/conf.d/jerbild', '/etc/conf.d/jerbild')
   # and the init script itself
-  jenny.file('etc/init.d/jerbild', '/etc/init.d/jerbild')
+  jenny.file('etc/init.d/jerbild', '/etc/init.d/jerbild', :chmod=>0755)
   # and init files for jservice
   jenny.file('etc/conf.d/jserviced', '/etc/conf.d/jserviced')
-  jenny.file('etc/init.d/jserviced', '/etc/init.d/jserviced')
+  jenny.file('etc/init.d/jserviced', '/etc/init.d/jserviced', :chmod=>0755)
   # the daemon itself, which is executable
   jenny.wrapper('sbin/jerbild', '/usr/sbin/jerbild')
   jenny.wrapper('sbin/jerbil-stop', '/usr/sbin/jerbil-stop')
   jenny.wrapper('sbin/jserviced', '/usr/sbin/jserviced')
   jenny.wrapper('sbin/jservice-stop', '/usr/sbin/jservice-stop')
   jenny.wrapper('sbin/jservice-status', '/usr/sbin/jservice-status')
-end
+  
+end.run!

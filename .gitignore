@@ -21,6 +21,7 @@ doc/**
 
 pkg
 log/**
+log
 
 ## PROJECT::SPECIFIC
 test/pids/**

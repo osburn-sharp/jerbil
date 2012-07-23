@@ -20,23 +20,33 @@ class Service < Thor
 
   default_task :list
   class_option :verbose, :default=>false, :aliases=>'-V', :desc=>'print more information'
+  class_option :verify, :aliases=>'-v', :desc=>'check the service is running'
+  class_option :config, :aliases=>'-c', :desc=>'use the given config file'
 
   desc "list", "List services"
   def list
     config = Jerbil.get_config(options[:config])
-    local = Jerbil.get_local_server(options[:config])
+    local = Jerbil::Servers.get_local_server(config[:environment])
     services = []
     begin
       jerbs = local.connect
       services = jerbs.get_all(true) # ignore this access
     rescue
       puts "Failed to connect to the local Jerbil server".red.bold
+      return
     end
     puts "There are #{services.length} services registered with Jerbil:"
     services.each do |s|
       puts "  #{s.name}[:#{s.env}]@#{s.host}:#{s.port}".cyan
       puts "    started at: #{s.registered_at.strftime('%d/%m/%y %H:%M')}" if options[:verbose]
       puts "    accessed #{s.access_count.to_s} times, last time at: #{s.accessed_at.strftime('%d/%m/%y %H:%M')}" if options[:verbose]
+      if options[:verify] then
+        if jerbs.service_missing?(s) then
+          puts "  #{s.ident} has failed and should be removed".red
+        else
+          puts "  #{s.ident} responded".green
+        end
+      end
     end
   end
 
