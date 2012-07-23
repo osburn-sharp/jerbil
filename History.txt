@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-0.99.05 23-Jul-2012]
+
+  fixed Etc.getpwnam.name
+
 [jerbil-0.99.04 23-Jul-2012]
 
   fixed Jerbil::Config to inherit JerbilService::Config

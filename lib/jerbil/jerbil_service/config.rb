@@ -76,7 +76,7 @@ module JerbilService
     
     # bespoke validator for users
     def a_valid_user(user)
-      Etc.getpwnam(user)
+      Etc.getpwnam(user).name
     rescue ArgumentError
       raise ConfigError, "User is not valid: #{user}"
     end
