@@ -1,4 +1,4 @@
 #NO_DAEMON=true
 #NO_SYSLOG=true
-#CONF_FILE=/etc/jermine/jerbil-test.rb
+CONF_FILE=/etc/jermine/jerbil-test.rb
 #VERBOSE=true

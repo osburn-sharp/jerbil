@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-0.99.06 23-Jul-2012]
+
+  minor tweaks to config files for installation
+
 [jerbil-0.99.05 23-Jul-2012]
 
   fixed Etc.getpwnam.name

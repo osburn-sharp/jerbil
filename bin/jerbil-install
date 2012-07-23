@@ -33,7 +33,7 @@ Jenny::Installer.new_from_gem('jerbil') do |jenny|
   jenny.empty_directory('/var/run/jermine', :chown=>'jermine', :chgrp=>'jermine')
   
   
-  jenny.file('etc/jermine/jerbil-test.rb', '/etc/jermine/jerbil-test.rb', :chmod=>0400)
+  jenny.file('etc/jermine/jerbil-test.rb', '/etc/jermine/jerbil-test.rb', :chown=>'jermine', :chgrp=>'jermine', :chmod=>0660)
   jenny.message(:install, "Create a secret with jerbil server secret", :warning)
   
   # configuration file to run the service
