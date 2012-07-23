@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-0.99.04 23-Jul-2012]
+
+  fixed Jerbil::Config to inherit JerbilService::Config
+
 [jerbil-0.99.03 23-Jul-2012]
 
   Release candidate for testing

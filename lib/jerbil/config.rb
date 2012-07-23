@@ -16,7 +16,7 @@
 # 
 #
 
-require 'jeckyl/service'
+require 'jerbil/jerbil_service/config'
 require 'jeckyl'
 
 module Jerbil
@@ -25,7 +25,7 @@ module Jerbil
   # see Jeckyl::Service for details
   #
   # Updated to find other jerbil servers rather than hard-wire their details in
-  class Config < Jeckyl::Service
+  class Config < JerbilService::Config
     
     def configure_net_address(naddr)
       default '192.168.0.1'
