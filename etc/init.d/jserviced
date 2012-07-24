@@ -16,6 +16,7 @@ depend() {
 
 # make sure there are no unexpected rubylibs
 export RUBYLIB=""
+export RUBYOPT="rubygems"
 
 myopts=""
 [ -n "${NO_DAEMON}" ] && myopts="${myopts} -n"
@@ -31,7 +32,6 @@ start() {
     # create the options for starting the daemon from the settings in the
     # /etc/conf.d/jservice file (same name as this link)
 
-    #/bin/su -m -c "/usr/sbin/jerbild ${myopts}" - jermine
     /usr/sbin/jserviced ${myopts} -s ${SERVICE_NAME}
 
   eend $?

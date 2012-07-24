@@ -27,7 +27,7 @@ localhost = Socket.gethostname
 describe "Test Jerbil Client Interface" do
 
   before(:all) do
-    @client_opts = {:local=>true, :environment=>:dev, :quiet=>true, :jerbil_env=>:test}
+    @client_opts = {:local=>true, :environment=>:test, :quiet=>true, :jerbil_env=>:test}
   end
 
   it "should respond to the old connect method" do

@@ -20,12 +20,18 @@ module Jerbil
   
   module Chuser
     
-    # change the current user to the one specified, if possible
+    # change the current user and group to the one specified, if possible
     # returns true if it worked, false otherwise
     def self.change(user)
       return false unless user # may not be a user to change to
       return false unless Process.uid == 0 # not root so cannot change anyway
-      new_uid = Etc.getpwnam(user).uid
+      new_user = Etc.getpwnam(user)
+      new_uid = new_user.uid
+      new_gid = new_user.gid
+      
+      # change group first, while still root!
+      Process::Sys.setgid(new_gid)
+      
       Process::Sys.setuid(new_uid)
       return true
     rescue ArgumentError

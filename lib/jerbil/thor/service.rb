@@ -21,7 +21,7 @@ class Service < Thor
   default_task :list
   class_option :verbose, :default=>false, :aliases=>'-V', :desc=>'print more information'
   class_option :verify, :aliases=>'-v', :desc=>'check the service is running'
-  class_option :config, :aliases=>'-c', :desc=>'use the given config file'
+  class_option :config, :aliases=>'-c', :desc=>'use the given config file', :default=>'/etc/jermine/jerbil-client.rb'
 
   desc "list", "List services"
   def list

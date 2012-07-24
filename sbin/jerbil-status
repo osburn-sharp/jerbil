@@ -18,26 +18,26 @@
 #
 require 'rubygems'
 
-require 'jerbil/jerbil_service/client'
-require 'jerbil/jerbil_service/utils'
-require 'jerbil/errors'
+require 'jerbil'
+require 'jerbil/servers'
+require 'jerbil/version'
+require 'jerbil/config'
+require 'jerbil/support'
 require 'optparse'
 
 # force quiet to suppress client output regardless of whether verbose is selected
-client_opts = {:local=>true, :quiet=>true}
+options = Hash.new
 
 verbose = false
-my_service = nil
+config_file = nil
+env = :null
+quiet = nil
 OptionParser.new do |opts|
 
-  opts.banner = "Usage: service-status [opts]"
+  opts.banner = "Usage: jerbil-status [opts]"
   opts.separator ""
   opts.separator " stop the given Jerbil Service"
   opts.separator ""
-
-  opts.on("-s", "--service [name]", String, "check the given service") do |name|
-    my_service = name
-  end
 
   opts.on("-n", "--no-daemon", "Do not daemonize") do
     daemonize = false
@@ -47,13 +47,17 @@ OptionParser.new do |opts|
     log_to_syslog = false
   end
 
-  opts.on("-c", "--config [file]", String, "use this config file instead of the default" ) do |cfile|
+  opts.on("-c", "--config [file]", String, "use this config file to find Jerbil" ) do |cfile|
     if FileTest.readable?(cfile) then
-      client_opts[:config_file] = cfile
+      options = Jerbil::Config.new(cfile)
     else
       puts "Config file cannot be read."
       exit 1
     end
+  end
+
+  opts.on("-e", "--environment [TYPE]", [:prod, :test, :dev], "Select env (prod, test, dev), default is prod") do |e|
+    env = e
   end
 
   opts.on("-V", "--verbose", "output more information about what is going on ") do
@@ -72,28 +76,44 @@ OptionParser.new do |opts|
 
 end.parse!
 
-unless my_service
-  puts "Error: You must provide a service (-s name)"
-  exit 1
+puts "Check status of the local Jerbil Server" if verbose
+#puts "Version: jerbil-" + Jerbil::Version + " [#{Jerbil::Version_Date}]" if verbose
+
+#options = Jerbil::Config.new(config_file)
+#servers = options[:servers]
+
+#server_env = nil
+if env != :null then
+  server_env = env
 else
-  service_name = JerbilService::Utils.classify(my_service)
-  require "#{my_service}"
-  require "#{my_service}/config"
-  require "#{my_service}/version"
-  the_service = Module.const_get(service_name)
+  server_env = options[:environment] || :prod
 end
 
-running = false
+puts "Running with environment: #{server_env}" if verbose
+
+local = Jerbil::Servers.get_local_server(server_env)
+
+if local.nil? then
+  puts "Cannot find record for a local Jerbil Server" if verbose
+  exit 1
+end
+
+puts "Found local Jerbil Server record" if verbose
+
+
 begin
-  JerbilService::Client.connect(the_service, client_opts) do |jservice|
-    running = jservice.verify
+  jerbild = local.connect
+
+  # see if you can verify?
+  jerbild.verify
+  if verbose then
+    puts "Jerbil Server is running" 
+    puts "  started on #{jerbild.started.strftime('%d-%m-%y %H:%M')}"
   end
-rescue Jerbil::ServiceNotFound
-  running = false
+  exit 0
+rescue DRb::DRbConnError, Jerbil::ServerConnectError
+  #fall back to pid killing
+  puts "Failed to connect to the Jerbil Server" if verbose
+  exit 1
 end
 
-if verbose then
-  puts running ? "Service #{service_name} is running" : "Service #{service_name} is not running"
-end
-
-running ? exit(0) : exit(1)

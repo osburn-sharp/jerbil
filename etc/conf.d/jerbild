@@ -1,4 +1,15 @@
-#NO_DAEMON=true
-#NO_SYSLOG=true
-CONF_FILE=/etc/jermine/jerbil-test.rb
-#VERBOSE=true
+# NO_DAEMON can be set true to prevent the service from daemonizing and run it
+# in the foreground instead. Only recommended for testing and diagnostics
+#NO_DAEMON=false
+
+# NO_SYSLOG can be set true to prevent the logger from logging messages to syslog
+# Only recommended for testing
+#NO_SYSLOG=false
+
+# CONF_FILE can be used to start the service with a configuration from a file
+# other than the system default (/etc/jermine/jemplayer).
+#CONF_FILE=
+
+# By default, the service will suppress all messages to the terminal. For testing and
+# diagnostics, set VERBOSE to be true and run with NO_DAEMON
+#VERBOSE=false

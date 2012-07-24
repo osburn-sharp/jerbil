@@ -78,16 +78,6 @@ end.parse!
 
 puts "Starting the Jerbil Server (#{Jerbil::Ident})" if verbose
 
-#options = Jerbil::Config.new(config_file)
-#puts options.inspect if verbose
-#
-#servers = options[:servers]
-#
-#if env != :null then
-#  server_env = env
-#else
-#  server_env = options[:environment] || :prod
-#end
 
 begin
   config = Jerbil.get_config(config_file)
@@ -157,6 +147,18 @@ begin
     puts "Running in the foreground" if verbose
     logger = $stderr
   end
+  
+rescue => err
+  
+  File.open('/tmp/jerbil_panic.log', 'w') do |pfile|
+    pfile.puts "Panic during daemonization:"
+    pfile.puts "#{err.class.to_s}: #{err.message}"
+    err.backtrace.each do |bt|
+      pfile.puts(bt)
+    end
+  end
+  
+  exit 1
 end
 
 

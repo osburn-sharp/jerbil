@@ -20,7 +20,7 @@
 class Server < Thor
 
   default_task :local
-  class_option :config, :aliases=>'-c', :desc=>'use the given config file'
+  class_option :config, :aliases=>'-c', :desc=>'use the given config file', :default=>'/etc/jermine/jerbil-client.rb'
   class_option :verify, :aliases=>'-v', :desc=>'check the server is running'
 
   desc "local", "display information about the local jerbil server"

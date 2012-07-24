@@ -14,6 +14,7 @@
 
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 require 'jerbil/jerbil_service/utils'
+require 'jerbil/chuser'
 
 
 describe "utils" do
@@ -21,6 +22,17 @@ describe "utils" do
   it "should classify a string" do
     JerbilService::Utils.classify('robert_sharp').should == "RobertSharp"
     JerbilService::Utils.classify('robert/sharp').should == "Robert::Sharp"
+  end
+  
+  it "should change a user id etc" do
+    Process.should_receive(:uid).and_return(0)
+    Process::Sys.should_receive(:setuid).once.and_return(true)
+    Process::Sys.should_receive(:setgid).once.and_return(true)
+    Jerbil::Chuser.change('jermine').should be_true
+  end
+  
+  it "should change a user id for real if run as su" do
+    Jerbil::Chuser.change('jermine').should be_true
   end
   
 end

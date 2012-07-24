@@ -14,6 +14,7 @@
 #
 # stop the jerbil server on this host
 # 
+require 'rubygems'
 require 'jerbil'
 require 'jerbil/servers'
 require 'jerbil/version'
@@ -22,9 +23,10 @@ require 'jerbil/support'
 require 'drb'
 require 'optparse'
 
-config_file='/etc/jermine/jerbil.conf'
+
 verbose = false
 env = :null
+conf_file = nil
 
 OptionParser.new do |opts|
 
@@ -32,10 +34,19 @@ OptionParser.new do |opts|
   opts.separator ""
   opts.separator " Stop the Jerbil Server"
   opts.separator ""
+  
+  opts.on("-n", "--no-daemon", "ignored") do
+    daemonize = false
+  end
+
+  opts.on("-S", "--no-syslog", "ignored") do
+    log_to_syslog = false
+  end
+
 
   opts.on("-c", "--config [file]", String, "use this config file to find Jerbil" ) do |cfile|
     if FileTest.readable?(cfile) then
-      config_file = cfile
+      conf_file = cfile
     else
       puts "Config file cannot be read."
       exit 1
@@ -61,7 +72,7 @@ end.parse!
 puts "Stopping the local Jerbil Server" if verbose
 puts "Version: jerbil-" + Jerbil::Version + " [#{Jerbil::Version_Date}]" if verbose
 
-options = Jerbil::Config.new(config_file)
+options = Jerbil::Config.new(conf_file)
 #servers = options[:servers]
 
 if env != :null then

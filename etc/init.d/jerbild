@@ -1,25 +1,28 @@
 #!/sbin/runscript
 #
-# INIT Script for the Numbat System Controller
+# INIT Script for the Jerbil - Ruby Object Broker
 
-#opts="${opts} install"
+
+depend() {
+  use net
+  use logger
+}
+
 export RUBYOPT="rubygems"
 export RUBYLIB=""
 
+# create the options for starting the daemon from the settings in the
+# /etc/conf.d/jerbild file
+
+myopts=""
+[ -n "${NO_DAEMON}" ] && myopts="${myopts} -n"
+[ -n "${CONF_FILE}" ] && myopts="${myopts} -c ${CONF_FILE}"
+[ "${VERBOSE}" == "true" ] && [ "${QUIET}" != "true" ] && myopts="${myopts} -V"
+[ -n "${NO_SYSLOG}" ] && myopts="${myopts} -S"
+
+
 start() {
   ebegin "Starting Jerbil Server"
-
-    if [ ! -d /var/run/jermine ]; then
-      install
-    fi
-
-    # create the options for starting the daemon from the settings in the
-    # /etc/conf.d/jerbild file
-    myopts=""
-    [ -n "${NO_DAEMON}" ] && myopts="${myopts} -n"
-    [ -n "${CONF_FILE}" ] && myopts="${myopts} -c ${CONF_FILE}"
-    [ "${VERBOSE}" == "true" ] && [ "${QUIET}" != "true" ] && myopts="${myopts} -V"
-    [ -n "${NO_SYSLOG}" ] && myopts="${myopts} -S"
 
     #/bin/su -m -c "/usr/sbin/jerbild ${myopts}" - jermine
     /usr/sbin/jerbild ${myopts}
@@ -29,14 +32,14 @@ start() {
 
 status() {
   ebegin "Checking Jerbil Status"
-    /usr/local/bin/jerbil -q
+  /usr/sbin/jerbil-status ${myopts}
   eend $?
 }
 
 
 stop() {
   ebegin "Stopping Jerbil Server"
-    /usr/sbin/jerbil-stop
+    /usr/sbin/jerbil-stop ${myopts}
   eend $?
 }
 

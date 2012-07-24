@@ -14,11 +14,11 @@
 # utility.
 # 
 
-require 'jeckyl/service'
+require 'jerbil/jerbil_service/config'
 
 module RubyTest
   
-  class Config < Jeckyl::Service
+  class Config < JerbilService::Config
 
     def configure_jerbil_env(env)
       vals = [:prod, :test, :env]
