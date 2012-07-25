@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-0.99.10 25-Jul-2012]
+
+  jerbil/jerbil_service/client requires server instead of servers
+
 [jerbil-0.99.09 25-Jul-2012]
 
   Fix typo when adding services from remote server

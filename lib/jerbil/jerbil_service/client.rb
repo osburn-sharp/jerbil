@@ -15,7 +15,7 @@
 require 'jerbil/config'
 require 'jeckyl/errors'
 require 'jerbil/errors'
-require 'jerbil/server'
+require 'jerbil/servers'
 require 'jerbil/service'
 require 'socket'
 
