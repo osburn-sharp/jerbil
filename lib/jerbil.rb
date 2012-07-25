@@ -99,6 +99,7 @@ module Jerbil
           begin
             rkey = rjerbil.register_server(@local, @secret, @env)
             remote_server.set_key(rkey)
+            @logger.debug "Key for #{remote_server.fqdn}: #{rkey}"
             rjerbil.get_local_services(rkey).each {|ls| add_service_to_store(@remote_store, ls)}
           rescue DRb::DRbConnError
             # assume it is not working
@@ -108,6 +109,12 @@ module Jerbil
       end
 
       @logger.system("Started up the Jerbil Server")
+      
+      @logger.debug "My key: #{@private_key}"
+      @logger.debug "Stored remote keys:"
+      @remote_servers.each do |rs|
+        @logger.debug "   #{rs.fqdn}: #{rs.key}"
+      end
     end
 
     # date/time at which the server was started
@@ -387,6 +394,8 @@ module Jerbil
       end
       unless @remote_servers.include?(server)
         @remote_servers << server 
+        @logger.debug "Registered a new server"
+        @logger.debug "   #{server.fqdn}: #{server.key}"
       else
         @logger.warning("Attempting to register server twice: #{@server.ident}")
       end
@@ -398,7 +407,7 @@ module Jerbil
     # Must provide a valid key
     #
     def get_local_services(my_key)
-      raise InvalidServerKey, @logger.error("get_local_services: incorrect key") unless @private_key == my_key
+      raise InvalidServerKey, @logger.error("get_local_services: incorrect key #{my_key}") unless @private_key == my_key
       return @store.dup
     end
 

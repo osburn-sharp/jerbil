@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-0.99.11 25-Jul-2012]
+
+  Annotated to help debug key issues
+
 [jerbil-0.99.10 25-Jul-2012]
 
   jerbil/jerbil_service/client requires server instead of servers
