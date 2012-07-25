@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-0.99.12 25-Jul-2012]
+
+  further annotations
+
 [jerbil-0.99.11 25-Jul-2012]
 
   Annotated to help debug key issues

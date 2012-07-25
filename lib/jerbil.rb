@@ -407,7 +407,7 @@ module Jerbil
     # Must provide a valid key
     #
     def get_local_services(my_key)
-      raise InvalidServerKey, @logger.error("get_local_services: incorrect key #{my_key}") unless @private_key == my_key
+      raise InvalidServerKey, @logger.error("get_local_services: incorrect key: #{my_key}") unless @private_key == my_key
       return @store.dup
     end
 
@@ -420,7 +420,7 @@ module Jerbil
     # Also raises ServiceAlreadyRegistered if the service is a duplicate
     #
     def register_remote(my_key, service)
-      raise InvalidServerKey, @logger.error("get_local_services: incorrect key") unless @private_key == my_key
+      raise InvalidServerKey, @logger.error("register remote: incorrect key: #{my_key}") unless @private_key == my_key
       add_service_to_store(@remote_store, service)
       @logger.info("Registered Remote Service: #{service.ident}")
       return true
@@ -430,7 +430,7 @@ module Jerbil
     # delete a remote service
     # requires a valid server key
     def remove_remote(my_key, service)
-      raise InvalidServerKey, @logger.error("get_local_services: incorrect key") unless @private_key == my_key
+      raise InvalidServerKey, @logger.error("remove_remote: incorrect key: #{my_key}") unless @private_key == my_key
       @remote_store.delete_if {|s| s == service}
       @logger.info("Deleted Remote Service: #{service.ident}")
       return true
@@ -439,7 +439,7 @@ module Jerbil
     # and close a remote server
     def detach_server(my_key, server)
       @logger.verbose("About to detach a remote server: #{server.ident}")
-      raise InvalidServerKey, @logger.error("close_remote_server: incorrect key") unless @private_key == my_key
+      raise InvalidServerKey, @logger.error("close_remote_server: incorrect key: #{my_key}") unless @private_key == my_key
       @remote_store.delete_if {|s| s.host == server.fqdn}
       @remote_servers.delete(server)
       @logger.info("Detached server: #{server.ident}")
