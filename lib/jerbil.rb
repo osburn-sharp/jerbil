@@ -99,7 +99,7 @@ module Jerbil
           begin
             rkey = rjerbil.register_server(@local, @secret, @env)
             remote_server.set_key(rkey)
-            rjerbil.get_local_services(rkey).each {|ls| add_service_to_store(@remote_store. ls)}
+            rjerbil.get_local_services(rkey).each {|ls| add_service_to_store(@remote_store, ls)}
           rescue DRb::DRbConnError
             # assume it is not working
             @logger.verbose("Failed to get remote services from server: #{remote_server.fqdn}")
