@@ -53,7 +53,7 @@ class Service < Thor
   desc "verify", "Verify that services are running"
   def verify
     config = Jerbil.get_config(options[:config])
-    local = Jerbil.get_local_server(options[:config])
+    local = Jerbil::Servers.get_local_server(options[:environment])
     services = []
     begin
       jerbs = local.connect

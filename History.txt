@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-0.99.08 25-Jul-2012]
+
+  Fix error in thor services verify
+
 [jerbil-0.99.07 24-Jul-2012]
 
   another release candidate with tweaks to sbin scripts.

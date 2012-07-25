@@ -374,7 +374,7 @@ module Jerbil
     end
 
     
-    # tell me about yourselve: another server. Adds the server to the list of remote
+    # tell me about yourself: another server. Adds the server to the list of remote
     # servers unless it is already there. Returns this servers private key
     def register_server(server, secret, env)
       @logger.debug("Attempting to register server: #{server.ident}")

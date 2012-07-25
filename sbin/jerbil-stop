@@ -72,7 +72,7 @@ end.parse!
 puts "Stopping the local Jerbil Server" if verbose
 puts "Version: jerbil-" + Jerbil::Version + " [#{Jerbil::Version_Date}]" if verbose
 
-options = Jerbil::Config.new(conf_file)
+options = Jerbil.get_config(conf_file)
 #servers = options[:servers]
 
 if env != :null then
