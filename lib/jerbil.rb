@@ -379,10 +379,21 @@ module Jerbil
     rescue => err
       @logger.exception(err)
     end
+    
+    #================================================
+    #
+    # SERVER related methods
+    #
+    #================================================
 
     
-    # tell me about yourself: another server. Adds the server to the list of remote
-    # servers unless it is already there. Returns this servers private key
+    # Register a remote server, providing limited authentication. Registering a server
+    # will purge any old server record and any old services for that server
+    #
+    # @param [Servers] :server - the remote server's Servers record
+    # @param [String] :secret shared between all servers on the net
+    # @param [Symbol] :env of the calling server, just to ensure it is the same
+    #
     def register_server(server, secret, env)
       @logger.debug("Attempting to register server: #{server.ident}")
       unless secret == @secret
@@ -392,13 +403,16 @@ module Jerbil
       unless env = @env
         raise JerbilAuthenticationError, @logger.error("Registering server with #{env}, against #{@env}")
       end
-      unless @remote_servers.include?(server)
-        @remote_servers << server 
-        @logger.debug "Registered a new server"
-        @logger.debug "   #{server.fqdn}: #{server.key}"
-      else
-        @logger.warning("Attempting to register server twice: #{@server.ident}")
-      end
+      # need to delete any stale existing record
+      @remote_servers.delete_if {|rserver| rserver.fqdn == server.fqdn}
+      
+      # registering this new server, but there may be stale services as well
+      @remote_store.delete_if {|rservice| rservice.host == server.fqdn}
+      
+      @remote_servers << server 
+      @logger.debug "Registered a new server"
+      @logger.debug "   #{server.ident}: #{server.key}"
+        
       return @private_key
     end
 
@@ -414,13 +428,20 @@ module Jerbil
 
     # register a remote service
     #
-    # the caller must provide a valid key known to this server
-    # or the exception InvalidServerKey will be raised
+    # @param [String] :my_key - the caller must provide this servers private key
+    # @param [Service] :service - the service to be registered
     #
+    # or the exception InvalidServerKey will be raised
     # Also raises ServiceAlreadyRegistered if the service is a duplicate
     #
     def register_remote(my_key, service)
+      @logger.debug "About to register a remote service:"
+      @logger.debug "   #{service.inspect}"
       raise InvalidServerKey, @logger.error("register remote: incorrect key: #{my_key}") unless @private_key == my_key
+      
+      # perhaps there is a stale record for this service? Stops add below from assuming it is missing etc
+      @remote_store.delete_if {|rservice| rservice.same_service?(service)}
+      
       add_service_to_store(@remote_store, service)
       @logger.info("Registered Remote Service: #{service.ident}")
       return true
@@ -430,6 +451,8 @@ module Jerbil
     # delete a remote service
     # requires a valid server key
     def remove_remote(my_key, service)
+      @logger.debug "About to remove a remote service:"
+      @logger.debug "   #{service.inspect}"
       raise InvalidServerKey, @logger.error("remove_remote: incorrect key: #{my_key}") unless @private_key == my_key
       @remote_store.delete_if {|s| s == service}
       @logger.info("Deleted Remote Service: #{service.ident}")

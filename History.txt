@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-0.99.13 26-Jul-2012]
+
+  Reworked remote server logic to ensure duplicate servers and services are purged
+
 [jerbil-0.99.12 25-Jul-2012]
 
   further annotations

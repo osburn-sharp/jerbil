@@ -23,7 +23,7 @@ require 'jerbil'
 require 'colored'
 
 
-$LOAD_PATH.unshift File.expand_path('../lib', File.dirname(__FILE__))
+#$LOAD_PATH.unshift File.expand_path('../lib', File.dirname(__FILE__))
 require 'jerbil/thor/install'
 require 'jerbil/thor/server'
 require 'jerbil/thor/service'
