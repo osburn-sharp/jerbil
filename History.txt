@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-1.0.2 15-Aug-2012]
+
+  Add a catchall for connecting to older servers
+  
 [jerbil-1.0.1 15-Aug-2012]
 
   Add NoMethodError as a reason why calls tp older servers may fail.

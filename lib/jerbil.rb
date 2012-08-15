@@ -109,6 +109,8 @@ module Jerbil
             @logger.warn("  #{jerr.message}")
           rescue ArgumentError, NoMethodError
             @logger.warn("Remote server incompatibility, skipping")
+          rescue => jerr
+            @logger.exception(jerr)
           end
         end
       end
@@ -120,6 +122,10 @@ module Jerbil
       @remote_servers.each do |rs|
         @logger.debug "   #{rs.fqdn}: #{rs.key}"
       end
+      
+    rescue => jerr
+      @logger.exception(jerr)
+      raise
     end
 
     # date/time at which the server was started
