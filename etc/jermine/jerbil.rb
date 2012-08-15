@@ -47,7 +47,9 @@ net_address "192.168.0.1"
 
 # A secret key available to all Jerbil Servers and used to authenticate the inital registration.
 # If security is an issue, ensure that this config file is readable only be trusted users
-secret "Amz09+C8GqQ+StC9wbPEKE2dm5WbOxLVXM+McvxnJ7QM17qcnYshzF0zFOGK"
+#
+# Generate a new secret with something like: openssl genrsa -des3 and paste a line into here
+secret "hK78l/z1mIDBOs+/Qx2q7k5beExChmdc3tpw81qTBNLmcQknRrY93oHzIAd3DNo2"
 
 # A valid netmask for the hosts to search using the above net address. This should be
 # between 24 (a class C network) and 30, beyound which its not much of a network. If you only have a few

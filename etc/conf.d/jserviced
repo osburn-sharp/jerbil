@@ -19,6 +19,7 @@
 #VERBOSE=false
 
 # A service name can be defined here, but in its absence, will be taken from the file name
+# Which is probably not going to be right if the file has the usual "d" on the end!
 #SERVICE_NAME=""
 
 NEEDS="logger

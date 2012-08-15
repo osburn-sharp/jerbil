@@ -1,5 +1,10 @@
 ==History
 
+[jerbil-1.0.0 15-Aug-2012]
+
+  Release of new version, featuring server discovery, the new jservice scripts to start
+  any service, increased reliability, improved jerbil command and other minor changes.
+
 [jerbil-0.99.13 26-Jul-2012]
 
   Reworked remote server logic to ensure duplicate servers and services are purged
