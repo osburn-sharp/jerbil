@@ -107,7 +107,7 @@ module Jerbil
           rescue JerbilAuthenticationError => jerr
             @logger.warn("Remote server authentication failed, skipping")
             @logger.warn("  #{jerr.message}")
-          rescue ArgumentError
+          rescue ArgumentError, NoMethodError
             @logger.warn("Remote server incompatibility, skipping")
           end
         end

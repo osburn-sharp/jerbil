@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-1.0.1 15-Aug-2012]
+
+  Add NoMethodError as a reason why calls tp older servers may fail.
+  
 [jerbil-1.0.0 15-Aug-2012]
 
   Release of new version, featuring server discovery, the new jservice scripts to start
