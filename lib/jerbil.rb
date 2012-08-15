@@ -87,11 +87,11 @@ module Jerbil
       @started = Time.now
       @registrations = 0
       @logger.verbose("Searching for remote servers")
-      @remote_servers = Jerbil::Servers.find_servers(@env, options[:net_address], options[:net_mask], options[:scan_timeout])
+      network_servers = Jerbil::Servers.find_servers(@env, options[:net_address], options[:net_mask], options[:scan_timeout])
       @logger.verbose("Found #{@remote_servers.length} remote servers")
 
       # now loop round the remote servers to see if any are there
-      @remote_servers.each do |remote_server|
+      network_servers.each do |remote_server|
         rjerbil = remote_server.connect
         unless rjerbil.nil?
           @logger.debug "Getting Remote Services. Connecting to : #{remote_server.inspect}"
@@ -101,6 +101,8 @@ module Jerbil
             remote_server.set_key(rkey)
             @logger.debug "Key for #{remote_server.fqdn}: #{rkey}"
             rjerbil.get_local_services(rkey).each {|ls| add_service_to_store(@remote_store, ls)}
+            # add it to the list of verified servers
+            @remote_servers << remote_server
           rescue DRb::DRbConnError
             # assume it is not working
             @logger.verbose("Failed to get remote services from server: #{remote_server.fqdn}")
@@ -112,6 +114,7 @@ module Jerbil
           rescue => jerr
             @logger.exception(jerr)
           end
+
         end
       end
 

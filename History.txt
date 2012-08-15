@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-1.0.3 15-Aug-2012]
+
+  Ensure only valid servers are remembered during start-up.
+
 [jerbil-1.0.2 15-Aug-2012]
 
   Add a catchall for connecting to older servers
