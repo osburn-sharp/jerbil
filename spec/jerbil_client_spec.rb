@@ -19,7 +19,7 @@ require 'jerbil/jerbil_service/client'
 require 'jerbil/errors'
 require 'socket'
 
-config_file = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/test')
+config_file = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/ruby_test.rb')
 jerbil_config = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/jerbil.conf')
 log_filename = File.expand_path(File.dirname(__FILE__) + '/../log/client.log')
 localhost = Socket.gethostname
@@ -27,7 +27,7 @@ localhost = Socket.gethostname
 describe "Test Jerbil Client Interface" do
 
   before(:all) do
-    @client_opts = {:local=>true, :environment=>:test, :quiet=>true, :jerbil_env=>:test}
+    @client_opts = {:local=>true, :config_file=>config_file, :environment=>:dev, :quiet=>true, :jerbil_env=>:test}
   end
 
   it "should respond to the old connect method" do

@@ -28,6 +28,7 @@ client_opts = {:local=>true, :quiet=>true}
 
 verbose = false
 my_service = nil
+quiet = false
 OptionParser.new do |opts|
 
   opts.banner = "Usage: service-status [opts]"
@@ -58,6 +59,7 @@ OptionParser.new do |opts|
 
   opts.on("-V", "--verbose", "output more information about what is going on ") do
     verbose = true
+    client_opts[:quiet] = false
   end
 
   opts.on("-q", "--quiet", "output nothing") do
@@ -77,6 +79,7 @@ unless my_service
   exit 1
 else
   service_name = JerbilService::Utils.classify(my_service)
+  puts "Checking status for #{service_name}" unless quiet
   require "#{my_service}"
   require "#{my_service}/config"
   require "#{my_service}/version"

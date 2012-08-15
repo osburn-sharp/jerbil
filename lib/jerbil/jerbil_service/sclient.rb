@@ -31,11 +31,15 @@ module JerbilService
   # call the methods below in response to the options on the command line. When the
   # block closes the service will be started and will wait for calls.
   #
+  # All of this is already done via /usr/sbin/jserviced. See {file:README_SERVICES.md Jerbil Services} for more details
+  #
   class Supervisor
 
     # create and run a service daemon for the given class, which should be a JerbilService
-    # class. Within the block, use the methods below to set parameters and the service
+    # class. This yields a block. Within the block, use the methods below to set parameters and the service
     # will then be launched when the block returns
+    #
+    # @param [Class] klass a JerbilService class or child of
     #
     def initialize(klass, &block)
 
@@ -70,7 +74,9 @@ module JerbilService
       @daemonize = false
     end
 
-    # output extra information, unless quiet has been set
+    # output extra information about starting up the service. Ignored if quiet has been set
+    # Note this controls messages from the Supervisor about the startup process
+    # and is unrelated to the service's logger
     def verbose
       @verbose = true unless @quiet
     end
@@ -83,30 +89,39 @@ module JerbilService
     end
 
     # ensure logging does not log to syslog
-    # see Jelly.disable_syslog for details
+    # see Jelly::Logger#disable_syslog for details
     def no_syslog
       @no_syslog = true
     end
 
-    # set the condif file for the service. Overides the
-    # default, which is defined by Jeckyl
+    # set the config file for the service. Each service expects an options hash, which the supervisor
+    # will obtain from either this file, or the default, which is usually: /etc/jermine/<service>.rb
+    #
     def config_file=(cfile)
       @config_file = cfile
     end
 
-    # set the output to a file (object, not path)
+    # set the supervisor output to a file (object, not path)
     def output=(ofile)
       @output = ofile unless @quiet
     end
     
-    # create a log for the daemon task, the output of
-    # which is otherwise lost
+    # create a log file for the daemon task, the output of
+    # which is otherwise lost. This uses jelly and will write the log
+    # to a file in the log_dir (see {JerbilService::Config}) named after the service with _sd added.
+    # By default this would be /var/log/jermine/<service>_sd.log
+    #
+    # This logger takes over from the output file set in {JerbilService::Supervisor#output}, but only
+    # when the supervisor daemonises.
+    #
     def log_daemon
       @set_log_daemon = true
     end
     
     # override the default jerbil config file, used only
     # for testing new versions of jerbil
+    # @deprecated - jerbil_env is a standard config parameter now, although still only
+    # intended for test purposes.
     def jerbil_env=(env)
       @jerbil_env = env
     end
@@ -126,6 +141,8 @@ module JerbilService
       sclient.stop_service
 
     end
+    
+    #protected
 
     # this method is called by the initialize method to start a Jerbil Service
     # messages are logged through @output, which is stderr by default or
@@ -208,15 +225,14 @@ module JerbilService
         @output.puts "Sending messages to syslog"
       end
 
-
-      @service = @klass::Service.new(pkey, config)
-
-      @output.puts "Registered Service with Jerbil"
-
       # now create the pid file
       Jerbil::Support.write_pid_file(@name_symbol, config[:environment], config[:pid_dir])
 
       @output.puts "Created a pid file for process: #{Process.pid}"
+
+      @service = @klass::Service.new(pkey, config)
+
+      @output.puts "Registered Service with Jerbil"
 
       @service.wait(pkey)
 

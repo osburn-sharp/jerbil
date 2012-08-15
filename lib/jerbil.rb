@@ -104,6 +104,11 @@ module Jerbil
           rescue DRb::DRbConnError
             # assume it is not working
             @logger.verbose("Failed to get remote services from server: #{remote_server.fqdn}")
+          rescue JerbilAuthenticationError => jerr
+            @logger.warn("Remote server authentication failed, skipping")
+            @logger.warn("  #{jerr.message}")
+          rescue ArgumentError
+            @logger.warn("Remote server incompatibility, skipping")
           end
         end
       end

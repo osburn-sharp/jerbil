@@ -28,19 +28,19 @@ describe "A local Jerbil Session" do
   
   before(:all) do
     Jelly::Logger.disable_syslog
-  end
-
-  before(:each) do
-
     @pkey = "ABCDEFG"
     my_conf = Jerbil::Config.new(conf_file)
     #puts my_conf.inspect
     @my_session = Jerbil::Broker.new(my_conf, @pkey)
+  end
+
+  before(:each) do
+
     @my_service = Jerbil::ServiceRecord.new(:rubytest, :dev)
     @a_service = Jerbil::ServiceRecord.new(:rubytest, :test)
   end
 
-  after(:each) do
+  after(:all) do
     @my_session.stop(@pkey)
   end
 
@@ -64,12 +64,14 @@ describe "A local Jerbil Session" do
     service = @my_session.get_local(:ignore_access => true)
     service.should == @my_service
     @my_session.find(:name=>'Another', :ignore_access => true).should == []
+    @my_session.remove(@my_service)
   end
 
-it "should not be possible to register the same service twice" do
+  it "should not be possible to register the same service twice" do
     @my_service.should_receive(:connect).and_return(true) # make it appear the service is live
     @my_session.register(@my_service)
     lambda{@my_session.register(@my_service)}.should raise_error{Jerbil::ServiceAlreadyRegistered}
+    @my_session.remove(@my_service)
   end
 
   it "should be easy to remove a service" do

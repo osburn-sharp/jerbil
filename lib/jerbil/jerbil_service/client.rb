@@ -86,7 +86,8 @@ module JerbilService
       config_file = options[:config_file]
       config = modl.get_config(config_file)
 
-      options[:environment] = config[:environment]
+      options[:environment] ||= config[:environment]
+      options[:jerbil_env] ||= config[:jerbil_env]
 
       self.find_services(:first, modl, options, &block)
 
@@ -106,10 +107,15 @@ module JerbilService
       else
         @output = File.open('/dev/null', 'w')
       end
-
+      
       @welcome = options[:welcome]
 
       @output.puts "Welcome to #{name} (#{modl.ident})" if @welcome
+
+      unless quiet
+        @output.puts "Options:"
+        options.each {|key, val| @output.puts("  #{key}:#{val}") }
+      end
 
       env = options[:environment]
 

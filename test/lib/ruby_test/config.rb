@@ -21,7 +21,7 @@ module RubyTest
   class Config < JerbilService::Config
 
     def configure_jerbil_env(env)
-      vals = [:prod, :test, :env]
+      vals = [:prod, :test, :dev]
       a_member_of(env, vals)
     end
     
