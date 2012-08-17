@@ -14,7 +14,7 @@
 # utility.
 # 
 require 'jelly/config'
-
+require 'etc'
 require 'jeckyl'
 
 module JerbilService

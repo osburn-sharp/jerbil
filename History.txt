@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-1.0.7 17-Aug-2012]
+
+  add require 'etc' to config
+
 [jerbil-1.0.6 17-Aug-2012]
 
   Fix bug in change_group
