@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-1.0.8 17-Aug-2012]
+
+  fix another typo in config
+
 [jerbil-1.0.7 17-Aug-2012]
 
   add require 'etc' to config

@@ -91,7 +91,7 @@ module JerbilService
     
     # bespoke validator for groups
     def a_valid_group(group)
-      Etc.getgrnam(user).name
+      Etc.getgrnam(group).name
     rescue ArgumentError
       raise ConfigError, "Group is not valid: #{group}"
     end
