@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-1.0.5 17-Aug-2012]
+
+  Provide a separate group parameter cos changing user does not do all the groups
+
 [jerbil-1.0.4 17-Aug-2012]
 
   Silently ignore register remote and remove remote if the key is invalid to allow 

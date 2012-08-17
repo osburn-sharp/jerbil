@@ -155,7 +155,13 @@ module JerbilService
       # get the config options for this service
       config = @klass.get_config(@config_file)
       
-      if Jerbil::Chuser.change(config[:user]) then
+      if Jerbil::Chuser.change_group(config[:group]) then
+        @output.puts "Changed group to #{config[:group]}"
+        config = @klass.get_config(@config_file)
+      end
+            
+      # create a hash for logger options
+      if Jerbil::Chuser.change_user(config[:user]) then
         @output.puts "Changed user to #{config[:user]}"
         config = @klass.get_config(@config_file)
       end

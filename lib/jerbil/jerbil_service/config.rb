@@ -66,6 +66,14 @@ module JerbilService
       
     end
     
+    def configure_group(group)
+      comment "the name of the valid system group to which a service should switch when being started"
+      
+      # needs a little testing?
+      a_valid_group(group)
+      
+    end
+    
     def configure_jerbil_env(env)
       comment "Set this only to use a Jerbil Server that is not running in the production environment"
       env_set = [:prod, :test, :dev]
@@ -79,6 +87,13 @@ module JerbilService
       Etc.getpwnam(user).name
     rescue ArgumentError
       raise ConfigError, "User is not valid: #{user}"
+    end
+    
+    # bespoke validator for groups
+    def a_valid_group(group)
+      Etc.getgrnam(user).name
+    rescue ArgumentError
+      raise ConfigError, "Group is not valid: #{group}"
     end
 
 
