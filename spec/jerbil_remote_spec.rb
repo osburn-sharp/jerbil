@@ -77,7 +77,9 @@ describe "A Remote Jerbil Session" do
 
   it "should not be possible to register a remote service without a valid key" do
     rkey = @my_session.register_server(@calling_server, @secret, @env)
-    lambda{@my_session.register_remote('INVALID', @a_service)}.should raise_error{Jerbil::InvalidServerKey}
+    #lambda{@my_session.register_remote('INVALID', @a_service)}.should raise_error{Jerbil::InvalidServerKey}
+    @my_session.register_remote('INVALID', @a_service)
+    @my_session.service_count.should == 0
     @my_session.detach_server(rkey, @calling_server)
   end
 

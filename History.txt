@@ -1,5 +1,10 @@
 ==History
 
+[jerbil-1.0.4 17-Aug-2012]
+
+  Silently ignore register remote and remove remote if the key is invalid to allow 
+  co-existence with pre-1.0 versions
+
 [jerbil-1.0.3 15-Aug-2012]
 
   Ensure only valid servers are remembered during start-up.

@@ -445,13 +445,17 @@ module Jerbil
     # @param [String] :my_key - the caller must provide this servers private key
     # @param [Service] :service - the service to be registered
     #
-    # or the exception InvalidServerKey will be raised
+    # Silently ignores incorrect keys
     # Also raises ServiceAlreadyRegistered if the service is a duplicate
     #
     def register_remote(my_key, service)
       @logger.debug "About to register a remote service:"
       @logger.debug "   #{service.inspect}"
-      raise InvalidServerKey, @logger.error("register remote: incorrect key: #{my_key}") unless @private_key == my_key
+ 
+      unless @private_key == my_key
+        @logger.warn("register remote: incorrect key: #{my_key}, ignoring")
+        return true
+      end
       
       # perhaps there is a stale record for this service? Stops add below from assuming it is missing etc
       @remote_store.delete_if {|rservice| rservice.same_service?(service)}
@@ -463,11 +467,15 @@ module Jerbil
     end
 
     # delete a remote service
-    # requires a valid server key
+    # requires a valid server key or operation is ignored
     def remove_remote(my_key, service)
       @logger.debug "About to remove a remote service:"
       @logger.debug "   #{service.inspect}"
-      raise InvalidServerKey, @logger.error("remove_remote: incorrect key: #{my_key}") unless @private_key == my_key
+ 
+      unless @private_key == my_key
+        @logger.warn("remove_remote: incorrect key: #{my_key}")
+        return true
+      end
       @remote_store.delete_if {|s| s == service}
       @logger.info("Deleted Remote Service: #{service.ident}")
       return true
@@ -476,7 +484,11 @@ module Jerbil
     # and close a remote server
     def detach_server(my_key, server)
       @logger.verbose("About to detach a remote server: #{server.ident}")
-      raise InvalidServerKey, @logger.error("close_remote_server: incorrect key: #{my_key}") unless @private_key == my_key
+     
+      unless @private_key == my_key
+        @logger.warn("close_remote_server: incorrect key: #{my_key}")
+        return true
+      end
       @remote_store.delete_if {|s| s.host == server.fqdn}
       @remote_servers.delete(server)
       @logger.info("Detached server: #{server.ident}")
