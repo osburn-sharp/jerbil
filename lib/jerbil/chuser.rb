@@ -43,8 +43,8 @@ module Jerbil
     def self.change_group(gp)
       return false unless gp # may not be a user to change to
       return false unless Process.uid == 0 # not root so cannot change anyway
-      new_user = Etc.getgrnam(user)
-      new_gid = new_user.gid
+      new_group = Etc.getgrnam(gp)
+      new_gid = new_group.gid
       
       # change group first, while still root!
       Process::Sys.setgid(new_gid)
