@@ -47,12 +47,14 @@ module JerbilService
     end
     
     def configure_key_dir(path)
+      default '/var/run/jermine'
       comment "private key dir used to authenticate privileged users"
 
       a_writable_dir(path)
     end
 
     def configure_pid_dir(path)
+      default '/var/run/jermine'
       comment "directory used to store the daemons pid to assist in stopping reluctant servers"
 
       a_writable_dir(path)
