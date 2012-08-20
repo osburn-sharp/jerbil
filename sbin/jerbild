@@ -102,8 +102,15 @@ if verbose then
   end
 end
 
+if Jerbil::Chuser.change_group(config[:group]) then
+  @output.puts "Changed group to #{config[:group]}"
+  config = @klass.get_config(@config_file)
+else
+  puts "Group was not changed"
+end
+            
 # change user if required
-if Jerbil::Chuser.change(config[:user]) then
+if Jerbil::Chuser.change_user(config[:user]) then
   puts "Changed user to #{config[:user]}" if verbose
   # having changed user, reload the config data to check its still OK
   config = Jerbil.get_config(config_file)

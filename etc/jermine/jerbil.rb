@@ -32,6 +32,8 @@ key_dir "/var/run/jermine"
 # application will not attempt to change user id
 user 'jermine' 
 
+group 'jermine'
+
 
 # Boolean - set to false to prevent service from executing exit! on stop
 #exit_on_stop true
