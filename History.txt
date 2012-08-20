@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-1.0.10 20-Aug-2012]
+
+  fixed cut-and-paste errors in changing group
+
 [jerbil-1.0.9 20-Aug-2012]
 
   fixed Chuser calls in sbin/jerbild
