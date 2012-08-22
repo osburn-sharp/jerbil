@@ -46,7 +46,7 @@ OptionParser.new do |opts|
   end
 
   opts.on("-l", "--log-daemon", "Log daemon output") do
-    log_daemon = false
+    log_daemon = true
   end
 
   opts.on("-S", "--no-syslog", "Do not log to syslog") do

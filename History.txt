@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-1.0.14 22-Aug-2012]
+
+  Set log_daemon to true in sbin/jserviced
+
 [jerbil-1.0.13 22-Aug-2012]
 
   Add log_daemon capability to init files
