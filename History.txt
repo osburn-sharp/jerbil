@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-1.0.12 22-Aug-2012]
+
+  Add log_daemon capability to sbin/jserviced
+
 [jerbil-1.0.11 20-Aug-2012]
 
   added defaults to key and pid directories in jerbil_service/config

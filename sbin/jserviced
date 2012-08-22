@@ -28,6 +28,7 @@ log_to_syslog = true
 verbose = true
 quiet = false
 my_service = nil
+log_daemon = false
 
 OptionParser.new do |opts|
 
@@ -42,6 +43,10 @@ OptionParser.new do |opts|
 
   opts.on("-n", "--no-daemon", "Do not daemonize") do
     daemonize = false
+  end
+
+  opts.on("-l", "--log-daemon", "Log daemon output") do
+    log_daemon = false
   end
 
   opts.on("-S", "--no-syslog", "Do not log to syslog") do
@@ -88,6 +93,7 @@ JerbilService::Supervisor.new(the_service) do |jservice|
   jservice.no_daemon unless daemonize
   jservice.quiet if quiet
   jservice.verbose if verbose
+  jservice.log_daemon if log_daemon
   jservice.no_syslog unless log_to_syslog
   jservice.config_file = config_file
 end
