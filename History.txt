@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-1.0.16 22-Aug-2012]
+
+  Fix problem with log-opts being deleted and not there a second time round
+
 [jerbil-1.0.15 22-Aug-2012]
 
   Tweaks to sclient.rb to fix daemon problems or help uncover them at least

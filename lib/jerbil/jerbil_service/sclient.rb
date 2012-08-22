@@ -176,15 +176,15 @@ module JerbilService
       end
 
       # create a Jelly logging object if requested
-      if @set_log_daemon then
-        Jelly::Logger.disable_syslog if @no_syslog
-        log_opts = Jelly::Logger.get_options(config)
-        log_opts[:log_level] = :debug if @verbose
-        @logger = Jelly::Logger.new("#{@klass.to_s.downcase}_sd", log_opts)
-        @output.puts "Logging output to #{@logger.logfilename}"
-        @output.flush
-        @output = @logger
-      end
+      # if @set_log_daemon then
+      #   Jelly::Logger.disable_syslog if @no_syslog
+      #   log_opts = Jelly::Logger.get_options(config)
+      #   log_opts[:log_level] = :debug if @verbose
+      #   @logger = Jelly::Logger.new("#{@klass.to_s.downcase}_sd", log_opts)
+      #   @output.puts "Logging output to #{@logger.logfilename}"
+      #   @output.flush
+      #   @output = @logger
+      # end
 
       # log the configuration options if requested
       if @verbose then
@@ -218,6 +218,8 @@ module JerbilService
         # all those open files are closed?
         # so open the logger again
         if @set_log_daemon then
+          log_opts = Jelly::Logger.get_options(config)
+          log_opts[:log_level] = :debug if @verbose
           @output = Jelly::Logger.new("#{@klass.to_s.downcase}_sd", log_opts)
         else
           # no logger, so write any messages to /dev/null
