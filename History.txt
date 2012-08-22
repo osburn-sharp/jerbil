@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-1.0.15 22-Aug-2012]
+
+  Tweaks to sclient.rb to fix daemon problems or help uncover them at least
+
 [jerbil-1.0.14 22-Aug-2012]
 
   Set log_daemon to true in sbin/jserviced

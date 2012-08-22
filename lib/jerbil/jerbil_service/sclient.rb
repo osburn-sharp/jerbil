@@ -204,7 +204,11 @@ module JerbilService
       # the service will be daemonized so need to set up daemon parameters
       if @daemonize then
         @output.puts "About to demonize this service"
+        # cleanly close everything
+        @output.close
+        
         dopts = @logger.nil? ? {} : {:backtrace=>true,
+          :app_name=>@klass.to_s.downcase,
           :log_dir=>File.dirname(@logger.logfilename),
           :log_output=>true,
           :dir_mode=>:normal,
@@ -245,8 +249,8 @@ module JerbilService
       @output.puts "Service has stopped"
       
     rescue => err
-      @output.puts "Error while starting service: #{err.class.to_s}, #{err.message}"
-      @output.puts err.backtrace.join("\n") if @verbose
+      puts "Error while starting service: #{err.class.to_s}, #{err.message}"
+      puts err.backtrace.join("\n") if @verbose
     end
 
     # stop a Jerbil Service
