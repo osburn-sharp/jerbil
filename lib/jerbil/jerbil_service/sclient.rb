@@ -205,7 +205,7 @@ module JerbilService
       if @daemonize then
         @output.puts "About to demonize this service"
         # cleanly close everything
-        @output.close
+        #@output.close
         
         dopts = {:backtrace=>true,
           :app_name=>@klass.to_s.downcase,
