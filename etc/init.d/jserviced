@@ -23,6 +23,7 @@ myopts=""
 [ -n "${CONF_FILE}" ] && myopts="${myopts} -c ${CONF_FILE}"
 [ "${VERBOSE}" == "true" ] && [ "${QUIET}" != "true" ] && myopts="${myopts} -V"
 [ -n "${NO_SYSLOG}" ] && myopts="${myopts} -S"
+[ -n "${LOG_DAEMON}" ] && myopts="${myopts} -l"
 [ "$SERVICE_NAME" == "" ] && SERVICE_NAME="${SVCNAME}"
 
 start() {

@@ -14,6 +14,9 @@
 # other than the system default (/etc/jermine/jemplayer).
 #CONF_FILE=
 
+# LOG_DAEMON can be used to log the output of the daemon to a jelly log file
+#LOG_DAEMON=false
+
 # By default, the service will suppress all messages to the terminal. For testing and
 # diagnostics, set VERBOSE to be true and run with NO_DAEMON
 #VERBOSE=false
