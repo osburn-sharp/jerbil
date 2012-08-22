@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-1.0.19 22-Aug-2012]
+
+  add log_daemon to stop and status services
+
 [jerbil-1.0.18 22-Aug-2012]
 
   Daemons expects STDOUT to be open, so ensure it is!

@@ -43,6 +43,10 @@ OptionParser.new do |opts|
   opts.on("-n", "--no-daemon", "Do not daemonize") do
     daemonize = false
   end
+  
+  opts.on("-l", "--log-daemon", "ignored") do
+    daemonize = false
+  end
 
   opts.on("-S", "--no-syslog", "Do not log to syslog") do
     log_to_syslog = false
