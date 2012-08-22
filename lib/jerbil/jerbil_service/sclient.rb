@@ -207,12 +207,12 @@ module JerbilService
         # cleanly close everything
         @output.close
         
-        dopts = @logger.nil? ? {} : {:backtrace=>true,
+        dopts = {:backtrace=>true,
           :app_name=>@klass.to_s.downcase,
-          :log_dir=>File.dirname(@logger.logfilename),
+          :log_dir=>config[:log_dir],
           :log_output=>true,
           :dir_mode=>:normal,
-          :dir=>File.dirname(@logger.logfilename)} 
+          :dir=>config[:log_dir]}
         Daemons.daemonize(dopts)
         
         # all those open files are closed?
