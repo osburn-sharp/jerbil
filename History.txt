@@ -1,5 +1,10 @@
 ==History
 
+[jerbil-1.1.0 24-Aug-2012]
+
+  Change jservice to use su again as this seems more reliable than changing the user
+  internally. Also add logging to verify calls.
+
 [jerbil-1.0.19 22-Aug-2012]
 
   add log_daemon to stop and status services

@@ -155,16 +155,19 @@ module JerbilService
       # get the config options for this service
       config = @klass.get_config(@config_file)
       
-      if Jerbil::Chuser.change_group(config[:group]) then
-        @output.puts "Changed group to #{config[:group]}"
-        config = @klass.get_config(@config_file)
-      end
-            
-      # create a hash for logger options
-      if Jerbil::Chuser.change_user(config[:user]) then
-        @output.puts "Changed user to #{config[:user]}"
-        config = @klass.get_config(@config_file)
-      end
+      # suspend change user stuff - seems to still know it is root
+      #
+      
+      # if Jerbil::Chuser.change_group(config[:group]) then
+      #   @output.puts "Changed group to #{config[:group]}"
+      #   config = @klass.get_config(@config_file)
+      # end
+      #       
+      # # create a hash for logger options
+      # if Jerbil::Chuser.change_user(config[:user]) then
+      #   @output.puts "Changed user to #{config[:user]}"
+      #   config = @klass.get_config(@config_file)
+      # end
             
       # create a hash for logger options
       log_opts = {}
@@ -208,7 +211,7 @@ module JerbilService
         #@output.close
         
         dopts = {:backtrace=>true,
-          :app_name=>@klass.to_s.downcase,
+          :app_name=>@klass.to_s.downcase + "_daemon",
           :log_dir=>config[:log_dir],
           :log_output=>true,
           :dir_mode=>:normal,

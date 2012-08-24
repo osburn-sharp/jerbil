@@ -25,6 +25,7 @@ myopts=""
 [ -n "${NO_SYSLOG}" ] && myopts="${myopts} -S"
 [ -n "${LOG_DAEMON}" ] && myopts="${myopts} -l"
 [ "$SERVICE_NAME" == "" ] && SERVICE_NAME="${SVCNAME}"
+[ "$SERVICE_USER" == "" ] && SERVICE_USER="jermine"
 
 start() {
   ebegin "Starting Jerbil Service ${SERVICE_NAME}"
@@ -33,7 +34,7 @@ start() {
     # create the options for starting the daemon from the settings in the
     # /etc/conf.d/jservice file (same name as this link)
 
-    /usr/sbin/jserviced ${myopts} -s ${SERVICE_NAME}
+    /bin/su -m -c "/usr/sbin/jserviced ${myopts} -s ${SERVICE_NAME}" - ${SERVICE_USER}
 
   eend $?
 }

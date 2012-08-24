@@ -11,7 +11,7 @@
 #NO_SYSLOG=false
 
 # CONF_FILE can be used to start the service with a configuration from a file
-# other than the system default (/etc/jermine/jemplayer).
+# other than the system default (/etc/jermine/<service>.rb).
 #CONF_FILE=
 
 # LOG_DAEMON can be used to log the output of the daemon to a jelly log file
@@ -23,8 +23,13 @@
 
 # A service name can be defined here, but in its absence, will be taken from the file name
 # Which is probably not going to be right if the file has the usual "d" on the end!
-#SERVICE_NAME=""
+SERVICE_NAME=
 
+# define the user under which this service will run
+SERVICE_USER=
+
+
+# Add further services is needed, remembering the d on the end!
 NEEDS="logger
 net
 jerbild"

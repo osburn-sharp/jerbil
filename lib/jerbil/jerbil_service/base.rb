@@ -147,6 +147,7 @@ module JerbilService
     #
     def verify_callback(skey="")
       check_key(skey, @service.key)
+      @logger.info "Verify called"
       return true
     end
 
