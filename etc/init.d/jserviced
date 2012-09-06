@@ -34,7 +34,7 @@ start() {
     # create the options for starting the daemon from the settings in the
     # /etc/conf.d/jservice file (same name as this link)
 
-    /bin/su -m -c "/usr/sbin/jserviced ${myopts} -s ${SERVICE_NAME}" - ${SERVICE_USER}
+    /bin/su -c "/usr/sbin/jserviced ${myopts} -s ${SERVICE_NAME}" - ${SERVICE_USER}
 
   eend $?
 }

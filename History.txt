@@ -1,5 +1,14 @@
 ==History
 
+[jerbil-1.1.2 06-Sep-2012]
+
+  Update runscript to create /var/run/jermine if not already there. 3.0+ kernels
+  appear to use /run on tmpfs
+
+[jerbil-1.1.1 24-Aug-2012]
+
+  Take out the -m option from the su command - no need to preserve any environment
+
 [jerbil-1.1.0 24-Aug-2012]
 
   Change jservice to use su again as this seems more reliable than changing the user

@@ -1,14 +1,14 @@
 # Created by Jevoom
 #
-# 24-Aug-2012
-#     Change jservice to use su again as this seems more reliable than changing the user
-#     internally. Also add logging to verify calls.
+# 06-Sep-2012
+#     Update runscript to create /var/run/jermine if not already there. 3.0+ kernels
+#     appear to use /run on tmpfs
 
 module Jerbil
-  # version set to 1.1.0
-  Version = '1.1.0'
-  # date set to 24-Aug-2012
-  Version_Date = '24-Aug-2012'
-  #ident string set to: jerbil-1.1.0 24-Aug-2012
-  Ident = 'jerbil-1.1.0 24-Aug-2012'
+  # version set to 1.1.2
+  Version = '1.1.2'
+  # date set to 06-Sep-2012
+  Version_Date = '06-Sep-2012'
+  #ident string set to: jerbil-1.1.2 06-Sep-2012
+  Ident = 'jerbil-1.1.2 06-Sep-2012'
 end
