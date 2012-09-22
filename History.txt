@@ -1,5 +1,9 @@
 ==History
 
+[jerbil-1.1.3 22-Sep-2012]
+
+  Add some instrumentation to jserviced to help troubleshoot the numbat runscript.
+
 [jerbil-1.1.2 06-Sep-2012]
 
   Update runscript to create /var/run/jermine if not already there. 3.0+ kernels

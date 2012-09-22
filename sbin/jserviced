@@ -78,16 +78,25 @@ OptionParser.new do |opts|
 
 end.parse!
 
+verbose = false if quiet
+
+puts "Ready to start. Looking for class" if verbose
+
 unless my_service
   puts "Error: You must name a service (-s name)"
   exit 1
 else
   service_name = JerbilService::Utils.classify(my_service)
+  puts "Requiring modules for: #{service_name}" if verbose
   require "#{my_service}"
   require "#{my_service}/config"
   require "#{my_service}/version"
+  puts "Required modules" if verbose
   the_service = Module.const_get(service_name)
+  puts "Obtained module name: #{the_service}" if verbose
 end
+
+puts "Starting the Supervisor" if verbose
 
 JerbilService::Supervisor.new(the_service) do |jservice|
   jservice.no_daemon unless daemonize
@@ -97,3 +106,5 @@ JerbilService::Supervisor.new(the_service) do |jservice|
   jservice.no_syslog unless log_to_syslog
   jservice.config_file = config_file
 end
+
+puts "Everything should be working now" if verbose

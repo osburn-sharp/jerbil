@@ -28,10 +28,11 @@ SERVICE_NAME=
 # define the user under which this service will run
 SERVICE_USER=
 
+# add any services that this service uses
+USES="logger
+net"
 
-# Add further services is needed, remembering the d on the end!
-NEEDS="logger
-net
-jerbild"
+# Add further services that this service needs, remembering the d on the end!
+NEEDS="jerbild"
 
 DESCRIPTION="This is a test service for Jerbil!"

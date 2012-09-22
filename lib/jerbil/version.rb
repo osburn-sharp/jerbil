@@ -1,14 +1,13 @@
 # Created by Jevoom
 #
-# 06-Sep-2012
-#     Update runscript to create /var/run/jermine if not already there. 3.0+ kernels
-#     appear to use /run on tmpfs
+# 22-Sep-2012
+#   Add some instrumentation to jserviced to help troubleshoot the numbat runscript.
 
 module Jerbil
-  # version set to 1.1.2
-  Version = '1.1.2'
-  # date set to 06-Sep-2012
-  Version_Date = '06-Sep-2012'
-  #ident string set to: jerbil-1.1.2 06-Sep-2012
-  Ident = 'jerbil-1.1.2 06-Sep-2012'
+  # version set to 1.1.3
+  Version = '1.1.3'
+  # date set to 22-Sep-2012
+  Version_Date = '22-Sep-2012'
+  #ident string set to: jerbil-1.1.3 22-Sep-2012
+  Ident = 'jerbil-1.1.3 22-Sep-2012'
 end
