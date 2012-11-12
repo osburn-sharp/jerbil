@@ -25,7 +25,7 @@ myopts=""
 [ -n "${NO_SYSLOG}" ] && myopts="${myopts} -S"
 [ -n "${LOG_DAEMON}" ] && myopts="${myopts} -l"
 [ "$SERVICE_NAME" == "" ] && SERVICE_NAME="${SVCNAME}"
-[ "$SERVICE_USER" == "" ] && SERVICE_USER="jermine"
+[ "$SERVICE_USER" == "" ] && SERVICE_USER="jerbil"
 
 start() {
   ebegin "Starting Jerbil Service ${SERVICE_NAME}"

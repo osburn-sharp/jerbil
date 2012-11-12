@@ -8,7 +8,7 @@
 10-01-2012
 
 sclient will strip out log options when getting its own! Need to change this or add
-an option in Jelly to not strip them.
+an option in Jellog to not strip them.
 
 01-Dec-2011
 

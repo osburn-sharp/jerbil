@@ -19,7 +19,7 @@ require 'jerbil/servers'
 require 'jerbil/service'
 require 'jerbil/config'
 require 'jerbil'
-require 'jelly'
+require 'jellog'
 
 
 conf_file = File.expand_path(File.dirname(__FILE__) + '/../../test/conf.d/jerbil_test.rb')
@@ -28,7 +28,7 @@ conf_file = File.expand_path(File.dirname(__FILE__) + '/../../test/conf.d/jerbil
 describe "A local Jerbil Session running under a daemon" do
   
   before(:all) do
-    Jelly::Logger.disable_syslog
+    Jellog::Logger.disable_syslog
   end
 
   before(:each) do

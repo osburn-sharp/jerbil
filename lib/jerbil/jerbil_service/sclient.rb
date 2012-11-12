@@ -16,31 +16,46 @@ require 'daemons'
 require 'drb'
 require 'socket'
 
-require 'jelly'
+require 'jellog'
 require 'jerbil/support'
 require 'jerbil/servers'
-require 'jerbil/chuser'
 require 'jeckyl/errors'
 
 module JerbilService
 
-  # Supervisor - a wrapper class for managing a Jerbil Service
+  # Supervisor (Supervisory Client) - a wrapper class for managing a Jerbil Service
   #
-  # Can be used to easily create a daemon script for a service. First gather options
+  # Can be used to create a daemon script for a service. First gather options
   # from the command line using optparse and then call Supervisor.new. Within the block
   # call the methods below in response to the options on the command line. When the
   # block closes the service will be started and will wait for calls.
   #
-  # All of this is already done via /usr/sbin/jserviced. See {file:README_SERVICES.md Jerbil Services} for more details
+  # All of this is already done for you by /usr/sbin/jserviced. 
+  # See {file:README_SERVICES.md Services Readme} for more details.
   #
   class Supervisor
 
     # create and run a service daemon for the given class, which should be a JerbilService
-    # class. This yields a block. Within the block, use the methods below to set parameters and the service
-    # will then be launched when the block returns
+    # class. 
     #
-    # @param [Class] klass a JerbilService class or child of
+    # The service called through this supervisor needs to comply with Jerbil naming
+    # conventions. This requires the service to be defined within a module with the
+    # name of the service, and having a class called Service within it. See 
+    # {file:README_SERVICES.md Service Readme} for more details.
     #
+    # The method yields a block. Within the block, use the methods below to set parameters and the service
+    # will then be launched when the block returns:
+    #
+    #    JerbilService::Supervisor.new(MyService, opts) do |service|
+    #      service.no_daemon
+    #      service.quiet
+    #    end
+    #
+    # The supervisor will start the service when the block exits.
+    #
+    #
+    # @param [Module] klass is the service module (see above)
+    # @yield [service] instance of supervisor to config
     def initialize(klass, &block)
 
       @daemonize = true
@@ -89,25 +104,25 @@ module JerbilService
     end
 
     # ensure logging does not log to syslog
-    # see Jelly::Logger#disable_syslog for details
+    # see Jellog::Logger#disable_syslog for details
     def no_syslog
       @no_syslog = true
     end
 
     # set the config file for the service. Each service expects an options hash, which the supervisor
     # will obtain from either this file, or the default, which is usually: /etc/jermine/<service>.rb
-    #
     def config_file=(cfile)
       @config_file = cfile
     end
 
-    # set the supervisor output to a file (object, not path)
+    # set the supervisor output to a file
+    # @param [IO] ofile is a file object to output to
     def output=(ofile)
       @output = ofile unless @quiet
     end
     
     # create a log file for the daemon task, the output of
-    # which is otherwise lost. This uses jelly and will write the log
+    # which is otherwise lost. This uses jellog and will write the log
     # to a file in the log_dir (see {JerbilService::Config}) named after the service with _sd added.
     # By default this would be /var/log/jermine/<service>_sd.log
     #
@@ -120,8 +135,9 @@ module JerbilService
     
     # override the default jerbil config file, used only
     # for testing new versions of jerbil
+    #
     # @deprecated - jerbil_env is a standard config parameter now, although still only
-    # intended for test purposes.
+    #   intended for test purposes.
     def jerbil_env=(env)
       @jerbil_env = env
     end
@@ -129,7 +145,10 @@ module JerbilService
 
     # this class method if called to create an instance of the supervisor to
     # stop a Jerbil service. Use the methods above in the block to set
-    # parameters
+    # parameters, although some of them have no meaning in this context.
+    #
+    # @param [Module] klass is the service module of the service to stop
+    # @yield [service] instance of supervisor to config
     def self.stop(klass, &block)
 
       # create an instance of this class without starting the service
@@ -142,11 +161,11 @@ module JerbilService
 
     end
     
-    #protected
 
+    # @private
     # this method is called by the initialize method to start a Jerbil Service
     # messages are logged through @output, which is stderr by default or
-    # /dev/null if quiet was enabled, or a Jelly logger.
+    # /dev/null if quiet was enabled, or a Jellog logger.
     #
     def start_service
 
@@ -154,21 +173,7 @@ module JerbilService
       
       # get the config options for this service
       config = @klass.get_config(@config_file)
-      
-      # suspend change user stuff - seems to still know it is root
-      #
-      
-      # if Jerbil::Chuser.change_group(config[:group]) then
-      #   @output.puts "Changed group to #{config[:group]}"
-      #   config = @klass.get_config(@config_file)
-      # end
-      #       
-      # # create a hash for logger options
-      # if Jerbil::Chuser.change_user(config[:user]) then
-      #   @output.puts "Changed user to #{config[:user]}"
-      #   config = @klass.get_config(@config_file)
-      # end
-            
+                       
       # create a hash for logger options
       log_opts = {}
       
@@ -178,12 +183,12 @@ module JerbilService
         config[:jerbil_env] = @jerbil_env
       end
 
-      # create a Jelly logging object if requested
+      # create a Jellog logging object if requested
       # if @set_log_daemon then
-      #   Jelly::Logger.disable_syslog if @no_syslog
-      #   log_opts = Jelly::Logger.get_options(config)
+      #   Jellog::Logger.disable_syslog if @no_syslog
+      #   log_opts = Jellog::Logger.get_options(config)
       #   log_opts[:log_level] = :debug if @verbose
-      #   @logger = Jelly::Logger.new("#{@klass.to_s.downcase}_sd", log_opts)
+      #   @logger = Jellog::Logger.new("#{@klass.to_s.downcase}_sd", log_opts)
       #   @output.puts "Logging output to #{@logger.logfilename}"
       #   @output.flush
       #   @output = @logger
@@ -221,9 +226,9 @@ module JerbilService
         # all those open files are closed?
         # so open the logger again
         if @set_log_daemon then
-          log_opts = Jelly::Logger.get_options(config)
+          log_opts = Jellog::Config.intersection(config)
           log_opts[:log_level] = :debug if @verbose
-          @output = Jelly::Logger.new("#{@klass.to_s.downcase}_sd", log_opts)
+          @output = Jellog::Logger.new("#{@klass.to_s.downcase}_sd", log_opts)
         else
           # no logger, so write any messages to /dev/null
           @output = File.open('/dev/null', 'w')
@@ -235,7 +240,7 @@ module JerbilService
 
       if @no_syslog then
         @output.puts "Disabling messages to syslog"
-        Jelly::Logger.disable_syslog
+        Jellog::Logger.disable_syslog
       else
         @output.puts "Sending messages to syslog"
       end
@@ -258,7 +263,7 @@ module JerbilService
       puts err.backtrace.join("\n") if @verbose
     end
 
-    # stop a Jerbil Service
+    # @private stop a Jerbil Service
     def stop_service
 
       config = @klass.get_config(@config_file)

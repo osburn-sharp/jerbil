@@ -24,10 +24,11 @@ myopts=""
 start() {
   ebegin "Starting Jerbil Server"
   
-  if [ ! -d /var/run/jermine ] ; then
-    mkdir /var/run/jermine
-    chown jermine:jermine /var/run/jermine
-    einfo "Created /var/run/jermine"
+  # /var/run is now temporary and may need to be created at each boot
+  if [ ! -d /var/run/jerbil ] ; then
+    mkdir /var/run/jerbil
+    chown jerbil:jerbil /var/run/jerbil
+    einfo "Created /var/run/jerbil"
   fi
 
     /usr/sbin/jerbild ${myopts}

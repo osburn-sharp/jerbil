@@ -12,7 +12,7 @@ my_servers << Jerbil::Server.new('antonia', 'JKLMNOP')
 servers my_servers
 
 
-# Controls the amount of logging done by Jelly
+# Controls the amount of logging done by Jellog
 # 
 #  * :system - standard message, plus log to syslog
 #  * :verbose - more generous logging to help resolve problems
@@ -20,7 +20,7 @@ servers my_servers
 # 
 log_level :debug
 
-# Location for Jelly (logging utility) to save log files
+# Location for Jellog (logging utility) to save log files
 log_dir "/home/robert/dev/projects/jerbil/log"
 
 # Size of a log file (in MB) before switching to the next log

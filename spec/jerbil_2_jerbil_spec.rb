@@ -16,7 +16,7 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 require 'jerbil/server'
 require 'jerbil/service'
 require 'jerbil'
-require 'jelly'
+require 'jellog'
 require 'socket'
 require 'syslog'
 require 'drb'
@@ -38,7 +38,7 @@ describe "Jerbil to Jerbil tests" do
       end
     end
     DRb.start_service
-    Jelly::Logger.disable_syslog
+    Jellog::Logger.disable_syslog
     #@remote_jerbil_server = Jerbil::ServerRecord.new(hostname, 'ABCDE')
     #@jerbil_server = Jerbil::ServerRecord.new(hostname, @my_key)
     @a_service = Jerbil::ServiceRecord.new(:rubytest, :test)

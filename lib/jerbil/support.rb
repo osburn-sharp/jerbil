@@ -20,12 +20,18 @@ require 'socket'
 module Jerbil
 
   #
-  # Set of utilities to assist in managing services. Used largely by JerbilService
+  # Set of utilities to assist in managing Jerbil services. Used largely by JerbilService
   # modules and classes
   #
   module Support
 
     # create a pid file for the given service and env in the given pid_dir
+    #
+    # @param [Symbol] name of the service
+    # @param [Symbol] env the services is running in
+    # @param [String] pid_dir path to directory where pid file is to be written
+    # @return [String] the pid
+    # @raise [Jerbil::ServiceConfigError] if the pid file cannot be written to
     def Support.write_pid_file(name, env, pid_dir)
       pid = Process.pid.to_s
       pid_file = "#{pid_dir}/#{name.to_s}-#{env}.pid"
@@ -40,6 +46,9 @@ module Jerbil
     end
 
     # retrieve the pid from a perviously created pid file
+    #
+    # @param (see Support.write_pid_file)
+    # @return [Integer] the pid from the pid file
     def Support.get_pid_from_file(name, env, pid_dir)
       pid_file = "#{pid_dir}/#{name.to_s}-#{env}.pid"
       pid = File.read(pid_file).chomp
@@ -49,7 +58,8 @@ module Jerbil
       return 0
     end
 
-    # retrieve the pid and delete the pid file
+    # (see Support.get_pid_from_file)
+    # @note This deletes the pid file as well
     def Support.get_pid_and_delete_file(name, env, pid_dir)
       pid = get_pid_from_file(name, env, pid_dir)
       if pid > 0 then
@@ -68,6 +78,11 @@ module Jerbil
     # Private keys should be created by the daemon start script and used to supervise
     # the service (e.g. stop)
     #
+    # @param [Symbol] name of the service
+    # @param [Symbol] env the services is running in
+    # @param [String] key_dir path to directory where key file is to be written  
+    # @return [String] the private key
+    # @raise [Jerbil::ServiceConfigError] if the key file cannot be written to
     def Support.create_private_key(name,  env, key_dir)
       key = Digest::SHA1.hexdigest(Time.now.to_s + rand(12341234).to_s)[1..20]
       key_file = "#{key_dir}/#{name.to_s}-#{env}.asc"
@@ -82,6 +97,9 @@ module Jerbil
     end
 
     # return a previously saved private key
+    #
+    # @param (see Support.create_private_key)
+    # @return (see Support.create_private_key)
     def Support.get_private_key(name, env, key_dir)
       key_file = "#{key_dir}/#{name.to_s}-#{env}.asc"
       key = File.read(key_file).chomp
@@ -90,7 +108,8 @@ module Jerbil
       return ''
     end
 
-    # return a previously saved key and delete the file
+    # (see Support.get_private_key)
+    # @note This deletes the key file
     def Support.get_key_and_delete_file(name, env, key_dir)
       key = get_private_key(name, env, key_dir)
       if key != '' then
@@ -109,12 +128,24 @@ module Jerbil
 
   # General support methods for Jerbil itself
 
-  # get the Jerbil config options from the given file, or the default if nil
+  # get the Jerbil config options
+  #
+  # This will create a hash of the Jerbil Server config options from either
+  # the given config file or, if none is provided, the default file. The
+  # location of the default file is currently defined by the Jeckyl gem as the
+  # default location for all Jeckyl config files.
+  #
+  # @note This method is used to get the environment for the Jerbil Server
+  #  and therefore find the server.
+  #
+  # @param [String] config_file path to jerbil config file
+  # @return [Hash] of config options
+  # @raise [Jerbil::JerbilConfigError] if there was any error reading the file
   def Jerbil.get_config(config_file=nil)
      # check that the config_file has been specified
     if config_file.nil? then
       # no, so set the default
-      config_file = Jeckyl::ConfigRoot + "/jerbil.rb"
+      config_file = File.join(Jeckyl.config_dir, "/jerbil.rb")
     end
 
     # read the config file
@@ -125,38 +156,5 @@ module Jerbil
     raise Jerbil::JerbilConfigError, err.message
   end
 
-
-  # use the jerbil config file to get the ServerRecord for the server requested
-  #
-  # * fqdn - string name for the server to search for
-  # * config_file - string path to file. If nil (default) then use the default
-  #   path
-  #
-  def Jerbil.get_server(fqdn, config=nil)
-
-    # check that a config has been specified
-    #if config.nil? then
-      # no, so get the default
-      config = Jerbil.get_config(config)
-    #end
-
-    # get the servers that have been defined
-    servers = config[:servers]
-
-    # and return the local server
-    servers.each {|server| return server if server.fqdn == fqdn && server.env == config[:environment]}
-
-    # not returned? No server found
-    raise Jerbil::MissingServer, "No server at jerbil[#{config[:environment]}]@#{fqdn}"
-
-  end
-
-  # as for get_server but use the local server
-  def Jerbil.get_local_server(config=nil)
-    hostname = Socket.gethostname
-
-    Jerbil.get_server(hostname, config)
-
-  end
 
 end

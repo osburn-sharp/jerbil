@@ -20,7 +20,7 @@ require 'jerbil/config'
 require 'jerbil'
 require 'socket'
 require 'syslog'
-require 'jelly'
+require 'jellog'
 require 'rspec/mocks/standalone'
 
 conf_file = File.expand_path(File.dirname(__FILE__) + '/../../test/conf.d/jerbil_test.rb')
@@ -50,7 +50,7 @@ describe "A Remote Jerbil Session running under a daemon" do
     Socket.stub(:gethostname).and_return('antonia.osburn-sharp.ath.cx')
     @b_service = Jerbil::ServiceRecord.new(:rubytest, :prod)
     Socket.unstub(:gethostname)
-    Jelly::Logger.disable_syslog
+    Jellog::Logger.disable_syslog
   end
 
   it "should be easily created" do

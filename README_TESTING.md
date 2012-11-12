@@ -34,14 +34,14 @@ The following tests require the RubyTest service to be started as well:
     
 ## Dev and Test servers
 
-Jerbil can be run with dev and test servers in parallel with any production server. To access these servers requires
-the :jerbil_env parameter to be set to the required value. This is how the rubytest service operates, so check out
+Jerbil can be run with dev and test servers in parallel with any production server. To access these servers from another
+service requires the :jerbil_env parameter to be set to the required value. This is how the rubytest service operates, so check out
 the config file above.
 
 Testing Jerbil across the network is best done using git to clone the jerbil files, and then running the RubyTest tests
 described above. To check the status of a server, use the jerbil command:
 
     $ jerbil services -c test/conf.d/jerbiltest.rb
-    
+    $ # and verify
     $ jerbil services -c test/conf.d/jerbiltest.rb -v
   

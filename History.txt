@@ -1,4 +1,13 @@
+# @markup rdoc
+# @title Change Log
+# @author Robert Sharp
+
 ==History
+
+[jerbil-1.2.0 12-Nov-2012]
+
+  Housekeeping release with unwanted modules/code removed and documentation tidied for
+  release into wild (evenutally).
 
 [jerbil-1.1.3 22-Sep-2012]
 
@@ -246,7 +255,7 @@ and including an install command
 
 jerbil-0.2.0 08-Sep-2011
 
-Migrate to Jelly 1.0
+Migrate to Jellog 1.0
 Add colour to jerbil listings
 Fix bug in missing_service that failed to remove from local server
 Add test to see if prior registered service is responding and kick it if it is not

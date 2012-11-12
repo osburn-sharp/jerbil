@@ -15,10 +15,10 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 require 'jerbil/server'
 require 'jerbil'
-require 'jelly'
+require 'jellog'
 require 'socket'
 
-Jelly.disable_syslog
+Jellog.disable_syslog
 config_dir = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/')
 config_file = config_dir + '/jerbil.conf'
 

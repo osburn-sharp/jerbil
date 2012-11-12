@@ -27,8 +27,11 @@ module Jerbil
   # and by services and clients to find the local broker
   class Servers
 
-    # returns the local server from an array of servers. Aimed at locating the local
-    # server to use from the output of the config file
+    # return a record for the local server
+    #
+    # @param [Symbol] env being one of :dev, :test, :prod, and defaulting to :prod
+    # @param [Boolean] check set true to ensure server is running
+    # @raise [Jerbil::MissingServer] if server is not running
     #
     def self.get_local_server(env=nil, check=false)
       env ||= :prod
@@ -40,6 +43,12 @@ module Jerbil
     end
     
     # create the local server record
+    # 
+    # used by {Jerbil::Broker} during startup to create its own record
+    #
+    # @param [Symbol] env being one of :dev, :test, :prod
+    # @param [String] pkey the private key for this server
+    # @return [Jerbil::Servers] a server record
     def self.create_local_server(env, pkey)
       hostname = Socket.gethostname
       port = self.get_port(env)
@@ -47,7 +56,7 @@ module Jerbil
     end
 
     # return the server with the given fqdn
-    # NOT USED ANYWHERE?
+    # @deprecated NOT USED ANYWHERE?
     def self.get_server(servers, fqdn, env=:prod)
       servers.each {|server| return server if server.fqdn == fqdn && server.env == env}
       # found nothing to match
@@ -55,8 +64,19 @@ module Jerbil
     end
     
     # scan the lan for open ports and return an array of servers
-    # for each. These server records have blank keys, however. 
-    # Use get_key to obtain the key from the server
+    # for each. 
+    # 
+    # These server records have blank keys. {Jerbil::Broker#register_server} will return
+    # the called servers key, which can then be set with {Jerbil::Servers#set_key}.
+    #
+    # The netaddress and netmask are defined in {Jerbil::Config} where further details
+    # about these parameters can be found.
+    #
+    # @param [Symbol] env being the environment in which the servers should be running
+    # @param [String] netaddress for the network to search
+    # @param [Numeric] netmask to limit the search
+    # @param [Float] seconds to wait before timing out
+    # @return [Array] of {jerbil::Servers} that were found
     def self.find_servers(env, netaddress, netmask, seconds=0.1)
       # get the port number for jerbil
       port = self.get_port(env)
@@ -72,12 +92,12 @@ module Jerbil
       return servers
     end
 
-    #
     # create a new server record with
     #
-    # * fqdn - string fully qualified domain name
-    # * key - string access key
-    # * port - optional integer for port number
+    # @param [String] fqdn - string fully qualified domain name
+    # @param [String] key - private access key for system methods
+    # @param [Symbol] env to set the environment to :dev, :test or :prod
+    # @param [Numeric] port - optional integer for port number
     #
     def initialize(fqdn, key, env=:prod, port=nil)
       @fqdn = fqdn
@@ -92,26 +112,46 @@ module Jerbil
       end
       @active = false
     end
-
-    attr_reader :fqdn, :key, :port, :env
     
-    # ensure euqality is across name, key and port
+    # the full-qualified domain name for the server
+    attr_reader :fqdn
+    
+    # the private key for the server
+    attr_reader :key
+    
+    # the port for the server
+    attr_reader :port
+    
+    # the environment that the server is running in
+    attr_reader :env
+    
+    # test for equality
+    #
+    # ensure equality is across name, key and port.
+    # no need to test env because port is unique enough
+    #
+    # @param [Jerbil::Servers] rhs server to compare
     def ==(rhs)
       @fqdn == rhs.fqdn && @key == rhs.key && @port == rhs.port
     end
 
-    # methods to assist in DRb communications
-
+    # convenience method to assist Jerbil internals with DRb
+    #
     # drb_address makes it easier to start a DRb server, which
     # is done outside this class because it should only be done
     # under specific circumstances, and not by the general users of this class
     #
+    # @return [String] the servers DRb address
     def drb_address
       "druby://#{@fqdn}:#{@port}"
     end
 
-    # connect to the specified server. Always assumes that the caller has a DRb service
+    # connect to this server. 
+    # 
+    # Always assumes that the caller has a DRb service
     # running. Jerbil certainly should!
+    # 
+    # @raise [ServerConnectError] if anything goes wrong
     def connect
       DRbObject.new(nil, self.drb_address)
     rescue Exception
@@ -119,27 +159,40 @@ module Jerbil
     end
     
     # get the key for this server from the actual server
+    # @return [String] private key
     def get_key
       @key = self.connect.get_key
     end
     
-    # create a key for this server, ensuring it is local
+    # save the key for this server, ensuring it is local
+    #
+    # @param [String] pkey - the server's private key'
     def set_key(pkey)
       @key = pkey
     end
     
     # return a string name for the server
+    #
+    # @return [String] ident string
     def ident
       "#{@fqdn}[:#{@env}]"
     end
 
     # create a deep copy of the server object.
+    #
+    # @return [Jerbil::Server] copy of self
     def copy
       return ServerRecord.new(self.fqdn, self.key, self.env, self.port)
     end
     
-    # check if the given server is running - internal use only
+    # check if the given server is running
     #
+    # This is intended for internal use only by {Jerbil::Servers.find_servers}.
+    #
+    # @param [String] ip address of server to test
+    # @param [Integer] port for server
+    # @param [Float] timeout_secs to wait for a response
+    # @return [Boolean] true if server is up
     def self.server_up?(ip, port, timeout_secs)
       #puts "Checking for #{ip}:#{port}"
       Timeout::timeout(timeout_secs) do
@@ -154,12 +207,14 @@ module Jerbil
       false
     end
     
-    # get the port for the Jerbil Server or raise an exception if there is no jerbil
-    # service defined in /etc/services. Note that jerbil and all its services expect
-    # three consecutive ports to be available, one for each environment. The first port should be
-    # :prod, then :test and finally :dev
+    # get the port for the Jerbil Server 
+    # 
+    # Note that jerbil and all its services expect
+    # three consecutive ports to be available, one for each environment. 
+    # The first port should be :prod, then :test and finally :dev
     #
-    # raises Jerbil::MissingJerbilService if jerbil is not in /etc/services
+    # @param [Symbol] env the environment in which the servers are running
+    # @raise [Jerbil::MissingJerbilService] if jerbil is not in /etc/services
     #
     def self.get_port(env)
       port = Socket.getservbyname('jerbil')

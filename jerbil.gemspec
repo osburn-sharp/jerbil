@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
   s.files            += Dir.glob("test/**/*")
   
   s.add_dependency('colored')
-  s.add_dependency('jelly')
+  s.add_dependency('jellog')
   s.add_dependency('jeckyl')
   s.add_dependency('thor')
   s.add_dependency('term-ansicolor')

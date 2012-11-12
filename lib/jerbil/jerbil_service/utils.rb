@@ -18,8 +18,14 @@
 
 module JerbilService
   
+  # misc. methods for Jerbil scripts
   module Utils
 
+    # convert a filename etc to a proper class name
+    # For example, converts 'my_service' to 'MyService'
+    #
+    # @param [String] string to convert to a classname
+    # @return [String] converted classname
     def Utils.classify(string)
       string = string.sub(/^[a-z\d]*/) { $&.capitalize }
       string.gsub(/(?:_|(\/))([a-z\d]*)/) { "#{$1}#{$2.capitalize}" }.gsub('/', '::')

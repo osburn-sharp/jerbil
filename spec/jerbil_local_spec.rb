@@ -18,7 +18,7 @@ require 'jerbil/servers'
 require 'jerbil/service'
 require 'jerbil/config'
 require 'jerbil'
-require 'jelly'
+require 'jellog'
 
 
 conf_file = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/jerbil_local.rb')
@@ -27,7 +27,7 @@ conf_file = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/jerbil_lo
 describe "A local Jerbil Session" do
   
   before(:all) do
-    Jelly::Logger.disable_syslog
+    Jellog::Logger.disable_syslog
     @pkey = "ABCDEFG"
     my_conf = Jerbil::Config.new(conf_file)
     #puts my_conf.inspect

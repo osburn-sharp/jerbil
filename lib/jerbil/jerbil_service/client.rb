@@ -21,39 +21,88 @@ require 'socket'
 
 module JerbilService
 
-  # == Jerbil Client Interface
+
   #
-  # Client provides a wrapper around a JerbilService::Base type service that hides
-  # all interaction with Jerbil itself.
+  # JerbilService::Client provides a wrapper around a {JerbilService::Base} type service that hides
+  # all interaction with Jerbil itself, enabling client interfaces with a service to be constructed
+  # quickly and painlessly
   #
-  # To use, create an instance and then call the methods of the service.
+  # To use, call the {JerbilService::Client.find_services} method, which yields a block for
+  # each matching service registered with the Jerbil Server. The service's methods can then 
+  # be called on the yielded object, which are then transparently passed back to the
+  # service itself. 
+  #
+  # It should always be remembered that these method calls will be mediated through Ruby's
+  # DRb mechanisms and therefore access to objects across this interface may not be
+  # the same as accessing them directly. See {file:README_SERVICES.md Services Readme} for
+  # more details
   #
   class Client
 
     private_class_method :new
 
     # return the server's config options for the given file, or the default if none given
+    # 
+    # @param [Object] modl must be the constant name of the service's module.
+    # @param [String] config_file is an optional path to a Jeckyl config file
+    #
+    # This method uses [Jeckyl]() to obtain the config parameters. The module name
+    # is expected to follow the guidelines for a JerbilService: create a module
+    # with the service's name (echoed in the gem name etc) and then a class
+    # called Service. The parameter passed in is the module name as a constant
+    #
+    #    config = JerbilService::Client.get_config(MyService)
+    #
     def self.get_config(modl, config_file=nil)
       modl.get_config(config_file)
     end
 
-    # Connect to a single service using Jerbil
+    # Connect to a one or more instances of a service using Jerbil
     #
-    # * modl - constant for the service module
-    # * client_options - hash of:
-    #   :quiet - boolean, suppress messages on stdout (default: false)
-    #   :local - boolean, find only the local service (default: false)
-    #   :output - a file object or similar (not filename) to be used for output - defaults to
-    #   $stderr. Is overridden with /dev/null if quiet.
-    #   :welcome - boolean, output additional messages suitable for standalone operation
-    #   :environment - symbol for environment from config-file (probably), defaults to :prod
     #
-    # The block is called with the client so that within the block the user
-    # can call methods on the remote object
+    # The method will search the Jerbil Server for services of the given module, as
+    # defined by the what parameter:
+    # * :first, yields the block once with the first service regardless of how many services there are
+    #  and with no guarantee about which services this might be
+    # * :local, yields the service running on the same processor as the client
+    # * :all, yields the block for each service.
+    # Within the block, the user can call any of the service's methods, together with the
+    # instance methods of the client itself.
     #
-    # The connection to the service is closed at the end of the block
+    # For example, to find a service running on a particular host:
     #
-    def self.find_services(what, modl, options={}, &block) # :yields: client
+    #    JerbilService::Client.find_services(:all, MyService, opts) do |service|
+    #      if service.host == 'a_server.network.com' then
+    #        # found the services I am looking for, now do something
+    #        ...
+    #      end
+    #    end
+    #
+    # To find a service running in a particular environment, you need to set the
+    # above option:
+    #    opts = {:environment => :dev}
+    #    JerbilService::Client.find_services(:all, MyService, opts) do ...
+    #
+    # If you want to use a config file to access this information, you can use
+    # {JerbilService::Client.get_config} and extract the env information:
+    #
+    #    config = JerbilService::Client.get_config(MyService)
+    #    opts[:environment] = config[:environment]
+    #    ...
+    #
+    # The connection to the service is closed when the block exits.
+    #
+    # @param [Symbol] what being one of :first, :all or :local
+    # @param [Object] modl - constant for the service module
+    # @param [Hash] options - hash of the following
+    # @option options [Boolean]  :quiet suppress messages on stdout (default: false)
+    # @option options [Boolean]   :local find only the local service (default: false)
+    # @option options [IO]    :output a file object or similar (not filename) to be used 
+    #   for output - defaults to $stderr. Is overridden with /dev/null if quiet.
+    # @option options [Boolean]   :welcome output additional messages to stdout suitable for standalone operation
+    # @option options [Symbol]    :environment being that which the service is operating in (:dev, :test, :prod)
+    # @yield [service] a client instance for each matching service registered with Jerbil
+    def self.find_services(what, modl, options={}, &block)
 
       case what
       when :first
@@ -80,6 +129,11 @@ module JerbilService
     # backwards compatible method to connect to first service using environment
     # defined in config_file which is read in from options[:config_file] or the default
     # location (see get_config)
+    # 
+    # @deprecated Use {JerbilService::Client.find_services} instead
+    #
+    # @param (see find_services)
+    # @option (see find_services)
     #
     def self.connect(modl, options={}, &block) # :yields: client
 
@@ -94,7 +148,7 @@ module JerbilService
     end
 
 
-    #create a client instance and call the block. Should be used internally only
+    # @private create a client instance and call the block. Should be used internally only
     def initialize(modl, options, &block)
 
       @klass = modl::Service
@@ -166,7 +220,7 @@ module JerbilService
 
     #private
 
-    # connect to the client
+    # @private connect to the client
     def connect(index=:all, &block)
 
       if index == :first then
@@ -185,11 +239,14 @@ module JerbilService
 
     end
 
-    # verify that the service is working - having a @session is enough cos
-    # calling @service.connect will already try verify_callback. This is a bit of a
-    # no-op cos to call it OK you must already have connected and if it could ever
-    # return false you wouldn't have got this far! Still, it gives mean to what
-    # would otherwise be a meaningless empty block.
+    # verify that the service is working
+    #
+    # This is really a no-op in that if the client has entered the block successfully, then
+    # the service that is passed to the block will be working and therefore this call
+    # will always return true. Consider it a placebo statement for a client interface
+    # that only wants to check the service is running!
+    #
+    # @return [Boolean] indicating if the services if running
     #
     def verify
       @session != nil
@@ -197,15 +254,22 @@ module JerbilService
 
 
     # return the name of the host on which the service is running
+    #
+    # @return [String] FQDN of the host on which the service is running
     def host
       return @service.host
     end
 
+    # return the service key for the given service, which can be used
+    # by the caller where a method requires. See {file:README_SERVICES.md Services Readme}
+    # for details about keys.
+    #
+    # @return [String] key to use to connect to service methods requiring it
     def service_key
       return @service.key
     end
 
-    #:nodoc: allow client to pass on methods to the remote service
+    # @private allow client to pass on methods to the remote service
     #
     def method_missing(symb, *parameters)
 

@@ -19,27 +19,28 @@ require 'digest/sha1'
 
 module Jerbil
 
-  # Define a service to register with Jerbil
+  # Define a service record for a service to register with Jerbil
   #
-  # * name - a unique symbol by which the service will be identified
-  # * port - the service port to be used for the service
-  # * env - set to :dev, :test, or :production
+  # Used internally by {Jerbil::Broker} and {JerbilService} to record information about
+  # running services. Is made available to users through the {JerbilService::Client} 
+  # interface where it can be used, for example, to get the service's key.
   #
   class ServiceRecord
 
-    # create a new service object
+    # create a new service record object
     #
-    # * name - symbol identifying the service - needs to match /etc/services
+    # Note that the callback parameters do not really need to be considered
+    # if you are using {JerbilService::Base}
+    #
+    # @param [Symbol] name identifying the service - needs to match /etc/services
     #  or create fails with the exception InvalidService
-    #
-    #  * env - symbol to identify the service's environment. Allows multiple
+    # @param [Symbol] env identify the service's environment. Allows multiple
     #  services to operate for development etc
-    #
-    #  *verify_callback - symbol being the name of the method to call to check
+    # @param [Symbol] verify_callback being the name of the method to call to check
     #  that the service is working
-    #
-    #  *stop_callback - as above but the method stops the service
-    # 
+    # @param [Symbol] stop_callback as above but the method stops the service
+    # @return [ServiceRecord] of course
+    # @raise [InvalidService] if the service is not registered through /etc/services
     def initialize(name, env, verify_callback=:verify_callback, stop_callback=nil)
       @host = Socket.gethostname
       @name = name
@@ -68,36 +69,39 @@ module Jerbil
 
     # name of the service
     attr_reader :name
-    # environment services is running in
+    # environment the service is running in
     attr_reader :env
     # the key needed to access the service
     attr_reader :key
     # the host on which the service is running
     attr_reader :host
     # the full DRb address used to contact the service
+    # This is only required by Jerbil and should not be needed
+    # by the casual user.
     attr_reader :address
     # the port used by the service
     attr_reader :port
     # the date/time at which the service was registered with Jerbil
     attr_reader :registered_at
     # the number of times the service has been accessed on Jerbil
+    # since it was registered
     attr_reader :access_count
     # the date/time at which the service was last accessed
     attr_reader :accessed_at
 
-    # allows Jerbil to set when the service was registered
+    # method to allow Jerbil to set when the service was registered
     def register
       @registered_at = Time.now
       @accessed_at = @registered_at
     end
 
-    # record an access to this service
+    # method to allow Jerbil to record an access to this service
     def log_access
       @accessed_at = Time.now
       @access_count += 1
     end
 
-    # return a string containing the name, host etc
+    # return a string containing the name, env, host etc
     def ident
       "#{@name}[#{@env}]@#{@address}"
     end
@@ -109,10 +113,12 @@ module Jerbil
 
     # compare services according to a set of arguments
     #
-    # args should a hash containing the following keys :name, :env, :key
-    #
     # This will return true if the service matches the given keys. An argument of nil
-    # matches all services.
+    # matches all services. Uses the same arguments as {Jerbil::Broker#find} except
+    # that it will ignore the :ignore_access argument!
+    #
+    # @param (see Jerbil::Broker#find)
+    # @option (see Jerbil::Broker#find)
     #
     def matches?(args={})
       options = {:name => nil, :env => nil, :host=>nil, :key => nil}.merge(args)
@@ -125,21 +131,38 @@ module Jerbil
     end
 
     # compares services directly and returns true if they have the same
-    # name, env, and host
+    # name, env, and host.
+    #
+    # Note that this ignores the service records key, allowing you to find
+    # instances of the same service e.g. that have previously been registered.
+    #
+    # @param [ServiceRecord] rhs service to compare to this one
     def same_service?(rhs)
       self.matches?(:name=>rhs.name, :env=>rhs.env, :host=>rhs.host)
     end
 
     # compares services directly and returns true if they have the same
     # name, env, host and key
+    #
+    # @param (see Jerbil::ServiceRecord#same_service?)
     def ==(rhs)
       self.matches?(:name=>rhs.name, :env=>rhs.env, :host=>rhs.host, :key=>rhs.key)
     end
 
-    # return a DRb session for the given service
+    # connect to the service represented by this record
+    #
+    # You do not need to use this method if you use {JerbilService::Client} to
+    # manage the client-server interface direct.
+    #
+    # This return a DRb session for the given service
     # set verify to true (default) to call the
     # services keep_alive method
     #
+    # @param [Boolean] verify if the service is running immedaitely after connecting
+    # @raise [ServiceCallbackMissing] if the verify method in this record does not
+    #  match the methods of the service being connected to (you have mucked it up!)
+    # @raise [ServiceConnectError] if any other exception is raised during the connect 
+    #  process.
     def connect(verify=true)
       self.start_drb_if_needed
       service = DRbObject.new(nil, "druby://#{@address}")
@@ -152,6 +175,8 @@ module Jerbil
 
     end
 
+    # convenience method to assist JerbilService actions
+    # 
     # drb_address makes it easier to start a DRb server, which
     # is done outside this class because it should only be done
     # under specific circumstances, and not by the general users of this class
@@ -174,6 +199,8 @@ module Jerbil
     
   protected
 
+    # ensures that there is a DRb session running before trying to use
+    # DRb services
     def start_drb_if_needed
       DRb.current_server
       @close = false

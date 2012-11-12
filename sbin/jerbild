@@ -22,7 +22,7 @@ require 'jerbil/config'
 require 'jerbil/version'
 require 'jerbil/support'
 require 'jerbil/chuser'
-require 'jelly'
+require 'jellog'
 require 'jeckyl'
 require 'socket'
 require 'drb'
@@ -129,7 +129,7 @@ unless config[:pid_dir] then
 end
 
 # prevent the server from generating syslogs
-Jelly::Logger.disable_syslog unless log_to_syslog
+Jellog::Logger.disable_syslog unless log_to_syslog
 
 # create a local log
 
@@ -146,9 +146,9 @@ begin
   if daemonize then
     puts "Daemonizing now" if verbose
     Daemons.daemonize(dopts)
-    log_opts = Jelly::Logger.get_options(config)
+    log_opts = Jellog::Config.intersection(config)
     #log_opts[:log_level] = :debug
-    logger = Jelly::Logger.new('jerbilsd', log_opts)
+    logger = Jellog::Logger.new('jerbil_sd', log_opts)
     config = config.merge(log_opts) # add them back!
   else
     puts "Running in the foreground" if verbose

@@ -16,8 +16,8 @@ require 'jerbil/servers'
 require 'jerbil/errors'
 require 'jerbil/config'
 require 'jerbil/support'
-require 'jerbil/chuser'
-require 'jelly'
+require 'jellog'
+require 'jellog/config'
 require 'socket'
 require 'drb'
 
@@ -54,7 +54,7 @@ module JerbilService
   # == JerbilService::Base
   #
   # Parent class to be used for all services. Manages all interactions with Jerbil
-  # and sets up a Jelly logger.
+  # and sets up a Jellog logger.
   #
   # In general, services using this class are intended to be started and stopped
   # using {JerbilService::Supervisor} and clients are expected to interact with the
@@ -67,12 +67,10 @@ module JerbilService
     # create a Jerbil Service
     #
     # @param [String] name - symbol for the service needs to correspond with /etc/services
-    # @param [String] key - private key used for privileged methods
+    # @param [String] pkey - private key used for privileged methods
     # @param [Hash] options for the service. The easiest way to generate this hash is to use
     #   Jeckyl and inherit the {JerbilService::Config} class. See class description for details of
     #   the options required by a service
-    #
-    #
     def initialize(name, pkey, options)
       @name = name.to_s.capitalize
       @env = options[:environment]
@@ -82,8 +80,8 @@ module JerbilService
       $0 = "#{@name.downcase}-#{@env}"
       
       # start up a logger
-      log_opts = Jelly::Logger.get_options(options)
-      @logger = Jelly::Logger.new(@name, log_opts)
+      log_opts = Jellog::Config.intersection(options)
+      @logger = Jellog::Logger.new(@name, log_opts)
       # @logger.log_level = options[:log_level]
       
       @exit = options[:exit_on_stop]
@@ -127,7 +125,7 @@ module JerbilService
       @logger.system "Started service: #{@service.ident}"
     end
 
-    # give access to {Jerbi::Service} Record for this service
+    # give access to {Jerbil::ServiceRecord} Record for this service
     # @deprecated - unless I can find why I allowed it!
     attr_reader :service
 
@@ -140,10 +138,10 @@ module JerbilService
     # this is used by callers just to check that the service is running
     # if caller is unaware of the key, this will fail
     #
-    # @param [String] pkey - private key given to the service when created
+    # @param [String] skey - private key given to the service when created
     #
-    # This method is not intended to be called directly. The user should
-    # call {Jerbil::Service#verify} instead
+    # This method is not intended to be called directly. It is usually
+    # called when connecting to the service (see {Jerbil::ServiceRecord#connect}).
     #
     def verify_callback(skey="")
       check_key(skey, @service.key)
@@ -156,7 +154,7 @@ module JerbilService
     # @param [String] pkey - private key given when service is created
     #
     # This method is not intended to be called directly. To stop a service, the
-    # user should use the {Jerbil::Supervisor} class.
+    # user should use the {JerbilService::Supervisor} class.
     #
     def stop_callback(pkey="")
       check_key(pkey)
@@ -171,7 +169,7 @@ module JerbilService
 
     # wait for calls. This hides the DRb call to be made once the
     # service is up and running. It is not intended to be called by
-    # anyone outside of {Jerbil::Supervisor}
+    # anyone outside of {JerbilService::Supervisor}
     #
     def wait(pkey='')
       check_key(pkey)

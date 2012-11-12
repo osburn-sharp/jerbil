@@ -21,10 +21,13 @@ require 'jeckyl'
 
 module Jerbil
   
-  # standard service config parameters are all that are needed
-  # see Jeckyl::Service for details
+  # Jeckyl config parameters for the Jerbil Server
   #
-  # Updated to find other jerbil servers rather than hard-wire their details in
+  # The config file will include all of the parameters defined in {JerbilService::Config}
+  # and its parents, such as key directories, logging parameters etc.
+  #
+  # @see file:lib/jerbil/config.md Jerbil Parameter Descriptions
+  # @see file:lib/jerbil/jerbil_service/config.md Jerbil Service Parameter Descriptions
   class Config < JerbilService::Config
     
     def configure_net_address(naddr)
@@ -38,21 +41,24 @@ module Jerbil
     def configure_net_mask(nmask)
       default 26
       comment "A valid netmask for the hosts to search using the above net address. This should be",
-        "between 24 (a class C network) and 30, beyound which its not much of a network. If you only have a few"
-        "hosts it will be easier to restrict them to a small subnet"
+        "between 24 (a class C network) and 30, beyound which its not much of a network. If you only have a few",
+        "hosts it will be easier to restrict them to a small subnet.",
+        "",
+        "To find out more about netmasks, go to [UnixWiz](http://www.unixwiz.net/techtips/netmask-ref.html)."
       in_range(nmask, 24, 30)
     end
     
     def configure_scan_timeout(tim)
       default 0.1
-      comment "Provide a timeout when searching for jerbil servers on the net. Depending on the size of the net mask",
-        "this timeout may make the search long. The default should work in most cases"
+      comment "Provide a timeout when searching for jerbil servers on the net during startup.",
+        "Depending on the size of the net mask this timeout may make the search long.",
+        "The default should work in most cases"
         
       a_type_of(tim, Numeric)
     end
     
     def configure_secret(scrt)
-      comment "A secret key available to all Jerbil Servers and used to authenticate the inital registration.",
+      comment "A secret key available to all Jerbil Servers and used to authenticate the initial registration.",
        "If security is an issue, ensure that this config file is readable only be trusted users"
       a_type_of(scrt, String)
     end

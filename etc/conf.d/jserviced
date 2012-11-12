@@ -14,7 +14,7 @@
 # other than the system default (/etc/jermine/<service>.rb).
 #CONF_FILE=
 
-# LOG_DAEMON can be used to log the output of the daemon to a jelly log file
+# LOG_DAEMON can be used to log the output of the daemon to a jellog log file
 #LOG_DAEMON=false
 
 # By default, the service will suppress all messages to the terminal. For testing and

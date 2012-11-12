@@ -20,7 +20,7 @@ require 'jerbil'
 require 'socket'
 require 'syslog'
 require 'drb'
-require 'jelly'
+require 'jellog'
 #require 'rspec/mocks/standalone'
 
 
@@ -47,7 +47,7 @@ describe "Missing Services" do
     #@calling_key = @local.key
 
     #Syslog.stub(:info).and_return(true)
-    Jelly::Logger.disable_syslog
+    Jellog::Logger.disable_syslog
     
   end
   

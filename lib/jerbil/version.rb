@@ -1,13 +1,14 @@
 # Created by Jevoom
 #
-# 22-Sep-2012
-#   Add some instrumentation to jserviced to help troubleshoot the numbat runscript.
+# 12-Nov-2012
+#   Housekeeping release with unwanted modules/code removed and documentation tidied for
+#   release into wild (evenutally).
 
 module Jerbil
-  # version set to 1.1.3
-  Version = '1.1.3'
-  # date set to 22-Sep-2012
-  Version_Date = '22-Sep-2012'
-  #ident string set to: jerbil-1.1.3 22-Sep-2012
-  Ident = 'jerbil-1.1.3 22-Sep-2012'
+  # version set to 1.2.0
+  Version = '1.2.0'
+  # date set to 12-Nov-2012
+  Version_Date = '12-Nov-2012'
+  #ident string set to: jerbil-1.2.0 12-Nov-2012
+  Ident = 'jerbil-1.2.0 12-Nov-2012'
 end

@@ -20,7 +20,7 @@ require 'jerbil'
 require 'socket'
 require 'syslog'
 require 'drb'
-require 'jelly'
+require 'jellog'
 
 
 config = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/missing_services')
@@ -34,20 +34,20 @@ describe "This Environment" do
     $LOAD_PATH.index('/usr/local/lib').should be_false
   end
   
-  it "should have the most recent Jelly" do
-    require 'jelly/version'
-    Jelly::Version.should == "1.0.1"
-    Jelly::Logger.respond_to?(:get_options).should be_true
+  it "should have the most recent Jellog" do
+    require 'jellog/version'
+    Jellog::Version.should == "1.0.1"
+    Jellog::Logger.respond_to?(:get_options).should be_true
   end
   
   it "should produce coloured logs" do
-    logger = Jelly::Logger.new("tester", :logdir=>logdir)
+    logger = Jellog::Logger.new("tester", :logdir=>logdir)
     logger.info "This should be here"
   end
   
   it "should select log options from a hash" do
     opts = {:logdir=>'/tmp', :my_opts=>true}
-    Jelly::Logger.get_options(opts).should == {:logdir=>'/tmp'}
+    Jellog::Logger.get_options(opts).should == {:logdir=>'/tmp'}
   end
 
 end

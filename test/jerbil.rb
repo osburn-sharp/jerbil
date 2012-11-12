@@ -19,7 +19,7 @@
 require 'jerbil'
 require 'jerbil/server'
 require 'jerbil/config'
-require 'jelly'
+require 'jellog'
 require 'jeckyl'
 require 'socket'
 require 'drb'
@@ -38,7 +38,7 @@ puts options.inspect
 servers = options.delete(:servers)
 
 # prevent the server from generating syslogs
-Jelly.disable_syslog
+Jellog.disable_syslog
 
 $SAFE = 1 # using DRb, so prevent anything nasty
 

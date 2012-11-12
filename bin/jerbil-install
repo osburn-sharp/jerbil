@@ -1,10 +1,11 @@
 #!/usr/bin/env ruby18
-
 #
+# @markup ruby
+# @title Installation Script
 #
 # = Jerbil Installation
 #
-# == Uses Jenny to install Jerbil Files
+# == Uses Jeni to install Jerbil Files
 #
 # Author:: Robert Sharp
 # Copyright:: Copyright (c) 2011 Robert Sharp
@@ -17,38 +18,38 @@
 #
 # 
 #
-require 'rubygems'
-require 'jenny'
+require 'rubygems' # jeni uses it anyway to find the jerbil gem so why not use it here?
+require 'jeni'
 
 
-Jenny::Installer.new_from_gem('jerbil') do |jenny|
-  jenny.optparse(ARGV)
+Jeni::Installer.new_from_gem('jerbil') do |jeni|
+  jeni.optparse(ARGV)
   
   # create a user, if not already created, with its own group
-  jenny.user('jermine', :skip=>true, :user_group=>true)
+  jeni.user('jerbil', :skip=>true, :user_group=>true)
   
   # make the required directories, if they do not already exist
-  jenny.empty_directory('/etc/jermine')
-  jenny.empty_directory('/var/log/jermine', :chown=>'jermine', :chgrp=>'jermine', :chmod=>0775)
-  jenny.empty_directory('/var/run/jermine', :chown=>'jermine', :chgrp=>'jermine', :chmod=>0775)
+  jeni.empty_directory('/etc/jerbil')
+  jeni.empty_directory('/var/log/jerbil', :chown=>'jerbil', :chgrp=>'jerbil', :chmod=>0775)
+  jeni.empty_directory('/var/run/jerbil', :chown=>'jerbil', :chgrp=>'jerbil', :chmod=>0775)
   
   
-  jenny.file('etc/jermine/jerbil.rb', '/etc/jermine/jerbil.rb', :chown=>'jermine', :chgrp=>'jermine', :chmod=>0640)
-  jenny.file('etc/jermine/jerbil-client.rb', '/etc/jermine/jerbil-client.rb', :chown=>'jermine', :chgrp=>'jermine', :chmod=>0640)
+  jeni.file('etc/jerbil/jerbil.rb', '/etc/jerbil/jerbil.rb', :chown=>'jerbil', :chgrp=>'jerbil', :chmod=>0640)
+  jeni.file('etc/jerbil/jerbil-client.rb', '/etc/jerbil/jerbil-client.rb', :chown=>'jerbil', :chgrp=>'jerbil', :chmod=>0640)
   
   # configuration file to run the service
-  jenny.file('etc/conf.d/jerbild', '/etc/conf.d/jerbild')
+  jeni.file('etc/conf.d/jerbild', '/etc/conf.d/jerbild')
   # and the init script itself
-  jenny.file('etc/init.d/jerbild', '/etc/init.d/jerbild', :chmod=>0755)
+  jeni.file('etc/init.d/jerbild', '/etc/init.d/jerbild', :chmod=>0755)
   # and init files for jservice
-  jenny.file('etc/conf.d/jserviced', '/etc/conf.d/jserviced')
-  jenny.file('etc/init.d/jserviced', '/etc/init.d/jserviced', :chmod=>0755)
+  jeni.file('etc/conf.d/jserviced', '/etc/conf.d/jserviced')
+  jeni.file('etc/init.d/jserviced', '/etc/init.d/jserviced', :chmod=>0755)
   # the daemon itself, which is executable
-  jenny.wrapper('sbin/jerbild', '/usr/sbin/jerbild')
-  jenny.wrapper('sbin/jerbil-stop', '/usr/sbin/jerbil-stop')
-  jenny.wrapper('sbin/jerbil-status', '/usr/sbin/jerbil-status')
-  jenny.wrapper('sbin/jserviced', '/usr/sbin/jserviced')
-  jenny.wrapper('sbin/jservice-stop', '/usr/sbin/jservice-stop')
-  jenny.wrapper('sbin/jservice-status', '/usr/sbin/jservice-status')
+  jeni.wrapper('sbin/jerbild', 'sbin/jerbild')
+  jeni.wrapper('sbin/jerbil-stop', 'sbin/jerbil-stop')
+  jeni.wrapper('sbin/jerbil-status', 'sbin/jerbil-status')
+  jeni.wrapper('sbin/jserviced', 'sbin/jserviced')
+  jeni.wrapper('sbin/jservice-stop', 'sbin/jservice-stop')
+  jeni.wrapper('sbin/jservice-status', 'sbin/jservice-status')
   
 end.run!

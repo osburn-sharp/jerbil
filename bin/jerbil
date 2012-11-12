@@ -23,8 +23,6 @@ require 'jerbil'
 require 'colored'
 
 
-#$LOAD_PATH.unshift File.expand_path('../lib', File.dirname(__FILE__))
-require 'jerbil/thor/install'
 require 'jerbil/thor/server'
 require 'jerbil/thor/service'
 
@@ -56,7 +54,7 @@ class Jerbs < Thor
   
   map "services"=>"service"
 
-  # use separate jenny installer
+  # use separate jeni installer
   #register Installer, :install, "install", "install jerbil on local machine"
   
 end
