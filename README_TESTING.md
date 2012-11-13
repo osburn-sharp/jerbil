@@ -41,7 +41,7 @@ the config file above.
 Testing Jerbil across the network is best done using git to clone the jerbil files, and then running the RubyTest tests
 described above. To check the status of a server, use the jerbil command:
 
-    $ jerbil services -c test/conf.d/jerbiltest.rb
+    $ jerbil services -c test/conf.d/jerbil_test.rb
     $ # and verify
-    $ jerbil services -c test/conf.d/jerbiltest.rb -v
+    $ jerbil services -c test/conf.d/jerbil_test.rb -v
   

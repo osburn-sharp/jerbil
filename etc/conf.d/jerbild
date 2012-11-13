@@ -7,7 +7,7 @@
 #NO_SYSLOG=false
 
 # CONF_FILE can be used to start the service with a configuration from a file
-# other than the system default (/etc/jermine/jerbil.rb).
+# other than the system default (/etc/jerbil/jerbil.rb).
 #CONF_FILE=
 
 # By default, the service will suppress all messages to the terminal. For testing and

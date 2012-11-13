@@ -11,11 +11,12 @@
 #NO_SYSLOG=false
 
 # CONF_FILE can be used to start the service with a configuration from a file
-# other than the system default (/etc/jermine/<service>.rb).
+# other than the system default (/etc/jerbil/<service>.rb).
 #CONF_FILE=
 
 # LOG_DAEMON can be used to log the output of the daemon to a jellog log file
-#LOG_DAEMON=false
+# which is useful for debugging purposes
+LOG_DAEMON=true
 
 # By default, the service will suppress all messages to the terminal. For testing and
 # diagnostics, set VERBOSE to be true and run with NO_DAEMON
@@ -23,10 +24,10 @@
 
 # A service name can be defined here, but in its absence, will be taken from the file name
 # Which is probably not going to be right if the file has the usual "d" on the end!
-SERVICE_NAME=
+SERVICE_NAME=""
 
 # define the user under which this service will run
-SERVICE_USER=
+SERVICE_USER=""
 
 # add any services that this service uses
 USES="logger

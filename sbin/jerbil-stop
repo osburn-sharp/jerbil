@@ -15,11 +15,13 @@
 # stop the jerbil server on this host
 # 
 require 'rubygems'
+
 require 'jerbil'
 require 'jerbil/servers'
 require 'jerbil/version'
 require 'jerbil/config'
 require 'jerbil/support'
+
 require 'drb'
 require 'optparse'
 

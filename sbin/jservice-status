@@ -21,6 +21,7 @@ require 'rubygems'
 require 'jerbil/jerbil_service/client'
 require 'jerbil/jerbil_service/utils'
 require 'jerbil/errors'
+
 require 'optparse'
 
 # force quiet to suppress client output regardless of whether verbose is selected

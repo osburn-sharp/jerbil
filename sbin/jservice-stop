@@ -20,6 +20,7 @@ require 'rubygems'
 
 require 'jerbil/jerbil_service/sclient'
 require 'jerbil/jerbil_service/utils'
+
 require 'optparse'
 
 config_file = nil # let it be the default

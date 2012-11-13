@@ -21,9 +21,10 @@ require 'jerbil/servers'
 require 'jerbil/config'
 require 'jerbil/version'
 require 'jerbil/support'
-require 'jerbil/chuser'
+
 require 'jellog'
 require 'jeckyl'
+
 require 'socket'
 require 'drb'
 require 'rubygems'
@@ -102,21 +103,6 @@ if verbose then
   end
 end
 
-if Jerbil::Chuser.change_group(config[:group]) then
-  puts "Changed group to #{config[:group]}"
-  config = Jerbil.get_config(config_file)
-else
-  puts "Group was not changed"
-end
-            
-# change user if required
-if Jerbil::Chuser.change_user(config[:user]) then
-  puts "Changed user to #{config[:user]}" if verbose
-  # having changed user, reload the config data to check its still OK
-  config = Jerbil.get_config(config_file)
-else
-  puts "User was not changed" if verbose
-end
 
 # create a private key for jerbil
 pkey = Jerbil::Support.create_private_key(:jerbil, config[:environment], config[:key_dir])
@@ -134,6 +120,7 @@ Jellog::Logger.disable_syslog unless log_to_syslog
 # create a local log
 
 dopts = {:backtrace=>true,
+  :app_name=>'jerbil_daemon',
   :log_dir=>config[:log_dir],
   :log_output=>true,
   :dir_mode=>:normal,
@@ -149,7 +136,7 @@ begin
     log_opts = Jellog::Config.intersection(config)
     #log_opts[:log_level] = :debug
     logger = Jellog::Logger.new('jerbil_sd', log_opts)
-    config = config.merge(log_opts) # add them back!
+    #config = config.merge(log_opts) # add them back!
   else
     puts "Running in the foreground" if verbose
     logger = $stderr
@@ -192,7 +179,7 @@ logger.puts "Written pid #{Process.pid} to pid file"
 
 $0 = "jerbild-#{config[:environment]}"
 
-logger.puts "Changed process name to #{my_self.ident}"
+logger.puts "Changed process name for #{my_self.ident}"
 
 $SAFE = 1 # using DRb, so prevent anything nasty
 

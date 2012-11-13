@@ -7,6 +7,10 @@ depend() {
   use net
   use logger
 }
+  
+describe() {
+  einfo "Reliable Broker for Ruby Services"
+}
 
 export RUBYOPT="rubygems"
 export RUBYLIB=""
@@ -31,7 +35,7 @@ start() {
     einfo "Created /var/run/jerbil"
   fi
 
-    /usr/sbin/jerbild ${myopts}
+  /bin/su -c "/usr/sbin/jerbild ${myopts}" - jerbil
 
   eend $?
 }

@@ -4,6 +4,10 @@
 
 ==History
 
+[jerbil-1.2.1 13-Nov-2012]
+
+  Minor bugs fixed in sbin/jerbild and runscript updated to su to jerbil user
+
 [jerbil-1.2.0 12-Nov-2012]
 
   Housekeeping release with unwanted modules/code removed and documentation tidied for

@@ -13,10 +13,11 @@
 # 
 
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
-require 'jerbil/server'
+require 'jerbil/servers'
 require 'jerbil/service'
 require 'jerbil/config'
 require 'jerbil'
+
 require 'socket'
 require 'syslog'
 require 'drb'
