@@ -4,6 +4,10 @@
 
 ==History
 
+[jerbil-1.2.2 21-Nov-2012]
+
+  Add proper home for jerbil user in jerbil-install. Add guidance on logging to READMEs.
+
 [jerbil-1.2.1 13-Nov-2012]
 
   Minor bugs fixed in sbin/jerbild and runscript updated to su to jerbil user

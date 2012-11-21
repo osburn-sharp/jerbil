@@ -17,7 +17,7 @@
 #
 
 require 'jerbil/jerbil_service/config'
-require 'jeckyl'
+
 
 module Jerbil
   

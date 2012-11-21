@@ -24,9 +24,10 @@ require 'jeni'
 
 Jeni::Installer.new_from_gem('jerbil') do |jeni|
   jeni.optparse(ARGV)
+  jeni.usr # force files to be relative to /usr
   
   # create a user, if not already created, with its own group
-  jeni.user('jerbil', :skip=>true, :user_group=>true)
+  jeni.user('jerbil', :skip=>true, :user_group=>true, :home=>'/var/run/jerbil')
   
   # make the required directories, if they do not already exist
   jeni.empty_directory('/etc/jerbil')
@@ -45,11 +46,11 @@ Jeni::Installer.new_from_gem('jerbil') do |jeni|
   jeni.file('etc/conf.d/jserviced', '/etc/conf.d/jserviced')
   jeni.file('etc/init.d/jserviced', '/etc/init.d/jserviced', :chmod=>0755)
   # the daemon itself, which is executable
-  jeni.wrapper('sbin/jerbild', 'sbin/jerbild')
-  jeni.wrapper('sbin/jerbil-stop', 'sbin/jerbil-stop')
-  jeni.wrapper('sbin/jerbil-status', 'sbin/jerbil-status')
-  jeni.wrapper('sbin/jserviced', 'sbin/jserviced')
-  jeni.wrapper('sbin/jservice-stop', 'sbin/jservice-stop')
-  jeni.wrapper('sbin/jservice-status', 'sbin/jservice-status')
+  jeni.wrapper('sbin/jerbild', 'sbin/jerbild', :chmod=>0755)
+  jeni.wrapper('sbin/jerbil-stop', 'sbin/jerbil-stop', :chmod=>0755)
+  jeni.wrapper('sbin/jerbil-status', 'sbin/jerbil-status', :chmod=>0755)
+  jeni.wrapper('sbin/jserviced', 'sbin/jserviced', :chmod=>0755)
+  jeni.wrapper('sbin/jservice-stop', 'sbin/jservice-stop', :chmod=>0755)
+  jeni.wrapper('sbin/jservice-status', 'sbin/jservice-status', :chmod=>0755)
   
 end.run!

@@ -14,7 +14,7 @@
 # utility.
 # 
 require 'jellog/config'
-require 'jeckyl'
+
 
 module JerbilService
   

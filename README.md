@@ -188,26 +188,40 @@ Jerbil is divided into two groups: the server and the services that use the serv
 ### Servers
 
 The server consists of one main class: {Jerbil::Broker} and two data-type classes: 
-{Jerbil::Servers} and {Jerbil::ServiceRecord}. The Broker is the main server code, 
+{Jerbil::Servers} and {Jerbil::ServiceRecord}. The Broker contains the main server code, 
 finding and registering with other servers, accepting and recording services and
 responding to queries about registered services. When a service registers with 
 the broker, the broker will also inform all of the other servers of that service. 
 The {Jerbil::Servers} class is used by the broker to record information
 about a server and it provides convenience methods to connect to a server and a class 
-method to find the local server. The {Jerbil::ServiceRecord} class fulfils a similar role for services.
+method to find the local server. The {Jerbil::ServiceRecord} class fulfils a similar 
+role for services.
 
-Jerbil is intended to be as reliable as possible - to survive any of the servers and their services leaving the network
-unexpectedly. If a local client attempts to connect to a remote service and fails, then the server will be asked to check
-with {Jerbil::Broker#service_missing?}. This will attempt to contact the service's local server and ask it to check. If
-the local server is running, it will check that the service is OK and if not, remove the service and update all the other
-servers. If this server is not available (e.g. server has gone down) then the original server will take responsibility
-for purging the service from its own records and all the remaining servers.
+When a server starts up it uses the {Jerbil::Servers.find_servers} class method to
+search the network for any other servers. This method uses the NetAddr gem to create a
+list of network addresses from the parameters defined by {Jerbil::Config}, allowing
+users to limit jerbil addresses, both to control which machines get polled and to speed
+up the search. The jerbil port is polled using the standard library TCPSocket interface
+with a timeout (standard library again). When the server finds another server it first 
+does a minor security check (see below) and then obtains all of the services registered with
+that server and adds it to its service database.
 
-Jerbil uses Jellog for logging and on :debug level produces copious records to help understand what it is doing.
+Jerbil is intended to be as reliable as possible - to survive any of the servers and 
+their services leaving the network unexpectedly. If a local client attempts to connect 
+to a remote service and fails, then the server will be asked to check with {Jerbil::Broker#service_missing?}. 
+This will attempt to contact the service's local server and ask it to check. If
+the local server is running, it will check that the service is OK and if not, remove 
+the service and update all the other servers. If this server is not available (e.g. 
+server has gone down) then the original server will take responsibility for purging the 
+service from its own records and all the remaining servers.
 
-Jerbil and Jerbil Services use the standard library daemons to run in the background but they keep track of their own pids
-instead of relying on daemon. To stop the server, an attempt is made to call the stop method, which cleans up with all
-the other servers, but failing that the pid is used to kill the server.
+Jerbil uses Jellog for logging and on :debug level produces copious records to help understand 
+what it is doing. See below for more detail on Jerbil logging.
+
+Jerbil and Jerbil Services use the standard library daemons to run in the background 
+but they keep track of their own pids instead of relying on daemon. To stop the server, 
+an attempt is made to call the stop method, which cleans up with all the other servers, 
+but failing that the pid is used to kill the server.
 
 ### Services
 
@@ -254,7 +268,32 @@ targetted at a benign network environment.
 During installation, jerbil-install should have created the 'jermine' user. By default the jerbil servers will run as this
 user and so will any services started using the /etc/init.d runscripts.
 
-### Support
+### Logging
+
+Jerbil uses [Jellog](http://rubydoc.info/github/osburn-sharp/jellog/frames) to log
+messages. By default, these messages will be logged to /var/log/jerbil/jerbil-<env>.log
+where <env> is prod, test or dev depending on the environment jerbil is running in.
+Note that Jellog also logs certain messages to syslog unless you select the option
+to disable this (see sbin/jerbild or /etc/conf.d/jerbild). The verbosity of the log 
+can be increased by setting the log_level parameter in {Jerbil::Config} to either
+:verbose or :debug.
+
+This log is used by the main Jerbil Server, but it is not the only log generated. 
+During start-up, the script will also log to a separate file (by default this is
+/var/log/jerbil/jerbil_sd.log). This can be used to check if something went wrong
+with the script after it daemonised. To ensure that this logging occurs, set the 
+command line option for the sbin/jerbild script or the parameter in /etc/conf.d/jerbild.
+Alternatively, run the script in foreground mode to see all the possible messages. This
+is also an option on the script and in the config file.
+
+In the event that something goes wrong during the daemonisation itself, the jerbil
+script sets the daemon process to log any messages to a file in the same log directory:
+/var/log/jerbil/jerbil_daemon.output. This can, however, contain a lot of exception
+information that has very little to do with the problem. 
+
+Finally, if Jerbil fails to start and these logs show no help, it is worth checking
+the file /tmp/jerbil_panic.log which is also created by the startup script in the
+event that an exception is raised during the daemonization process.
 
 
 ## Dependencies
@@ -266,7 +305,7 @@ Check the {file:Gemfile} for other dependencies.
 ## Documentation
 
 Documentation is best viewed using Yard and is available online 
-at [RubyDoc](http://rdoc.info/github/osburn-sharp/jerbil/frames)
+at [RubyDoc](http://rubydoc.info/github/osburn-sharp/jerbil/frames)
 
 ## Testing/Modifying
 

@@ -29,4 +29,5 @@ test/pids/**
 
 *.gem
 
-.yardoc/
+.yardoc
+.yardopts
