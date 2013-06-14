@@ -32,6 +32,7 @@ start() {
   if [ ! -d /var/run/jerbil ] ; then
     mkdir /var/run/jerbil
     chown jerbil:jerbil /var/run/jerbil
+    chmod 775 /var/run/jerbil
     einfo "Created /var/run/jerbil"
   fi
 

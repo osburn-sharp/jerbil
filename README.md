@@ -39,6 +39,8 @@ of [Jeni](https://github.com/osburn-sharp/jeni):
 
 This will install various files over and above those installed by the gem, including configuration files,
 runscripts, and sbin wrappers for the jerbil server and for services that use the server.
+By default, Jerbil will install start-up scripts etc into /usr/local/sbin, but this can be
+changed to /usr/sbin by adding the -u option.
 Use the -p switch to pretend and see if everything works OK. Jerbil assumes there is a 
 user 'jerbil' that will run the server process etc, so if there is no user 'jerbil' then 
 this script will create one.

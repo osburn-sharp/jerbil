@@ -1,13 +1,13 @@
 # Created by Jevoom
 #
-# 21-Nov-2012
-#   Add proper home for jerbil user in jerbil-install. Add guidance on logging to READMEs.
+# 03-Apr-2013
+#   Add chmod to creation of /var/run/jerbil in jerbil initscript.
 
 module Jerbil
-  # version set to 1.2.2
-  Version = '1.2.2'
-  # date set to 21-Nov-2012
-  Version_Date = '21-Nov-2012'
-  #ident string set to: jerbil-1.2.2 21-Nov-2012
-  Ident = 'jerbil-1.2.2 21-Nov-2012'
+  # version set to 1.2.3
+  Version = '1.2.3'
+  # date set to 03-Apr-2013
+  Version_Date = '03-Apr-2013'
+  #ident string set to: jerbil-1.2.3 03-Apr-2013
+  Ident = 'jerbil-1.2.3 03-Apr-2013'
 end

@@ -305,6 +305,15 @@ module JerbilService
 
         session = my_service.connect
 
+        # now to do the stopping
+        begin
+          session.stop_callback(pkey)
+          @output.puts "Stopped service successfully"
+        rescue DRb::DRbConnError
+          @ouput.puts "Service stopped, but not gracefully"
+          return nil
+        end
+
       rescue Jerbil::MissingServer
         @output.puts("Cannot find a local Jerbil server")
       rescue Jerbil::JerbilConfigError => err
@@ -313,15 +322,6 @@ module JerbilService
         @output.puts("Error with Jerbil Service: #{jerr.message}")
       rescue Jerbil::ServerConnectError
         @output.puts("Error connecting to Jerbil Server")
-      end
-
-      # now to do the stopping
-      begin
-        session.stop_callback(pkey)
-        @output.puts "Stopped service successfully"
-      rescue DRb::DRbConnError
-        @ouput.puts "Service stopped, but not gracefully"
-        return nil
       end
 
     rescue Jeckyl::JeckylError => jerr
