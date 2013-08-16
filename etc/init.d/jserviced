@@ -41,14 +41,14 @@ start() {
 
 status() {
   ebegin "Checking status for Jerbil Service ${SERVICE_NAME}"
-    /usr/sbin/jservice-status ${myopts} -s ${SERVICE_NAME}
+    /bin/su -c "/usr/sbin/jservice-status ${myopts} -s ${SERVICE_NAME}" -${SERVICE_USER}
   eend $?
 }
 
 
 stop() {
   ebegin "Stopping Jerbil Service ${SERVICE_NAME}"
-    /usr/sbin/jservice-stop ${myopts} -s ${SERVICE_NAME}
+    /bin/su -c "/usr/sbin/jservice-stop ${myopts} -s ${SERVICE_NAME}" - ${SERVICE_USER}
   eend $?
 }
   

@@ -4,6 +4,14 @@
 
 ==History
 
+[jerbil-1.2.5 16-Aug-2013]
+
+  Use /bin/su for all init.d actions (stop and status)
+
+[jerbil-1.2.4 03-Apr-2013]
+
+  Suppress client messages about method strings and symbols
+
 [jerbil-1.2.3 03-Apr-2013]
 
   Add chmod to creation of /var/run/jerbil in jerbil initscript.

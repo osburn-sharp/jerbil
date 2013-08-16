@@ -285,10 +285,10 @@ module JerbilService
       if String.instance_methods.first.instance_of?(String) then
         # < 1.9 Ruby
         method_id = symb.to_s
-        @output.puts "Setting method id to a string: #{method_id}"
+        #@output.puts "Setting method id to a string: #{method_id}"
       else
         method_id = symb
-        @output.puts "Ensuring method id is a symbol: #{method_id}"
+        #@output.puts "Ensuring method id is a symbol: #{method_id}"
       end
       
       unless @klass.instance_methods.include?(method_id)
