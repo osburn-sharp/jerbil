@@ -4,6 +4,10 @@
 
 ==History
 
+[jerbil-1.2.6 23-Aug-2013]
+
+  Ensure that Jerbil is 1.9 compliant and ready to go
+
 [jerbil-1.2.5 16-Aug-2013]
 
   Use /bin/su for all init.d actions (stop and status)

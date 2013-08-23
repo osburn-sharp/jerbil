@@ -10,3 +10,5 @@ RSpec.configure do |config|
   config.formatter = :doc
   
 end
+
+puts "Running under Ruby #{RUBY_VERSION}"
