@@ -123,6 +123,7 @@ module JerbilService
       end
 
       @logger.system "Started service: #{@service.ident}"
+      @logger.info "Jerbil Service #{@service.ident} running under #{RUBY_VERSION}"
     end
 
     # give access to {Jerbil::ServiceRecord} Record for this service

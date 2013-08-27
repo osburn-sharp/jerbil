@@ -4,6 +4,10 @@
 
 ==History
 
+[jerbil-1.2.7 27-Aug-2013]
+
+  Added log entry to record RUBY_VERSION for a service
+
 [jerbil-1.2.6 23-Aug-2013]
 
   Ensure that Jerbil is 1.9 compliant and ready to go
