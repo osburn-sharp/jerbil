@@ -37,7 +37,7 @@ start() {
   #  einfo "Created /var/run/jerbil"
   #fi
   
-  checkpath -q -d -m 0755 -o jerbil:jerbil /var/run/jerbil
+  checkpath -q -d -m 0775 -o jerbil:jerbil /var/run/jerbil
 
   /bin/su -c "${SBIN_PATH}jerbild ${myopts}" - jerbil
 

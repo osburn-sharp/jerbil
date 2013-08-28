@@ -16,5 +16,5 @@
 
 # By default, runscript will only pass /usr/bin, /usr/sbin, and /bin in the path variable
 # so if your gems are getting stuffed into something else (/usr/local) then make sure
-# this is set below:
-SBIN_PATH=/usr/local/sbin
+# this is set below (make sure it has a trailing /):
+SBIN_PATH=/usr/local/sbin/

@@ -24,8 +24,8 @@ LOG_DAEMON=true
 
 # By default, runscript will only pass /usr/bin, /usr/sbin, and /bin in the path variable
 # so if your gems are getting stuffed into something else (/usr/local) then make sure
-# this is set below:
-SBIN_PATH=/usr/local/sbin
+# this is set below (make sure it has a trailing /):
+SBIN_PATH=/usr/local/sbin/
 
 # A service name can be defined here, but in its absence, will be taken from the file name
 # Which is probably not going to be right if the file has the usual "d" on the end!
@@ -35,14 +35,9 @@ SERVICE_NAME=""
 SERVICE_USER=""
 
 # add any services that this service uses
-USES="logger
-net"
-
 rc_use="logger net"
 
 # Add further services that this service needs, remembering the d on the end!
-NEEDS="jerbild"
-
 rc_need="jerbild"
 
 DESCRIPTION="This is a test service for Jerbil!"

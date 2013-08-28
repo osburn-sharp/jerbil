@@ -30,12 +30,15 @@ myopts=""
 
 start() {
   ebegin "Starting Jerbil Service ${SERVICE_NAME}"
+  
+    # need to export the LANG variable to support ruby 1.9 encodings correctly
+    _LANG="export LANG=${LANG}"
 
 
     # create the options for starting the daemon from the settings in the
     # /etc/conf.d/jservice file (same name as this link)
 
-    /bin/su -c "${SBIN_PATH}jserviced ${myopts} -s ${SERVICE_NAME}" - ${SERVICE_USER}
+    /bin/su -c "$_LANG; ${SBIN_PATH}jserviced ${myopts} -s ${SERVICE_NAME}" - ${SERVICE_USER}
 
   eend $?
 }

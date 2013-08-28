@@ -4,6 +4,10 @@
 
 ==History
 
+[jerbil-1.2.10 28-Aug-2013]
+
+  Add the export of LANG to support encodings
+
 [jerbil-1.2.9 28-Aug-2013]
 
   further changes to runscripts to not fiddle with PATH etc
