@@ -4,6 +4,10 @@
 
 ==History
 
+[jerbil-1.2.8 28-Aug-2013]
+
+  Various changes to runscripts to cope with /usr/local and to use checkpath
+
 [jerbil-1.2.7 27-Aug-2013]
 
   Added log entry to record RUBY_VERSION for a service

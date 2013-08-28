@@ -18,6 +18,9 @@ depend() {
 export RUBYLIB=""
 export RUBYOPT="rubygems"
 
+# gem may install jerbil binaries in /usr/local/sbin
+PATH=/usr/local/sbin:${PATH}
+
 myopts=""
 [ -n "${NO_DAEMON}" ] && myopts="${myopts} -n"
 [ -n "${CONF_FILE}" ] && myopts="${myopts} -c ${CONF_FILE}"
@@ -34,21 +37,21 @@ start() {
     # create the options for starting the daemon from the settings in the
     # /etc/conf.d/jservice file (same name as this link)
 
-    /bin/su -c "/usr/sbin/jserviced ${myopts} -s ${SERVICE_NAME}" - ${SERVICE_USER}
+    /bin/su -c "jserviced ${myopts} -s ${SERVICE_NAME}" - ${SERVICE_USER}
 
   eend $?
 }
 
 status() {
   ebegin "Checking status for Jerbil Service ${SERVICE_NAME}"
-    /bin/su -c "/usr/sbin/jservice-status ${myopts} -s ${SERVICE_NAME}" -${SERVICE_USER}
+    /bin/su -c "jservice-status ${myopts} -s ${SERVICE_NAME}" -${SERVICE_USER}
   eend $?
 }
 
 
 stop() {
   ebegin "Stopping Jerbil Service ${SERVICE_NAME}"
-    /bin/su -c "/usr/sbin/jservice-stop ${myopts} -s ${SERVICE_NAME}" - ${SERVICE_USER}
+    /bin/su -c "jservice-stop ${myopts} -s ${SERVICE_NAME}" - ${SERVICE_USER}
   eend $?
 }
   

@@ -24,7 +24,9 @@ require 'jeni'
 
 Jeni::Installer.new_from_gem('jerbil') do |jeni|
   jeni.optparse(ARGV)
-  jeni.usr # force files to be relative to /usr
+  #jeni.usr # force files to be relative to /usr
+  jeni.message('warning', "executables will be installed relative to #{jeni.target_root}", :warning)
+  jeni.message('warning', "use -u or -t to change", :warning)
   
   # create a user, if not already created, with its own group
   jeni.user('jerbil', :skip=>true, :user_group=>true, :home=>'/var/run/jerbil')
