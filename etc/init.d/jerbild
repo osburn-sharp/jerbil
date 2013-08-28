@@ -15,8 +15,6 @@ describe() {
 export RUBYOPT="rubygems"
 export RUBYLIB=""
 
-# gem may install jerbil binaries in /usr/local/sbin
-PATH=/usr/local/sbin:${PATH}
 
 # create the options for starting the daemon from the settings in the
 # /etc/conf.d/jerbild file
@@ -41,21 +39,21 @@ start() {
   
   checkpath -q -d -m 0755 -o jerbil:jerbil /var/run/jerbil
 
-  /bin/su -c "jerbild ${myopts}" - jerbil
+  /bin/su -c "${SBIN_PATH}jerbild ${myopts}" - jerbil
 
   eend $?
 }
 
 status() {
   ebegin "Checking Jerbil Status"
-    /bin/su -c "jerbil-status ${myopts}" - jerbil
+    /bin/su -c "${SBIN_PATH}jerbil-status ${myopts}" - jerbil
   eend $?
 }
 
 
 stop() {
   ebegin "Stopping Jerbil Server"
-    /bin/su - c "jerbil-stop ${myopts}" - jerbil
+    /bin/su -c "${SBIN_PATH}jerbil-stop ${myopts}" - jerbil
   eend $?
 }
 

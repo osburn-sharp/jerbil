@@ -3,23 +3,21 @@
 # INIT Script for a Jerbil Service
 
 # create dependencies from the list of services in $NEEDS and $USES
-depend() {
-  for need_service in $NEEDS
-  do
-    need $need_service
-  done
-  for use_service in $USES
-  do
-    use $use_service
-  done
-}
+#depend() {
+#  for need_service in $NEEDS
+#  do
+#    need $need_service
+#  done
+#  for use_service in $USES
+#  do
+#    use $use_service
+#  done
+#}
 
 # make sure there are no unexpected rubylibs
 export RUBYLIB=""
 export RUBYOPT="rubygems"
 
-# gem may install jerbil binaries in /usr/local/sbin
-PATH=/usr/local/sbin:${PATH}
 
 myopts=""
 [ -n "${NO_DAEMON}" ] && myopts="${myopts} -n"
@@ -37,21 +35,21 @@ start() {
     # create the options for starting the daemon from the settings in the
     # /etc/conf.d/jservice file (same name as this link)
 
-    /bin/su -c "jserviced ${myopts} -s ${SERVICE_NAME}" - ${SERVICE_USER}
+    /bin/su -c "${SBIN_PATH}jserviced ${myopts} -s ${SERVICE_NAME}" - ${SERVICE_USER}
 
   eend $?
 }
 
 status() {
   ebegin "Checking status for Jerbil Service ${SERVICE_NAME}"
-    /bin/su -c "jservice-status ${myopts} -s ${SERVICE_NAME}" -${SERVICE_USER}
+    /bin/su -c "${SBIN_PATH}jservice-status ${myopts} -s ${SERVICE_NAME}" -${SERVICE_USER}
   eend $?
 }
 
 
 stop() {
   ebegin "Stopping Jerbil Service ${SERVICE_NAME}"
-    /bin/su -c "jservice-stop ${myopts} -s ${SERVICE_NAME}" - ${SERVICE_USER}
+    /bin/su -c "${SBIN_PATH}jservice-stop ${myopts} -s ${SERVICE_NAME}" - ${SERVICE_USER}
   eend $?
 }
   

@@ -13,3 +13,8 @@
 # By default, the service will suppress all messages to the terminal. For testing and
 # diagnostics, set VERBOSE to be true and run with NO_DAEMON
 #VERBOSE=false
+
+# By default, runscript will only pass /usr/bin, /usr/sbin, and /bin in the path variable
+# so if your gems are getting stuffed into something else (/usr/local) then make sure
+# this is set below:
+SBIN_PATH=/usr/local/sbin

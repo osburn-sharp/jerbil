@@ -4,6 +4,10 @@
 
 ==History
 
+[jerbil-1.2.9 28-Aug-2013]
+
+  further changes to runscripts to not fiddle with PATH etc
+
 [jerbil-1.2.8 28-Aug-2013]
 
   Various changes to runscripts to cope with /usr/local and to use checkpath
