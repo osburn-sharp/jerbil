@@ -1,5 +1,9 @@
 == Bugs
 
+[jerbil-1.3.1 29-Aug-2013]
+
+  Need to update jerbil command to get rid of thor and improve what it does.
+
 [jerbil-1.2.3 06-June-2013]
 
  * If a server attempts to connect to another that is no longer working then the caller hangs.
@@ -8,3 +12,5 @@
 
   * Supervisor#stop does not call stop_callback in the scope of the connected session
     so the service is not stopped as it should be.
+    
+    Appears to be fixed.

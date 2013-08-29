@@ -4,6 +4,10 @@
 
 ==History
 
+[jerbil-1.3.1 29-Aug-2013]
+
+  Fix minor error in runscript (status)
+
 [jerbil-1.3.0 29-Aug-2013]
 
   First release with properly multiplexed runscript files

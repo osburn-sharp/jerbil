@@ -47,7 +47,7 @@ start() {
 
 status() {
   ebegin "Checking status for Jerbil Service ${SERVICE_NAME}"
-    /bin/su -c "${SBIN_PATH}jservice-status ${myopts} -s ${SERVICE_NAME}" -${SERVICE_USER}
+    /bin/su -c "${SBIN_PATH}jservice-status ${myopts} -s ${SERVICE_NAME}" - ${SERVICE_USER}
   eend $?
 }
 
