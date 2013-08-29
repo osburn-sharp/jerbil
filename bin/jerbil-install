@@ -45,8 +45,9 @@ Jeni::Installer.new_from_gem('jerbil') do |jeni|
   # and the init script itself
   jeni.file('etc/init.d/jerbild', '/etc/init.d/jerbild', :chmod=>0755)
   # and init files for jservice
-  jeni.file('etc/conf.d/jserviced', '/etc/conf.d/jserviced')
-  jeni.file('etc/init.d/jserviced', '/etc/init.d/jserviced', :chmod=>0755)
+  jeni.file('etc/conf.d/jerbil', '/etc/conf.d/jerbil')
+  jeni.file('etc/conf.d/jerbil.service', '/etc/conf.d/jerbil.service')
+  jeni.file('etc/init.d/jerbil', '/etc/init.d/jerbil', :chmod=>0755)
   # the daemon itself, which is executable
   jeni.wrapper('sbin/jerbild', 'sbin/jerbild', :chmod=>0755)
   jeni.wrapper('sbin/jerbil-stop', 'sbin/jerbil-stop', :chmod=>0755)

@@ -1,13 +1,13 @@
 # Created by Jevoom
 #
-# 28-Aug-2013
-#   Add the export of LANG to support encodings
+# 29-Aug-2013
+#   First release with properly multiplexed runscript files
 
 module Jerbil
-  # version set to 1.2.10
-  Version = '1.2.10'
-  # date set to 28-Aug-2013
-  Version_Date = '28-Aug-2013'
-  #ident string set to: jerbil-1.2.10 28-Aug-2013
-  Ident = 'jerbil-1.2.10 28-Aug-2013'
+  # version set to 1.3.0
+  Version = '1.3.0'
+  # date set to 29-Aug-2013
+  Version_Date = '29-Aug-2013'
+  #ident string set to: jerbil-1.3.0 29-Aug-2013
+  Ident = 'jerbil-1.3.0 29-Aug-2013'
 end

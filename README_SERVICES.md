@@ -342,48 +342,68 @@ Its convenient to start a service automatically, and Jerbil tries to make this e
 However, what is on offer will probably only work out of the box for Gentoo.
 
 There is only one runscript needed and if you followed the installation instructions
-in {file:README.md the readme file} then this will already be installed as /etc/init.d/jserviced.
+in {file:README.md the readme file} then this will already be installed as /etc/init.d/jerbil
+(not jerbild which is the jerbil server itself). Notice that Jerbil Services can be
+managed using a "multiplexed" runscript. The runscript for each service is a link
+to a common runscript, there is a config file for each service and another common
+file for all services.
+
 To set up a service involves the following:
 
-* create a link to /etc/init.d/jserviced for your service, e.g. /etc/init.d/myserviced
-* create a copy of /etc/conf.d/jserviced for your service, e.g. /etc/conf.d/myserviced.
-  Ensure these two files have the same name.
+* create a link to /etc/init.d/jerbil for your service, e.g. /etc/init.d/jerbil.my_service
+* create a copy of /etc/conf.d/jerbil.service for your service, e.g. /etc/conf.d/jerbil.my_service
+  Ensure these two files (init and conf) have the same name.
 * edit the conf.d file as required.
-* start the service: /etc/init.d/myserviced start
-* add the service to your default runscripts: rc-update add myserviced default
+* start the service: /etc/init.d/jerbil.my_service start
+* add the service to your default runscripts: rc-update add jerbil.my_service default
 
-The variables defined in the conf.d file are:
+The variables defined in the main conf.d file (/etc/conf.d/jerbil) are:
 
 * NO_DAEMON - set to true to run the service in the foreground, usually to debug it.
   Defaults to false.
 * NO_SYSLOG - suppress messages that would normally be sent to syslog, again usually
   for debug purposes. Defaults to false.
 * CONF_FILE - path to the config file for this service. Defaults to whatever the default 
-  location is for Jeckyl (e.g. /etc/jermine/myservice.rb)
+  location is for Jeckyl (e.g. /etc/jerbil/my_service.rb)
 * LOG_DAEMON - log the output from the daemon, which covers the startup process before
   the service starts logging itself. By default this will be logged to a file named
-  after the service with the suffix _sd added, e.g. /var/log/jermine/myservice_sd.log
+  after the service with the suffix _sd added, e.g. /var/log/jerbil/my_service_sd.log
   Defaults to false
 * VERBOSE - output more information during the startup process. This does not affect
   the level of logging for the service itself
-* SERVICE_NAME - by default the service name will be determined from the runscript.
-  But if, like me, you always seem to want a "d" on the end, then use this to ensure
-  the script picks up the right service, e.g. SERVICE_NAME="myservice"
+* SBIN_PATH - the path to the directory where the service is located. This will be set
+  to /usr/local/sbin and can be changed to whatever your default location happens to
+  be.
 * SERVICE_USER - by default, the service user will be a user created when Jerbil was
-  installed (jermine). Change it here if you want someone else. See below for details.
-* USES - enter any services that this service uses. Make sure each service is on a 
-  separate line. e.g. 'USES="logger' on one line and 'net"' on the next. See the example
-  in /etc/conf.d/jserviced.
-* NEEDS - enter any services that this service needs. Make sure this is at least "jerbild".
-  As above, make it one entry per line.
+  installed (jerbil). Change it here if you want someone else. See below for details.
+* Universal runscript dependencies are defined by default using rc_use and rc_need.
+
+For each service it is possible to override the above variables and the following
+  
+* SERVICE_NAME - by default the service name will be determined from the runscript.
+  For example, for my_service the runscript should be called jerbil.my_service.
 * DESCRIPTION - a one line description that will be displayed during start/stop operations.
 
-All services are super-user'd to a given user for safety within the runscript. By default this is jermine
+Note if you need to add a dependency (see 'man runscript' for details) then you will
+need to preserve existing values as well, either explicitly or by adding the variable
+to any new definition:
+
+    rc_use="logger net atd"
+    rc_need="postgres ${rc_need}"
+    
+All services are super-user'd to a given user for safety within the runscript. By default this is jerbil
 but you can set it to another user as above. 
 
-When setting USES and NEEDS remember that services defined as needed will restart this
+When setting use and need dependencies remember that services defined as needed will restart this
 service when they are restarted. Services that are just used do not restart this service
 but will be started before it.
+
+Finally, the generic runscript does not preserve the environment through the su command and
+the path will be very limited (by runscript), which is why SBIN_PATH is required. It
+does set one environment variable on start with is LANG and that is to help ruby 1.9 applications
+that have complex encoding demands. If you need more variables to be set it is suggested
+that you create a bespoke runscript and set them up as part of the su command. Inheriting
+the environment and passing in a wider path may present security risks.
 
 ## Errors and Exceptions
 

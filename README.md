@@ -40,7 +40,7 @@ of [Jeni](https://github.com/osburn-sharp/jeni):
 This will install various files over and above those installed by the gem, including configuration files,
 runscripts, and sbin wrappers for the jerbil server and for services that use the server.
 By default, Jerbil will install start-up scripts etc into /usr/local/sbin, but this can be
-changed to /usr/sbin by adding the -u option.
+changed to /usr/sbin by adding the -u option or the -t option.
 Use the -p switch to pretend and see if everything works OK. Jerbil assumes there is a 
 user 'jerbil' that will run the server process etc, so if there is no user 'jerbil' then 
 this script will create one.
@@ -129,15 +129,18 @@ the latter command works on Gentoo at least.
 
 You can also check if the server is working using:
 
-    # /usr/sbin/jerbil-status -V
-    or
     # /etc/init.d/jerbild status
 
 To stop the server:
 
-    # /usr/sbin/jerbil-stop
-    or
     # /etc/init.d/jerbild stop
+    
+If your distro does not support runscripts like this, then you can start, stop and test status
+manually using:
+
+    # /usr/local/sbin/jerbild 
+    # /usr/local/sbin/jerbil-status
+    # /usr/local/sbin/jerbil-stop
 
 Further details of all these commands can be obtained with the -h or --help option
 

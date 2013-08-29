@@ -1,0 +1,47 @@
+# This file sets values for a specific service and should be copied and changed for 
+# each one. You only need to change the following commented out settings if you
+# do not want the defaults in /etc/conf.d/jerbil
+
+# NO_DAEMON can be set true to prevent the service from daemonizing and run it
+# in the foreground instead. Only recommended for testing and diagnostics
+#NO_DAEMON=false
+
+# NO_SYSLOG can be set true to prevent the logger from logging messages to syslog
+# Only recommended for testing
+#NO_SYSLOG=false
+
+# CONF_FILE can be used to start the service with a configuration from a file
+# other than the system default (/etc/jerbil/<service>.rb).
+#CONF_FILE=
+
+# LOG_DAEMON can be used to log the output of the daemon to a jellog log file
+# which is useful for debugging purposes
+#LOG_DAEMON=true
+
+# By default, the service will suppress all messages to the terminal. For testing and
+# diagnostics, set VERBOSE to be true and run with NO_DAEMON
+#VERBOSE=false
+
+# By default, runscript will only pass /usr/bin, /usr/sbin, and /bin in the path variable
+# so if your gems are getting stuffed into something else (/usr/local) then make sure
+# this is set below (make sure it has a trailing /):
+#SBIN_PATH=/usr/local/sbin/
+
+# define the user under which this service will run
+#SERVICE_USER="jerbil"
+
+# add any services that this service uses, and keep the defaults in this list as well
+# because this overrides any previous definitions
+#rc_use="logger net"
+
+# Add further services that this service needs, and again keep the defaults here
+#rc_need="jerbild"
+
+# the service name should be, by default, used to name this multiplexed file. For example,
+# if the service name is my_service then this file should be called jerbil.my_service
+# if for some reason this is not the case then you can define a different name here
+# but it has to be a valid service name. See the README file for details
+#SERVICE_NAME=""
+
+# describe the service
+DESCRIPTION=""

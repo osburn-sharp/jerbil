@@ -1,0 +1,65 @@
+#!/sbin/runscript
+#
+# INIT Script for a Jerbil Service
+
+
+# make sure there are no unexpected rubylibs
+export RUBYLIB=""
+export RUBYOPT="rubygems"
+
+
+myopts=""
+[ -n "${NO_DAEMON}" ] && myopts="${myopts} -n"
+[ -n "${CONF_FILE}" ] && myopts="${myopts} -c ${CONF_FILE}"
+[ "${VERBOSE}" == "true" ] && [ "${QUIET}" != "true" ] && myopts="${myopts} -V"
+[ -n "${NO_SYSLOG}" ] && myopts="${myopts} -S"
+[ -n "${LOG_DAEMON}" ] && myopts="${myopts} -l"
+[ "$SERVICE_NAME" == "" ] && SERVICE_NAME="${RC_SVCNAME#*.}"
+[ "$SERVICE_USER" == "" ] && SERVICE_USER="jerbil"
+
+start() {
+  
+  if [ "${SVCNAME}" = "jerbil" ]; then
+    eerror "You are not supposed to run this script directly. Create a symlink"
+    eerror "for the jerbil service you want to run as well as a copy of the"
+    eerror "configuration file and modify it appropriately like so..."
+    eerror
+    eerror "  ln -s jerbil /etc/init.d/jerbil.my_service"
+    eerror "  cp /etc/conf.d/jerbil /etc/conf.d/jerbil.my_service"
+    eerror "  `basename "${EDITOR}"` /etc/conf.d/jerbil.my_service"
+    eerror
+    return 1
+  fi
+  
+  ebegin "Starting Jerbil Service ${SERVICE_NAME}"
+  
+    # need to export the LANG variable to support ruby 1.9 encodings correctly
+    local _LANG="export LANG=${LANG}"
+
+
+    # create the options for starting the daemon from the settings in the
+    # /etc/conf.d/jservice file (same name as this link)
+
+    /bin/su -c "$_LANG; ${SBIN_PATH}jserviced ${myopts} -s ${SERVICE_NAME}" - ${SERVICE_USER}
+
+  eend $?
+}
+
+status() {
+  ebegin "Checking status for Jerbil Service ${SERVICE_NAME}"
+    /bin/su -c "${SBIN_PATH}jservice-status ${myopts} -s ${SERVICE_NAME}" -${SERVICE_USER}
+  eend $?
+}
+
+
+stop() {
+  ebegin "Stopping Jerbil Service ${SERVICE_NAME}"
+    /bin/su -c "${SBIN_PATH}jservice-stop ${myopts} -s ${SERVICE_NAME}" - ${SERVICE_USER}
+  eend $?
+}
+  
+describe() {
+  einfo ${DESCRIPTION}
+
+}
+
