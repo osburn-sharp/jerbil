@@ -98,8 +98,9 @@ class Jerbs < Optplus::Parser
         end #
         if option? :verbose then
           begin
-            puts "  Running under Ruby version: #{remote.ruby_version}"
+            puts "    Running under Ruby version: #{remote.connect.ruby_version}"
           rescue
+            puts "    No info on ruby version from this server"
           end
         end
       end
