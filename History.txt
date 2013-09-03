@@ -4,6 +4,11 @@
 
 ==History
 
+[jerbil-1.3.2 03-Sep-2013]
+
+  Introduce Optplus version of the bin/jerbil command and add a couple of information
+  methods to the server in support.
+
 [jerbil-1.3.1 29-Aug-2013]
 
   Fix minor error in runscript (status)

@@ -168,6 +168,16 @@ module Jerbil
     #
     # @return [Array] of {Jerbil::Servers}
     attr_reader :remote_servers
+    
+    # provide access to the local server record
+    def server
+      @local
+    end
+    
+    # tell remote users about what version of Ruby we are running
+    def ruby_version
+      RUBY_VERSION
+    end
 
     # The current version of the Jerbil Server
     # @return [String] version number in the form N.N.N

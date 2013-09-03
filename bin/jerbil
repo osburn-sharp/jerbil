@@ -1,12 +1,13 @@
 #!/usr/bin/env ruby
 #
 #
-# = Jerbil command line utility
 #
-# == control and display jerbil related info
+# = Jerbil command line
+#
+# == useful things to do with Jerbil
 #
 # Author:: Robert Sharp
-# Copyright:: Copyright (c) 2011 Robert Sharp
+# Copyright:: Copyright (c) 2013 Robert Sharp
 # License:: Open Software Licence v3.0
 #
 # This software is licensed for use under the Open Software Licence v. 3.0
@@ -14,49 +15,157 @@
 # and in the file copyright.txt. Under the terms of this licence, all derivative works
 # must themselves be licensed under the Open Software Licence v. 3.0
 #
-# Trial using Thor
+# 
 #
-require 'rubygems'
-require 'thor'
-require 'thor/group'
+
+require 'optplus'
 require 'jerbil'
+require 'jellog/proxy'
 require 'colored'
+require 'socket'
 
-
-require 'jerbil/thor/server'
-require 'jerbil/thor/service'
-
-
-
-# the main thor handler
-class Jerbs < Thor
+class Jerbs < Optplus::Parser
   
-  #class_option :verbose, :default=>false, :aliases=>'-V', :desc=>'print more information'
+  usage "[options] actions"
   
-  desc "test", "This is just to test things"
-  method_option :debug, :aliases=>'-D', :desc=>'display debug information'
-  def test
-    puts "Hello World"
-    if options[:debug] then
-      puts "Debugging..."
-      puts "  Load Path:"
-      $LOAD_PATH.each do |lpath|
-        puts "    #{lpath.to_s}"
+  description "Provide information on Jerbil servers and services"
+  
+  def options(opts)
+    
+    opts.on('-a', '--all', 'show all servers or services') do |a|
+      set_option :all, a
+    end
+    
+    opts.on('-H', '--host STRING', String, 'show services on given host') do |h|
+      hostname = resolve_hostname(h)
+      set_option :host, hostname
+    end
+    
+    opts.on('-c', '--config [FILE]', String, 'use the given config file') do |c|
+      if FileTest.exists?(c) then
+        set_option :config, c
+      else
+        message :fatal, "the config file given does not exist"
       end
+    end
+  
+    opts.on('-v', '--verify', 'verify the connections') do |c|
+      set_option :verify, c
+    end
+  
+    debug_option(opts)
+    
+    verbose_option(opts)
+
+  end
+  
+  def before_actions
+    @logger = Jellog::ProxyLogger.new("Jerbil")
+    @config = Jerbil.get_config(get_option(:config))
+    @server = Jerbil::Servers.get_local_server(@config[:environment])
+  rescue Jeckyl::ConfigFileMissing
+    puts "Error: No config file #{config_file ? config_file : '/etc/jerbil/jerbil.rb'}".red.bold
+  end
+  
+  describe :status, "show the status of the local server"
+  def status
+    puts "Checking for local Jerbil server running in env: #{@config[:environment]}"
+    jerbs = @server.connect
+    started = jerbs.started
+    puts "  Jerbil server found, version: #{jerbs.version}".green
+    puts "  Server has been up since #{started.strftime('%d %b %Y at %H:%M')}"
+    puts "  and has had #{jerbs.registrations.to_s} registrations"
+  rescue Exception => err
+    puts "Server did not respond: #{err.message}".red.bold
+  end
+  
+  describe :remotes, "list the remote servers on the network"
+  def remotes
+    puts "Checking for remote Jerbil servers running in env: #{@config[:environment]}"
+    begin
+      jerbs = @server.connect
+      remotes = jerbs.remote_servers
+      remotes.each do |remote|
+        if option?(:verify) then
+          begin
+            remote.connect.verify
+            puts "  #{remote.ident}".green
+          rescue
+            puts "  #{remote.ident}".red
+          end
+        else
+          puts "  #{remote.ident}".cyan
+        end #
+        if option? :verbose then
+          begin
+            puts "  Running under Ruby version: #{remote.ruby_version}"
+          rescue
+          end
+        end
+      end
+    rescue Exception => err
+      puts "  Server did not respond: #{err.message}".red.bold
     end
   end
   
+  describe :services, "list the services registered with Jerbil"
+  def services
+    jerbs = @server.connect
+    local_host = Socket.gethostname
+    if option?(:all) then
+      services = jerbs.get_all(true)
+    elsif option?(:host) then
+      services = jerbs.find(host: get_option(:host), ignore_access: true)
+    else
+      services = jerbs.find(host: local_host, ignore_access: true)
+    end
+    services.each do |s|
+      puts "  #{s.name}[:#{s.env}]@#{s.host}:#{s.port}".cyan
+      if option? :verbose then
+        puts "    started at: #{s.registered_at.strftime('%d/%m/%y %H:%M')}"
+        puts "    accessed #{s.access_count.to_s} times, last time at: #{s.accessed_at.strftime('%d/%m/%y %H:%M')}"
+      end
+      if option? :verify then
+        if jerbs.service_missing?(s) then
+          puts "  #{s.ident} has failed and should be removed".red
+        else
+          puts "  #{s.ident} responded".green
+        end
+      end
+    end
+      
+  rescue Jerbil::JerbilServerError => err
+    puts "Jerbil Server did not respond: #{err.message}".red.bold
+  end
   
-  register Server, :server, "server", "show information about jerbil servers"
+  describe :secret, "generate a secret key for the Jerbil Servers"
+  def secret
+    puts "Paste the following into the config files for each server"
+    key = Digest::SHA1.hexdigest(Time.now.to_s + rand(12341234).to_s)
+    puts 'secret "' + key + '"'
+  end
   
-
-  register Service, :service, "service", "show information about registered services"
+  describe :readme, 'Display the Jerbil Readme file by whatever means is best'
+  def readme
+    gem_spec = Gem::Specification.find_by_name('jerbil')
+    readme_path = File.join(gem_spec.gem_dir, 'README.md')
+    if FileTest.exists?('/usr/bin/markdown_py') then
+      exec "markdown_py #{readme_path} | lynx -stdin"
+    else
+      exec "less #{readme_path}"
+    end    
+  end
   
-  map "services"=>"service"
-
-  # use separate jeni installer
-  #register Installer, :install, "install", "install jerbil on local machine"
+  def resolve_hostname(host)
+    if host.split('.').length > 1 then
+      return host
+    else
+      myhost = Socket.gethostname.split('.')
+      myhost[0] = host
+      return myhost.join('.')
+    end
+  end
   
 end
 
-Jerbs.start
+Jerbs.run!
