@@ -4,6 +4,12 @@
 
 ==History
 
+[jerbil-1.4.0 19-Apr-2014]
+
+  Ensure that jerbild init does not complete until the server has completed
+  discovery. This prevents services from starting when there is apparently
+  a server but it is not yet ready for them. 
+
 [jerbil-1.3.3 03-Sep-2013]
 
   Ensure jerbil methods are called on the server and not the server record.

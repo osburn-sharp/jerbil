@@ -103,11 +103,13 @@ module Jerbil
       @remote_store = Array.new
 
       # create a jellog logger that continues any previous log and keeps the last 5 log files
-      app_name = "Jerbil-#{options[:environment].to_s}"
-      log_opts = Jellog::Logger.get_options(options)
-      @logger = Jellog::Logger.new(app_name, log_opts)
+      @app_name = "Jerbil-#{options[:environment].to_s}"
+      @log_opts = Jellog::Logger.get_options(options)
+      log_opts = @log_opts.dup
+      @logger = Jellog::Logger.new(@app_name, log_opts)
       @logger.mark
       @logger.debug "Started the Logger for Jerbil"
+      @logger.debug "Saved logger options: #{@log_opts.inspect}"
 
 
       # some statistical data
@@ -153,9 +155,19 @@ module Jerbil
         @logger.debug "   #{rs.fqdn}: #{rs.key}"
       end
       
+      @logger.verbose "Closing logger temporarily"
+      @logger.close
+      
     rescue => jerr
       @logger.exception(jerr)
       raise
+    end
+    
+    # restart the logger on the other side of daemonising it
+    #
+    def restart_logger
+      @logger = Jellog::Logger.new(@app_name, @log_opts)     
+      @logger.debug "Restarted Logger"
     end
 
     # date/time at which the server was started
