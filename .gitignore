@@ -31,3 +31,5 @@ test/pids/**
 
 .yardoc
 .yardopts
+
+tmp

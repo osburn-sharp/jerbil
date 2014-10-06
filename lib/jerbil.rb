@@ -94,10 +94,6 @@ module Jerbil
       @local = Jerbil::Servers.create_local_server(@env, @private_key)
       @remote_servers = Array.new
 
-
-      # who am i
-      #@host = Socket.gethostname
-
       #store local and remote services
       @store = Array.new
       @remote_store = Array.new
@@ -140,7 +136,7 @@ module Jerbil
             @logger.warn("  #{jerr.message}")
           rescue ArgumentError, NoMethodError
             @logger.warn("Remote server incompatibility, skipping")
-          rescue => jerr
+          rescue StandardError => jerr
             @logger.exception(jerr)
           end
 

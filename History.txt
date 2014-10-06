@@ -4,6 +4,10 @@
 
 ==History
 
+[jerbil-1.4.1 03-Aug-2014]
+
+  allow for gethostname not to return fqdn and use gethostbyname if this happens.
+
 [jerbil-1.4.0 19-Apr-2014]
 
   Ensure that jerbild init does not complete until the server has completed

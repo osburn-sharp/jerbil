@@ -32,6 +32,10 @@ module Jerbil
     # Note that the callback parameters do not really need to be considered
     # if you are using {JerbilService::Base}
     #
+    # Warning - if your hostname is not fully qualified this may not work as expected
+    # if you DNS server does not provide expected reverse lookup. Consider using
+    # `hostname -f` although *nix dependent.
+    #
     # @param [Symbol] name identifying the service - needs to match /etc/services
     #  or create fails with the exception InvalidService
     # @param [Symbol] env identify the service's environment. Allows multiple
@@ -42,7 +46,13 @@ module Jerbil
     # @return [ServiceRecord] of course
     # @raise [InvalidService] if the service is not registered through /etc/services
     def initialize(name, env, verify_callback=:verify_callback, stop_callback=nil)
+      
+      # gethostname may npt provide the fqdn
       @host = Socket.gethostname
+      if @host.split('.').length == 1 then
+        # no domain name
+        @host = Socket.gethostbyname(@host).first
+      end
       @name = name
       begin
         @port = Socket.getservbyname(@name.to_s)
