@@ -46,20 +46,17 @@ describe "Missing Services" do
     @ant_fqdn = 'antonia.osburn-sharp.ath.cx'
     #@ant = Jerbil::Servers.get_server(@servers, @ant_fqdn, @env)
     #@calling_key = @local.key
-
-    #Syslog.stub(:info).and_return(true)
-    Jellog::Logger.disable_syslog
     
   end
   
   before(:each) do
     
     @my_service = Jerbil::ServiceRecord.new(:rubytest, :dev)
-    Socket.stub(:gethostname).and_return(@germs_fqdn)
+    allow(Socket).to receive_messages(:gethostname=>@germs_fqdn)
     @a_service = Jerbil::ServiceRecord.new(:rubytest, :test)
-    Socket.stub(:gethostname).and_return(@ant_fqdn)
+    allow(Socket).to receive_messages(:gethostname=>@ant_fqdn)
     @b_service = Jerbil::ServiceRecord.new(:rubytest, :prod)
-    Socket.unstub(:gethostname)
+    allow(Socket).to receive(:gethostname).and_call_original
 
     @jerbs.register(@my_service)
     rkey = @jerbs.register_server(@calling_server, @secret, @env)

@@ -1,6 +1,7 @@
 # Jerbil Testing
 
-Testing is generally through rspec, development/test versions of the Jerbil server, and service mocks.
+Testing is generally through rspec, development/test versions of the Jerbil server, and service mocks. 
+Rspec 3.1.0 has been used for all tests
 
 ## Basic tests
 

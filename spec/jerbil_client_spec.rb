@@ -33,28 +33,28 @@ describe "Test Jerbil Client Interface" do
   it "should respond to the old connect method" do
     client_opts = {:local=>true, :config_file=>config_file, :quiet=>true, :jerbil_env=>:test}
     JerbilService::Client.connect(RubyTest, client_opts) do |rubytest|
-      rubytest.action.should == 'Hello'
-      rubytest.host.should == localhost
+      expect(rubytest.action).to eq('Hello')
+      expect(rubytest.host).to eq(localhost)
     end
   end
 
   it "should respond to the new find_services method" do
     JerbilService::Client.find_services(:first, RubyTest, @client_opts) do |rubytest|
-      rubytest.action.should == 'Hello'
-      rubytest.host.should == localhost
+      expect(rubytest.action).to eq('Hello')
+      expect(rubytest.host).to eq(localhost)
     end
   end
 
   it "should respond to the new find_services method with local service" do
     JerbilService::Client.find_services(:local, RubyTest, @client_opts) do |rubytest|
-      rubytest.action.should == 'Hello'
-      rubytest.host.should == localhost
+      expect(rubytest.action).to eq('Hello')
+      expect(rubytest.host).to eq(localhost)
     end
   end
 
   it "should work with multiple client call" do
     JerbilService::Client.find_services(:all, RubyTest, @client_opts) do |rubytest|
-      rubytest.action.should == 'Hello'
+      expect(rubytest.action).to eq('Hello')
     end
   end
 
@@ -66,26 +66,26 @@ describe "Test Jerbil Client Interface" do
     options[:output] = log_file
     options[:quiet] = false
     JerbilService::Client.find_services(:local, RubyTest, options) do |rubytest|
-      rubytest.action.should == 'Hello'
+      expect(rubytest.action).to eq('Hello')
     end
     log_file.close
     log = File.readlines(log_filename)
-    log[0].should match(/^Welcome/)
+    expect(log[0]).to match(/^Welcome/)
   end
 
   it "should not respond to an unknown method" do
     JerbilService::Client.find_services(:first, RubyTest, @client_opts) do |rubytest|
-      lambda{rubytest.unlikely_method}.should raise_error(NoMethodError)
+      expect {rubytest.unlikely_method}.to raise_error(NoMethodError)
     end
   end
 
   it "should not respond to an unknown search key" do
-    lambda{JerbilService::Client.find_services(:last, RubyTest, @client_opts)}.should raise_error(ArgumentError)
+    expect {JerbilService::Client.find_services(:last, RubyTest, @client_opts)}.to raise_error(ArgumentError)
   end
 
   it "should not allow the stop_callback to be called" do
     JerbilService::Client.find_services(:first, RubyTest, @client_opts) do |rubytest|
-      lambda{rubytest.stop_callback}.should raise_error(Jerbil::UnauthorizedMethod)
+      expect {rubytest.stop_callback}.to raise_error(Jerbil::UnauthorizedMethod)
     end
   end
 
@@ -97,18 +97,18 @@ describe "Jerbil Clients that do different things" do
   end
 
   it "should not find an invalid service" do
-    lambda{JerbilService::Client.connect(Blabla)}.should raise_error(NameError)
+    expect {JerbilService::Client.connect(Blabla)}.to raise_error(NameError)
   end
 
   it "should find a local service" do
     JerbilService::Client.connect(RubyTest, @client_opts) do |client|
-      client.action.should == 'Hello'
+      expect(client.action).to eq('Hello')
     end
   end
 
   it "should not find a local service if it thinks it is somewhere else" do
-    Socket.stub(:gethostname).and_return('germanicus.osburn-sharp.ath.cx', 'lucius.osburn-sharp.ath.cx')
-    lambda{JerbilService::Client.connect(RubyTest, @client_opts)}.should raise_error(Jerbil::ServiceNotFound)
+    allow(Socket).to receive_message_chain(:gethostname).and_return('germanicus.osburn-sharp.ath.cx', 'lucius.osburn-sharp.ath.cx')
+    expect {JerbilService::Client.connect(RubyTest, @client_opts)}.to raise_error(Jerbil::ServiceNotFound)
   end
 
 end

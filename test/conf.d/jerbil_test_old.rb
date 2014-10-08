@@ -1,5 +1,5 @@
 project_root = '/home/robert/dev/projects/jerbil'
-env = :dev
+env = :test
 environment env
 
 # directory used to store the daemons pid to assist in stopping reluctant servers
@@ -25,7 +25,7 @@ log_level :debug
 # private key file used to authenticate privileged users
 key_dir "#{project_root}/test/pids"
 
-disable_syslog true
+#user 'robert'
 
 
 # netmask

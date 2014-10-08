@@ -19,12 +19,15 @@
 #
 
 require 'optplus'
+require 'optplus/IO'
 require 'jerbil'
 require 'jellog/proxy'
 require 'colored'
 require 'socket'
 
 class Jerbs < Optplus::Parser
+  
+  include Optplus::IO
   
   usage "[options] actions"
   
@@ -45,7 +48,7 @@ class Jerbs < Optplus::Parser
       if FileTest.exists?(c) then
         set_option :config, c
       else
-        message :fatal, "the config file given does not exist"
+        alert "the config file given does not exist"
       end
     end
   
@@ -67,79 +70,102 @@ class Jerbs < Optplus::Parser
     puts "Error: No config file #{config_file ? config_file : '/etc/jerbil/jerbil.rb'}".red.bold
   end
   
+  
   describe :status, "show the status of the local server"
+  help :status, "  jerbil status",
+    "",
+    "Display status information about the local Jerbil server, such as its version",
+    "and the time it was started"
+    
   def status
     puts "Checking for local Jerbil server running in env: #{@config[:environment]}"
     jerbs = @server.connect
     started = jerbs.started
     puts "  Jerbil server found, version: #{jerbs.version}".green
     puts "  Server has been up since #{started.strftime('%d %b %Y at %H:%M')}"
-    puts "  and has had #{jerbs.registrations.to_s} registrations"
-  rescue Exception => err
-    puts "Server did not respond: #{err.message}".red.bold
+    puts "  and has had #{jerbs.registrations.to_s} registrations."
+  rescue Jerbil::JerbilError
+    show_err "Jerbil Server Error"
+  rescue DRb::DRbError
+    show_err "Server did not respond"
   end
   
+  
   describe :remotes, "list the remote servers on the network"
+  help :remotes, "  jerbil remotes [-vV]",
+    "List remote servers and optionally verify the server is running.",
+    "Verbose listing does little atm but display the Ruby version."
+    
   def remotes
-    puts "Checking for remote Jerbil servers running in env: #{@config[:environment]}"
-    begin
-      jerbs = @server.connect
-      remotes = jerbs.remote_servers
-      remotes.each do |remote|
-        if option?(:verify) then
-          begin
-            remote.connect.verify
-            puts "  #{remote.ident}".green
-          rescue
-            puts "  #{remote.ident}".red
-          end
-        else
-          puts "  #{remote.ident}".cyan
-        end #
-        if option? :verbose then
-          begin
-            puts "    Running under Ruby version: #{remote.connect.ruby_version}"
-          rescue
-            puts "    No info on ruby version from this server"
-          end
+    say "Checking for remote Jerbil servers running in env: #{@config[:environment]}"
+    jerbs = @server.connect
+    remotes = jerbs.remote_servers
+    remotes.each do |remote|
+      if option?(:verify) then
+        begin
+          remote.connect.verify
+          say_ok "  #{remote.ident}"
+        rescue
+          say "  #{remote.ident}".red
+        end
+      else
+        say "  #{remote.ident}".cyan
+      end #
+      if option? :verbose then
+        begin
+          say "    Running under Ruby version: #{remote.connect.ruby_version}"
+        rescue
+          say "    No info on ruby version from this server"
         end
       end
-    rescue Exception => err
-      puts "  Server did not respond: #{err.message}".red.bold
     end
+    unless remotes && remotes.length > 0
+      # no remotes
+      warn "There are no remote servers registered at this time"
+    end
+      
+  rescue Jerbil::JerbilError
+    show_err "Jerbil Server Error"
+  rescue DRb::DRbError
+    show_err "Jerbil Server did not respond"
+    
   end
   
   describe :services, "list the services registered with Jerbil"
+  help :services, "  jerbil services [-avV -h <hostname>]",
+    "Display the services registered with the local Jerbil Server.",
+    "By default, these are just the local services. To see services",
+    "on remote servers use the -a switch. You can also see just those",
+    "services on a given host with the -h switch. To verify that the services",
+    "are operating, use the -v switch."
+    
   def services
     jerbs = @server.connect
     local_host = Socket.gethostname
     if option?(:all) then
-      services = jerbs.get_all(true)
+      servers = jerbs.get_all_by_server
+      servers.each_pair do |name, services|
+        puts "Services for #{name}:"
+        display_services(services, jerbs)
+      end
+      unless servers && servers.length > 0
+        warn "There are no servers and therefore services registered with Jerbil"
+      end
+      return
     elsif option?(:host) then
       services = jerbs.find(host: get_option(:host), ignore_access: true)
     else
       services = jerbs.find(host: local_host, ignore_access: true)
     end
-    services.each do |s|
-      puts "  #{s.name}[:#{s.env}]@#{s.host}:#{s.port}".cyan
-      if option? :verbose then
-        puts "    started at: #{s.registered_at.strftime('%d/%m/%y %H:%M')}"
-        puts "    accessed #{s.access_count.to_s} times, last time at: #{s.accessed_at.strftime('%d/%m/%y %H:%M')}"
-      end
-      if option? :verify then
-        if jerbs.service_missing?(s) then
-          puts "  #{s.ident} has failed and should be removed".red
-        else
-          puts "  #{s.ident} responded".green
-        end
-      end
-    end
-      
-  rescue Jerbil::JerbilServerError => err
-    puts "Jerbil Server did not respond: #{err.message}".red.bold
+    display_services(services, jerbs)
+          
+  rescue Jerbil::JerbilError
+    show_err "Jerbil Server Error"
+  rescue DRb::DRbError
+    show_err "Jerbil Server did not respond"
   end
   
-  describe :secret, "generate a secret key for the Jerbil Servers"
+  describe :secret, "generate a random secret key for the Jerbil Servers"
   def secret
     puts "Paste the following into the config files for each server"
     key = Digest::SHA1.hexdigest(Time.now.to_s + rand(12341234).to_s)
@@ -157,6 +183,7 @@ class Jerbs < Optplus::Parser
     end    
   end
   
+  # if hostname is not FQDN then get the FQDN
   def resolve_hostname(host)
     if host.split('.').length > 1 then
       return host
@@ -165,6 +192,36 @@ class Jerbs < Optplus::Parser
       myhost[0] = host
       return myhost.join('.')
     end
+  end
+  
+  # helper method to display service information
+  def display_services(services, jerbs)
+    unless services && services.length > 0
+      warn "There are no services registered with Jerbil"
+      return false
+    end
+
+    services.each do |s|
+      puts "  #{s.name}[:#{s.env}]@#{s.host}:#{s.port}".cyan
+      if option? :verbose then
+        puts "    started at: #{s.registered_at.strftime('%d/%m/%y %H:%M')}"
+        puts "    accessed #{s.access_count.to_s} times, last time at: #{s.accessed_at.strftime('%d/%m/%y %H:%M')}"
+      end
+      if option? :verify then
+        if jerbs.service_missing?(s) then
+          puts "  #{s.ident} has failed and should be removed".red
+        else
+          puts "  #{s.ident} responded".green
+        end
+      end
+    end
+    
+  end # display_services
+  
+  # helper method to show errors
+  def show_err(msg)
+    alert msg + ':'
+    puts "  #{$!.message}"
   end
   
 end

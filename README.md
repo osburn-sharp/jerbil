@@ -1,10 +1,18 @@
 # Jerbil
 
-**(a.k.a Jumpin Ermin's Reliable Broker for Integrated Linux services)**
+A "Framework" for writing services in Ruby that provides a reliable way to deploy
+services across a network. Reliability is a key objective and with a server
+on each machine you can rely on Jerbil to connect you effortlessly to your services
+wherever they are running. 
 
-An Object Broker for ruby that provides reliable access to services across the LAN
-and comes complete with a service class that makes writing services easy, hiding all
-of the broker interactions.
+Jerbil comes complete with a basic service class to make writing a new service very
+quick and easy. It also has helpers to connect clients to services through Jerbil
+without having to worry about where the service is running. You can find single or 
+multiple services and you can run services at development, test or production status 
+all on the same LAN or same machine.
+
+Overall, Jerbil should save anyone looking to develop a service in Ruby from a lot of
+tedious work and should avoid a lot of the headaches of alternatives such as Rinda.
 
 **GitHub:** [https://github.com/osburn-sharp/jerbil](https://github.com/osburn-sharp/jerbil)
 
@@ -22,7 +30,8 @@ uses the Jerbil Server
 
 ### Note
 
-Jerbil will work on any Linux distro (and possibly other systems too) but it comes with
+Jerbil **(a.k.a Jumpin Ermin's Reliable Broker for Integrated Linux services)** will 
+work on any Linux distro (and possibly other systems too) but it comes with
 all the gear necessary to work on Gentoo out of the box - e.g. runscripts, /etc/conf.d files
 and the like.
 
@@ -71,13 +80,19 @@ the defaults, you need to generate a secret. A random secret can be generated us
 
     # jerbil server secret
 
-although any long string will do. Full details of the configuration parameters for Jerbil are in {Jerbil::Config}.
+although any long string will do. 
+
+You also need to set some parameters for your network. This is to help the server
+discover any other Jerbil servers on the network without having to hard-code
+this information on all computers. Further details on Server Discovery are provided below.
+Full details of the configuration parameters for Jerbil are in {Jerbil::Config}.
 
 ### Editting /etc/services
 
-Jerbil uses /etc/services to find its services (unsurprisingly) so this file needs to be updated. There must
-be an entry for the server itself, as well as the services that use jerbil. Because Jerbil supports three
-operating environments (dev, test and prod), these services must be assigned in triplets. The following is an example
+Jerbil uses /etc/services (Socket.getservbyname) to find the ports for its services (unsurprisingly) so this 
+file needs to be updated. There must be an entry for the Jerbil server itself, as well as the 
+services that use Jerbil. Because Jerbil supports three operating environments (dev, test and prod), 
+these services must be assigned in triplets. The following is an example
 
     # starts from 49195
     #
@@ -109,31 +124,33 @@ and offsets it if either test or dev is selected. They are included here as a re
 Once you have generated a secret and set up some services in /etc/services, it is now possible to
 start the Jerbil Server. This can be done using the jerbild script:
 
-    # /usr/sbin/jerbild
+    # /usr/local/sbin/jerbild
 
-which will start the server, get the default config file (/etc/jermine/jerbil.rb), daemonise, and say very little.
+which will start the server, get the default config file (/etc/jerbil/jerbil.rb), daemonise, and say very little.
 If you add the -h or --help switch you can see how to overide this default behaviour.
 You can then test that the server is running with:
 
-    # jerbil server
+    # jerbil status
 
 If this does not report the server as up, go to the troubleshooting section.
 
-If you can support init scripts, then jerbil is ready to go. Edit /etc/conf.d/jerbild if you need to change settings such as
-where the config file is and then run:
+If you can support init scripts, then jerbil is ready to go. Edit /etc/conf.d/jerbild if 
+you need to change settings such as where the config file is and then run:
 
     # /etc/init.d/jerbild start
+    or alternatively
+    # rc-service jerbild start
+    and to set the service to run at startup:
     # rc-update add jerbild default
 
-the latter command works on Gentoo at least.
 
 You can also check if the server is working using:
 
-    # /etc/init.d/jerbild status
+    # rc-service jerbild status
 
 To stop the server:
 
-    # /etc/init.d/jerbild stop
+    # rc-service jerbild stop
     
 If your distro does not support runscripts like this, then you can start, stop and test status
 manually using:
@@ -147,7 +164,7 @@ Further details of all these commands can be obtained with the -h or --help opti
 
 ## General Description
 
-The function of Jerbil is to make it easy to write linux services in ruby that can be deployed anywhere on
+The aim of Jerbil is to make it easier to write Linux services in Ruby that can be deployed anywhere on
 a network, once or multiple times, and enabling clients to access these services regardless of where they are. Its
 a wrapper around DRb and a replacement for Rinda.
 
@@ -160,7 +177,7 @@ single point of failure. If it goes down nobody can find anything and all servic
 server is restored.
 
 Part of the self-healing in Jerbil is dealing with services that become unavailable. When this happens, the server
-checks if the services local server is running. If it is, this local server is asked to deal with the missing service
+checks if the service's local server is running. If it is, this local server is asked to deal with the missing service
 and update the database accordingly. If it is not, then the original server takes responsibility for the missing
 service and purges it from all the other servers.
 
@@ -175,8 +192,8 @@ Jerbil with only a couple of lines of code.
 
 Controlling a service is also made easy by the {JerbilService::Supervisor} class. This hides all of the actions needed
 to start a service. However, service control is made even easier by /usr/bin/jserviced, which starts any service
-given that services name, provided the files conform to certain protocols. The /usr/sbin/jservice-status and
-/usr/sbin/jservice-stop commands work in a similar manner.
+given that services name, provided the files conform to certain protocols. The /usr/local/sbin/jservice-status and
+/usr/local/sbin/jservice-stop commands work in a similar manner.
 
 Writing a client is similarly made easy by the {JerbilService::Client} class, which finds one or more services ready
 to be connected to and acted upon.
@@ -194,22 +211,13 @@ Jerbil is divided into two groups: the server and the services that use the serv
 
 The server consists of one main class: {Jerbil::Broker} and two data-type classes: 
 {Jerbil::Servers} and {Jerbil::ServiceRecord}. The Broker contains the main server code, 
-finding and registering with other servers, accepting and recording services and
+accepting and recording services and
 responding to queries about registered services. When a service registers with 
 the broker, the broker will also inform all of the other servers of that service. 
 The {Jerbil::Servers} class is used by the broker to record information
 about a server and it provides convenience methods to connect to a server and a class 
 method to find the local server. The {Jerbil::ServiceRecord} class fulfils a similar 
 role for services.
-
-When a server starts up it uses the {Jerbil::Servers.find_servers} class method to
-search the network for any other servers. This method uses the NetAddr gem to create a
-list of network addresses from the parameters defined by {Jerbil::Config}, allowing
-users to limit jerbil addresses, both to control which machines get polled and to speed
-up the search. The jerbil port is polled using the standard library TCPSocket interface
-with a timeout (standard library again). When the server finds another server it first 
-does a minor security check (see below) and then obtains all of the services registered with
-that server and adds it to its service database.
 
 Jerbil is intended to be as reliable as possible - to survive any of the servers and 
 their services leaving the network unexpectedly. If a local client attempts to connect 
@@ -227,6 +235,30 @@ Jerbil and Jerbil Services use the standard library daemons to run in the backgr
 but they keep track of their own pids instead of relying on daemon. To stop the server, 
 an attempt is made to call the stop method, which cleans up with all the other servers, 
 but failing that the pid is used to kill the server.
+
+### Server Discovery
+
+Jerbil servers automatically connect to each other on a LAN to make their management
+as easy as possible. They do this using brute force - polling each address on the network
+until they find a server and then registering with it. This all takes time and to avoid
+delaying the server itself, the discovery task is delegated to {Jerbil::Monitor}, which
+is run in a sub-process by the sbin/jerbild script.
+
+The {Jerbil::Monitor} class uses the {Jerbil::Servers.find_servers} class method to
+search the network for any other servers. This method uses the NetAddr gem to create a
+list of network addresses from the parameters defined by {Jerbil::Config}, allowing
+users to limit jerbil addresses, both to control which machines get polled and to speed
+up the search. The Jerbil port is polled using the standard library TCPSocket interface
+with a timeout (standard library again). When the server finds another server it first 
+does a minor security check (see below) and then obtains all of the services registered with
+that server and adds it to its service database.
+
+To avoid missing any servers that may have been busy during the short period waited on
+each port, the monitor process can loop round the discovery task multiple times (see
+defaults in {Jerbil::Config}. There is also a delay between each cycle that can be 
+set in {Jeckyl::Config}. Overall, the parameters for the monitor task can be tuned
+to ensure success on anything from a small subnet to a large network. The only thing
+it cannot do is monitor more than one network.
 
 ### Services
 
@@ -303,7 +335,7 @@ event that an exception is raised during the daemonization process.
 
 ## Dependencies
 
-A ruby compiler - works with 1.8.7.
+Tested on Ruby 1.9.3 and 2.0.0.
 
 Check the {file:Gemfile} for other dependencies.
 
@@ -326,7 +358,7 @@ See {file:History.txt} for a summary change history
 
 ## Copyright and Licence
 
-Copyright (c) 2012 Robert Sharp
+Copyright (c) 2014 Robert Sharp
 
 This software is licensed under the terms defined in {file:LICENCE.rdoc}
 

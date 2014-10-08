@@ -94,15 +94,19 @@ module Jerbil
       @local = Jerbil::Servers.create_local_server(@env, @private_key)
       @remote_servers = Array.new
 
+
+      # who am i
+      #@host = Socket.gethostname
+
       #store local and remote services
       @store = Array.new
       @remote_store = Array.new
 
       # create a jellog logger that continues any previous log and keeps the last 5 log files
       @app_name = "Jerbil-#{options[:environment].to_s}"
-      @log_opts = Jellog::Logger.get_options(options)
-      log_opts = @log_opts.dup
-      @logger = Jellog::Logger.new(@app_name, log_opts)
+      @log_opts = Jellog::Config.intersection(options)
+      #log_opts = @log_opts.dup
+      @logger = Jellog::Logger.new(@app_name, @log_opts)
       @logger.mark
       @logger.debug "Started the Logger for Jerbil"
       @logger.debug "Saved logger options: #{@log_opts.inspect}"
@@ -112,10 +116,11 @@ module Jerbil
       @started = Time.now
       @registrations = 0
       @logger.verbose("Searching for remote servers")
-      network_servers = Jerbil::Servers.find_servers(@env, options[:net_address], options[:net_mask], options[:scan_timeout])
-      @logger.verbose("Found #{@remote_servers.length} remote servers")
+      network_servers = [] #Jerbil::Servers.find_servers(@env, options[:net_address], options[:net_mask], options[:scan_timeout])
+      #@logger.verbose("Found #{@remote_servers.length} remote servers")
 
       # now loop round the remote servers to see if any are there
+      # DO NOTHING cos its an empty array!
       network_servers.each do |remote_server|
         rjerbil = remote_server.connect
         unless rjerbil.nil?
@@ -136,7 +141,7 @@ module Jerbil
             @logger.warn("  #{jerr.message}")
           rescue ArgumentError, NoMethodError
             @logger.warn("Remote server incompatibility, skipping")
-          rescue StandardError => jerr
+          rescue => jerr
             @logger.exception(jerr)
           end
 
@@ -151,8 +156,8 @@ module Jerbil
         @logger.debug "   #{rs.fqdn}: #{rs.key}"
       end
       
-      @logger.verbose "Closing logger temporarily"
-      @logger.close
+      #@logger.verbose "Closing logger temporarily"
+      #@logger.close
       
     rescue => jerr
       @logger.exception(jerr)
@@ -161,6 +166,7 @@ module Jerbil
     
     # restart the logger on the other side of daemonising it
     #
+    # NOT NEEDED!
     def restart_logger
       @logger = Jellog::Logger.new(@app_name, @log_opts)     
       @logger.debug "Restarted Logger"
@@ -378,6 +384,18 @@ module Jerbil
     def get_all(ignore_access=false)
       self.find(:ignore_access => ignore_access)
     end
+    
+    def get_all_by_server
+      services = self.find(ignore_access: true)
+      servers = Hash.new
+      services.each do |serv|
+        unless servers.has_key?(serv.host)
+          servers[serv.host] = Array.new
+        end
+        servers[serv.host] << serv
+      end
+      return servers
+    end
 
     # Checks for a potentially missing service and removes it if it cannot be found.
     #
@@ -478,7 +496,7 @@ module Jerbil
         @remote_servers.each do |rserver|
           begin
             rjerbil = rserver.connect
-            @logger.verbose("Closing connection to; #{rserver.ident}")
+            @logger.verbose("Closing connection to: #{rserver.ident}")
             rjerbil.detach_server(rserver.key, @local) 
           rescue ServerConnectError, DRb::DRbConnError
             @logger.error("Failed to connect to #{rserver.ident}")
@@ -608,12 +626,18 @@ module Jerbil
     # @param [String] my_key being the key of the server being called
     # @param [Server] server being the record for the remote server that is detaching
     def detach_server(my_key, server)
-      @logger.verbose("About to detach a remote server: #{server.ident}")
      
       unless @private_key == my_key
-        @logger.warn("close_remote_server: incorrect key: #{my_key}")
-        return true
+        @logger.warn("Detaching remote server: incorrect key: #{my_key}")
+        return false
       end
+      
+      unless @remote_servers.include?(server)
+        @logger.warn "Detaching remote server: server not known: #{server.ident}"
+        return false
+      end
+      
+      @logger.verbose("About to detach a remote server: #{server.ident}")
       @remote_store.delete_if {|s| s.host == server.fqdn}
       @remote_servers.delete(server)
       @logger.info("Detached server: #{server.ident}")

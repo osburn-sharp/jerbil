@@ -50,11 +50,28 @@ module Jerbil
     
     def configure_scan_timeout(tim)
       default 0.1
-      comment "Provide a timeout when searching for jerbil servers on the net during startup.",
+      comment "Provide a timeout in seconds when searching for jerbil servers on the net during startup.",
         "Depending on the size of the net mask this timeout may make the search long.",
         "The default should work in most cases"
         
       a_type_of(tim, Numeric)
+    end
+    
+    def configure_check_count(count)
+      default 3
+      comment "Define how many times the monitor process will check for other servers",
+        "at start up. Limited to at least once and at most 10 times. Probably is not need",
+        "to check more than 3 times unless you set a very short scan timeout."
+      in_range(count, 1, 10)
+    end
+    
+    def configure_loop_time(delay)
+      default 30
+      comment "Define the delay between successive checks carried out by the monitor at start up.",
+        "Setting it to 0 will cause the checks to be completed without delay. The upper limit is",
+        "an hour for no particular reason. Default should work for most cases. Could be quicker on smaller",
+        "nets with fewer machines to check each time."
+      in_range(delay, 0, 360)
     end
     
     def configure_secret(scrt)

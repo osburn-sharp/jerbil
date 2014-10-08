@@ -32,7 +32,6 @@ describe "A local Jerbil Session running under a daemon" do
   end
 
   before(:each) do
-
     my_conf = Jerbil::Config.new(conf_file)
     test_server = Jerbil::Servers.get_local_server(my_conf[:environment])
     @my_session = test_server.connect
@@ -44,21 +43,21 @@ describe "A local Jerbil Session running under a daemon" do
 
 
   it "should be easily created" do
-    @my_session.started.should be_true
-    @my_session.registrations.should == @registrations
-    @my_session.service_count.should == @start_count
-    @my_session.get_all.should == []
+    expect(@my_session.started).to be_kind_of(Time)
+    expect(@my_session.registrations).to eq(@registrations)
+    expect(@my_session.service_count).to eq(@start_count)
+    expect(@my_session.get_all).to eq([])
   end
 
   it "should be easy to add a service" do
     @my_session.register(@my_service)
-    @my_session.registrations.should == @registrations + 1
-    @my_session.service_count.should == @start_count + 1
+    expect(@my_session.registrations).to eq(@registrations + 1)
+    expect(@my_session.service_count).to eq(@start_count + 1)
     services = @my_session.get_all(:ignore_access => true)
-    services[0].should == @my_service
+    expect(services[0]).to eq(@my_service)
     service = @my_session.get_local(:ignore_access => true)
-    service.should == @my_service
-    @my_session.find(:name=>'Another', :ignore_access => true).should == []
+    expect(service).to eq(@my_service)
+    expect(@my_session.find(:name=>'Another', :ignore_access => true)).to eq([])
     @my_session.remove(@my_service)
   end
 
@@ -67,13 +66,13 @@ describe "A local Jerbil Session running under a daemon" do
   it "should be easy to remove a service" do
     @my_session.register(@my_service)
     @my_session.remove(@my_service)
-    @my_session.service_count.should == @start_count
+    expect(@my_session.service_count).to eq(@start_count)
   end
 
   it "should do nothing if you remove an unregistered service" do
     @my_session.register(@my_service)
     @my_session.remove(@a_service)
-    @my_session.service_count.should == @start_count + 1
+    expect(@my_session.service_count).to eq(@start_count + 1)
     @my_session.remove(@my_service)
   end
 

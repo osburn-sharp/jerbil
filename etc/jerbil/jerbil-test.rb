@@ -11,7 +11,7 @@
 #  * :verbose - more generous logging to help resolve problems
 #  * :debug - usually used only for resolving problems during development
 # 
-#log_level :system
+log_level :debug
 
 # Number of log files to retain at any time, between 0 and 20
 #log_rotation 2
@@ -54,7 +54,7 @@
 # 
 # Services can be running in all three environments at the same time. Clients
 # will need to use the appropriate config file to connect with each environment.
-#environment :prod
+environment :test
 
 # a writable directory where Jerbil stores a private key for each service.
 # This key is used to authenticate systems operations, such as stopping the service.

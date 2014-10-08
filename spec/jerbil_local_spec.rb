@@ -13,7 +13,7 @@
 # The purpose of these tests is to check the local interface to a Jerbil Broker only
 # 
 require 'rubygems'
-require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+require File.expand_path(File.join(File.dirname(__FILE__), 'spec_helper'))
 require 'jerbil/servers'
 require 'jerbil/service'
 require 'jerbil/config'
@@ -21,7 +21,7 @@ require 'jerbil'
 require 'jellog'
 
 
-conf_file = File.expand_path(File.dirname(__FILE__) + '/../test/conf.d/jerbil_local.rb')
+conf_file = File.expand_path(File.join(File.dirname(File.dirname(__FILE__)), 'test', 'conf.d','jerbil_local.rb'))
 
 
 describe "A local Jerbil Session" do
@@ -45,45 +45,45 @@ describe "A local Jerbil Session" do
   end
 
   it "should be easily created" do
-    @my_session.started.should be_true
-    @my_session.registrations.should == 0
-    @my_session.service_count.should == 0
-    @my_session.local_service_count.should == 0
-    @my_session.remote_service_count.should == 0
-    @my_session.get_all.should == []
+    expect(@my_session.started).to be_kind_of(Time)
+    expect(@my_session.registrations).to eq(0)
+    expect(@my_session.service_count).to eq(0)
+    expect(@my_session.local_service_count).to eq(0)
+    expect(@my_session.remote_service_count).to eq(0)
+    expect(@my_session.get_all).to eq([])
   end
 
   it "should be easy to add a service" do
     @my_session.register(@my_service)
-    @my_session.registrations.should == 1
-    @my_session.service_count.should == 1
-    @my_session.local_service_count.should == 1
-    @my_session.remote_service_count.should == 0
+    expect(@my_session.registrations).to eq(1)
+    expect(@my_session.service_count).to eq(1)
+    expect(@my_session.local_service_count).to eq(1)
+    expect(@my_session.remote_service_count).to eq(0)
     services = @my_session.get_all(:ignore_access => true)
-    services[0].should == @my_service
+    expect(services[0]).to eq(@my_service)
     service = @my_session.get_local(:ignore_access => true)
-    service.should == @my_service
-    @my_session.find(:name=>'Another', :ignore_access => true).should == []
+    expect(service).to eq(@my_service)
+    expect(@my_session.find(:name=>'Another', :ignore_access => true)).to eq([])
     @my_session.remove(@my_service)
   end
 
   it "should not be possible to register the same service twice" do
-    @my_service.should_receive(:connect).and_return(true) # make it appear the service is live
+    allow(@my_service).to receive_messages(connect:true) # make it appear the service is live
     @my_session.register(@my_service)
-    lambda{@my_session.register(@my_service)}.should raise_error{Jerbil::ServiceAlreadyRegistered}
+    expect {@my_session.register(@my_service)}.to raise_error{Jerbil::ServiceAlreadyRegistered}
     @my_session.remove(@my_service)
   end
 
   it "should be easy to remove a service" do
     @my_session.register(@my_service)
     @my_session.remove(@my_service)
-    @my_session.service_count.should == 0
+    expect(@my_session.service_count).to eq(0)
   end
 
   it "should do nothing if you remove an unregistered service" do
     @my_session.register(@my_service)
     @my_session.remove(@a_service)
-    @my_session.service_count.should == 1
+    expect(@my_session.service_count).to eq(1)
 
   end
 

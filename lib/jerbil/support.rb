@@ -32,14 +32,14 @@ module Jerbil
     # @param [String] pid_dir path to directory where pid file is to be written
     # @return [String] the pid
     # @raise [Jerbil::ServiceConfigError] if the pid file cannot be written to
-    def Support.write_pid_file(name, env, pid_dir)
-      pid = Process.pid.to_s
+    def Support.write_pid_file(name, env, pid_dir, pid=Process.pid)
+      #pid = Process.pid.to_s
       pid_file = "#{pid_dir}/#{name.to_s}-#{env}.pid"
       FileUtils.rm_f(pid_file) if File.exists?(pid_file) # avoid permissions probs
       File.open(pid_file, "w") do |pfile|
-        pfile.puts pid
+        pfile.puts pid.to_s
       end
-      return pid
+      return pid.to_s
     rescue Errno::ENOENT
       # failed to write pid to file
       raise Jerbil::ServiceConfigError, "Cannot write pid file: #{pid_file}"

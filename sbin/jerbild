@@ -21,6 +21,7 @@ require 'jerbil/servers'
 require 'jerbil/config'
 require 'jerbil/version'
 require 'jerbil/support'
+require 'jerbil/monitor'
 
 require 'jellog'
 require 'jeckyl'
@@ -127,65 +128,70 @@ dopts = {:backtrace=>true,
   :dir=>config[:pid_dir]
 }
   
+logger = nil
 
-logger = $stderr
+begin
+  if daemonize then
+    puts "Daemonizing now" if verbose
+    Daemons.daemonize(dopts)
+    log_opts = Jellog::Config.intersection(config)
+    #log_opts[:log_level] = :debug
+    logger = Jellog::Logger.new('jerbil_sd', log_opts)
+    #config = config.merge(log_opts) # add them back!
+  else
+    puts "Running in the foreground" if verbose
+    logger = $stderr
+  end
+  
+rescue => err
+  
+  File.open('/tmp/jerbil_panic.log', 'w') do |pfile|
+    pfile.puts "Panic during daemonization:"
+    pfile.puts "#{err.class.to_s}: #{err.message}"
+    err.backtrace.each do |bt|
+      pfile.puts(bt)
+    end
+  end
+  
+  exit 1
+end
+
+
 
 logger.puts "Logging started for Jerbil Daemon"
 logger.puts "Daemonized" if verbose && daemonize
 
-begin
-  my_self = Jerbil::Servers.create_local_server(config[:environment], pkey)
+my_self = Jerbil::Servers.create_local_server(config[:environment], pkey)
+
+logger.puts "Created local server: #{my_self.ident}"
+
+jerbild = Jerbil::Broker.new(config, pkey)
+
+logger.puts "Started Broker"
+
+logger.puts "Starting Monitor"
+
+mon_pid = fork do
   
-  logger.puts "Created local server: #{my_self.ident}"
+  monitor = Jerbil::Monitor.new(config, pkey)
   
-  jerbild = Jerbil::Broker.new(config, pkey)
+  monitor.monitor
   
-  logger.puts "Started Broker"
-rescue => err
-  logger.puts "Error while creating server"
-  logger.puts "#{err.class.to_s}: #{err.message}"
-  err.backtrace.each do |bt|
-    logger.puts(bt)
-  end
-  exit 1
 end
 
-
-if daemonize then
-  begin
-    logger.puts "Daemonizing now" if verbose
-    Daemons.daemonize(dopts)
-    jerbild.restart_logger
-    log_opts = Jellog::Config.intersection(config)
-    logger = Jellog::Logger.new('jerbil_sd', log_opts)
-    logger.puts "Daemonised and logging restarted"
-  rescue => err
-    logger.puts "Error while daemonizing server"
-    logger.puts "#{err.class.to_s}: #{err.message}"
-    err.backtrace.each do |bt|
-      logger.puts(bt)
-    end
-    exit 1
-  end
-end
-
-begin
-  DRb.start_service(my_self.drb_address, jerbild)
-rescue => err
-  logger.puts "Error while connecting to DRb"
-  logger.puts "#{err.class.to_s}: #{err.message}"
-  err.backtrace.each do |bt|
-    logger.puts(bt)
-  end
-  exit 1
-end
+DRb.start_service(my_self.drb_address, jerbild)
 
 logger.puts "Started DRb"
 
-# now create the pid file
-Jerbil::Support.write_pid_file(:jerbil, config[:environment], config[:pid_dir])
 
-logger.puts "Written pid #{Process.pid} to pid file"
+# now create the pid files
+jer_pid = Jerbil::Support.write_pid_file(:jerbil, config[:environment], config[:pid_dir])
+
+logger.puts "Written Jerbil pid #{jer_pid} to pid file"
+
+# Jerbil::Support.write_pid_file(:jmonitor, config[:environment], config[:pid_dir], mon_pid)
+# 
+# logger.puts "Written Monitor pid #{mon_pid} to pid file"
 
 $0 = "jerbild-#{config[:environment]}"
 

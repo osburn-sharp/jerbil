@@ -13,7 +13,7 @@
 # The purpose of these tests is to check the remote interface to the Jerbil Server
 # 
 
-require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
+require File.expand_path(File.join(File.dirname(__FILE__), 'spec_helper'))
 require 'jerbil/servers'
 require 'jerbil/service'
 require 'jerbil/config'
@@ -41,16 +41,15 @@ describe "A Remote Jerbil Session" do
     @my_conf = Jerbil::Config.new(conf_file)
     @secret = @my_conf[:secret]
     @env = @my_conf[:environment]
-
     @my_session = Jerbil::Broker.new(@my_conf, @pkey)
 
     @remote_host = 'germanicus.osburn-sharp.ath.cx'
-    Socket.stub(:gethostname).and_return(@remote_host)
+    allow(Socket).to receive_messages(:gethostname => @remote_host)
     @a_service = Jerbil::ServiceRecord.new(:rubytest, :test)
-    Socket.stub(:gethostname).and_return('antonia.osburn-sharp.ath.cx')
+    allow(Socket).to receive_messages(:gethostname => 'antonia.osburn-sharp.ath.cx')
     @b_service = Jerbil::ServiceRecord.new(:rubytest, :prod)
-    Socket.unstub(:gethostname)
-    Jellog::Logger.disable_syslog
+    allow(Socket).to receive(:gethostname).and_call_original
+    #Jellog::Logger.disable_syslog
   end
 
   after(:all) do
@@ -58,28 +57,28 @@ describe "A Remote Jerbil Session" do
   end
 
   it "should be easily created" do
-    @my_session.service_count.should == 0
+    expect(@my_session.service_count).to eq(0)
   end
 
   it "should be easy to add a remote service" do
     rkey = @my_session.register_server(@calling_server, @secret, @env)
     @my_session.register_remote(rkey, @a_service)
-    @my_session.service_count.should == 1
-    @my_session.remote_service_count.should == 1
+    expect(@my_session.service_count).to eq(1)
+    expect(@my_session.remote_service_count).to eq(1)
     @my_session.detach_server(rkey, @calling_server)
-    @my_session.service_count.should == 0
+    expect(@my_session.service_count).to eq(0)
   end
 
   it "should not be possible to register a remote server without a valid secret" do
     #Syslog.should_not_receive(:info)
-    lambda{@my_session.register_server(@calling_server, 'INVALID', @env)}.should raise_error{Jerbil::JerbilAuthenticationError}
+    expect {@my_session.register_server(@calling_server, 'INVALID', @env)}.to raise_error{Jerbil::JerbilAuthenticationError}
   end
 
   it "should not be possible to register a remote service without a valid key" do
     rkey = @my_session.register_server(@calling_server, @secret, @env)
     #lambda{@my_session.register_remote('INVALID', @a_service)}.should raise_error{Jerbil::InvalidServerKey}
     @my_session.register_remote('INVALID', @a_service)
-    @my_session.service_count.should == 0
+    expect(@my_session.service_count).to eq(0)
     @my_session.detach_server(rkey, @calling_server)
   end
 
@@ -87,17 +86,19 @@ describe "A Remote Jerbil Session" do
   it "should be easy to remove a remote service" do
     rkey = @my_session.register_server(@calling_server, @secret, @env)    
     @my_session.register_remote(rkey, @a_service)
-    @my_session.service_count.should == 1
+    expect(@my_session.service_count).to eq(1)
     @my_session.remove_remote(rkey, @a_service)
-    @my_session.service_count.should == 0
+    expect(@my_session.service_count).to eq(0)
     @my_session.detach_server(rkey, @calling_server)
   end
 
+  # These last two seem to involve a long delay! Need to stub something.
+  
   it "should do nothing if you remove an unregistered remote service" do
     rkey = @my_session.register_server(@calling_server, @secret, @env)    
     @my_session.register(@my_service)
     @my_session.remove_remote(rkey, @a_service)
-    @my_session.service_count.should == 1
+    expect(@my_session.service_count).to eq(1)
     @my_session.detach_server(rkey, @calling_server)
   end
   
@@ -105,10 +106,10 @@ describe "A Remote Jerbil Session" do
     @my_session.register(@my_service)
     rkey = @my_session.register_server(@calling_server, @secret, @env)    
     services = @my_session.get_local_services(rkey)
-    services[0].should == @my_service
+    expect(services[0]).to eq(@my_service)
     @my_session.register(@another_service)
-    @my_session.local_service_count.should == 2
-    services.length.should == 1
+    expect(@my_session.local_service_count).to eq(2)
+    expect(services.length).to eq(1)
     @my_session.detach_server(rkey, @calling_server)
     
   end

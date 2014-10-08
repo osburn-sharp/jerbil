@@ -136,4 +136,15 @@ rescue DRb::DRbConnError
 end
 
 puts "Stopped Jerbil Server" if verbose
+
+# puts "Stopping Monitor process" if verbose
+# 
+# mpid = Jerbil::Support.get_pid_and_delete_file(:jmonitor, server_env, options[:pid_dir])
+# if mpid then
+#   puts "Obtained a pid for monitor: #{mpid}" if verbose
+#   Process.kill "SIGKILL", mpid.to_i
+# else
+#   puts "No mpid was found!" if verbose
+# end
+
 exit 0
