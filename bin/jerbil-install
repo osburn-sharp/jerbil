@@ -38,7 +38,7 @@ Jeni::Installer.new_from_gem('jerbil') do |jeni|
   
   
   jeni.file('etc/jerbil/jerbil.rb', '/etc/jerbil/jerbil.rb', :chown=>'jerbil', :chgrp=>'jerbil', :chmod=>0640)
-  jeni.file('etc/jerbil/jerbil-client.rb', '/etc/jerbil/jerbil-client.rb', :chown=>'jerbil', :chgrp=>'jerbil', :chmod=>0640)
+  jeni.file('etc/jerbil/jerbil-test.rb', '/etc/jerbil/jerbil-test.rb', :chown=>'jerbil', :chgrp=>'jerbil', :chmod=>0640)
   
   # configuration file to run the service
   jeni.file('etc/conf.d/jerbild', '/etc/conf.d/jerbild')

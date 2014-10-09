@@ -4,6 +4,10 @@
 
 ==History
 
+[jerbil-1.4.2 09-Oct-2014]
+
+  Fix jeni installer error.
+
 [jerbil-1.4.1 03-Aug-2014]
 
   Relocate server discovery to Jerbil::Monitor. Tidy up tests and readmes. Allow for 
