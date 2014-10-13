@@ -4,6 +4,10 @@
 
 ==History
 
+[jerbil-1.4.4 13-Oct-2014]
+
+  Fix Gemfile dependencies to please rubygems and remove thor as a dependency.
+
 [jerbil-1.4.3 13-Oct-2014]
 
   Ensure monitor raises the alarm if the secret key is rejected by another server.
