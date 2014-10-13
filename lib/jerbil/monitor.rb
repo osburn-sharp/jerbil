@@ -45,6 +45,7 @@ module Jerbil
       log_opts = @log_opts.dup
       @logger = Jellog::Logger.new('jerbil-monitor', log_opts)
       @logger.verbose "Started the Jerbil Monitor"
+      self.monitor
     end
     
     # start the monitor loop to find and register existing servers
@@ -85,41 +86,32 @@ module Jerbil
   
           rjerbil = nserver.connect
           unless rjerbil.nil?
-            
-            # register local with remote
-            rkey = rjerbil.register_server(@local_server, @options[:secret], @env)
-            nserver.set_key(rkey)
-            
-            # and register remote with local
-            ljerbil.register_server(nserver, @options[:secret], @env)
-            
-            @logger.info "Found server: #{nserver.fqdn}"
-            
-            # Add to local record - could use jerbil itself?
-            @servers[nserver.fqdn] = nserver
-            
-            
-            # now tell my server about these services
-            
-            rjerbil.get_local_services(rkey).each do |rservice|
-              ljerbil.register_remote(@jerbil_key, rservice)
+            begin
+              # register local with remote
+              rkey = rjerbil.register_server(@local_server, @options[:secret], @env)
+              nserver.set_key(rkey)
+              
+              # and register remote with local
+              ljerbil.register_server(nserver, @options[:secret], @env)
+              
+              @logger.info "Found server: #{nserver.fqdn}"
+              
+              # Add to local record - could use jerbil itself?
+              @servers[nserver.fqdn] = nserver
+              
+              
+              # now tell my server about these services
+              
+              rjerbil.get_local_services(rkey).each do |rservice|
+                ljerbil.register_remote(@jerbil_key, rservice)
+              end
+              
+            rescue Jerbil::JerbilAuthenticationError
+              @logger.alert "Invalid Secret key registering with #{nserver.fqdn}"
+              @servers[nserver.fqdn] = nserver # save it anyway to stop repeated logging
             end
           end
         end
-        
-        # @servers.each_value {|s| @logger.debug "Known Server: #{s.fqdn}"}
-        # scanned.each {|s| @logger.debug "Scanned server: #{s}"}
-        # 
-        # @logger.debug "Checking for lost servers"
-        # # or remove if not found
-        # @servers.each_pair do |name, rserver|
-        #   unless scanned.include?(name) || name == @local_server.fqdn
-        #     # missing from the network so tell my server
-        #     @logger.verbose "Missing server: #{name}"
-        #     ljerbil.detach_server(@jerbil_key, rserver)
-        #     @servers.delete(name)
-        #   end
-        # end
         
         if time_to_next_loop > Time.now then
           @logger.debug "Taking a nap"
@@ -128,19 +120,15 @@ module Jerbil
       
       end # loop
       @logger.info "Completed scan and exiting"
-      @logger.close
-      Process.exit
+
       
     rescue => e
       @logger.exception e
+    ensure
+      @logger.close
       Process.exit!
     end
     
-    # Provided for a cleaner exit but it never gets called!
-    def close
-      @logger.info "Shutting down the monitor"
-      Process.exit!
-    end
     
   end
 end

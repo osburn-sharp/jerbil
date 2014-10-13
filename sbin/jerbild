@@ -158,8 +158,11 @@ end
 
 
 
-logger.puts "Logging started for Jerbil Daemon"
+logger.puts "Logging started for Jerbil Daemon" if verbose
 logger.puts "Daemonized" if verbose && daemonize
+
+# will only output messages to screen if not daemonised and therefore safe to
+# assume verbose anyway.
 
 my_self = Jerbil::Servers.create_local_server(config[:environment], pkey)
 
@@ -171,11 +174,13 @@ logger.puts "Started Broker"
 
 logger.puts "Starting Monitor"
 
+# create a separate process to look for other servers
+# and log them to this one
 mon_pid = fork do
   
   monitor = Jerbil::Monitor.new(config, pkey)
   
-  monitor.monitor
+  # exits automatically 
   
 end
 
