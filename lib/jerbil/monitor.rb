@@ -107,7 +107,7 @@ module Jerbil
               end
               
             rescue Jerbil::JerbilAuthenticationError
-              @logger.alert "Invalid Secret key registering with #{nserver.fqdn}"
+              @logger.fatal "Invalid Secret key registering with #{nserver.fqdn}"
               @servers[nserver.fqdn] = nserver # save it anyway to stop repeated logging
             end
           end
