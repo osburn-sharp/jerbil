@@ -1,1 +1,1 @@
-Jumpin' Ermin's Reliable Broker for Integrated Linux services
+A framework for reliable network-wide client-server inter-process comms.

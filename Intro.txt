@@ -1,5 +1,9 @@
-Provides an Object Request Broker and service framework for ruby-based services.
+Provides a reliable Object Request Broker and a simple framework for ruby-based services.
 Jerbil servers run on each machine in the system and share information on registering
-services. A parent class for services hides all of the jerbil interactions and client
-and supervisor modules hide interactions from scripts or applications interacting
-with these services.
+services. This ensures no single point of failure - machines can come and go (orderly or disorderly)
+and the network extends or heals as they do. For services there is a parent class that hides 
+all of the jerbil server interactions so that new services can be written without having
+to write any distributing code. Clients can also be written using an interface that
+can find one or more services on the network and connect to each or the first. Finally, there
+are scripts to start and stop the Jerbil server and any Services so that the whole thing
+can be quickly installed and integrated with your system.

@@ -1,0 +1,1 @@
+Now run jerbil-install to complete the installation
