@@ -1,9 +1,9 @@
 # @markup ruby
 #
 # general utilities
-gem 'netaddr', '~> 0'
-gem 'term-ansicolor', '~> 0'
-gem 'daemons', '~> 0'
+gem 'netaddr', '~> 1.0'
+gem 'term-ansicolor', '~> 1.0'
+gem 'daemons', '~> 1.0'
 
 # jerbil-related utilities
 gem 'jellog', '~> 1.0', '>=1.0.14' # for logging
