@@ -1,11 +1,18 @@
 == Bugs
 
+[jerbil-1.4.4 16-Oct-2014]
+
+  Started up a service with a previous version still running and it did not detect or
+  notify the problem!
+
 [jerbil-1.3.1 29-Aug-2013]
 
   Need to update jerbil command to get rid of thor and improve what it does.
   Consider Network Dependencies - where a service on one machine does not start
   without a service on another or when a service is taken down on which others depend
   then they are notified first, through Jerbil?
+  
+  [Thor removed in 2014]
 
 [jerbil-1.2.3 06-June-2013]
 

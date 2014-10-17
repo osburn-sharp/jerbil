@@ -78,12 +78,12 @@ class Jerbs < Optplus::Parser
     "and the time it was started"
     
   def status
-    puts "Checking for local Jerbil server running in env: #{@config[:environment]}"
+    say "Checking for local Jerbil server running in env: #{@config[:environment]}"
     jerbs = @server.connect
     started = jerbs.started
-    puts "  Jerbil server found, version: #{jerbs.version}".green
-    puts "  Server has been up since #{started.strftime('%d %b %Y at %H:%M')}"
-    puts "  and has had #{jerbs.registrations.to_s} registrations."
+    say_ok "Jerbil server found, version: #{jerbs.version}".green
+    say "  Server has been up since #{started.strftime('%d %b %Y at %H:%M')}"
+    say "  and has had #{jerbs.registrations.to_s} registrations."
   rescue Jerbil::JerbilError
     show_err "Jerbil Server Error"
   rescue DRb::DRbError
@@ -113,7 +113,9 @@ class Jerbs < Optplus::Parser
       end #
       if option? :verbose then
         begin
+          say "    Jerbil server version: #{remote.version}"
           say "    Running under Ruby version: #{remote.connect.ruby_version}"
+          say "    Remote server has been up since #{remote.started.strftime('%d %b %Y at %H:%M')}"
         rescue
           say "    No info on ruby version from this server"
         end

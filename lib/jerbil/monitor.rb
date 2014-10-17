@@ -44,7 +44,7 @@ module Jerbil
       @log_opts = Jellog::Logger.get_options(options)
       log_opts = @log_opts.dup
       @logger = Jellog::Logger.new('jerbil-monitor', log_opts)
-      @logger.verbose "Started the Jerbil Monitor"
+      @logger.system "Started the Jerbil Monitor"
       self.monitor
     end
     
@@ -119,12 +119,12 @@ module Jerbil
         end
       
       end # loop
-      @logger.info "Completed scan and exiting"
 
       
     rescue => e
       @logger.exception e
     ensure
+      @logger.system "Jerbil Monitor complete and closing down"
       @logger.close
       Process.exit!
     end
