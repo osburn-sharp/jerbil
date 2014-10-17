@@ -113,11 +113,11 @@ class Jerbs < Optplus::Parser
       end #
       if option? :verbose then
         begin
-          say "    Jerbil server version: #{remote.version}"
+          say "    Jerbil server version: #{remote.connect.version}"
           say "    Running under Ruby version: #{remote.connect.ruby_version}"
-          say "    Remote server has been up since #{remote.started.strftime('%d %b %Y at %H:%M')}"
-        rescue
-          say "    No info on ruby version from this server"
+          say "    Remote server has been up since #{remote.connect.started.strftime('%d %b %Y at %H:%M')}"
+        #rescue
+        #  say "    No info on ruby version from this server"
         end
       end
     end

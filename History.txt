@@ -4,9 +4,13 @@
 
 ==History
 
+[jerbil-1.4.6 17-Oct-2014]
+
+  Fix change to jerbil remotes so that it works!
+
 [jerbil-1.4.5 17-Oct-2014]
 
-  Add server version to 'jerbil remotes -V' and add system logging for start and
+  Add server version to verbose out of jerbil remotes and add system logging for start and
   end of monitor process.
 
 [jerbil-1.4.4 13-Oct-2014]
