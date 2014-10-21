@@ -67,7 +67,7 @@ class Jerbs < Optplus::Parser
     @config = Jerbil.get_config(get_option(:config))
     @server = Jerbil::Servers.get_local_server(@config[:environment])
   rescue Jeckyl::ConfigFileMissing
-    puts "Error: No config file #{config_file ? config_file : '/etc/jerbil/jerbil.rb'}".red.bold
+    exit_on_error "Error: No config file #{config_file ? config_file : '/etc/jerbil/jerbil.rb'}"
   end
   
   
@@ -116,8 +116,8 @@ class Jerbs < Optplus::Parser
           say "    Jerbil server version: #{remote.connect.version}"
           say "    Running under Ruby version: #{remote.connect.ruby_version}"
           say "    Remote server has been up since #{remote.connect.started.strftime('%d %b %Y at %H:%M')}"
-        #rescue
-        #  say "    No info on ruby version from this server"
+        rescue
+          warn "    No info on ruby version from this server"
         end
       end
     end

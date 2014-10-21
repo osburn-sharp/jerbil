@@ -1,6 +1,9 @@
 --no-private
 --protected
+--main README.md
 -
+README_SERVICES.md
+README_TESTING.md
 LICENCE.rdoc
 History.txt
 Bugs.rdoc

@@ -4,6 +4,10 @@
 
 ==History
 
+[jerbil-1.4.7 21-Oct-2014]
+
+  Fix readmes on rubydoc.info in the .yardopts file. A few tweaks to the jerbil utility.
+
 [jerbil-1.4.6 17-Oct-2014]
 
   Fix change to jerbil remotes so that it works!
