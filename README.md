@@ -16,7 +16,7 @@ tedious work and should avoid a lot of the headaches of alternatives such as Rin
 
 **GitHub:** [https://github.com/osburn-sharp/jerbil](https://github.com/osburn-sharp/jerbil)
 
-**RubyDoc:** [http://rubydoc.info/github/osburn-sharp/jerbil/frames](http://rubydoc.info/github/osburn-sharp/jerbil/frames)
+**RubyDoc:** [http://rubydoc.info/github/osburn-sharp/jerbil/frames/file/README.md](http://rubydoc.info/github/osburn-sharp/jerbil/frames/file/README.md)
 
 **RubyGems:** [https://rubygems.org/gems/jerbil](https://rubygems.org/gems/jerbil)
 

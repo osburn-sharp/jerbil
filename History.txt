@@ -4,6 +4,10 @@
 
 ==History
 
+[jerbil-1.4.8 26-Oct-2014]
+
+  Tweaked Rubydoc.info address to get to the right readme page.
+
 [jerbil-1.4.7 21-Oct-2014]
 
   Fix readmes on rubydoc.info in the .yardopts file. A few tweaks to the jerbil utility.
